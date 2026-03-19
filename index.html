@@ -681,6 +681,188 @@
       background: linear-gradient(90deg, transparent, var(--color-border), transparent);
     }
 
+    /* ─── Pricing Section ───────────────────────────────── */
+    .pricing-guarantee {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin: 32px 0 52px;
+      padding: 16px 28px;
+      background: rgba(201,168,76,.08);
+      border: 1px solid rgba(201,168,76,.30);
+      border-radius: 999px;
+      font-size: .9rem;
+      flex-wrap: wrap;
+      text-align: center;
+      color: var(--color-text-muted);
+    }
+    .pricing-guarantee strong { color: var(--color-gold); }
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      align-items: start;
+    }
+    .pricing-card {
+      position: relative;
+      padding: 32px 24px;
+      background: var(--color-card-bg);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius);
+      display: flex;
+      flex-direction: column;
+      transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+    }
+    .pricing-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 48px rgba(0,0,0,.30);
+      border-color: rgba(201,168,76,.40);
+    }
+    .pricing-card--featured {
+      background: linear-gradient(160deg, rgba(20,40,78,.98) 0%, rgba(30,55,90,.95) 100%);
+      border-color: var(--color-gold);
+      box-shadow: 0 0 40px rgba(201,168,76,.18), 0 16px 48px rgba(0,0,0,.40);
+      transform: translateY(-10px);
+    }
+    .pricing-card--featured:hover {
+      transform: translateY(-16px);
+      box-shadow: 0 0 60px rgba(201,168,76,.28), 0 24px 64px rgba(0,0,0,.45);
+    }
+    .pricing-card--featured::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--color-gold), var(--color-electric), var(--color-gold));
+      border-radius: var(--radius) var(--radius) 0 0;
+    }
+    .pricing-badge {
+      position: absolute;
+      top: -14px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 5px 18px;
+      background: linear-gradient(135deg, var(--color-gold), #A8893A);
+      color: var(--color-navy);
+      font-size: .68rem;
+      font-weight: 700;
+      letter-spacing: .10em;
+      text-transform: uppercase;
+      border-radius: 999px;
+      white-space: nowrap;
+      box-shadow: 0 4px 14px rgba(201,168,76,.35);
+    }
+    .pricing-tier-label {
+      font-size: .70rem;
+      font-weight: 600;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--color-text-muted);
+      margin-bottom: 8px;
+    }
+    .pricing-card--featured .pricing-tier-label { color: var(--color-gold-light); }
+    .pricing-name {
+      font-family: var(--font-serif);
+      font-size: 1.45rem;
+      font-weight: 700;
+      color: var(--color-text);
+      margin-bottom: 18px;
+    }
+    .pricing-card--featured .pricing-name { color: var(--color-gold-light); }
+    .pricing-price-wrap { margin-bottom: 18px; }
+    .pricing-price {
+      font-family: var(--font-serif);
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--color-text);
+      line-height: 1.1;
+    }
+    .pricing-card--featured .pricing-price { color: var(--color-gold); }
+    .pricing-price-note {
+      font-size: .73rem;
+      color: var(--color-text-muted);
+      margin-top: 5px;
+    }
+    .pricing-tagline {
+      font-size: .87rem;
+      color: var(--color-text-muted);
+      line-height: 1.65;
+      margin-bottom: 22px;
+      padding-bottom: 22px;
+      border-bottom: 1px solid var(--color-border);
+    }
+    .pricing-card--featured .pricing-tagline {
+      color: var(--color-electric);
+      border-color: rgba(201,168,76,.25);
+    }
+    .pricing-features {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 9px;
+      margin-bottom: 22px;
+      flex: 1;
+    }
+    .pricing-features li {
+      font-size: .84rem;
+      color: var(--color-text-muted);
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+    }
+    .pricing-card--featured .pricing-features li { color: var(--color-text); }
+    .pcheck {
+      color: var(--color-gold);
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .pricing-card--featured .pcheck { color: var(--color-gold-light); }
+    .pricing-no-sub {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+      padding: 8px 12px;
+      background: rgba(201,168,76,.08);
+      border: 1px solid rgba(201,168,76,.25);
+      border-radius: 8px;
+      font-size: .74rem;
+      font-weight: 700;
+      color: var(--color-gold);
+      margin-bottom: 18px;
+      text-align: center;
+    }
+    .btn-kickstarter {
+      display: block;
+      width: 100%;
+      padding: 13px 12px;
+      background: linear-gradient(135deg, var(--color-gold) 0%, #A8893A 100%);
+      color: var(--color-navy);
+      font-weight: 700;
+      font-size: .83rem;
+      border-radius: var(--radius);
+      text-align: center;
+      transition: transform var(--transition), box-shadow var(--transition);
+      box-shadow: 0 4px 16px rgba(201,168,76,.25);
+      margin-top: auto;
+    }
+    .btn-kickstarter:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(201,168,76,.45);
+    }
+    .pricing-card--featured .btn-kickstarter {
+      box-shadow: 0 6px 24px rgba(201,168,76,.40);
+    }
+    .pricing-footnote {
+      margin-top: 48px;
+      text-align: center;
+      font-size: .8rem;
+      color: var(--color-text-muted);
+      line-height: 1.7;
+    }
+
     /* ─── Responsive ─────────────────────────────────────── */
     @media (max-width: 960px) {
       .nav-links { display: none; }
@@ -689,6 +871,8 @@
       .industry-layout { grid-template-columns: 1fr; }
       .tech-grid { grid-template-columns: repeat(2, 1fr); }
       .tech-features { grid-template-columns: 1fr; }
+      .pricing-grid { grid-template-columns: 1fr; }
+      .pricing-card--featured { transform: none; }
     }
     @media (max-width: 600px) {
       .section { padding: 70px 0; }
@@ -696,6 +880,7 @@
       .tech-grid { grid-template-columns: repeat(2, 1fr); }
       .hero-trust { gap: 20px; }
       .footer-inner { flex-direction: column; text-align: center; }
+      .pricing-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -1212,57 +1397,96 @@
   <section id="pricing" class="section section--alt">
     <div class="container">
       <span class="label">Preise &amp; Pakete</span>
-      <h2 class="section-title">Wählen Sie Ihr passendes Paket</h2>
-      <p class="section-sub">Einmalige Lizenz – keine monatlichen Kosten, kein Cloud-Zwang, volle Datensouveränität.</p>
-      <div class="features-grid">
+      <h2 class="section-title">Wählen Sie Ihre <span class="gold">Zenith-Lösung</span></h2>
+      <p class="section-sub">
+        Einmalige Zahlung – keine Abonnements, kein Cloud-Zwang, keine versteckten Kosten.
+        Sie kaufen einmal und besitzen Zenith für immer.
+      </p>
 
-        <div class="feature-card">
-          <h3>Standard</h3>
-          <p class="tech-stat-number" style="font-size:1.8rem; margin:16px 0 10px;">ab €2.990 einmalig</p>
-          <p>Für Einzelkanzleien oder kleine Praxen. Alle Kern-Funktionen, lokale KI-Suche und 12 Monate Support.</p>
-          <ul class="compare-list" style="margin-top:20px;">
-            <li><span class="icon">✅</span><span>Bis zu 50.000 Dokumente</span></li>
-            <li><span class="icon">✅</span><span>Alle Kern-Features inkl. Fristmanagement</span></li>
-            <li><span class="icon">✅</span><span>12 Monate Support &amp; Updates</span></li>
-            <li><span class="icon">✅</span><span>Setup-Begleitung vor Ort oder remote</span></li>
-          </ul>
-          <div style="margin-top:24px;">
-            <a href="mailto:info@myzenith.org?subject=Anfrage Standard-Paket" class="btn-primary" style="display:inline-block; padding:12px 28px; font-size:.9rem;">Jetzt anfragen</a>
+      <div class="pricing-guarantee">
+        <span>🔒</span>
+        <strong>Kein Abo. Keine monatlichen Kosten.</strong>
+        <span>Alle Pakete: einmalige Zahlung – volle Datensouveränität auf Ihrer Hardware.</span>
+      </div>
+
+      <div class="pricing-grid">
+
+        <!-- ── BASE ── -->
+        <div class="pricing-card">
+          <div class="pricing-tier-label">Ready-to-Work</div>
+          <h3 class="pricing-name">BASE</h3>
+          <div class="pricing-price-wrap">
+            <div class="pricing-price">4.500 €</div>
+            <div class="pricing-price-note">Einmalzahlung · Hardware &amp; Software</div>
           </div>
+          <div class="pricing-tagline">
+            100 % lokale KI-Power – sofort einsatzbereit.<br />
+            Kein Cloud-Zwang, keine Daten verlassen Ihr Haus.
+          </div>
+          <ul class="pricing-features">
+            <li><span class="pcheck">✓</span><span>Minisforum MS-S1 Max (128 GB RAM)</span></li>
+            <li><span class="pcheck">✓</span><span>Zenith Software vorinstalliert &amp; konfiguriert</span></li>
+            <li><span class="pcheck">✓</span><span>100 % lokale KI – 0 Byte externe Übertragung</span></li>
+            <li><span class="pcheck">✓</span><span>DSGVO-konform by Design</span></li>
+            <li><span class="pcheck">✓</span><span>Setup-Anleitung &amp; E-Mail-Support</span></li>
+          </ul>
+          <div class="pricing-no-sub">🚫 Kein Abo &nbsp;·&nbsp; Keine monatl. Kosten</div>
+          <a href="#kickstarter" class="btn-kickstarter">Jetzt auf Kickstarter unterstützen →</a>
         </div>
 
-        <div class="feature-card" style="border-color: rgba(201,168,76,.50);">
-          <div class="feature-icon" style="background: rgba(201,168,76,.15);">⭐</div>
-          <h3>Professional</h3>
-          <p class="tech-stat-number" style="font-size:1.8rem; margin:16px 0 10px;">Preis auf Anfrage</p>
-          <p>Für mittelgroße Kanzleien und Praxen. Erweiterte Anpassungen, Schulungen und priorisierter Support.</p>
-          <ul class="compare-list" style="margin-top:20px;">
-            <li><span class="icon">✅</span><span>Unbegrenzte Dokumente</span></li>
-            <li><span class="icon">✅</span><span>Individuelle Konfiguration &amp; Branding</span></li>
-            <li><span class="icon">✅</span><span>Mitarbeiter-Schulungen inklusive</span></li>
-            <li><span class="icon">✅</span><span>Priorisierter Support, 24h-Reaktionszeit</span></li>
-          </ul>
-          <div style="margin-top:24px;">
-            <a href="mailto:info@myzenith.org?subject=Anfrage Professional-Paket" class="btn-primary" style="display:inline-block; padding:12px 28px; font-size:.9rem;">Jetzt anfragen</a>
+        <!-- ── PROFESSIONAL (FEATURED) ── -->
+        <div class="pricing-card pricing-card--featured">
+          <div class="pricing-badge">⭐ Bestseller</div>
+          <div class="pricing-tier-label">Für Kanzleien &amp; Praxen</div>
+          <h3 class="pricing-name">PROFESSIONAL</h3>
+          <div class="pricing-price-wrap">
+            <div class="pricing-price">5.200 €</div>
+            <div class="pricing-price-note">Einmalzahlung · Inkl. RAID-Redundanz</div>
           </div>
+          <div class="pricing-tagline">
+            Maximale Ausfallsicherheit für sensible Akten.<br />
+            Integrierte Redundanz – damit kein Dokument verloren geht.
+          </div>
+          <ul class="pricing-features">
+            <li><span class="pcheck">✓</span><span>Alles aus BASE</span></li>
+            <li><span class="pcheck">✓</span><span>Externes RAID-System für Dateiausfallschutz</span></li>
+            <li><span class="pcheck">✓</span><span>Integrierte Redundanz für Mandats&shy;akten &amp; Patientendaten</span></li>
+            <li><span class="pcheck">✓</span><span>Automatisches lokales Backup</span></li>
+            <li><span class="pcheck">✓</span><span>Prioritäts-E-Mail-Support</span></li>
+          </ul>
+          <div class="pricing-no-sub">🚫 Kein Abo &nbsp;·&nbsp; Keine monatl. Kosten</div>
+          <a href="#kickstarter" class="btn-kickstarter">Jetzt auf Kickstarter unterstützen →</a>
         </div>
 
-        <div class="feature-card">
-          <h3>Enterprise</h3>
-          <p class="tech-stat-number" style="font-size:1.8rem; margin:16px 0 10px;">Preis auf Anfrage</p>
-          <p>Für Großpraxen oder Kanzleigruppen. Unbegrenzte Dokumente, SLA-Garantie und On-Site-Installation.</p>
-          <ul class="compare-list" style="margin-top:20px;">
-            <li><span class="icon">✅</span><span>Mehrstandort-Unterstützung</span></li>
-            <li><span class="icon">✅</span><span>Dedizierter Account Manager</span></li>
-            <li><span class="icon">✅</span><span>SLA mit garantierter Verfügbarkeit</span></li>
-            <li><span class="icon">✅</span><span>On-Site-Installation &amp; Wartung</span></li>
-          </ul>
-          <div style="margin-top:24px;">
-            <a href="mailto:info@myzenith.org?subject=Anfrage Enterprise-Paket" class="btn-primary" style="display:inline-block; padding:12px 28px; font-size:.9rem;">Jetzt anfragen</a>
+        <!-- ── PREMIUM ── -->
+        <div class="pricing-card">
+          <div class="pricing-tier-label">Für Mediziner &amp; Juristen</div>
+          <h3 class="pricing-name">PREMIUM</h3>
+          <div class="pricing-price-wrap">
+            <div class="pricing-price">5.800 €</div>
+            <div class="pricing-price-note">Einmalzahlung · Das Sorglos-Paket</div>
           </div>
+          <div class="pricing-tagline">
+            Persönlich betreut von Tag eins.<br />
+            Für Mediziner und Juristen, die keine Kompromisse machen.
+          </div>
+          <ul class="pricing-features">
+            <li><span class="pcheck">✓</span><span>Alles aus PROFESSIONAL</span></li>
+            <li><span class="pcheck">✓</span><span>24 Monate Priority-Support</span></li>
+            <li><span class="pcheck">✓</span><span>Remote-Setup durch Zenith-Experten</span></li>
+            <li><span class="pcheck">✓</span><span>24h-Reaktionszeit bei Störungen</span></li>
+            <li><span class="pcheck">✓</span><span>Persönlicher Account Manager</span></li>
+          </ul>
+          <div class="pricing-no-sub">🚫 Kein Abo &nbsp;·&nbsp; Keine monatl. Kosten</div>
+          <a href="#kickstarter" class="btn-kickstarter">Jetzt auf Kickstarter unterstützen →</a>
         </div>
 
       </div>
+
+      <p class="pricing-footnote">
+        Alle Preise zzgl. MwSt. &nbsp;·&nbsp; Einmalige Zahlung – keine Folgekosten &nbsp;·&nbsp;
+        Kickstarter Early-Bird-Preise – begrenzte Stückzahl verfügbar
+      </p>
     </div>
   </section>
 
