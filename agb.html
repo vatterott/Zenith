@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Allgemeine Geschäftsbedingungen (AGB) der Zenith DMS Software." />
+  <title>AGB – Zenith DMS</title>
+  <meta name="robots" content="noindex, follow" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg:            #08080F;
+      --bg-alt:        #0D0D1A;
+      --bg-card:       #111120;
+      --purple:        #CC2299;
+      --purple-dim:    #A81A7A;
+      --purple-glow:   rgba(204,34,153,.28);
+      --cyan:          #FFFFFF;
+      --text:          #F0F0FF;
+      --text-muted:    #6A6A85;
+      --border:        rgba(255,255,255,.07);
+      --border-purple: rgba(204,34,153,.35);
+      --font-display:  'Barlow Condensed', 'Impact', sans-serif;
+      --font-body:     'Barlow', system-ui, sans-serif;
+      --transition:    .3s ease;
+      --radius:        3px;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-body); background-color: var(--bg); color: var(--text); line-height: 1.6; overflow-x: hidden; }
+    a { color: var(--purple); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container { max-width: 860px; margin: 0 auto; padding: 0 32px; }
+
+    header {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      padding: 20px 0;
+      background: rgba(8,8,15,.96);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(16px);
+    }
+    nav { display: flex; align-items: center; justify-content: space-between; }
+    .logo {
+      font-family: var(--font-display); font-size: 1.45rem; font-weight: 900;
+      letter-spacing: .1em; text-transform: uppercase; color: var(--text); text-decoration: none;
+    }
+    .logo:hover { text-decoration: none; }
+    .logo span { color: var(--purple); }
+    .nav-back {
+      font-size: .72rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase;
+      color: var(--text-muted); transition: color var(--transition); text-decoration: none;
+    }
+    .nav-back:hover { color: var(--text); text-decoration: none; }
+    .nav-back::before { content: '← '; }
+
+    .page-hero { padding: 160px 0 80px; border-bottom: 1px solid var(--border); }
+    .page-hero .label {
+      display: inline-block; font-size: .68rem; font-weight: 700;
+      letter-spacing: .22em; text-transform: uppercase; color: var(--cyan); margin-bottom: 16px;
+    }
+    .page-hero h1 {
+      font-family: var(--font-display); font-size: clamp(2.4rem, 5vw, 3.6rem);
+      font-weight: 900; line-height: 1.05; text-transform: uppercase;
+      letter-spacing: .02em; margin-bottom: 16px;
+    }
+    .page-hero h1 span { color: var(--purple); }
+    .page-hero .meta { font-size: .82rem; color: var(--text-muted); letter-spacing: .05em; }
+
+    .content { padding: 80px 0 120px; }
+    .content section { margin-bottom: 60px; }
+    .content h2 {
+      font-family: var(--font-display); font-size: 1.6rem; font-weight: 800;
+      text-transform: uppercase; letter-spacing: .04em; color: var(--text);
+      margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border);
+    }
+    .content h3 {
+      font-family: var(--font-body); font-size: 1rem; font-weight: 700;
+      color: var(--purple); letter-spacing: .06em; text-transform: uppercase; margin: 28px 0 10px;
+    }
+    .content p { font-size: .97rem; color: #C8C8E0; line-height: 1.85; margin-bottom: 14px; }
+    .content ul, .content ol { margin: 0 0 14px 24px; }
+    .content li { font-size: .97rem; color: #C8C8E0; line-height: 1.85; margin-bottom: 6px; }
+
+    .info-box {
+      background: var(--bg-card); border: 1px solid var(--border-purple);
+      border-left: 3px solid var(--purple); padding: 20px 24px;
+      border-radius: var(--radius); margin: 20px 0;
+    }
+    .info-box p { margin-bottom: 6px; }
+    .info-box p:last-child { margin-bottom: 0; }
+
+    footer { background: var(--bg-alt); border-top: 1px solid var(--border); padding: 40px 0; }
+    .footer-inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px; }
+    .footer-logo { font-family: var(--font-display); font-size: 1.2rem; font-weight: 900; letter-spacing: .1em; text-transform: uppercase; }
+    .footer-logo span { color: var(--purple); }
+    .footer-links { display: flex; gap: 28px; list-style: none; }
+    .footer-links a {
+      font-size: .72rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+      color: var(--text-muted); transition: color var(--transition); text-decoration: none;
+    }
+    .footer-links a:hover { color: var(--text); text-decoration: none; }
+    .footer-links a.active { color: var(--purple); }
+    .footer-copy { font-size: .72rem; color: var(--text-muted); letter-spacing: .05em; }
+
+    @media (max-width: 640px) {
+      .footer-inner { flex-direction: column; text-align: center; }
+      .footer-links { flex-wrap: wrap; justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <nav>
+        <a href="index.html" class="logo">Zenith<span>.</span></a>
+        <a href="index.html" class="nav-back">Zurück zur Startseite</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page-hero">
+    <div class="container">
+      <span class="label">Rechtliches</span>
+      <h1>Allgemeine Geschäfts<span>bedingungen</span></h1>
+      <p class="meta">Stand: März 2026 &nbsp;|&nbsp; Zenith DMS Software</p>
+    </div>
+  </div>
+
+  <main class="content">
+    <div class="container">
+
+      <section>
+        <h2>§ 1 Geltungsbereich</h2>
+        <p>
+          Diese Allgemeinen Geschäftsbedingungen (nachfolgend „AGB") gelten für alle gegenwärtigen und
+          zukünftigen Geschäfte zwischen der <strong>[Unternehmensname]</strong> (nachfolgend „Anbieter")
+          und dem Kunden (nachfolgend „Lizenznehmer") über die Nutzung der Software „Zenith DMS"
+          (nachfolgend „Software").
+        </p>
+        <p>
+          Entgegenstehende oder abweichende Bedingungen des Lizenznehmers werden nicht anerkannt, es sei
+          denn, der Anbieter stimmt ihrer Geltung ausdrücklich schriftlich zu.
+        </p>
+        <p style="color:var(--text-muted); font-size:.85rem;">
+          <em>Hinweis: Platzhalter [Unternehmensname] und weitere eckige Klammern durch Ihre rechtlichen Angaben ersetzen.</em>
+        </p>
+      </section>
+
+      <section>
+        <h2>§ 2 Vertragsgegenstand</h2>
+        <p>
+          Gegenstand dieser AGB ist die Überlassung von Nutzungsrechten an der Software „Zenith DMS",
+          einem lokal betriebenen Dokumenten-Management-System mit KI-Funktionen für Kanzleien und
+          Arztpraxen. Die Software wird ausschließlich lokal auf den Systemen des Lizenznehmers
+          betrieben; eine Cloud-Verarbeitung von Daten findet nicht statt.
+        </p>
+        <p>
+          Der genaue Leistungsumfang ergibt sich aus dem jeweiligen Angebot bzw. dem Lizenzvertrag sowie
+          der aktuellen Produktbeschreibung auf <a href="https://myzenith.org">myzenith.org</a>.
+        </p>
+      </section>
+
+      <section>
+        <h2>§ 3 Vertragsschluss</h2>
+        <p>
+          Die Darstellung der Software auf der Website des Anbieters stellt kein rechtlich bindendes
+          Angebot, sondern eine Aufforderung zur Abgabe eines Angebots (invitatio ad offerendum) dar.
+        </p>
+        <p>
+          Ein Vertrag kommt zustande, wenn der Lizenznehmer ein Angebot abgibt und der Anbieter dieses
+          durch eine schriftliche Auftragsbestätigung oder durch Bereitstellung der Lizenz annimmt.
+        </p>
+      </section>
+
+      <section>
+        <h2>§ 4 Lizenzgewährung und Nutzungsrechte</h2>
+
+        <h3>4.1 Einräumung der Lizenz</h3>
+        <p>
+          Der Anbieter räumt dem Lizenznehmer nach vollständiger Zahlung des vereinbarten Lizenzentgelts
+          ein nicht-ausschließliches, nicht übertragbares Recht ein, die Software im Rahmen des
+          vereinbarten Umfangs zu nutzen.
+        </p>
+
+        <h3>4.2 Nutzungsumfang</h3>
+        <p>Der Lizenznehmer ist berechtigt, die Software:</p>
+        <ul>
+          <li>auf der vereinbarten Anzahl von Arbeitsplätzen / Servern zu installieren und zu betreiben,</li>
+          <li>für eigene interne Geschäftszwecke zu nutzen,</li>
+          <li>Sicherungskopien anzufertigen, soweit dies für den ordnungsgemäßen Betrieb erforderlich ist.</li>
+        </ul>
+
+        <h3>4.3 Verbotene Handlungen</h3>
+        <p>Dem Lizenznehmer ist untersagt:</p>
+        <ul>
+          <li>die Software zu vervielfältigen, zu verbreiten oder öffentlich zugänglich zu machen,</li>
+          <li>die Software an Dritte zu vermieten, zu verleihen oder unterzulizenzieren,</li>
+          <li>den Quellcode durch Reverse Engineering, Decompilierung oder Disassemblierung zu ermitteln,</li>
+          <li>Urheberrechtsvermerke, Markenzeichen oder sonstige Schutzvermerke zu entfernen.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>§ 5 Vergütung und Zahlungsbedingungen</h2>
+        <p>
+          Die Vergütung richtet sich nach dem jeweils gültigen Preisblatt bzw. dem individuellen Angebot
+          des Anbieters. Alle Preise verstehen sich zuzüglich der gesetzlichen Umsatzsteuer.
+        </p>
+        <p>
+          Rechnungen sind innerhalb von 14 Tagen nach Rechnungsstellung ohne Abzug fällig. Bei
+          Zahlungsverzug ist der Anbieter berechtigt, Verzugszinsen in Höhe von 9 Prozentpunkten über
+          dem jeweiligen Basiszinssatz gemäß § 288 Abs. 2 BGB zu berechnen.
+        </p>
+      </section>
+
+      <section>
+        <h2>§ 6 Laufzeit und Kündigung</h2>
+        <p>
+          Abonnementverträge werden für die vereinbarte Laufzeit geschlossen und verlängern sich
+          automatisch um denselben Zeitraum, sofern sie nicht mit einer Frist von 30 Tagen vor
+          Vertragsende schriftlich oder per E-Mail gekündigt werden.
+        </p>
+        <p>
+          Das Recht zur außerordentlichen Kündigung aus wichtigem Grund bleibt unberührt. Ein wichtiger
+          Grund für den Anbieter liegt insbesondere vor, wenn der Lizenznehmer gegen wesentliche
+          Bestimmungen dieser AGB verstößt und diesen Verstoß auch nach Abmahnung nicht abstellt.
+        </p>
+      </section>
+
+      <section>
+        <h2>§ 7 Gewährleistung und Mängelbeseitigung</h2>
+        <p>
+          Der Anbieter gewährleistet, dass die Software bei vertragsgemäßem Betrieb im Wesentlichen
+          die in der Produktbeschreibung angegebenen Funktionen erfüllt. Geringfügige Abweichungen
+          begründen keinen Mangel.
+        </p>
+        <p>
+          Mängel sind vom Lizenznehmer unverzüglich nach Entdeckung schriftlich oder per E-Mail
+          anzuzeigen. Der Anbieter ist berechtigt, Mängel zunächst durch Nachbesserung zu beheben.
+          Schlägt die Nachbesserung zweimal fehl, kann der Lizenznehmer Minderung oder – bei erheblichen
+          Mängeln – Rücktritt vom Vertrag verlangen.
+        </p>
+      </section>
+
+      <section>
+        <h2>§ 8 Haftungsbeschränkung</h2>
+        <p>
+          Der Anbieter haftet unbeschränkt für Schäden aus der Verletzung des Lebens, des Körpers oder
+          der Gesundheit sowie für Schäden, die auf Vorsatz oder grober Fahrlässigkeit beruhen, und
+          für Schäden, die durch das Fehlen einer zugesicherten Eigenschaft entstehen.
+        </p>
+        <p>
+          Für leichte Fahrlässigkeit haftet der Anbieter nur bei Verletzung wesentlicher
+          Vertragspflichten (Kardinalpflichten). In diesem Fall ist die Haftung auf den
+          vertragstypischen, vorhersehbaren Schaden begrenzt. Im Übrigen ist die Haftung für leicht
+          fahrlässig verursachte Schäden ausgeschlossen.
+        </p>
+        <p>
+          Die Haftung nach dem Produkthaftungsgesetz bleibt unberührt.
+        </p>
+      </section>
+
+      <section>
+        <h2>§ 9 Datenschutz</h2>
+        <p>
+          Die Software verarbeitet alle Daten ausschließlich lokal auf den Systemen des Lizenznehmers.
+          Der Anbieter hat keinen Zugriff auf die vom Lizenznehmer in der Software erfassten Daten.
+        </p>
+        <p>
+          Informationen zur Verarbeitung personenbezogener Daten im Rahmen der Vertragsbeziehung und
+          des Website-Betriebs finden Sie in unserer <a href="datenschutz.html">Datenschutzerklärung</a>.
+        </p>
+      </section>
+
+      <section>
+        <h2>§ 10 Änderungen der AGB</h2>
+        <p>
+          Der Anbieter ist berechtigt, diese AGB mit einer Ankündigungsfrist von 30 Tagen zu ändern.
+          Die Änderungen werden dem Lizenznehmer per E-Mail mitgeteilt. Widerspricht der Lizenznehmer
+          nicht innerhalb der Ankündigungsfrist, gelten die neuen AGB als akzeptiert. Auf das
+          Widerspruchsrecht und die Folgen des Schweigens wird der Lizenznehmer in der
+          Änderungsmitteilung ausdrücklich hingewiesen.
+        </p>
+      </section>
+
+      <section>
+        <h2>§ 11 Schlussbestimmungen</h2>
+
+        <h3>11.1 Anwendbares Recht</h3>
+        <p>
+          Es gilt das Recht der Bundesrepublik Deutschland unter Ausschluss des UN-Kaufrechts (CISG).
+        </p>
+
+        <h3>11.2 Gerichtsstand</h3>
+        <p>
+          Sofern der Lizenznehmer Kaufmann, juristische Person des öffentlichen Rechts oder
+          öffentlich-rechtliches Sondervermögen ist, ist ausschließlicher Gerichtsstand für alle
+          Streitigkeiten aus diesem Vertrag der Sitz des Anbieters.
+        </p>
+
+        <h3>11.3 Salvatorische Klausel</h3>
+        <p>
+          Sollten einzelne Bestimmungen dieser AGB unwirksam oder undurchführbar sein oder werden,
+          bleibt die Wirksamkeit der übrigen Bestimmungen unberührt. An die Stelle der unwirksamen
+          oder undurchführbaren Bestimmung tritt eine wirksame Regelung, die dem wirtschaftlichen
+          Zweck der unwirksamen Bestimmung am nächsten kommt.
+        </p>
+
+        <h3>11.4 Schriftform</h3>
+        <p>
+          Änderungen und Ergänzungen dieser AGB bedürfen der Schriftform. Dies gilt auch für die
+          Aufhebung dieses Schriftformerfordernisses.
+        </p>
+      </section>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-logo">Zenith<span>.</span></div>
+        <ul class="footer-links">
+          <li><a href="impressum.html">Impressum</a></li>
+          <li><a href="datenschutz.html">Datenschutz</a></li>
+          <li><a href="agb.html" class="active">AGB</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+        <p class="footer-copy">© 2025 Zenith DMS. Alle Rechte vorbehalten.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

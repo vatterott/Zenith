@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Kontaktieren Sie das Zenith-Team – für Anfragen, Demos und Support." />
+  <title>Kontakt – Zenith DMS</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg:            #08080F;
+      --bg-alt:        #0D0D1A;
+      --bg-card:       #111120;
+      --purple:        #CC2299;
+      --purple-dim:    #A81A7A;
+      --purple-glow:   rgba(204,34,153,.28);
+      --cyan:          #FFFFFF;
+      --text:          #F0F0FF;
+      --text-muted:    #6A6A85;
+      --border:        rgba(255,255,255,.07);
+      --border-purple: rgba(204,34,153,.35);
+      --font-display:  'Barlow Condensed', 'Impact', sans-serif;
+      --font-body:     'Barlow', system-ui, sans-serif;
+      --transition:    .3s ease;
+      --radius:        3px;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-body); background-color: var(--bg); color: var(--text); line-height: 1.6; overflow-x: hidden; }
+    a { color: var(--purple); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container { max-width: 1080px; margin: 0 auto; padding: 0 32px; }
+
+    header {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      padding: 20px 0;
+      background: rgba(8,8,15,.96);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(16px);
+    }
+    nav { display: flex; align-items: center; justify-content: space-between; }
+    .logo {
+      font-family: var(--font-display); font-size: 1.45rem; font-weight: 900;
+      letter-spacing: .1em; text-transform: uppercase; color: var(--text); text-decoration: none;
+    }
+    .logo:hover { text-decoration: none; }
+    .logo span { color: var(--purple); }
+    .nav-back {
+      font-size: .72rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase;
+      color: var(--text-muted); transition: color var(--transition); text-decoration: none;
+    }
+    .nav-back:hover { color: var(--text); text-decoration: none; }
+    .nav-back::before { content: '← '; }
+
+    /* ─── Page hero ────────────────────────────────────── */
+    .page-hero { padding: 160px 0 80px; border-bottom: 1px solid var(--border); }
+    .page-hero .label {
+      display: inline-block; font-size: .68rem; font-weight: 700;
+      letter-spacing: .22em; text-transform: uppercase; color: var(--cyan); margin-bottom: 16px;
+    }
+    .page-hero h1 {
+      font-family: var(--font-display); font-size: clamp(2.4rem, 5vw, 3.6rem);
+      font-weight: 900; line-height: 1.05; text-transform: uppercase;
+      letter-spacing: .02em; margin-bottom: 16px;
+    }
+    .page-hero h1 span { color: var(--purple); }
+    .page-hero .sub {
+      font-size: .97rem; color: var(--text-muted);
+      max-width: 520px; line-height: 1.8;
+    }
+
+    /* ─── Contact layout ───────────────────────────────── */
+    .contact-section { padding: 100px 0 120px; }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      gap: 80px;
+      align-items: start;
+    }
+
+    /* ─── Info column ──────────────────────────────────── */
+    .contact-info h2 {
+      font-family: var(--font-display); font-size: 1.6rem; font-weight: 800;
+      text-transform: uppercase; letter-spacing: .04em;
+      color: var(--text); margin-bottom: 28px;
+    }
+    .contact-info h2 span { color: var(--purple); }
+    .contact-item {
+      display: flex; flex-direction: column;
+      gap: 4px; margin-bottom: 32px;
+    }
+    .contact-item .ci-label {
+      font-size: .68rem; font-weight: 700; letter-spacing: .2em;
+      text-transform: uppercase; color: var(--text-muted);
+    }
+    .contact-item .ci-value {
+      font-size: 1rem; color: var(--text); font-weight: 500;
+    }
+    .contact-item .ci-value a { color: var(--text); }
+    .contact-item .ci-value a:hover { color: var(--purple); text-decoration: none; }
+
+    .response-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--bg-card); border: 1px solid var(--border-purple);
+      padding: 10px 16px; border-radius: var(--radius);
+      font-size: .75rem; font-weight: 700; letter-spacing: .1em;
+      text-transform: uppercase; color: var(--text-muted); margin-top: 8px;
+    }
+    .response-badge::before {
+      content: ''; display: block; width: 8px; height: 8px;
+      border-radius: 50%; background: var(--purple);
+      box-shadow: 0 0 8px var(--purple-glow);
+    }
+
+    /* ─── Form column ──────────────────────────────────── */
+    .contact-form-wrap {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      padding: 48px;
+      border-radius: 4px;
+    }
+    .contact-form-wrap h3 {
+      font-family: var(--font-display); font-size: 1.4rem; font-weight: 800;
+      text-transform: uppercase; letter-spacing: .04em;
+      color: var(--text); margin-bottom: 32px;
+    }
+    .contact-form-wrap h3 span { color: var(--purple); }
+
+    .form-row {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px;
+    }
+    .form-group { display: flex; flex-direction: column; gap: 8px; margin-bottom: 16px; }
+    .form-group label {
+      font-size: .68rem; font-weight: 700; letter-spacing: .16em;
+      text-transform: uppercase; color: var(--text-muted);
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      background: var(--bg-alt);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 12px 16px;
+      color: var(--text);
+      font-family: var(--font-body);
+      font-size: .94rem;
+      transition: border-color var(--transition);
+      outline: none;
+      width: 100%;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--purple);
+    }
+    .form-group select { cursor: pointer; }
+    .form-group textarea { resize: vertical; min-height: 140px; }
+    .form-group input::placeholder,
+    .form-group textarea::placeholder { color: var(--text-muted); }
+
+    .form-note {
+      font-size: .78rem; color: var(--text-muted);
+      line-height: 1.7; margin-bottom: 24px;
+    }
+    .form-note a { color: var(--purple); }
+
+    .btn-submit {
+      width: 100%;
+      padding: 14px 36px;
+      background: var(--purple);
+      color: #fff;
+      font-family: var(--font-body);
+      font-weight: 700;
+      font-size: .72rem;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      border-radius: var(--radius);
+      border: none;
+      cursor: pointer;
+      transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
+      box-shadow: 0 4px 28px var(--purple-glow);
+    }
+    .btn-submit:hover {
+      background: var(--purple-dim);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 40px var(--purple-glow);
+    }
+
+    /* success state (JS toggled) */
+    .form-success {
+      display: none;
+      text-align: center;
+      padding: 60px 20px;
+    }
+    .form-success .success-icon {
+      font-size: 2.5rem; margin-bottom: 16px;
+    }
+    .form-success h4 {
+      font-family: var(--font-display); font-size: 1.6rem; font-weight: 800;
+      text-transform: uppercase; color: var(--text); margin-bottom: 12px;
+    }
+    .form-success p { font-size: .94rem; color: var(--text-muted); }
+
+    /* ─── Footer ───────────────────────────────────────── */
+    footer { background: var(--bg-alt); border-top: 1px solid var(--border); padding: 40px 0; }
+    .footer-inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px; }
+    .footer-logo { font-family: var(--font-display); font-size: 1.2rem; font-weight: 900; letter-spacing: .1em; text-transform: uppercase; }
+    .footer-logo span { color: var(--purple); }
+    .footer-links { display: flex; gap: 28px; list-style: none; }
+    .footer-links a {
+      font-size: .72rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+      color: var(--text-muted); transition: color var(--transition); text-decoration: none;
+    }
+    .footer-links a:hover { color: var(--text); text-decoration: none; }
+    .footer-links a.active { color: var(--purple); }
+    .footer-copy { font-size: .72rem; color: var(--text-muted); letter-spacing: .05em; }
+
+    @media (max-width: 860px) {
+      .contact-grid { grid-template-columns: 1fr; gap: 60px; }
+    }
+    @media (max-width: 640px) {
+      .form-row { grid-template-columns: 1fr; }
+      .contact-form-wrap { padding: 32px 24px; }
+      .footer-inner { flex-direction: column; text-align: center; }
+      .footer-links { flex-wrap: wrap; justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <nav>
+        <a href="index.html" class="logo">Zenith<span>.</span></a>
+        <a href="index.html" class="nav-back">Zurück zur Startseite</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page-hero">
+    <div class="container">
+      <span class="label">Kontakt</span>
+      <h1>Sprechen Sie mit <span>uns</span></h1>
+      <p class="sub">
+        Haben Sie Fragen zu Zenith, möchten eine Demo buchen oder direkt loslegen?
+        Wir melden uns persönlich bei Ihnen.
+      </p>
+    </div>
+  </div>
+
+  <section class="contact-section">
+    <div class="container">
+      <div class="contact-grid">
+
+        <!-- ─── Info ──────────────────────────────────── -->
+        <div class="contact-info">
+          <h2>So erreichen<br /><span>Sie uns</span></h2>
+
+          <div class="contact-item">
+            <span class="ci-label">E-Mail</span>
+            <span class="ci-value"><a href="mailto:info@myzenith.org">info@myzenith.org</a></span>
+          </div>
+
+          <div class="contact-item">
+            <span class="ci-label">Demo &amp; Vertrieb</span>
+            <span class="ci-value"><a href="mailto:sales@myzenith.org">sales@myzenith.org</a></span>
+          </div>
+
+          <div class="contact-item">
+            <span class="ci-label">Support</span>
+            <span class="ci-value"><a href="mailto:support@myzenith.org">support@myzenith.org</a></span>
+          </div>
+
+          <div class="contact-item">
+            <span class="ci-label">Hauptsitz</span>
+            <span class="ci-value">
+              [Straße und Hausnummer]<br />
+              [PLZ] [Ort], Deutschland
+            </span>
+          </div>
+
+          <div class="response-badge">Typische Antwortzeit: 1 Werktag</div>
+        </div>
+
+        <!-- ─── Form ──────────────────────────────────── -->
+        <div class="contact-form-wrap">
+          <h3>Nachricht <span>senden</span></h3>
+
+          <form id="contactForm" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="fname">Vorname</label>
+                <input type="text" id="fname" name="fname" placeholder="Max" autocomplete="given-name" required />
+              </div>
+              <div class="form-group">
+                <label for="lname">Nachname</label>
+                <input type="text" id="lname" name="lname" placeholder="Mustermann" autocomplete="family-name" required />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="email">E-Mail-Adresse</label>
+              <input type="email" id="email" name="email" placeholder="max@kanzlei.de" autocomplete="email" required />
+            </div>
+
+            <div class="form-group">
+              <label for="company">Praxis / Kanzlei</label>
+              <input type="text" id="company" name="company" placeholder="Kanzlei Mustermann" autocomplete="organization" />
+            </div>
+
+            <div class="form-group">
+              <label for="topic">Thema</label>
+              <select id="topic" name="topic" required>
+                <option value="" disabled selected>Bitte auswählen …</option>
+                <option value="demo">Demo-Termin vereinbaren</option>
+                <option value="pricing">Preise &amp; Lizenzierung</option>
+                <option value="technical">Technische Fragen</option>
+                <option value="support">Support &amp; Hilfe</option>
+                <option value="other">Sonstiges</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Nachricht</label>
+              <textarea id="message" name="message" placeholder="Wie können wir Ihnen helfen?" required></textarea>
+            </div>
+
+            <p class="form-note">
+              Mit dem Absenden stimmen Sie zu, dass wir Ihre Angaben zur Bearbeitung Ihrer Anfrage
+              verwenden. Weitere Informationen finden Sie in unserer
+              <a href="datenschutz.html">Datenschutzerklärung</a>.
+            </p>
+
+            <button type="submit" class="btn-submit">Nachricht absenden</button>
+          </form>
+
+          <div class="form-success" id="formSuccess">
+            <div class="success-icon">✓</div>
+            <h4>Nachricht erhalten</h4>
+            <p>Vielen Dank – wir melden uns innerhalb eines Werktages bei Ihnen.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-logo">Zenith<span>.</span></div>
+        <ul class="footer-links">
+          <li><a href="impressum.html">Impressum</a></li>
+          <li><a href="datenschutz.html">Datenschutz</a></li>
+          <li><a href="agb.html">AGB</a></li>
+          <li><a href="kontakt.html" class="active">Kontakt</a></li>
+        </ul>
+        <p class="footer-copy">© 2025 Zenith DMS. Alle Rechte vorbehalten.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const form = this;
+      const required = form.querySelectorAll('[required]');
+      let valid = true;
+
+      required.forEach(function (el) {
+        el.style.borderColor = '';
+        if (!el.value.trim()) {
+          el.style.borderColor = '#CC2299';
+          valid = false;
+        }
+      });
+
+      if (!valid) return;
+
+      // Replace this block with your actual form submission logic
+      // (e.g. fetch to a backend / form service like Formspree / Netlify Forms)
+      form.style.display = 'none';
+      document.getElementById('formSuccess').style.display = 'block';
+    });
+  </script>
+
+</body>
+</html>
