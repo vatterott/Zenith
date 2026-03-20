@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Datenschutzerklärung von Zenith DMS – Informationen zur Verarbeitung personenbezogener Daten gemäß DSGVO." />
+  <title>Datenschutzerklärung – Zenith DMS</title>
+  <meta name="robots" content="noindex, follow" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ─── Tokens ───────────────────────────────────────── */
+    :root {
+      --bg:            #08080F;
+      --bg-alt:        #0D0D1A;
+      --bg-card:       #111120;
+      --purple:        #CC2299;
+      --purple-dim:    #A81A7A;
+      --purple-glow:   rgba(204,34,153,.28);
+      --cyan:          #FFFFFF;
+      --text:          #F0F0FF;
+      --text-muted:    #6A6A85;
+      --border:        rgba(255,255,255,.07);
+      --border-purple: rgba(204,34,153,.35);
+      --font-display:  'Barlow Condensed', 'Impact', sans-serif;
+      --font-body:     'Barlow', system-ui, sans-serif;
+      --transition:    .3s ease;
+      --radius:        3px;
+    }
+
+    /* ─── Reset ────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font-body);
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    a { color: var(--purple); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* ─── Utility ──────────────────────────────────────── */
+    .container { max-width: 860px; margin: 0 auto; padding: 0 32px; }
+    .divider { height: 1px; background: var(--border); }
+
+    /* ─── Navigation ───────────────────────────────────── */
+    header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      padding: 20px 0;
+      background: rgba(8,8,15,.96);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(16px);
+    }
+    nav { display: flex; align-items: center; justify-content: space-between; }
+    .logo {
+      font-family: var(--font-display);
+      font-size: 1.45rem;
+      font-weight: 900;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--text);
+      text-decoration: none;
+    }
+    .logo:hover { text-decoration: none; }
+    .logo span { color: var(--purple); }
+    .nav-back {
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      transition: color var(--transition);
+      text-decoration: none;
+    }
+    .nav-back:hover { color: var(--text); text-decoration: none; }
+    .nav-back::before { content: '← '; }
+
+    /* ─── Page header ──────────────────────────────────── */
+    .page-hero {
+      padding: 160px 0 80px;
+      border-bottom: 1px solid var(--border);
+    }
+    .page-hero .label {
+      display: inline-block;
+      font-size: .68rem;
+      font-weight: 700;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: var(--cyan);
+      margin-bottom: 16px;
+    }
+    .page-hero h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2.4rem, 5vw, 3.6rem);
+      font-weight: 900;
+      line-height: 1.05;
+      text-transform: uppercase;
+      letter-spacing: .02em;
+      margin-bottom: 16px;
+    }
+    .page-hero h1 span { color: var(--purple); }
+    .page-hero .meta {
+      font-size: .82rem;
+      color: var(--text-muted);
+      letter-spacing: .05em;
+    }
+
+    /* ─── Content ──────────────────────────────────────── */
+    .content {
+      padding: 80px 0 120px;
+    }
+    .content section {
+      margin-bottom: 60px;
+    }
+    .content h2 {
+      font-family: var(--font-display);
+      font-size: 1.6rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+      color: var(--text);
+      margin-bottom: 20px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border);
+    }
+    .content h3 {
+      font-family: var(--font-body);
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--purple);
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      margin: 28px 0 10px;
+    }
+    .content p {
+      font-size: .97rem;
+      color: #C8C8E0;
+      line-height: 1.85;
+      margin-bottom: 14px;
+    }
+    .content ul, .content ol {
+      margin: 0 0 14px 24px;
+    }
+    .content li {
+      font-size: .97rem;
+      color: #C8C8E0;
+      line-height: 1.85;
+      margin-bottom: 6px;
+    }
+    .content a { color: var(--purple); }
+    .content a:hover { text-decoration: underline; }
+
+    .info-box {
+      background: var(--bg-card);
+      border: 1px solid var(--border-purple);
+      border-left: 3px solid var(--purple);
+      padding: 20px 24px;
+      border-radius: var(--radius);
+      margin: 20px 0;
+    }
+    .info-box p { margin-bottom: 6px; }
+    .info-box p:last-child { margin-bottom: 0; }
+
+    /* ─── Footer ───────────────────────────────────────── */
+    footer {
+      background: var(--bg-alt);
+      border-top: 1px solid var(--border);
+      padding: 40px 0;
+    }
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .footer-logo {
+      font-family: var(--font-display);
+      font-size: 1.2rem;
+      font-weight: 900;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+    .footer-logo span { color: var(--purple); }
+    .footer-links { display: flex; gap: 28px; list-style: none; }
+    .footer-links a {
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      transition: color var(--transition);
+      text-decoration: none;
+    }
+    .footer-links a:hover { color: var(--text); text-decoration: none; }
+    .footer-links a.active { color: var(--purple); }
+    .footer-copy { font-size: .72rem; color: var(--text-muted); letter-spacing: .05em; }
+
+    @media (max-width: 640px) {
+      .footer-inner { flex-direction: column; text-align: center; }
+      .footer-links { flex-wrap: wrap; justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════════════
+       HEADER
+  ══════════════════════════════════════════════ -->
+  <header>
+    <div class="container">
+      <nav>
+        <a href="index.html" class="logo">Zenith<span>.</span></a>
+        <a href="index.html" class="nav-back">Zurück zur Startseite</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ══════════════════════════════════════════════
+       PAGE HERO
+  ══════════════════════════════════════════════ -->
+  <div class="page-hero">
+    <div class="container">
+      <span class="label">Rechtliches</span>
+      <h1>Datenschutz<span>erklärung</span></h1>
+      <p class="meta">Stand: März 2026 &nbsp;|&nbsp; Gültig für myzenith.org</p>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════
+       CONTENT
+  ══════════════════════════════════════════════ -->
+  <main class="content">
+    <div class="container">
+
+      <!-- 1. Verantwortlicher -->
+      <section>
+        <h2>1. Verantwortlicher</h2>
+        <p>
+          Verantwortlicher im Sinne der Datenschutz-Grundverordnung (DSGVO) und anderer nationaler
+          Datenschutzgesetze der Mitgliedstaaten sowie sonstiger datenschutzrechtlicher Bestimmungen ist:
+        </p>
+        <div class="info-box">
+          <p><strong>[Unternehmensname]</strong></p>
+          <p>[Straße und Hausnummer]</p>
+          <p>[PLZ] [Ort]</p>
+          <p>Deutschland</p>
+          <p>E-Mail: <a href="mailto:info@myzenith.org">info@myzenith.org</a></p>
+          <p>Website: <a href="https://myzenith.org">https://myzenith.org</a></p>
+        </div>
+        <p style="color:var(--text-muted); font-size:.85rem;">
+          <em>Hinweis: Bitte ersetzen Sie die Platzhalterdaten durch Ihre vollständigen rechtlichen Angaben.</em>
+        </p>
+      </section>
+
+      <!-- 2. Allgemeine Hinweise -->
+      <section>
+        <h2>2. Allgemeine Hinweise</h2>
+        <p>
+          Der Schutz Ihrer persönlichen Daten ist uns ein besonderes Anliegen. Wir verarbeiten Ihre Daten
+          daher ausschließlich auf Grundlage der gesetzlichen Bestimmungen (DSGVO, TKG 2021). In dieser
+          Datenschutzerklärung informieren wir Sie über die wichtigsten Aspekte der Datenverarbeitung im
+          Rahmen unserer Website.
+        </p>
+        <p>
+          Personenbezogene Daten sind alle Informationen, die sich auf eine identifizierte oder
+          identifizierbare natürliche Person beziehen. Hierzu gehören z. B. Angaben wie Ihr Name, Ihre
+          E-Mail-Adresse oder Ihre IP-Adresse.
+        </p>
+      </section>
+
+      <!-- 3. Hosting & Server-Log-Dateien -->
+      <section>
+        <h2>3. Hosting &amp; Server-Log-Dateien</h2>
+        <p>
+          Diese Website wird über <strong>GitHub Pages</strong> (GitHub, Inc., 88 Colin P. Kelly Jr. Street,
+          San Francisco, CA 94107, USA) gehostet. Beim Aufruf unserer Website übermitteln Sie dem Server
+          automatisch bestimmte technische Daten, die in sogenannten Server-Log-Dateien gespeichert werden:
+        </p>
+        <ul>
+          <li>IP-Adresse des anfragenden Geräts</li>
+          <li>Datum und Uhrzeit des Zugriffs</li>
+          <li>Aufgerufene URL / Dateiname</li>
+          <li>Übertragene Datenmenge</li>
+          <li>Browsertyp und -version</li>
+          <li>Verwendetes Betriebssystem</li>
+          <li>Referrer-URL (zuvor besuchte Seite)</li>
+        </ul>
+        <h3>Rechtsgrundlage</h3>
+        <p>
+          Die Verarbeitung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse).
+          Unser berechtigtes Interesse liegt in der Sicherstellung des technischen Betriebs und der
+          Sicherheit der Website.
+        </p>
+        <h3>Speicherdauer</h3>
+        <p>
+          Die Log-Dateien werden nach spätestens 30 Tagen automatisch gelöscht, sofern sie nicht zur
+          Aufklärung eines Sicherheitsvorfalls länger benötigt werden.
+        </p>
+        <p>
+          Weitere Informationen zum Datenschutz bei GitHub finden Sie unter:
+          <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener noreferrer">
+            GitHub Privacy Statement
+          </a>.
+        </p>
+      </section>
+
+      <!-- 4. Kontaktaufnahme per E-Mail -->
+      <section>
+        <h2>4. Kontaktaufnahme per E-Mail</h2>
+        <p>
+          Wenn Sie uns per E-Mail kontaktieren, werden die von Ihnen übermittelten Daten (Name,
+          E-Mail-Adresse, Nachrichteninhalt) bei uns gespeichert, um Ihre Anfrage zu bearbeiten und
+          etwaige Anschlussfragen zu stellen.
+        </p>
+        <h3>Rechtsgrundlage</h3>
+        <p>
+          Grundlage ist Art. 6 Abs. 1 lit. b DSGVO, sofern Ihre Anfrage auf den Abschluss eines Vertrags
+          gerichtet ist, ansonsten Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der Bearbeitung
+          von Anfragen).
+        </p>
+        <h3>Speicherdauer</h3>
+        <p>
+          Die im Rahmen der Kontaktaufnahme erhobenen Daten werden gelöscht, sobald die Anfrage
+          abschließend bearbeitet wurde, spätestens jedoch nach Ablauf gesetzlicher Aufbewahrungsfristen.
+        </p>
+      </section>
+
+      <!-- 5. Google Fonts -->
+      <section>
+        <h2>5. Google Fonts</h2>
+        <p>
+          Diese Website verwendet <strong>Google Fonts</strong> (Anbieter: Google LLC, 1600 Amphitheatre
+          Parkway, Mountain View, CA 94043, USA). Beim Aufruf einer Seite lädt Ihr Browser die
+          erforderlichen Schriftarten direkt von Googles Servern. Dabei wird Ihre IP-Adresse an Google
+          übermittelt.
+        </p>
+        <h3>Rechtsgrundlage</h3>
+        <p>
+          Die Einbindung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Unser berechtigtes
+          Interesse liegt in der einheitlichen und ansprechenden Darstellung unserer Website.
+        </p>
+        <p>
+          Weitere Informationen zu Google Fonts und dem Datenschutz bei Google finden Sie unter:
+          <a href="https://developers.google.com/fonts/faq/privacy" target="_blank" rel="noopener noreferrer">
+            developers.google.com/fonts/faq/privacy
+          </a> sowie unter
+          <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">
+            policies.google.com/privacy
+          </a>.
+        </p>
+      </section>
+
+      <!-- 6. Cookies -->
+      <section>
+        <h2>6. Cookies</h2>
+        <p>
+          Unsere Website verwendet ausschließlich technisch notwendige Cookies, die zum Betrieb der
+          Website erforderlich und nicht abschaltbar sind. Es werden keine Tracking-, Marketing- oder
+          Analyse-Cookies eingesetzt. Eine Einwilligung ist für den Einsatz technisch notwendiger Cookies
+          gemäß § 25 Abs. 2 TTDSG nicht erforderlich.
+        </p>
+      </section>
+
+      <!-- 7. Keine Analyse- oder Tracking-Dienste -->
+      <section>
+        <h2>7. Analyse- und Tracking-Dienste</h2>
+        <p>
+          Diese Website setzt keine Webanalyse-Dienste (z. B. Google Analytics, Matomo) und keine
+          Werbe- oder Social-Media-Tracking-Pixel ein. Es findet keine Profilbildung oder automatisierte
+          Entscheidungsfindung statt.
+        </p>
+      </section>
+
+      <!-- 8. Rechte der betroffenen Personen -->
+      <section>
+        <h2>8. Ihre Rechte als betroffene Person</h2>
+        <p>
+          Sie haben gegenüber uns folgende Rechte hinsichtlich der Sie betreffenden personenbezogenen
+          Daten:
+        </p>
+
+        <h3>Recht auf Auskunft (Art. 15 DSGVO)</h3>
+        <p>
+          Sie können Auskunft darüber verlangen, ob und welche personenbezogenen Daten wir von Ihnen
+          verarbeiten, sowie eine Kopie dieser Daten.
+        </p>
+
+        <h3>Recht auf Berichtigung (Art. 16 DSGVO)</h3>
+        <p>
+          Sie haben das Recht, die Berichtigung unrichtiger oder die Vervollständigung unvollständiger
+          personenbezogener Daten zu verlangen.
+        </p>
+
+        <h3>Recht auf Löschung (Art. 17 DSGVO)</h3>
+        <p>
+          Sie können die Löschung Ihrer personenbezogenen Daten verlangen, sofern die gesetzlichen
+          Voraussetzungen hierfür vorliegen.
+        </p>
+
+        <h3>Recht auf Einschränkung der Verarbeitung (Art. 18 DSGVO)</h3>
+        <p>
+          Sie haben das Recht, unter bestimmten Voraussetzungen die Einschränkung der Verarbeitung
+          Ihrer personenbezogenen Daten zu verlangen.
+        </p>
+
+        <h3>Recht auf Datenübertragbarkeit (Art. 20 DSGVO)</h3>
+        <p>
+          Sie haben das Recht, Ihre personenbezogenen Daten in einem strukturierten, gängigen und
+          maschinenlesbaren Format zu erhalten und diese Daten an einen anderen Verantwortlichen zu
+          übermitteln.
+        </p>
+
+        <h3>Widerspruchsrecht (Art. 21 DSGVO)</h3>
+        <p>
+          Sie haben das Recht, aus Gründen, die sich aus Ihrer besonderen Situation ergeben, jederzeit
+          gegen die Verarbeitung Sie betreffender personenbezogener Daten, die auf Art. 6 Abs. 1 lit. f
+          DSGVO (berechtigtes Interesse) beruht, Widerspruch einzulegen.
+        </p>
+
+        <h3>Widerruf einer Einwilligung</h3>
+        <p>
+          Sofern Sie uns eine Einwilligung zur Verarbeitung Ihrer Daten erteilt haben, können Sie diese
+          jederzeit mit Wirkung für die Zukunft widerrufen. Die Rechtmäßigkeit der bis zum Widerruf
+          erfolgten Verarbeitung bleibt davon unberührt.
+        </p>
+
+        <p>
+          Zur Ausübung Ihrer Rechte wenden Sie sich bitte per E-Mail an:
+          <a href="mailto:info@myzenith.org">info@myzenith.org</a>
+        </p>
+      </section>
+
+      <!-- 9. Beschwerderecht -->
+      <section>
+        <h2>9. Beschwerderecht bei der Aufsichtsbehörde</h2>
+        <p>
+          Unbeschadet anderweitiger verwaltungsrechtlicher oder gerichtlicher Rechtsbehelfe steht Ihnen
+          das Recht auf Beschwerde bei einer Datenschutz-Aufsichtsbehörde zu, wenn Sie der Ansicht sind,
+          dass die Verarbeitung der Sie betreffenden personenbezogenen Daten gegen die DSGVO verstößt.
+        </p>
+        <p>
+          Eine Liste der deutschen Datenschutzaufsichtsbehörden finden Sie beim Bundesbeauftragten für
+          den Datenschutz und die Informationsfreiheit (BfDI):
+          <a href="https://www.bfdi.bund.de/DE/Service/Anschriften/Laender/Laender-node.html" target="_blank" rel="noopener noreferrer">
+            www.bfdi.bund.de
+          </a>
+        </p>
+      </section>
+
+      <!-- 10. Datensicherheit -->
+      <section>
+        <h2>10. Datensicherheit</h2>
+        <p>
+          Unsere Website wird ausschließlich über eine verschlüsselte HTTPS-Verbindung (TLS) ausgeliefert.
+          Dadurch werden Ihre Daten bei der Übertragung zwischen Ihrem Browser und unserem Server vor dem
+          Zugriff Dritter geschützt.
+        </p>
+      </section>
+
+      <!-- 11. Aktualität -->
+      <section>
+        <h2>11. Aktualität und Änderung dieser Datenschutzerklärung</h2>
+        <p>
+          Diese Datenschutzerklärung ist aktuell gültig und hat den Stand März 2026. Durch die
+          Weiterentwicklung unserer Website oder aufgrund geänderter gesetzlicher bzw. behördlicher
+          Vorgaben kann es notwendig werden, diese Datenschutzerklärung anzupassen. Die jeweils aktuelle
+          Datenschutzerklärung kann jederzeit auf unserer Website unter
+          <a href="https://myzenith.org/datenschutz.html">myzenith.org/datenschutz.html</a> abgerufen werden.
+        </p>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- ══════════════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════════════ -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-logo">Zenith<span>.</span></div>
+        <ul class="footer-links">
+          <li><a href="#">Impressum</a></li>
+          <li><a href="datenschutz.html" class="active">Datenschutz</a></li>
+          <li><a href="#">AGB</a></li>
+          <li><a href="mailto:info@myzenith.org">Kontakt</a></li>
+        </ul>
+        <p class="footer-copy">© 2025 Zenith DMS. Alle Rechte vorbehalten.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
