@@ -86,7 +86,7 @@
     /* ─── Navigation ───────────────────────────────────── */
     header {
       position: fixed;
-      top: 0; left: 0; right: 0;
+      top: 44px; left: 0; right: 0;
       z-index: 100;
       padding: 20px 0;
       transition: background var(--transition), border-color var(--transition);
@@ -136,7 +136,7 @@
       align-items: center;
       position: relative;
       overflow: hidden;
-      padding-top: 80px;
+      padding-top: 124px;
       padding-bottom: 100px;
     }
     .hero-bg {
@@ -881,6 +881,53 @@
     @media (max-width: 600px) {
       .features-grid { grid-template-columns: 1fr; }
     }
+
+    /* ─── Announcement bar ─────────────────────────── */
+    .announce-bar {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 101;
+      height: 44px;
+      background: linear-gradient(90deg, #0D0820 0%, #160D30 50%, #0D0820 100%);
+      border-bottom: 1px solid var(--border-purple);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      padding: 0 24px;
+    }
+    .announce-badge {
+      font-size: .58rem;
+      font-weight: 700;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: #fff;
+      background: var(--purple);
+      padding: 3px 10px;
+      border-radius: 2px;
+      flex-shrink: 0;
+    }
+    .announce-text {
+      font-size: .7rem;
+      color: var(--text-muted);
+      letter-spacing: .03em;
+    }
+    .announce-link {
+      font-size: .6rem;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--cyan);
+      border: 1px solid rgba(0,212,184,.35);
+      padding: 4px 14px;
+      border-radius: 2px;
+      flex-shrink: 0;
+      transition: background var(--transition), color var(--transition);
+    }
+    .announce-link:hover { background: var(--cyan); color: var(--bg); }
+    @media (max-width: 600px) {
+      .announce-text { display: none; }
+    }
   </style>
 </head>
 
@@ -889,6 +936,13 @@
   <!-- ══════════════════════════════════════════════
        NAVIGATION
   ══════════════════════════════════════════════ -->
+  <!-- Announcement bar -->
+  <div class="announce-bar">
+    <span class="announce-badge">In Entwicklung</span>
+    <span class="announce-text">Marktstart voraussichtlich September 2026 &nbsp;·&nbsp; Unterstützen Sie das Projekt auf Kickstarter</span>
+    <a href="https://www.kickstarter.com/projects/125084900/491999603/edit/preview?ref=project_build" target="_blank" rel="noopener" class="announce-link">Zum Kickstarter →</a>
+  </div>
+
   <header id="header">
     <div class="container">
       <nav>
@@ -900,7 +954,7 @@
           <li><a href="#pricing">Preise</a></li>
           <li><a href="#cta">Kontakt</a></li>
         </ul>
-        <a href="#cta" class="nav-cta">Demo anfragen</a>
+        <a href="https://www.kickstarter.com/projects/125084900/491999603/edit/preview?ref=project_build" target="_blank" rel="noopener" class="nav-cta">Auf Kickstarter</a>
       </nav>
     </div>
   </header>
@@ -914,7 +968,7 @@
 
     <div class="container">
       <div class="hero-content">
-        <div class="label">Neu: Lokale KI-Technologie für professionelle Anwender</div>
+        <div class="label">In Entwicklung · Marktstart September 2026</div>
         <h1>
           IHRE DOKUMENTE.<br />
           IHRE INTELLIGENZ.<br />
@@ -1279,19 +1333,20 @@
     <div class="cta-glow"></div>
     <div class="container">
       <div class="cta-inner">
-        <div class="label">Jetzt starten</div>
-        <h2>Buchen Sie Ihre<br /><span class="accent">persönliche Live-Demo.</span></h2>
+        <div class="label">Jetzt unterstützen</div>
+        <h2>Seien Sie dabei –<br /><span class="accent">von Anfang an.</span></h2>
         <p>
-          Erleben Sie Zenith im echten Betrieb: KI-Suche, Fristmanagement und
-          automatische Klassifizierung – live in Ihrer Kanzlei oder Praxis,
-          ohne Risiko und ohne Verpflichtung.
+          Zenith befindet sich aktuell in der Entwicklung und wird voraussichtlich im
+          <strong style="color: var(--text);">September 2026</strong> marktreif sein.
+          Unterstützen Sie das Projekt auf Kickstarter und sichern Sie sich Ihren
+          Frühbucher-Vorzugspreis.
         </p>
         <div class="cta-actions">
-          <a href="mailto:info@myzenith.org?subject=Live-Demo anfragen" class="btn-primary">Live-Demo vereinbaren →</a>
-          <a href="#pricing" class="btn-outline">Preise &amp; Pakete ansehen</a>
+          <a href="https://www.kickstarter.com/projects/125084900/491999603/edit/preview?ref=project_build" target="_blank" rel="noopener" class="btn-primary">Auf Kickstarter unterstützen →</a>
+          <a href="mailto:info@myzenith.org?subject=Anfrage Zenith DMS" class="btn-outline">Kontakt aufnehmen</a>
         </div>
         <p style="margin-top:28px; font-size:.78rem; color: var(--text-muted);">
-          Einmalige Lizenz · Keine laufenden Abo-Kosten · 100 % lokal, keine Cloud-Pflicht
+          Einmalige Lizenz · Keine Abo-Kosten · 100 % lokal · Marktstart September 2026
         </p>
       </div>
     </div>
