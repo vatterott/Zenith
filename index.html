@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Zenith – Das erste Dokumenten-Management-System mit lokaler KI für Kanzleien und Arztpraxen. 100% lokal, keine Cloud, maximaler Datenschutz." />
-  <title>Zenith – Lokales DMS mit KI | Für Kanzleien &amp; Praxen</title>
+  <meta name="description" content="Zenith – Der souveräne Wissens-Hub für Industrie &amp; Business. Lokale KI für Ihre Dokumente – 100 % sicher, 100 % offline, 100 % souverän." />
+  <title>Zenith – Lokaler KI-Wissens-Hub | Für Industrie &amp; Business</title>
 
   <meta property="og:title" content="Zenith – Lokales DMS mit KI" />
-  <meta property="og:description" content="100 % lokale Dokumenten-Verwaltung mit KI – für Kanzleien und Praxen" />
+  <meta property="og:description" content="Der souveräne Wissens-Hub für Industrie &amp; Business – 100 % lokale KI für Ihre Dokumente" />
   <meta property="og:image" content="/assets/images/zenith-og.jpg" />
   <meta property="og:url" content="https://myzenith.org/" />
   <meta name="twitter:card" content="summary_large_image" />
@@ -595,8 +595,7 @@
       background: var(--border);
     }
     .compare-card {
-      padding: 44px 36px;
-      background: var(--bg-card);
+      padding: 52px 44px;
       position: relative;
       overflow: hidden;
     }
@@ -604,35 +603,95 @@
       content: '';
       position: absolute;
       top: 0; left: 0; right: 0;
-      height: 2px;
+      height: 3px;
     }
-    .compare-card--danger::after { background: #E05555; }
-    .compare-card--safe::after   { background: var(--cyan); }
+    .compare-card--danger {
+      background: linear-gradient(160deg, rgba(224,85,85,.06) 0%, var(--bg-card) 45%);
+      border: 1px solid rgba(224,85,85,.14);
+    }
+    .compare-card--danger::after {
+      background: linear-gradient(90deg, #E05555 0%, rgba(224,85,85,.3) 100%);
+      box-shadow: 0 0 18px rgba(224,85,85,.5);
+    }
+    .compare-card--safe {
+      background: linear-gradient(160deg, rgba(204,34,153,.07) 0%, var(--bg-card) 45%);
+      border: 1px solid var(--border-purple);
+    }
+    .compare-card--safe::after {
+      background: linear-gradient(90deg, var(--purple) 0%, rgba(204,34,153,.3) 100%);
+      box-shadow: 0 0 18px var(--purple-glow);
+    }
+    .compare-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      font-size: .58rem;
+      font-weight: 700;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      padding: 5px 12px;
+      border-radius: 2px;
+      margin-bottom: 22px;
+    }
+    .compare-card--danger .compare-badge {
+      background: rgba(224,85,85,.1);
+      color: #E07777;
+      border: 1px solid rgba(224,85,85,.22);
+    }
+    .compare-card--safe .compare-badge {
+      background: rgba(204,34,153,.1);
+      color: var(--purple);
+      border: 1px solid var(--border-purple);
+    }
     .compare-card h3 {
       font-family: var(--font-display);
-      font-size: 1.4rem;
-      font-weight: 800;
+      font-size: 1.7rem;
+      font-weight: 900;
       text-transform: uppercase;
-      letter-spacing: .03em;
-      margin-bottom: 28px;
+      letter-spacing: .02em;
+      line-height: 1.1;
+      margin-bottom: 32px;
+      color: var(--text);
     }
-    .compare-card--danger h3 { color: #E07777; }
-    .compare-card--safe h3   { color: var(--cyan); }
     .compare-list {
       list-style: none;
       display: flex;
       flex-direction: column;
-      gap: 16px;
     }
     .compare-list li {
       display: flex;
       align-items: flex-start;
-      gap: 12px;
+      gap: 14px;
       font-size: .88rem;
       color: var(--text-muted);
-      line-height: 1.7;
+      line-height: 1.72;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--border);
     }
-    .compare-list li .icon { flex-shrink: 0; }
+    .compare-list li:first-child { padding-top: 0; }
+    .compare-list li:last-child  { border-bottom: none; padding-bottom: 0; }
+    .compare-icon {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: .7rem;
+      font-style: normal;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .compare-icon--danger {
+      background: rgba(224,85,85,.1);
+      color: #E07777;
+      border: 1px solid rgba(224,85,85,.22);
+    }
+    .compare-icon--safe {
+      background: rgba(204,34,153,.1);
+      color: var(--purple);
+      border: 1px solid var(--border-purple);
+    }
 
     /* ─── Feature cards ────────────────────────────────── */
     .features-grid {
@@ -873,6 +932,7 @@
     @media (max-width: 960px) {
       .compare-grid { grid-template-columns: 1fr; gap: 16px; background: none; }
       .features-grid { grid-template-columns: repeat(2, 1fr); }
+      .usecases-grid { grid-template-columns: repeat(2, 1fr); }
       .industry-layout { grid-template-columns: 1fr; }
       .industry-tabs { background: none; gap: 8px; }
       .tab-btn { border: 1px solid var(--border); }
@@ -880,6 +940,65 @@
     }
     @media (max-width: 600px) {
       .features-grid { grid-template-columns: 1fr; }
+      .usecases-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    /* ─── Use Cases Grid ───────────────────────────────── */
+    .usecases-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 2px;
+      margin-top: 60px;
+      background: var(--border);
+    }
+    .usecase-card {
+      background: var(--bg-card);
+      padding: 30px 22px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      position: relative;
+      overflow: hidden;
+      transition: background var(--transition);
+      border: 1px solid transparent;
+    }
+    .usecase-card:hover {
+      background: rgba(204,34,153,.06);
+      border-color: var(--border-purple);
+    }
+    .usecase-card::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 2px;
+      background: var(--purple);
+      opacity: 0;
+      transition: opacity var(--transition);
+    }
+    .usecase-card:hover::after { opacity: 1; }
+    .usecase-icon { font-size: 1.9rem; line-height: 1; }
+    .usecase-sector {
+      font-size: .58rem;
+      font-weight: 700;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--purple);
+    }
+    .usecase-card h4 {
+      font-family: var(--font-display);
+      font-size: 1rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: .03em;
+      color: var(--text);
+      line-height: 1.25;
+      margin: 0;
+    }
+    .usecase-card p {
+      font-size: .81rem;
+      color: var(--text-muted);
+      line-height: 1.72;
+      margin: 0;
     }
 
     /* ─── Announcement bar ─────────────────────────── */
@@ -949,7 +1068,7 @@
         <a href="#hero" class="logo">Zenith<span>.</span></a>
         <ul class="nav-links">
           <li><a href="#features">Features</a></li>
-          <li><a href="#industry">Branchen</a></li>
+          <li><a href="#industry">Anwendungen</a></li>
           <li><a href="#technology">Technologie</a></li>
           <li><a href="#pricing">Preise</a></li>
           <li><a href="#cta">Kontakt</a></li>
@@ -970,14 +1089,13 @@
       <div class="hero-content">
         <div class="label">In Entwicklung · Marktstart September 2026</div>
         <h1>
-          IHRE DOKUMENTE.<br />
-          IHRE INTELLIGENZ.<br />
-          <span class="line-purple">ABSOLUTE DISKRETION.</span>
+          ZENITH: DER SOUVERÄNE<br />
+          WISSENS-HUB FÜR<br />
+          <span class="line-purple">INDUSTRIE &amp; BUSINESS.</span>
         </h1>
         <p class="hero-sub">
-          Das erste Dokumenten-Management-System mit lokaler KI, das Ihre sensiblen Daten
-          niemals verlässt. Entwickelt für Kanzleien und Praxen, die keine Kompromisse
-          beim Datenschutz machen.
+          Nutzen Sie die volle Power lokaler KI für Ihre Dokumente –
+          100 % sicher, 100 % offline, 100 % souverän.
         </p>
         <div class="hero-actions">
           <a href="#cta" class="btn-primary">Jetzt Zenith entdecken →</a>
@@ -999,30 +1117,32 @@
       <div class="label">Das Problem mit Cloud-KI</div>
       <h2 class="section-title">Warum Cloud-Lösungen<br /><span class="accent">keine Option</span> sind</h2>
       <p class="section-sub">
-        Mandantengeheimnis, ärztliche Schweigepflicht und DSGVO dulden keinen Kompromiss.
+        Betriebsgeheimnisse, Fachdaten und DSGVO dulden keinen Kompromiss.
         Zenith wurde genau dafür entwickelt.
       </p>
 
       <div class="compare-grid">
         <div class="compare-card compare-card--danger">
-          <h3>☁ Cloud-KI – Das versteckte Risiko</h3>
+          <div class="compare-badge">⚠ Risiko</div>
+          <h3>Cloud-KI –<br />Das versteckte Risiko</h3>
           <ul class="compare-list">
-            <li><span class="icon">⚠️</span><span>Sensible Mandanten- und Patientendaten verlassen Ihr Haus und werden auf fremde Server übertragen</span></li>
-            <li><span class="icon">⚠️</span><span>Verstoß gegen Berufsgeheimnis (§ 43a BRAO) und ärztliche Schweigepflicht (§ 203 StGB) möglich</span></li>
-            <li><span class="icon">⚠️</span><span>Datenschutz-Aufsichtsbehörden melden zunehmend Bußgelder bei unkontrollierter KI-Nutzung</span></li>
-            <li><span class="icon">⚠️</span><span>Intransparente Datenspeicherung durch KI-Anbieter – Trainingsdaten, Logs, Backups unkontrollierbar</span></li>
-            <li><span class="icon">⚠️</span><span>Abhängigkeit von Internetverbindung und externen Diensten gefährdet Ihre Verfügbarkeit</span></li>
+            <li><i class="compare-icon compare-icon--danger">✕</i><span>Sensible Geschäftsdaten, Betriebsgeheimnisse und Dokumentationen verlassen Ihr Haus und landen auf fremden Servern</span></li>
+            <li><i class="compare-icon compare-icon--danger">✕</i><span>Verstoß gegen DSGVO, Betriebsgeheimnis und branchenspezifische Compliance-Anforderungen möglich</span></li>
+            <li><i class="compare-icon compare-icon--danger">✕</i><span>Datenschutz-Aufsichtsbehörden melden zunehmend Bußgelder bei unkontrollierter KI-Nutzung</span></li>
+            <li><i class="compare-icon compare-icon--danger">✕</i><span>Intransparente Datenspeicherung durch KI-Anbieter – Trainingsdaten, Logs, Backups unkontrollierbar</span></li>
+            <li><i class="compare-icon compare-icon--danger">✕</i><span>Abhängigkeit von Internetverbindung und externen Diensten gefährdet Ihre Verfügbarkeit</span></li>
           </ul>
         </div>
 
         <div class="compare-card compare-card--safe">
-          <h3>✦ Zenith – Lokale Souveränität</h3>
+          <div class="compare-badge">✦ Lösung</div>
+          <h3>Zenith –<br />Lokale Souveränität</h3>
           <ul class="compare-list">
-            <li><span class="icon">✅</span><span>Alle KI-Prozesse laufen ausschließlich auf Ihrer Hardware – kein Byte verlässt Ihr Netzwerk</span></li>
-            <li><span class="icon">✅</span><span>Rechtssicher: vollständige Kontrolle über alle Daten, jederzeit auditierbar</span></li>
-            <li><span class="icon">✅</span><span>DSGVO-konform by Design – Datenschutzfolgenabschätzung problemlos umsetzbar</span></li>
-            <li><span class="icon">✅</span><span>Betrieb auf Ihrem lokalen Server (optimiert für Minisforum MS S1 Max) – keine Abhängigkeiten</span></li>
-            <li><span class="icon">✅</span><span>Funktioniert auch offline – maximale Verfügbarkeit und Unabhängigkeit</span></li>
+            <li><i class="compare-icon compare-icon--safe">✓</i><span>Alle KI-Prozesse laufen ausschließlich auf Ihrer Hardware – kein Byte verlässt Ihr Netzwerk</span></li>
+            <li><i class="compare-icon compare-icon--safe">✓</i><span>Rechtssicher: vollständige Kontrolle über alle Daten, jederzeit auditierbar</span></li>
+            <li><i class="compare-icon compare-icon--safe">✓</i><span>DSGVO-konform by Design – Datenschutzfolgenabschätzung problemlos umsetzbar</span></li>
+            <li><i class="compare-icon compare-icon--safe">✓</i><span>Betrieb auf Ihrem lokalen Server (optimiert für Minisforum MS S1 Max) – keine Abhängigkeiten</span></li>
+            <li><i class="compare-icon compare-icon--safe">✓</i><span>Funktioniert auch offline – maximale Verfügbarkeit und Unabhängigkeit</span></li>
           </ul>
         </div>
       </div>
@@ -1069,15 +1189,15 @@
           <div class="feature-num">01 — Suche</div>
           <h3>Intelligente Volltextsuche</h3>
           <p>Stellen Sie Fragen in natürlicher Sprache. Zenith durchsucht Ihre gesamte Dokumentenbasis mit semantischem Verständnis – nicht nur nach Keywords.</p>
-          <div class="feature-example">„Welche Fristen laufen in den nächsten 7 Tagen ab?"</div>
-          <div class="feature-example" style="margin-top:8px;">„Zeig mir alle Befunde von Patient Müller aus 2025."</div>
+          <div class="feature-example">„Welche Liefertermine und Deadlines laufen in den nächsten 7 Tagen ab?"</div>
+          <div class="feature-example" style="margin-top:8px;">„Zeig mir alle Wartungsberichte für Anlage B aus 2024–2025."</div>
         </div>
 
         <div class="feature-card">
           <div class="feature-num">02 — Klassifizierung</div>
           <h3>Automatisierte Klassifizierung</h3>
-          <p>Dokumente werden beim Import automatisch erkannt, kategorisiert und getaggt. Von der Rechnung bis zum Urteil – Ihr Archiv organisiert sich selbst.</p>
-          <div class="feature-example">Erkennt: Rechnungen · Urteile · Arztbriefe · Laborwerte · Verträge</div>
+          <p>Dokumente werden beim Import automatisch erkannt, kategorisiert und getaggt. Von der Rechnung bis zum Vertrag – Ihr Archiv organisiert sich selbst.</p>
+          <div class="feature-example">Erkennt: Rechnungen · Verträge · Berichte · Protokolle · Zertifikate · Handbucher</div>
         </div>
 
         <div class="feature-card">
@@ -1090,7 +1210,7 @@
         <div class="feature-card">
           <div class="feature-num">04 — Archiv</div>
           <h3>Strukturiertes Dokumentenarchiv</h3>
-          <p>Akten, Vorgänge und Dokumente in einer klaren Hierarchie. Volltext-indiziert, versioniert und blitzschnell abrufbar – auch bei zehntausenden Dateien.</p>
+          <p>Projekte, Vorgänge und Dokumente in einer klaren Hierarchie. Volltext-indiziert, versioniert und blitzschnell abrufbar – auch bei zehntausenden Dateien.</p>
           <div class="feature-example">Suche über alle Formate: PDF · Word · E-Mail · TIFF · mehr</div>
         </div>
 
@@ -1098,13 +1218,13 @@
           <div class="feature-num">05 — Fristen</div>
           <h3>Frist- &amp; Aufgabenmanagement</h3>
           <p>Zenith extrahiert Fristen und Termine automatisch aus Dokumenten und erinnert Sie proaktiv – bevor etwas ausläuft.</p>
-          <div class="feature-example">KI erkennt Termine in Urteilen, Bescheiden und Verträgen automatisch</div>
+          <div class="feature-example">KI erkennt Termine in Verträgen, Wartungsplänen und Behördenbescheiden automatisch</div>
         </div>
 
         <div class="feature-card">
           <div class="feature-num">06 — Analyse</div>
           <h3>Dokumentanalyse &amp; Zusammenfassung</h3>
-          <p>Lange Schriftsätze, Gutachten oder Arztbriefe in Sekunden erfasst. Zenith liefert präzise Zusammenfassungen und hebt relevante Passagen hervor.</p>
+          <p>Lange Berichte, Gutachten oder technische Dokumentationen in Sekunden erfasst. Zenith liefert präzise Zusammenfassungen und hebt relevante Passagen hervor.</p>
           <span class="feature-tag">Spart bis zu 70 % Lesezeit</span>
         </div>
 
@@ -1115,74 +1235,89 @@
   <div class="divider"></div>
 
   <!-- ══════════════════════════════════════════════
-       INDUSTRY
+       ANWENDUNGSBEREICHE
   ══════════════════════════════════════════════ -->
   <section id="industry" class="section">
     <div class="container">
-      <div class="label">Branchenspezifisch</div>
-      <h2 class="section-title">Maßgeschneidert für<br /><span class="accent">Ihre Branche</span></h2>
+      <div class="label">Grenzenlose Einsatzmöglichkeiten</div>
+      <h2 class="section-title">Für jede Branche.<br /><span class="accent">Für jeden Anwendungsfall.</span></h2>
       <p class="section-sub">
-        Zenith versteht die besonderen Anforderungen Ihrer Profession –
-        sprachlich, rechtlich und technisch.
+        Von der Fabrikhalle bis zum Verwaltungsamt – Zenith sichert Ihr Wissen,
+        wo immer kritische Dokumente und Fachdaten entstehen.
       </p>
 
-      <div class="industry-tabs">
-        <button class="tab-btn active" onclick="switchTab(event, 'kanzlei')">⚖ Für Kanzleien</button>
-        <button class="tab-btn" onclick="switchTab(event, 'praxis')">🏥 Für Arztpraxen</button>
-      </div>
+      <div class="usecases-grid">
 
-      <!-- Kanzlei -->
-      <div id="tab-kanzlei" class="industry-panel active">
-        <div class="industry-layout">
-          <div class="industry-visual">
-            <div class="industry-mockup-label">Zenith – Kanzlei-Ansicht</div>
-            <div class="mock-query">🔍 &nbsp;„Alle offenen Mandatsfristen der nächsten 14 Tage"</div>
-            <div class="mock-results">
-              <div class="mock-result-item"><span class="mock-result-tag tag-frist">Frist 3 Tage</span>Berufungsfrist – Az. 12 O 445/24 – Müller ./. AG München</div>
-              <div class="mock-result-item"><span class="mock-result-tag tag-urteil">Urteil</span>Urteilszustellung OLG Frankfurt – 07.03.2025 – Klagepartei: Weber GmbH</div>
-              <div class="mock-result-item"><span class="mock-result-tag tag-frist">Frist 9 Tage</span>Klageerwiderung – Az. 3 Ca 112/25 – Arbeitsrechtsstreit Schmidt</div>
-              <div class="mock-result-item"><span class="mock-result-tag tag-urteil">Vertrag</span>Kaufvertragsprüfung – Mandant: Becker Immobilien KG – Deadline 14.03.</div>
-            </div>
-          </div>
-          <div class="industry-content">
-            <h3>Aktenanalyse in Sekunden.<br /><span class="accent">Mandatsgeheimnis gewahrt.</span></h3>
-            <p>Verwalten Sie hunderte Mandate effizient. Zenith durchsucht Ihre gesamte Aktenlage in Echtzeit – vollständig auf Ihrer lokalen Infrastruktur, ohne dass ein einziges Wort die Kanzlei verlässt.</p>
-            <ul class="benefit-list">
-              <li><span class="benefit-check">✓</span><span>Aktenanalyse in Sekunden statt Stunden – mehr Zeit für Ihre Mandanten</span></li>
-              <li><span class="benefit-check">✓</span><span>DSGVO-konform und § 43a BRAO-sicher – Anwaltssoftware mit echtem Datenschutz</span></li>
-              <li><span class="benefit-check">✓</span><span>Automatische Fristenerkennung aus Urteilen, Bescheiden und Schriftsätzen</span></li>
-              <li><span class="benefit-check">✓</span><span>Schutz des Mandantengeheimnisses – keine Datenübertragung an Dritte</span></li>
-              <li><span class="benefit-check">✓</span><span>Schnelle Einarbeitung neuer Mitarbeiter durch strukturiertes Dokumentenarchiv</span></li>
-            </ul>
-          </div>
+        <div class="usecase-card">
+          <div class="usecase-icon">🏭</div>
+          <div class="usecase-sector">Industrie</div>
+          <h4>Maschinenpark-Wissen</h4>
+          <p>Wartungsfragen an Ihre gesamten Maschinendokumentationen stellen – sofort, offline, präzise.</p>
         </div>
-      </div>
 
-      <!-- Praxis -->
-      <div id="tab-praxis" class="industry-panel">
-        <div class="industry-layout">
-          <div class="industry-visual">
-            <div class="industry-mockup-label">Zenith – Praxis-Ansicht</div>
-            <div class="mock-query">🔍 &nbsp;„Laborwerte Patient Müller – Nierenwerte 2024–2025"</div>
-            <div class="mock-results">
-              <div class="mock-result-item"><span class="mock-result-tag tag-labor">Labor 03/2025</span>Kreatinin 1,1 mg/dl · GFR 78 · Harnstoff normal – Dr. Schneider</div>
-              <div class="mock-result-item"><span class="mock-result-tag tag-befund">Befund</span>Sonographie Abdomen 18.01.2025 – Nieren regelrecht beidseits</div>
-              <div class="mock-result-item"><span class="mock-result-tag tag-labor">Labor 11/2024</span>Kreatinin 1,3 mg/dl · leicht erhöht – Verlaufskontrolle empfohlen</div>
-              <div class="mock-result-item"><span class="mock-result-tag tag-befund">Arztbrief</span>Nephrologisches Konsil 09/2024 – Dr. Berger, Uniklinik München</div>
-            </div>
-          </div>
-          <div class="industry-content">
-            <h3>Patientendaten sofort.<br /><span class="accent">Schweigepflicht garantiert.</span></h3>
-            <p>Finden Sie in Sekunden, was Sie brauchen. Laborwerte, Befunde, Arztbriefe – Zenith durchsucht die gesamte Patientenakte auf Knopfdruck, ohne das Praxisnetz zu verlassen.</p>
-            <ul class="benefit-list">
-              <li><span class="benefit-check">✓</span><span>Schnelles Finden von Laborwerten, Befunden und Arztbriefen aus Jahren</span></li>
-              <li><span class="benefit-check">✓</span><span>Entlastung des Praxispersonals – weniger Suchaufwand, mehr Patientenzeit</span></li>
-              <li><span class="benefit-check">✓</span><span>Patientendaten bleiben stets lokal – § 203 StGB und ärztliche Schweigepflicht gewahrt</span></li>
-              <li><span class="benefit-check">✓</span><span>Automatische Klassifizierung von Einweisungen, Berichten und Rezepten</span></li>
-              <li><span class="benefit-check">✓</span><span>Verlaufsanalysen von Messwerten auf einen Blick – KI fasst zusammen</span></li>
-            </ul>
-          </div>
+        <div class="usecase-card">
+          <div class="usecase-icon">🏛</div>
+          <div class="usecase-sector">Architektur</div>
+          <h4>Bauvorschriften-Check</h4>
+          <p>Projektsteuerung und automatisierter Abgleich mit geltenden Bauvorschriften und Normen.</p>
         </div>
+
+        <div class="usecase-card">
+          <div class="usecase-icon">🏠</div>
+          <div class="usecase-sector">Immobilien</div>
+          <h4>Vertragsanalyse</h4>
+          <p>Mietvertragsanalyse, Fristenprüfung und Sonderkündigungsrechte in Sekunden aufgespürt.</p>
+        </div>
+
+        <div class="usecase-card">
+          <div class="usecase-icon">👥</div>
+          <div class="usecase-sector">HR</div>
+          <h4>Onboarding-Wissen</h4>
+          <p>Interne Richtlinien, Betriebsvereinbarungen und Onboarding-Dokumente blitzschnell abrufbar.</p>
+        </div>
+
+        <div class="usecase-card">
+          <div class="usecase-icon">🔬</div>
+          <div class="usecase-sector">R&amp;D</div>
+          <h4>Laborbericht-Analyse</h4>
+          <p>Jahrzehnte an Forschungsberichten und Laborprotokollen semantisch durchsuchbar machen.</p>
+        </div>
+
+        <div class="usecase-card">
+          <div class="usecase-icon">💹</div>
+          <div class="usecase-sector">Finanzen</div>
+          <h4>Audit-Vorbereitung</h4>
+          <p>Revisionssichere Dokumentation und blitzschnelle Audit-Vorbereitung – komplett offline.</p>
+        </div>
+
+        <div class="usecase-card">
+          <div class="usecase-icon">🏢</div>
+          <div class="usecase-sector">Verwaltung</div>
+          <h4>DSGVO-Bürgerservice</h4>
+          <p>Lokales KI-Wissen für Behörden – DSGVO-konformer Bürgerservice ohne Cloud-Abhängigkeit.</p>
+        </div>
+
+        <div class="usecase-card">
+          <div class="usecase-icon">🏨</div>
+          <div class="usecase-sector">Hotellerie</div>
+          <h4>SOP-Zugriff</h4>
+          <p>Zentraler Zugriff auf Qualitätsstandards und Standard Operating Procedures für alle Teams.</p>
+        </div>
+
+        <div class="usecase-card">
+          <div class="usecase-icon">💻</div>
+          <div class="usecase-sector">Software</div>
+          <h4>Legacy-Dokumentation</h4>
+          <p>Abfrage von jahralten Code-Dokumentationen, API-Specs und Architekturentscheidungen.</p>
+        </div>
+
+        <div class="usecase-card">
+          <div class="usecase-icon">🚢</div>
+          <div class="usecase-sector">Logistik</div>
+          <h4>Offline auf hoher See</h4>
+          <p>Wartungsprotokolle und technische Handbücher – auch ohne Internetverbindung verfügbar.</p>
+        </div>
+
       </div>
     </div>
   </section>
@@ -1233,7 +1368,7 @@
         <div class="tech-feature-item">
           <div class="tech-feature-icon">📈</div>
           <div>
-            <h4>Skalierbar von Einzelkanzlei bis Großpraxis</h4>
+            <h4>Skalierbar für jede Unternehmensgröße</h4>
             <p>Ob 500 oder 500.000 Dokumente – die Architektur bleibt schnell und stabil. Wachsen Sie ohne Mehrkosten.</p>
           </div>
         </div>
@@ -1283,7 +1418,7 @@
 
         <!-- PROFESSIONAL (featured) -->
         <div class="pricing-card pricing-card--featured">
-          <div class="p-tier">Für Kanzleien &amp; Praxen — Bestseller</div>
+          <div class="p-tier">Für Unternehmen &amp; Teams — Bestseller</div>
           <div class="p-name">Professional</div>
           <div class="p-price">5.200 €</div>
           <div class="p-note">Einmalzahlung · Inkl. RAID-Redundanz</div>
@@ -1291,7 +1426,7 @@
           <ul class="p-features">
             <li><span class="pchk">✓</span><span>Alles aus BASE</span></li>
             <li><span class="pchk">✓</span><span>Externes RAID-System für Dateiausfallschutz</span></li>
-            <li><span class="pchk">✓</span><span>Integrierte Redundanz für Mandatsakten &amp; Patientendaten</span></li>
+            <li><span class="pchk">✓</span><span>Integrierte Redundanz für kritische Geschäfts- und Betriebsdaten</span></li>
             <li><span class="pchk">✓</span><span>Automatisches lokales Backup</span></li>
             <li><span class="pchk">✓</span><span>Prioritäts-E-Mail-Support</span></li>
           </ul>
@@ -1300,7 +1435,7 @@
 
         <!-- PREMIUM -->
         <div class="pricing-card">
-          <div class="p-tier">Für Mediziner &amp; Juristen</div>
+          <div class="p-tier">Für Enterprise &amp; Behörden</div>
           <div class="p-name">Premium</div>
           <div class="p-price">5.800 €</div>
           <div class="p-note">Einmalzahlung · Das Sorglos-Paket</div>
@@ -1376,14 +1511,6 @@
     window.addEventListener('scroll', () => {
       header.classList.toggle('scrolled', window.scrollY > 40);
     }, { passive: true });
-
-    // Industry tab switching
-    function switchTab(e, tabId) {
-      document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
-      document.querySelectorAll('.industry-panel').forEach(p => p.classList.remove('active'));
-      e.currentTarget.classList.add('active');
-      document.getElementById('tab-' + tabId).classList.add('active');
-    }
   </script>
 
 </body>
