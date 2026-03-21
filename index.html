@@ -910,11 +910,12 @@
     }
     .tech-feature-item:hover { background: rgba(204,34,153,.04); }
     .tech-feature-icon {
-      font-size: 1.6rem;
       flex-shrink: 0;
-      width: 44px;
-      text-align: center;
+      width: 28px;
+      height: 28px;
+      color: rgba(255,255,255,.75);
     }
+    .tech-feature-icon svg { width: 100%; height: 100%; display: block; }
     .tech-feature-item h4 {
       font-family: var(--font-display);
       font-size: 1.1rem;
@@ -932,7 +933,7 @@
     @media (max-width: 960px) {
       .compare-grid { grid-template-columns: 1fr; gap: 16px; background: none; }
       .features-grid { grid-template-columns: repeat(2, 1fr); }
-      .usecases-grid { grid-template-columns: repeat(2, 1fr); }
+      .usecases-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 8px; background: none; }
       .industry-layout { grid-template-columns: 1fr; }
       .industry-tabs { background: none; gap: 8px; }
       .tab-btn { border: 1px solid var(--border); }
@@ -940,7 +941,7 @@
     }
     @media (max-width: 600px) {
       .features-grid { grid-template-columns: 1fr; }
-      .usecases-grid { grid-template-columns: repeat(2, 1fr); }
+      .usecases-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 8px; background: none; }
     }
 
     /* ─── Screenshots Gallery ──────────────────────────── */
@@ -1164,7 +1165,13 @@
       transition: opacity var(--transition);
     }
     .usecase-card:hover::after { opacity: 1; }
-    .usecase-icon { font-size: 1.9rem; line-height: 1; }
+    .usecase-icon {
+      width: 28px;
+      height: 28px;
+      color: rgba(255,255,255,.75);
+      flex-shrink: 0;
+    }
+    .usecase-icon svg { width: 100%; height: 100%; display: block; }
     .usecase-sector {
       font-size: .58rem;
       font-weight: 700;
@@ -1557,70 +1564,70 @@
       <div class="usecases-grid">
 
         <div class="usecase-card">
-          <div class="usecase-icon">🏭</div>
+          <div class="usecase-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="6" height="14"/><rect x="9" y="3" width="6" height="18"/><rect x="16" y="10" width="6" height="11"/><line x1="2" y1="21" x2="22" y2="21"/></svg></div>
           <div class="usecase-sector">Industrie</div>
           <h4>Maschinenpark-Wissen</h4>
           <p>Wartungsfragen an Ihre gesamten Maschinendokumentationen stellen – sofort, offline, präzise.</p>
         </div>
 
         <div class="usecase-card">
-          <div class="usecase-icon">🏛</div>
+          <div class="usecase-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M9 21V9l3-6 3 6v12M9 12h6"/></svg></div>
           <div class="usecase-sector">Architektur</div>
           <h4>Bauvorschriften-Check</h4>
           <p>Projektsteuerung und automatisierter Abgleich mit geltenden Bauvorschriften und Normen.</p>
         </div>
 
         <div class="usecase-card">
-          <div class="usecase-icon">🏠</div>
+          <div class="usecase-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5L12 3l9 7.5V21H3z"/><path d="M9 21v-9h6v9"/></svg></div>
           <div class="usecase-sector">Immobilien</div>
           <h4>Vertragsanalyse</h4>
           <p>Mietvertragsanalyse, Fristenprüfung und Sonderkündigungsrechte in Sekunden aufgespürt.</p>
         </div>
 
         <div class="usecase-card">
-          <div class="usecase-icon">👥</div>
+          <div class="usecase-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="7" r="3"/><path d="M2 21v-1a7 7 0 0 1 14 0v1"/><path d="M18 9a3 3 0 0 1 0 6M22 21v-1a7 7 0 0 0-5-6.7"/></svg></div>
           <div class="usecase-sector">HR</div>
           <h4>Onboarding-Wissen</h4>
           <p>Interne Richtlinien, Betriebsvereinbarungen und Onboarding-Dokumente blitzschnell abrufbar.</p>
         </div>
 
         <div class="usecase-card">
-          <div class="usecase-icon">🔬</div>
+          <div class="usecase-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6M8 3 4 13c0 3 3.6 5 8 5s8-2 8-5L16 3"/><line x1="6" y1="10" x2="18" y2="10"/></svg></div>
           <div class="usecase-sector">R&amp;D</div>
           <h4>Laborbericht-Analyse</h4>
           <p>Jahrzehnte an Forschungsberichten und Laborprotokollen semantisch durchsuchbar machen.</p>
         </div>
 
         <div class="usecase-card">
-          <div class="usecase-icon">💹</div>
+          <div class="usecase-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg></div>
           <div class="usecase-sector">Finanzen</div>
           <h4>Audit-Vorbereitung</h4>
           <p>Revisionssichere Dokumentation und blitzschnelle Audit-Vorbereitung – komplett offline.</p>
         </div>
 
         <div class="usecase-card">
-          <div class="usecase-icon">🏢</div>
+          <div class="usecase-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="1"/><line x1="2" y1="22" x2="22" y2="22"/><rect x="8" y="6" width="2" height="2"/><rect x="14" y="6" width="2" height="2"/><rect x="8" y="11" width="2" height="2"/><rect x="14" y="11" width="2" height="2"/><rect x="10" y="16" width="4" height="6"/></svg></div>
           <div class="usecase-sector">Verwaltung</div>
           <h4>DSGVO-Bürgerservice</h4>
           <p>Lokales KI-Wissen für Behörden – DSGVO-konformer Bürgerservice ohne Cloud-Abhängigkeit.</p>
         </div>
 
         <div class="usecase-card">
-          <div class="usecase-icon">🏨</div>
+          <div class="usecase-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 16h20M2 20h20M6 20V8h12v12"/><path d="M9 8V5a3 3 0 0 1 6 0v3"/></svg></div>
           <div class="usecase-sector">Hotellerie</div>
           <h4>SOP-Zugriff</h4>
           <p>Zentraler Zugriff auf Qualitätsstandards und Standard Operating Procedures für alle Teams.</p>
         </div>
 
         <div class="usecase-card">
-          <div class="usecase-icon">💻</div>
+          <div class="usecase-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M7 9l3 3-3 3"/><line x1="13" y1="15" x2="17" y2="15"/></svg></div>
           <div class="usecase-sector">Software</div>
           <h4>Legacy-Dokumentation</h4>
           <p>Abfrage von jahralten Code-Dokumentationen, API-Specs und Architekturentscheidungen.</p>
         </div>
 
         <div class="usecase-card">
-          <div class="usecase-icon">🚢</div>
+          <div class="usecase-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20c1.6-.8 3.4-.8 5 0s3.4.8 5 0 3.4-.8 5 0"/><path d="M5 18l1.5-7h11L19 18"/><path d="M10 11V6h4v5"/><path d="M8 6h8"/></svg></div>
           <div class="usecase-sector">Logistik</div>
           <h4>Offline auf hoher See</h4>
           <p>Wartungsprotokolle und technische Handbücher – auch ohne Internetverbindung verfügbar.</p>
@@ -1646,42 +1653,42 @@
 
       <div class="tech-features">
         <div class="tech-feature-item">
-          <div class="tech-feature-icon">🖥️</div>
+          <div class="tech-feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
           <div>
             <h4>Optimiert für Minisforum MS S1 Max</h4>
             <p>Zenith läuft auf dem kompakten Intel-basierten Mini-PC mit bis zu 128 GB DDR5-RAM, schnellem NVMe-Speicher und einem leisen Lüftersystem – ideal für den Dauerbetrieb im Büro.</p>
           </div>
         </div>
         <div class="tech-feature-item">
-          <div class="tech-feature-icon">🧠</div>
+          <div class="tech-feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a8 8 0 0 1 8 8c0 5-8 12-8 12S4 15 4 10a8 8 0 0 1 8-8z"/><circle cx="12" cy="10" r="3"/></svg></div>
           <div>
             <h4>RAG-Architektur (Retrieval-Augmented Generation)</h4>
             <p>Die KI antwortet nicht aus dem Gedächtnis, sondern aus Ihren Dokumenten – präzise, aktuell und ohne Halluzinationen.</p>
           </div>
         </div>
         <div class="tech-feature-item">
-          <div class="tech-feature-icon">🗄️</div>
+          <div class="tech-feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.66 4.03 3 9 3s9-1.34 9-3V5"/><path d="M3 12c0 1.66 4.03 3 9 3s9-1.34 9-3"/></svg></div>
           <div>
             <h4>SQL Vector Search</h4>
             <p>Hochperformante semantische Suche direkt in der Datenbank. Tausende Dokumente werden in Millisekunden semantisch durchsucht.</p>
           </div>
         </div>
         <div class="tech-feature-item">
-          <div class="tech-feature-icon">🔐</div>
+          <div class="tech-feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
           <div>
             <h4>Air-Gap-fähig</h4>
             <p>Zenith funktioniert vollständig ohne Internetverbindung. Für maximale Sicherheit kann es in einem vollständig isolierten Netzwerk betrieben werden.</p>
           </div>
         </div>
         <div class="tech-feature-item">
-          <div class="tech-feature-icon">📈</div>
+          <div class="tech-feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg></div>
           <div>
             <h4>Skalierbar für jede Unternehmensgröße</h4>
             <p>Ob 500 oder 500.000 Dokumente – die Architektur bleibt schnell und stabil. Wachsen Sie ohne Mehrkosten.</p>
           </div>
         </div>
         <div class="tech-feature-item">
-          <div class="tech-feature-icon">🔄</div>
+          <div class="tech-feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/><path d="M3 9a9 9 0 0 0 18 0"/></svg></div>
           <div>
             <h4>Automatische Backups &amp; Versionierung</h4>
             <p>Jede Änderung wird lokal versioniert. Vollständige Dokumentenhistorie auf Ihrer eigenen Hardware – kein Drittanbieter involviert.</p>
