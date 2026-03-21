@@ -943,6 +943,158 @@
       .usecases-grid { grid-template-columns: repeat(2, 1fr); }
     }
 
+    /* ─── Screenshots Gallery ──────────────────────────── */
+    .screens-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 52px;
+    }
+    .screen-card {
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      overflow: hidden;
+      background: var(--bg-card);
+      transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition);
+    }
+    .screen-card:hover {
+      border-color: var(--border-purple);
+      transform: translateY(-3px);
+      box-shadow: 0 12px 36px rgba(0,0,0,.45), 0 0 0 1px var(--border-purple);
+    }
+    .screen-thumb-wrap {
+      position: relative;
+      overflow: hidden;
+      aspect-ratio: 16/10;
+      background: #060610;
+    }
+    .screen-thumb {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform .5s ease, opacity var(--transition);
+      opacity: .88;
+    }
+    .screen-card:hover .screen-thumb {
+      transform: scale(1.03);
+      opacity: 1;
+    }
+    .screen-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(204,34,153,.12);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity var(--transition);
+    }
+    .screen-card:hover .screen-overlay { opacity: 1; }
+    .screen-zoom {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--purple);
+      color: #fff;
+      font-size: 1.1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 20px var(--purple-glow);
+    }
+    .screen-caption {
+      padding: 12px 16px;
+      font-size: .78rem;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border-top: 1px solid var(--border);
+    }
+    .screen-tag {
+      display: inline-block;
+      padding: 2px 9px;
+      background: rgba(204,34,153,.1);
+      border: 1px solid var(--border-purple);
+      color: var(--purple);
+      font-size: .58rem;
+      font-weight: 700;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      border-radius: 2px;
+      flex-shrink: 0;
+    }
+    .screen-tag--mobile {
+      background: rgba(255,255,255,.06);
+      border-color: rgba(255,255,255,.14);
+      color: var(--text-muted);
+    }
+    .screens-note {
+      margin-top: 28px;
+      text-align: center;
+      font-size: .75rem;
+      color: var(--text-muted);
+      letter-spacing: .05em;
+    }
+
+    /* ─── Lightbox ──────────────────────────────────────── */
+    .lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 500;
+      background: rgba(4,4,10,.92);
+      backdrop-filter: blur(10px);
+      align-items: center;
+      justify-content: center;
+      padding: 40px 24px;
+    }
+    .lightbox.open { display: flex; }
+    .lightbox-close {
+      position: absolute;
+      top: 20px; right: 24px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      width: 40px; height: 40px;
+      border-radius: 50%;
+      font-size: .9rem;
+      cursor: pointer;
+      transition: border-color var(--transition), color var(--transition);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .lightbox-close:hover { border-color: var(--purple); color: var(--purple); }
+    .lightbox-inner {
+      max-width: min(1100px, 94vw);
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+    }
+    .lightbox-img {
+      width: 100%;
+      height: auto;
+      border-radius: 4px;
+      border: 1px solid var(--border-purple);
+      box-shadow: 0 24px 80px rgba(0,0,0,.7);
+    }
+    .lightbox-caption {
+      font-size: .75rem;
+      color: var(--text-muted);
+      letter-spacing: .06em;
+      text-align: center;
+    }
+
+    @media (max-width: 960px) {
+      .screens-grid { grid-template-columns: 1fr; gap: 12px; }
+    }
+
     /* ─── Use Cases Grid ───────────────────────────────── */
     .usecases-grid {
       display: grid;
@@ -1068,6 +1220,7 @@
         <a href="#hero" class="logo">Zenith<span>.</span></a>
         <ul class="nav-links">
           <li><a href="#features">Features</a></li>
+          <li><a href="#screenshots">Screenshots</a></li>
           <li><a href="#industry">Anwendungen</a></li>
           <li><a href="#technology">Technologie</a></li>
           <li><a href="#pricing">Preise</a></li>
@@ -1168,6 +1321,78 @@
     <div class="stat-item">
       <div class="stat-num">&lt;<span>30</span></div>
       <div class="stat-lbl">min Setup-Zeit</div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════
+       SCREENSHOTS
+  ══════════════════════════════════════════════ -->
+  <section id="screenshots" class="section section--alt">
+    <div class="container">
+      <div class="label">Die Oberfläche</div>
+      <h2 class="section-title">Designed für den<br /><span class="accent">Alltag im Betrieb.</span></h2>
+      <p class="section-sub" style="max-width:640px;">
+        Zenith steht vollständig als Web-Oberfläche bereit – ohne Installation,
+        direkt im Browser. Ob am stationären Arbeitsplatz, im Homeoffice oder
+        unterwegs auf dem Smartphone: Ihre Wissensbasis ist immer nur einen
+        Klick entfernt.
+      </p>
+
+      <div class="screens-grid">
+
+        <div class="screen-card" onclick="openLightbox('images/screen_1.png', 'Zenith Desktop-Ansicht – Dokumentensuche')">
+          <div class="screen-thumb-wrap">
+            <img src="images/screen_1.png" alt="Zenith Desktop-Ansicht" class="screen-thumb" loading="lazy" />
+            <div class="screen-overlay">
+              <span class="screen-zoom">⤢</span>
+            </div>
+          </div>
+          <div class="screen-caption">
+            <span class="screen-tag">Desktop</span>
+            Hauptansicht &amp; Dokumentensuche
+          </div>
+        </div>
+
+        <div class="screen-card" onclick="openLightbox('images/screen_2.png', 'Zenith – Analysefunktion &amp; Zusammenfassung')">
+          <div class="screen-thumb-wrap">
+            <img src="images/screen_2.png" alt="Zenith Analysefunktion" class="screen-thumb" loading="lazy" />
+            <div class="screen-overlay">
+              <span class="screen-zoom">⤢</span>
+            </div>
+          </div>
+          <div class="screen-caption">
+            <span class="screen-tag">Desktop</span>
+            Analysefunktion &amp; KI-Zusammenfassung
+          </div>
+        </div>
+
+        <div class="screen-card" onclick="openLightbox('images/screen_3.png', 'Zenith Mobile-Ansicht – Optimiert für unterwegs')">
+          <div class="screen-thumb-wrap">
+            <img src="images/screen_3.png" alt="Zenith Mobile-Ansicht" class="screen-thumb" loading="lazy" />
+            <div class="screen-overlay">
+              <span class="screen-zoom">⤢</span>
+            </div>
+          </div>
+          <div class="screen-caption">
+            <span class="screen-tag screen-tag--mobile">Mobile</span>
+            Responsive Ansicht für unterwegs
+          </div>
+        </div>
+
+      </div>
+
+      <p class="screens-note">
+        <span>🖥</span> Desktop &amp; Laptop &nbsp;·&nbsp; <span>📱</span> Smartphone &amp; Tablet &nbsp;·&nbsp; Kein App-Download erforderlich
+      </p>
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+    <div class="lightbox-inner" onclick="event.stopPropagation()">
+      <img id="lightbox-img" src="" alt="" class="lightbox-img" />
+      <p id="lightbox-caption" class="lightbox-caption"></p>
     </div>
   </div>
 
@@ -1511,6 +1736,27 @@
     window.addEventListener('scroll', () => {
       header.classList.toggle('scrolled', window.scrollY > 40);
     }, { passive: true });
+
+    // Lightbox
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxCaption = document.getElementById('lightbox-caption');
+
+    function openLightbox(src, caption) {
+      lightboxImg.src = src;
+      lightboxImg.alt = caption;
+      lightboxCaption.textContent = caption;
+      lightbox.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeLightbox() {
+      lightbox.classList.remove('open');
+      document.body.style.overflow = '';
+      lightboxImg.src = '';
+    }
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') closeLightbox();
+    });
   </script>
 
 </body>
