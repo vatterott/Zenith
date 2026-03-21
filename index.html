@@ -1034,6 +1034,36 @@
       border-color: rgba(255,255,255,.14);
       color: var(--text-muted);
     }
+    .screens-divider {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin: 40px 0 28px;
+    }
+    .screens-divider::before,
+    .screens-divider::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+    .screens-divider-label {
+      font-size: .65rem;
+      font-weight: 700;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      white-space: nowrap;
+    }
+    .screens-grid--mobile {
+      grid-template-columns: repeat(5, 1fr);
+    }
+    .screen-thumb-wrap--portrait {
+      aspect-ratio: 9/19;
+    }
+    .lightbox-inner--mobile {
+      max-width: min(360px, 38vw);
+    }
     .screens-note {
       margin-top: 28px;
       text-align: center;
@@ -1093,6 +1123,12 @@
 
     @media (max-width: 960px) {
       .screens-grid { grid-template-columns: 1fr; gap: 12px; }
+      .screens-grid--mobile { grid-template-columns: repeat(3, 1fr); }
+      .lightbox-inner--mobile { max-width: min(360px, 70vw); }
+    }
+    @media (max-width: 600px) {
+      .screens-grid--mobile { grid-template-columns: repeat(2, 1fr); }
+      .lightbox-inner--mobile { max-width: 90vw; }
     }
 
     /* ─── Use Cases Grid ───────────────────────────────── */
@@ -1366,16 +1402,63 @@
           </div>
         </div>
 
-        <div class="screen-card" onclick="openLightbox('images/screen_3.png', 'Zenith Mobile-Ansicht – Optimiert für unterwegs')">
+        <div class="screen-card" onclick="openLightbox('images/screen_3.png', 'Zenith Desktop – Dokumentenarchiv &amp; Navigation')">
           <div class="screen-thumb-wrap">
-            <img src="images/screen_3.png" alt="Zenith Mobile-Ansicht" class="screen-thumb" loading="lazy" />
+            <img src="images/screen_3.png" alt="Zenith Dokumentenarchiv" class="screen-thumb" loading="lazy" />
+            <div class="screen-overlay">
+              <span class="screen-zoom">⤢</span>
+            </div>
+          </div>
+          <div class="screen-caption">
+            <span class="screen-tag">Desktop</span>
+            Dokumentenarchiv &amp; Navigation
+          </div>
+        </div>
+
+      </div>
+
+      <div class="screens-divider">
+        <span class="screens-divider-label">📱 Mobile-Ansicht</span>
+      </div>
+
+      <div class="screens-grid screens-grid--mobile">
+
+        <div class="screen-card" onclick="openLightbox('images/screen_mobile_1.png', 'Zenith Mobile – Startseite &amp; Schnellsuche', true)">
+          <div class="screen-thumb-wrap screen-thumb-wrap--portrait">
+            <img src="images/screen_mobile_1.png" alt="Zenith Mobile Startseite" class="screen-thumb" loading="lazy" />
             <div class="screen-overlay">
               <span class="screen-zoom">⤢</span>
             </div>
           </div>
           <div class="screen-caption">
             <span class="screen-tag screen-tag--mobile">Mobile</span>
-            Responsive Ansicht für unterwegs
+            Startseite &amp; Schnellsuche
+          </div>
+        </div>
+
+        <div class="screen-card" onclick="openLightbox('images/screen_mobile_2.png', 'Zenith Mobile – KI-Chat &amp; Antworten', true)">
+          <div class="screen-thumb-wrap screen-thumb-wrap--portrait">
+            <img src="images/screen_mobile_2.png" alt="Zenith Mobile KI-Chat" class="screen-thumb" loading="lazy" />
+            <div class="screen-overlay">
+              <span class="screen-zoom">⤢</span>
+            </div>
+          </div>
+          <div class="screen-caption">
+            <span class="screen-tag screen-tag--mobile">Mobile</span>
+            KI-Chat &amp; Dokumentenantworten
+          </div>
+        </div>
+
+        <div class="screen-card" onclick="openLightbox('images/screen_mobile_3.png', 'Zenith Mobile – Dokumentenübersicht', true)">
+          <div class="screen-thumb-wrap screen-thumb-wrap--portrait">
+            <img src="images/screen_mobile_3.png" alt="Zenith Mobile Dokumentenübersicht" class="screen-thumb" loading="lazy" />
+            <div class="screen-overlay">
+              <span class="screen-zoom">⤢</span>
+            </div>
+          </div>
+          <div class="screen-caption">
+            <span class="screen-tag screen-tag--mobile">Mobile</span>
+            Dokumentenübersicht &amp; Filter
           </div>
         </div>
 
@@ -1742,10 +1825,13 @@
     const lightboxImg = document.getElementById('lightbox-img');
     const lightboxCaption = document.getElementById('lightbox-caption');
 
-    function openLightbox(src, caption) {
+    const lightboxInner = document.querySelector('.lightbox-inner');
+
+    function openLightbox(src, caption, isMobile) {
       lightboxImg.src = src;
       lightboxImg.alt = caption;
       lightboxCaption.textContent = caption;
+      lightboxInner.classList.toggle('lightbox-inner--mobile', !!isMobile);
       lightbox.classList.add('open');
       document.body.style.overflow = 'hidden';
     }
