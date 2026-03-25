@@ -262,7 +262,7 @@
 
           <div class="contact-item">
             <span class="ci-label">E-Mail</span>
-            <span class="ci-value"><a href="mailto:info@vatterott.de">info@vatterott.de</a></span>
+            <span class="ci-value"><a href="mailto:info@myzenith.org">info@myzenith.org</a></span>
           </div>
 
           <div class="contact-item">
@@ -291,6 +291,10 @@
           <h3>Nachricht <span>senden</span></h3>
 
           <form id="contactForm" novalidate>
+            <input type="hidden" name="access_key" value="6fe23bd9-e21f-432e-abbc-6fdfb03e6270" />
+            <input type="hidden" name="subject" value="Neue Kontaktanfrage – Zenith" />
+            <input type="hidden" name="from_name" value="Zenith Kontaktformular" />
+            <input type="checkbox" name="botcheck" style="display:none;" />
             <div class="form-row">
               <div class="form-group">
                 <label for="fname">Vorname</label>
@@ -359,7 +363,7 @@
           <li><a href="agb.html">AGB</a></li>
           <li><a href="kontakt.html" class="active">Kontakt</a></li>
         </ul>
-        <p class="footer-copy">© 2025 Zenith DMS. Alle Rechte vorbehalten.</p>
+        <p class="footer-copy">© 2026 Zenith DMS. Alle Rechte vorbehalten.</p>
       </div>
     </div>
   </footer>
@@ -382,10 +386,32 @@
 
       if (!valid) return;
 
-      // Replace this block with your actual form submission logic
-      // (e.g. fetch to a backend / form service like Formspree / Netlify Forms)
-      form.style.display = 'none';
-      document.getElementById('formSuccess').style.display = 'block';
+      const submitBtn = form.querySelector('.btn-submit');
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Wird gesendet …';
+
+      const data = new FormData(form);
+
+      fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: data
+      })
+        .then(function (res) { return res.json(); })
+        .then(function (json) {
+          if (json.success) {
+            form.style.display = 'none';
+            document.getElementById('formSuccess').style.display = 'block';
+          } else {
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Nachricht absenden';
+            alert('Es ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut oder schreiben Sie uns direkt an info@myzenith.org');
+          }
+        })
+        .catch(function () {
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Nachricht absenden';
+          alert('Es ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut oder schreiben Sie uns direkt an info@myzenith.org');
+        });
     });
   </script>
 
