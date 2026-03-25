@@ -103,6 +103,9 @@
       font-weight: 900;
       letter-spacing: .1em;
       text-transform: uppercase;
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
     }
     .logo span { color: var(--purple); }
     .nav-links { display: flex; gap: 36px; list-style: none; }
@@ -170,6 +173,36 @@
       margin-bottom: 28px;
     }
     h1 .line-purple { color: var(--purple); }
+
+    /* ─── Hero h1 inline icon ──────────────────────────── */
+    .hero-h1-first-line {
+      display: inline-flex;
+      align-items: center;
+      gap: 18px;
+    }
+    .hero-h1-icon {
+      width: .85em;
+      height: .85em;
+      flex-shrink: 0;
+      filter: drop-shadow(0 0 14px rgba(204,34,153,.35));
+    }
+
+    /* ─── Hero DSGVO badge ─────────────────────────────── */
+    .hero-dsgvo-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 36px;
+      padding: 7px 16px;
+      border: 1px solid rgba(204,34,153,.4);
+      border-radius: 2px;
+      background: rgba(204,34,153,.07);
+      font-size: .68rem;
+      font-weight: 700;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--purple);
+    }
     .hero-sub {
       font-size: .97rem;
       color: var(--text-muted);
@@ -555,6 +588,9 @@
       font-weight: 900;
       letter-spacing: .1em;
       text-transform: uppercase;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
     }
     .footer-logo span { color: var(--purple); }
     .footer-links { display: flex; gap: 28px; list-style: none; }
@@ -1260,7 +1296,7 @@
   <header id="header">
     <div class="container">
       <nav>
-        <a href="#hero" class="logo">Zenith<span>.</span></a>
+        <a href="#hero" class="logo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" style="height:.85em;width:.85em;flex-shrink:0;" aria-hidden="true"><line x1="50" y1="10" x2="85" y2="30" stroke="currentColor" stroke-width="6" stroke-linecap="round"/><line x1="85" y1="30" x2="85" y2="70" stroke="currentColor" stroke-width="6" stroke-linecap="round"/><line x1="85" y1="70" x2="50" y2="90" stroke="currentColor" stroke-width="6" stroke-linecap="round"/><line x1="50" y1="90" x2="15" y2="70" stroke="currentColor" stroke-width="6" stroke-linecap="round"/><line x1="15" y1="70" x2="15" y2="30" stroke="currentColor" stroke-width="6" stroke-linecap="round"/><line x1="15" y1="30" x2="50" y2="10" stroke="currentColor" stroke-width="6" stroke-linecap="round"/><line x1="50" y1="10" x2="50" y2="90" stroke="currentColor" stroke-width="6" stroke-linecap="round"/><line x1="85" y1="30" x2="15" y2="70" stroke="currentColor" stroke-width="6" stroke-linecap="round"/><line x1="85" y1="70" x2="15" y2="30" stroke="currentColor" stroke-width="6" stroke-linecap="round"/><circle cx="50" cy="10" r="7" fill="currentColor"/><circle cx="85" cy="30" r="7" fill="currentColor"/><circle cx="85" cy="70" r="7" fill="currentColor"/><circle cx="50" cy="90" r="7" fill="currentColor"/><circle cx="15" cy="70" r="7" fill="currentColor"/><circle cx="15" cy="30" r="7" fill="currentColor"/></svg>Zenith<span>.</span></a>
         <ul class="nav-links">
           <li><a href="#features">Features</a></li>
           <li><a href="#screenshots">Screenshots</a></li>
@@ -1285,13 +1321,12 @@
       <div class="hero-content">
         <div class="label">In Entwicklung · Marktstart September 2026</div>
         <h1>
-          ZENITH: DER SOUVERÄNE<br />
-          WISSENS-HUB FÜR<br />
-          <span class="line-purple">INDUSTRIE &amp; BUSINESS.</span>
+          <span class="hero-h1-first-line"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="hero-h1-icon" aria-hidden="true"><line x1="50" y1="10" x2="85" y2="30" stroke="currentColor" stroke-width="6" stroke-linecap="round"/><line x1="85" y1="30" x2="85" y2="70" stroke="currentColor" stroke-width="6" stroke-linecap="round"/><line x1="85" y1="70" x2="50" y2="90" stroke="currentColor" stroke-width="6" stroke-linecap="round"/><line x1="50" y1="90" x2="15" y2="70" stroke="currentColor" stroke-width="6" stroke-linecap="round"/><line x1="15" y1="70" x2="15" y2="30" stroke="currentColor" stroke-width="6" stroke-linecap="round"/><line x1="15" y1="30" x2="50" y2="10" stroke="currentColor" stroke-width="6" stroke-linecap="round"/><line x1="50" y1="10" x2="50" y2="90" stroke="currentColor" stroke-width="6" stroke-linecap="round"/><line x1="85" y1="30" x2="15" y2="70" stroke="currentColor" stroke-width="6" stroke-linecap="round"/><line x1="85" y1="70" x2="15" y2="30" stroke="currentColor" stroke-width="6" stroke-linecap="round"/><circle cx="50" cy="10" r="7" fill="currentColor"/><circle cx="85" cy="30" r="7" fill="currentColor"/><circle cx="85" cy="70" r="7" fill="currentColor"/><circle cx="50" cy="90" r="7" fill="currentColor"/><circle cx="15" cy="70" r="7" fill="currentColor"/><circle cx="15" cy="30" r="7" fill="currentColor"/></svg>ZENITH<span class="line-purple">.</span></span><br />
+          <span class="line-purple">Das KI-Dokumenten-<br />Management System</span>
         </h1>
         <p class="hero-sub">
-          Nutzen Sie die volle Power lokaler KI für Ihre Dokumente –
-          100 % sicher, 100 % offline, 100 % souverän.
+          Nutzen Sie die volle Power lokaler KI für Ihre Dokumente –<br />
+          100 % sicher, 100 % offline, 100 % DSGVO-konform, 100 % souverän
         </p>
         <div class="hero-actions">
           <a href="#cta" class="btn-primary">Jetzt Zenith entdecken →</a>
@@ -1808,7 +1843,7 @@
   <footer>
     <div class="container">
       <div class="footer-inner">
-        <div class="footer-logo">Zenith<span>.</span></div>
+        <div class="footer-logo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" style="height:.85em;width:.85em;flex-shrink:0;" aria-hidden="true"><line x1="50" y1="10" x2="85" y2="30" stroke="currentColor" stroke-width="6" stroke-linecap="round"/><line x1="85" y1="30" x2="85" y2="70" stroke="currentColor" stroke-width="6" stroke-linecap="round"/><line x1="85" y1="70" x2="50" y2="90" stroke="currentColor" stroke-width="6" stroke-linecap="round"/><line x1="50" y1="90" x2="15" y2="70" stroke="currentColor" stroke-width="6" stroke-linecap="round"/><line x1="15" y1="70" x2="15" y2="30" stroke="currentColor" stroke-width="6" stroke-linecap="round"/><line x1="15" y1="30" x2="50" y2="10" stroke="currentColor" stroke-width="6" stroke-linecap="round"/><line x1="50" y1="10" x2="50" y2="90" stroke="currentColor" stroke-width="6" stroke-linecap="round"/><line x1="85" y1="30" x2="15" y2="70" stroke="currentColor" stroke-width="6" stroke-linecap="round"/><line x1="85" y1="70" x2="15" y2="30" stroke="currentColor" stroke-width="6" stroke-linecap="round"/><circle cx="50" cy="10" r="7" fill="currentColor"/><circle cx="85" cy="30" r="7" fill="currentColor"/><circle cx="85" cy="70" r="7" fill="currentColor"/><circle cx="50" cy="90" r="7" fill="currentColor"/><circle cx="15" cy="70" r="7" fill="currentColor"/><circle cx="15" cy="30" r="7" fill="currentColor"/></svg>Zenith<span>.</span></div>
         <ul class="footer-links">
           <li><a href="impressum.html">Impressum</a></li>
           <li><a href="datenschutz.html">Datenschutz</a></li>
