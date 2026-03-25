@@ -516,6 +516,99 @@
     }
     .pricing-card--featured .btn-book:hover { background: var(--purple-dim); border-color: var(--purple-dim); }
 
+    /* ─── TCO Comparison ───────────────────────────────── */
+    .tco-block {
+      margin-top: 64px;
+      border: 1px solid var(--border-purple);
+      border-radius: 16px;
+      overflow: hidden;
+    }
+    .tco-header {
+      padding: 20px 32px;
+      background: rgba(204,34,153,.07);
+      border-bottom: 1px solid var(--border-purple);
+      text-align: center;
+    }
+    .tco-header h3 {
+      margin: 0;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+    .tco-header h3 span { color: var(--purple); }
+    .tco-grid {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+    }
+    .tco-col {
+      padding: 32px 36px;
+    }
+    .tco-col--cloud {
+      background: rgba(255,255,255,.02);
+    }
+    .tco-col--zenith {
+      background: rgba(204,34,153,.05);
+    }
+    .tco-col .tco-label {
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+    }
+    .tco-col .tco-title {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: var(--text);
+      margin-bottom: 18px;
+    }
+    .tco-col .tco-calc {
+      font-size: .85rem;
+      color: var(--text-muted);
+      line-height: 2;
+      margin-bottom: 18px;
+    }
+    .tco-col .tco-calc code {
+      font-family: 'Barlow', sans-serif;
+      color: var(--text);
+      font-style: normal;
+    }
+    .tco-col .tco-total {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 2.2rem;
+      font-weight: 900;
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+    .tco-col--cloud .tco-total { color: #FF6B6B; }
+    .tco-col--zenith .tco-total { color: var(--purple); }
+    .tco-col .tco-verdict {
+      font-size: .78rem;
+      font-weight: 600;
+      letter-spacing: .04em;
+    }
+    .tco-col--cloud .tco-verdict { color: #FF6B6B; }
+    .tco-col--zenith .tco-verdict { color: var(--purple); }
+    .tco-vs {
+      padding: 0 20px;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1.6rem;
+      font-weight: 900;
+      color: var(--border-purple);
+      text-align: center;
+    }
+    @media (max-width: 640px) {
+      .tco-grid { grid-template-columns: 1fr; }
+      .tco-vs { padding: 0; text-align: center; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+      .tco-col { padding: 28px 24px; }
+    }
+
     /* ─── CTA ──────────────────────────────────────────── */
     #cta {
       padding: 120px 0;
@@ -1801,6 +1894,40 @@
           <a href="#cta" class="btn-book">Auf Kickstarter unterstützen →</a>
         </div>
 
+      </div>
+
+      <!-- TCO Comparison -->
+      <div class="tco-block">
+        <div class="tco-header">
+          <h3>Was kostet Sie KI wirklich? &nbsp;<span>Total Cost of Ownership – 3-Jahres-Vergleich</span></h3>
+        </div>
+        <div class="tco-grid">
+          <div class="tco-col tco-col--cloud">
+            <div class="tco-label">Typische Cloud-KI-Lösung</div>
+            <div class="tco-title">SaaS per Abo</div>
+            <div class="tco-calc">
+              <code>30 €</code> / Monat pro User<br />
+              × <code>10 User</code><br />
+              × <code>36 Monate</code> (3 Jahre)<br />
+              = laufende Kosten
+            </div>
+            <div class="tco-total">10.800 €</div>
+            <div class="tco-verdict">— und Ihre Daten liegen beim Anbieter.</div>
+          </div>
+          <div class="tco-vs">VS</div>
+          <div class="tco-col tco-col--zenith">
+            <div class="tco-label">Zenith Professional</div>
+            <div class="tco-title">Einmalig. Für immer.</div>
+            <div class="tco-calc">
+              Einmalige Hardware- &amp; Softwarezahlung<br />
+              Keine Monatsgebühren<br />
+              Keine User-Lizenzen<br />
+              Unbegrenzte Nutzungsdauer
+            </div>
+            <div class="tco-total">5.200 €</div>
+            <div class="tco-verdict">— und Ihre Daten bleiben bei Ihnen.</div>
+          </div>
+        </div>
       </div>
 
       <p style="margin-top:36px; text-align:center; font-size:.78rem; color: var(--text-muted); line-height:1.7;">
