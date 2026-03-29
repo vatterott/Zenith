@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30">
+  <!-- Blue field -->
+  <rect width="60" height="30" fill="#012169"/>
+  <!-- St Andrew's Cross – white diagonals -->
+  <line x1="0" y1="0" x2="60" y2="30" stroke="#fff" stroke-width="8"/>
+  <line x1="60" y1="0" x2="0" y2="30" stroke="#fff" stroke-width="8"/>
+  <!-- St Patrick's Cross – red diagonals (counterchange top-right/bottom-left) -->
+  <polyline points="0,0 30,11 60,0"      fill="none" stroke="#C8102E" stroke-width="4"/>
+  <polyline points="60,30 30,19 0,30"    fill="none" stroke="#C8102E" stroke-width="4"/>
+  <polyline points="60,0 35,15 60,30"    fill="none" stroke="#C8102E" stroke-width="4"/>
+  <polyline points="0,30 25,15 0,0"      fill="none" stroke="#C8102E" stroke-width="4"/>
+  <!-- St George's Cross – white arms -->
+  <rect x="24" y="0" width="12" height="30" fill="#fff"/>
+  <rect x="0"  y="9" width="60" height="12" fill="#fff"/>
+  <!-- St George's Cross – red arms -->
+  <rect x="26" y="0" width="8"  height="30" fill="#C8102E"/>
+  <rect x="0"  y="11" width="60" height="8" fill="#C8102E"/>
+</svg>
