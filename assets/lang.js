@@ -19,7 +19,7 @@
     'nav.pricing':       { en: 'Pricing',        de: 'Preise' },
     'nav.contact':       { en: 'Contact',        de: 'Kontakt' },
     'nav.kickstarter':   { en: 'On Kickstarter', de: 'Auf Kickstarter' },
-    'nav.back':          { en: '← Back to Homepage', de: '← Zurück zur Startseite' },
+    'nav.back':          { en: 'Back to Homepage', de: 'Zurück zur Startseite' },
 
     'footer.copy':       { en: '© 2026 Zenith DMS. All rights reserved.', de: '© 2026 Zenith DMS. Alle Rechte vorbehalten.' },
     'footer.imprint':    { en: 'Legal Notice', de: 'Impressum' },
@@ -303,6 +303,7 @@
       de: ''
     },
     'impressum.label':    { en: 'Legal Notice', de: 'Rechtliches' },
+    'impressum.h1':       { en: 'Legal <span>Notice</span>', de: 'Impres<span>sum</span>' },
     'impressum.meta':     { en: 'Required by German law (§ 5 TMG) &nbsp;|&nbsp; As of: March 2026', de: 'Angaben gemäß § 5 TMG &nbsp;|&nbsp; Stand: März 2026' },
 
     /* ════════════════════════════════
@@ -328,6 +329,7 @@
       de: ''
     },
     'agb.label':   { en: 'Legal', de: 'Rechtliches' },
+    'agb.h1':     { en: 'Terms &amp; <span>Conditions</span>', de: 'Allgemeine Geschäfts<span>bedingungen</span>' },
     'agb.meta':    { en: 'As of: March 2026 &nbsp;|&nbsp; Zenith DMS Software', de: 'Stand: März 2026 &nbsp;|&nbsp; Zenith DMS Software' },
   };
 
