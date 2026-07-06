@@ -6,29 +6,34 @@
 (function () {
   'use strict';
 
-  /* ─── Translations ──────────────────────────────────────────────── */
+  /* ─── Translations ──────────────────────────────────────────── */
   const translations = {
 
     /* ════════════════════════════════
        SHARED / GLOBAL
     ════════════════════════════════ */
-    'nav.features':      { en: 'Features',       de: 'Features' },
-    'nav.screenshots':   { en: 'Screenshots',    de: 'Screenshots' },
-    'nav.industry':      { en: 'Use Cases',      de: 'Anwendungen' },
-    'nav.technology':    { en: 'Technology',     de: 'Technologie' },
-    'nav.pricing':       { en: 'Pricing',        de: 'Preise' },
-    'nav.contact':       { en: 'Contact',        de: 'Kontakt' },
+    'nav.features':      { en: 'Features', de: 'Funktionen' },
+    'nav.screenshots':   { en: 'Screenshots', de: 'Screenshots' },
+    'nav.industry':      { en: 'Use Cases', de: 'Einsatzbereiche' },
+    'nav.technology':    { en: 'Technology', de: 'Technologie' },
+    'nav.pricing':       { en: 'Pricing', de: 'Preise' },
+    'nav.contact':       { en: 'Contact', de: 'Kontakt' },
     'nav.kickstarter':   { en: 'On Kickstarter', de: 'Auf Kickstarter' },
     'nav.back':          { en: 'Back to Homepage', de: 'Zurück zur Startseite' },
 
-    'footer.copy':       { en: '© 2026 Zenith DMS. All rights reserved.', de: '© 2026 Zenith DMS. Alle Rechte vorbehalten.' },
-    'footer.imprint':    { en: 'Legal Notice', de: 'Impressum' },
+    'footer.tagline':    { en: 'The AI document management system that runs 100% on your hardware. Your documents. Your AI. Your sovereignty.', de: 'Das KI-Dokumentenmanagement-System, das zu 100 % auf Ihrer Hardware läuft. Ihre Dokumente. Ihre KI. Ihre Souveränität.' },
+    'footer.col.product':{ en: 'Product', de: 'Produkt' },
+    'footer.col.company':{ en: 'Company', de: 'Unternehmen' },
+    'footer.col.legal':  { en: 'Legal', de: 'Rechtliches' },
+    'footer.copy':       { en: '© 2026 Zenith DMS · All rights reserved', de: '© 2026 Zenith DMS · Alle Rechte vorbehalten' },
+    'footer.made':       { en: 'Engineered in Germany · 100% local AI', de: 'Entwickelt in Deutschland · 100 % lokale KI' },
+    'footer.imprint':    { en: 'Imprint', de: 'Impressum' },
     'footer.privacy':    { en: 'Privacy Policy', de: 'Datenschutz' },
     'footer.terms':      { en: 'Terms & Conditions', de: 'AGB' },
     'footer.contact':    { en: 'Contact', de: 'Kontakt' },
 
     /* ════════════════════════════════
-       INDEX – announce bar
+       INDEX – Announce bar
     ════════════════════════════════ */
     'announce.badge':    { en: 'In Development', de: 'In Entwicklung' },
     'announce.text':     { en: 'Market launch expected September 2026 &nbsp;·&nbsp; Support the project on Kickstarter', de: 'Marktstart voraussichtlich September 2026 &nbsp;·&nbsp; Unterstützen Sie das Projekt auf Kickstarter' },
@@ -37,222 +42,232 @@
     /* ════════════════════════════════
        INDEX – Hero
     ════════════════════════════════ */
-    'hero.label':        { en: 'In Development · Market launch September 2026', de: 'In Entwicklung · Marktstart September 2026' },
-    'hero.h1.line2':     { en: 'The AI Document<br />Management System', de: 'Das KI-Dokumenten-<br />Management System' },
-    'hero.sub':          { en: 'Harness the full power of local AI for your documents –<br />100% secure, 100% offline, 100% GDPR-compliant, 100% sovereign', de: 'Nutzen Sie die volle Power lokaler KI für Ihre Dokumente –<br />100 % sicher, 100 % offline, 100 % DSGVO-konform, 100 % souverän' },
-    'hero.cta.primary':  { en: 'Discover Zenith Now →', de: 'Jetzt Zenith entdecken →' },
-    'hero.cta.ghost':    { en: 'Learn More', de: 'Mehr erfahren' },
-
-    /* ════════════════════════════════
-       INDEX – Problem / Solution
-    ════════════════════════════════ */
-    'problem.label':     { en: 'The Problem with Cloud AI', de: 'Das Problem mit Cloud-KI' },
-    'problem.title':     { en: 'Why Cloud Solutions<br /><span class="accent">Are Not an Option</span>', de: 'Warum Cloud-Lösungen<br /><span class="accent">keine Option</span> sind' },
-    'problem.sub':       { en: 'Trade secrets, sensitive data and data protection regulations tolerate no compromise. Zenith was built exactly for that.', de: 'Betriebsgeheimnisse, Fachdaten und DSGVO dulden keinen Kompromiss. Zenith wurde genau dafür entwickelt.' },
-
-    'problem.danger.badge': { en: '⚠ Risk', de: '⚠ Risiko' },
-    'problem.danger.h3':    { en: 'Cloud AI –<br />The Hidden Risk', de: 'Cloud-KI –<br />Das versteckte Risiko' },
-    'problem.danger.1':     { en: 'Sensitive business data, trade secrets and documentation leave your premises and end up on third-party servers', de: 'Sensible Geschäftsdaten, Betriebsgeheimnisse und Dokumentationen verlassen Ihr Haus und landen auf fremden Servern' },
-    'problem.danger.2':     { en: 'Possible violations of data protection law, trade secret law and industry-specific compliance requirements', de: 'Verstoß gegen DSGVO, Betriebsgeheimnis und branchenspezifische Compliance-Anforderungen möglich' },
-    'problem.danger.3':     { en: 'Data protection authorities are increasingly issuing fines for uncontrolled AI usage', de: 'Datenschutz-Aufsichtsbehörden melden zunehmend Bußgelder bei unkontrollierter KI-Nutzung' },
-    'problem.danger.4':     { en: 'Opaque data storage by AI providers – training data, logs, backups uncontrollable', de: 'Intransparente Datenspeicherung durch KI-Anbieter – Trainingsdaten, Logs, Backups unkontrollierbar' },
-    'problem.danger.5':     { en: 'Dependency on internet connection and external services jeopardises your availability', de: 'Abhängigkeit von Internetverbindung und externen Diensten gefährdet Ihre Verfügbarkeit' },
-
-    'problem.safe.badge':   { en: '✦ Solution', de: '✦ Lösung' },
-    'problem.safe.h3':      { en: 'Zenith –<br />Local Sovereignty', de: 'Zenith –<br />Lokale Souveränität' },
-    'problem.safe.1':       { en: 'All AI processes run exclusively on your hardware – not a single byte leaves your network', de: 'Alle KI-Prozesse laufen ausschließlich auf Ihrer Hardware – kein Byte verlässt Ihr Netzwerk' },
-    'problem.safe.2':       { en: 'Legally compliant: full control over all data, auditable at any time', de: 'Rechtssicher: vollständige Kontrolle über alle Daten, jederzeit auditierbar' },
-    'problem.safe.3':       { en: 'Privacy-by-design: data protection impact assessments are straightforward', de: 'DSGVO-konform by Design – Datenschutzfolgenabschätzung problemlos umsetzbar' },
-    'problem.safe.4':       { en: 'Runs on your local server (optimised for Minisforum MS S1 Max) – no dependencies', de: 'Betrieb auf Ihrem lokalen Server (optimiert für Minisforum MS S1 Max) – keine Abhängigkeiten' },
-    'problem.safe.5':       { en: 'Works fully offline – maximum availability and independence', de: 'Funktioniert auch offline – maximale Verfügbarkeit und Unabhängigkeit' },
+    'hero.eyebrow':      { en: '100% local · 0 bytes to the cloud · GDPR-compliant by design', de: '100 % lokal · 0 Byte in die Cloud · DSGVO-konform by design' },
+    'hero.h1':           { en: 'Your documents.<br />Your AI.<br /><span class="fx-serif fx-grad">Your hardware.</span>', de: 'Ihre Dokumente.<br />Ihre KI.<br /><span class="fx-serif fx-grad">Ihre Hardware.</span>' },
+    'hero.sub':          { en: 'Zenith reads, understands and organises your entire document inventory – PDFs, images, Office files. Ask questions in natural language and get answers <strong>with sources</strong>. All of it on one machine in your office.', de: 'Zenith liest, versteht und organisiert Ihren gesamten Dokumentenbestand – PDFs, Bilder, Office-Dateien. Stellen Sie Fragen in natürlicher Sprache und erhalten Sie Antworten <strong>mit Quellenangabe</strong>. Alles auf einer Maschine in Ihrem Büro.' },
+    'hero.cta1':         { en: 'Secure early-bird price', de: 'Frühbucher-Preis sichern' },
+    'hero.cta2':         { en: 'Explore features', de: 'Funktionen entdecken' },
+    'hero.proof1':       { en: 'Works fully offline', de: 'Funktioniert komplett offline' },
+    'hero.proof2':       { en: 'No subscription', de: 'Kein Abo' },
+    'hero.proof3':       { en: 'Unlimited users', de: 'Unbegrenzte Nutzer' },
+    'hero.fc1.head':     { en: 'Deadline detected', de: 'Frist erkannt' },
+    'hero.fc1.title':    { en: 'Insurance notice period', de: 'Kündigungsfrist Versicherung' },
+    'hero.fc1.date':     { en: 'March 31, 2026', de: '31. März 2026' },
+    'hero.fc1.tag':      { en: '→ added to calendar', de: '→ in Kalender eingetragen' },
+    'hero.fc2.head':     { en: 'Knowledge graph', de: 'Wissensgraph' },
+    'hero.fc2.body':     { en: '<strong>Müller GmbH</strong> linked with 23 documents, 4 contracts, 2 deadlines', de: '<strong>Müller GmbH</strong> verknüpft mit 23 Dokumenten, 4 Verträgen, 2 Fristen' },
 
     /* ════════════════════════════════
        INDEX – Stats
     ════════════════════════════════ */
-    'stats.ram':         { en: 'DDR5 RAM', de: 'DDR5-Arbeitsspeicher' },
-    'stats.bytes':       { en: 'External Data Transfer', de: 'Externe Datenübertragung' },
-    'stats.rag':         { en: 'AI Architecture', de: 'KI-Architektur' },
-    'stats.setup':       { en: 'min Setup Time', de: 'min Setup-Zeit' },
+    'stats.ram':         { en: 'Unified RAM for AI', de: 'Unified RAM für KI' },
+    'stats.bytes':       { en: 'External data transfer', de: 'Externe Datenübertragung' },
+    'stats.models':      { en: 'Specialised AI models', de: 'Spezialisierte KI-Modelle' },
+    'stats.setup':       { en: 'Setup time', de: 'Minuten bis einsatzbereit' },
+
+    /* ════════════════════════════════
+       INDEX – Marquee
+    ════════════════════════════════ */
+    'marquee.scans':     { en: 'Scans & Photos', de: 'Scans & Fotos' },
+    'marquee.hand':      { en: 'Handwritten notes', de: 'Handschriftliche Notizen' },
+    'marquee.scans2':    { en: 'Scans & Photos', de: 'Scans & Fotos' },
+    'marquee.hand2':     { en: 'Handwritten notes', de: 'Handschriftliche Notizen' },
+
+    /* ════════════════════════════════
+       INDEX – Problem / Solution
+    ════════════════════════════════ */
+    'problem.label':     { en: 'The problem with cloud AI', de: 'Das Problem mit Cloud-KI' },
+    'problem.title':     { en: 'Your data is your capital.<br /><span class="fx-serif fx-grad">Why hand it over?</span>', de: 'Ihre Daten sind Ihr Kapital.<br /><span class="fx-serif fx-grad">Warum sie aus der Hand geben?</span>' },
+    'problem.sub':       { en: 'Trade secrets, personal data and compliance requirements tolerate no compromise. Zenith was built for exactly one principle: nothing leaves your building. Ever.', de: 'Betriebsgeheimnisse, personenbezogene Daten und Compliance-Anforderungen dulden keinen Kompromiss. Zenith wurde für genau ein Prinzip gebaut: Nichts verlässt Ihr Haus. Niemals.' },
+    'problem.danger.badge': { en: '⚠ Cloud AI', de: '⚠ Cloud-KI' },
+    'problem.danger.h3':    { en: 'The invisible risk', de: 'Das unsichtbare Risiko' },
+    'problem.danger.1':     { en: 'Sensitive business data and trade secrets end up on third-party servers – often outside the EU', de: 'Sensible Geschäftsdaten und Betriebsgeheimnisse landen auf fremden Servern – oft außerhalb der EU' },
+    'problem.danger.2':     { en: 'Potential violations of GDPR, trade-secret law and industry-specific compliance', de: 'Mögliche Verstöße gegen DSGVO, Geschäftsgeheimnisgesetz und branchenspezifische Compliance' },
+    'problem.danger.3':     { en: 'Opaque storage: training data, logs and backups beyond your control', de: 'Intransparente Speicherung: Trainingsdaten, Logs und Backups außerhalb Ihrer Kontrolle' },
+    'problem.danger.4':     { en: 'Monthly per-user fees that never stop – costs grow with your team', de: 'Monatliche Gebühren pro Nutzer, die niemals enden – Kosten wachsen mit Ihrem Team' },
+    'problem.danger.5':     { en: 'No internet, no AI: your workflows depend on someone else\'s uptime', de: 'Kein Internet, keine KI: Ihre Arbeitsabläufe hängen von fremder Verfügbarkeit ab' },
+    'problem.safe.badge':   { en: '✓ Zenith', de: '✓ Zenith' },
+    'problem.safe.h3':      { en: 'Local sovereignty', de: 'Lokale Souveränität' },
+    'problem.safe.1':       { en: 'All AI models run exclusively on your hardware – not a single byte leaves your network', de: 'Alle KI-Modelle laufen ausschließlich auf Ihrer Hardware – kein einziges Byte verlässt Ihr Netzwerk' },
+    'problem.safe.2':       { en: 'Privacy-by-design: GDPR compliance and audits become straightforward', de: 'Privacy-by-Design: DSGVO-Konformität und Audits werden zur Formsache' },
+    'problem.safe.3':       { en: 'Full data control: you decide what is stored, processed and deleted', de: 'Volle Datenkontrolle: Sie entscheiden, was gespeichert, verarbeitet und gelöscht wird' },
+    'problem.safe.4':       { en: 'One-time purchase – no subscription, no per-user licences, unlimited usage', de: 'Einmaliger Kauf – kein Abo, keine Nutzerlizenzen, unbegrenzte Nutzung' },
+    'problem.safe.5':       { en: 'Works fully offline – even air-gapped in isolated networks', de: 'Funktioniert komplett offline – auf Wunsch sogar im isolierten Netzwerk (Air-Gap)' },
+
+    /* ════════════════════════════════
+       INDEX – Pipeline
+    ════════════════════════════════ */
+    'pipe.label':        { en: 'How Zenith works', de: 'So arbeitet Zenith' },
+    'pipe.title':        { en: 'Drop a file in.<br /><span class="fx-serif fx-grad">Knowledge comes out.</span>', de: 'Datei rein.<br /><span class="fx-serif fx-grad">Wissen raus.</span>' },
+    'pipe.sub':          { en: 'A fully automatic pipeline turns unstructured files into a searchable, connected knowledge base – without any manual tagging.', de: 'Eine vollautomatische Pipeline verwandelt unstrukturierte Dateien in eine durchsuchbare, vernetzte Wissensbasis – ganz ohne manuelles Verschlagworten.' },
+    'pipe.1.h3':         { en: 'Automatic intake', de: 'Automatische Erfassung' },
+    'pipe.1.p':          { en: 'A watched inbox folder ingests every file: PDFs, Word, Excel, photos, scans. Drop it in – Zenith does the rest, around the clock.', de: 'Ein überwachter Eingangsordner erfasst jede Datei: PDFs, Word, Excel, Fotos, Scans. Ablegen genügt – Zenith erledigt den Rest, rund um die Uhr.' },
+    'pipe.2.h3':         { en: 'Multimodal AI vision', de: 'Multimodale KI-Analyse' },
+    'pipe.2.p':          { en: 'A vision-language model reads every page like a human: text, tables, stamps, handwriting. It extracts title, sender, amounts, dates and tax relevance as structured data.', de: 'Ein Vision-Language-Modell liest jede Seite wie ein Mensch: Text, Tabellen, Stempel, Handschrift. Es extrahiert Titel, Absender, Beträge, Termine und Steuerrelevanz als strukturierte Daten.' },
+    'pipe.3.h3':         { en: 'Knowledge graph', de: 'Wissensgraph' },
+    'pipe.3.p':          { en: 'People, companies, projects and places are recognised as entities and linked across documents. Duplicates? Merge them with one click.', de: 'Personen, Firmen, Projekte und Orte werden als Entitäten erkannt und dokumentübergreifend verknüpft. Duplikate? Mit einem Klick zusammengeführt.' },
+    'pipe.4.h3':         { en: 'Ask anything', de: 'Fragen Sie einfach' },
+    'pipe.4.p':          { en: 'Semantic search plus AI chat with source references. Complex questions across document boundaries – answered in seconds, verifiable with one click.', de: 'Semantische Suche plus KI-Chat mit Quellenangaben. Komplexe Fragen über Dokumentgrenzen hinweg – beantwortet in Sekunden, überprüfbar mit einem Klick.' },
+
+    /* ════════════════════════════════
+       INDEX – Features (Bento)
+    ════════════════════════════════ */
+    'feat.label':        { en: 'Everything included', de: 'Alles inklusive' },
+    'feat.title':        { en: 'Not a document graveyard.<br /><span class="fx-serif fx-grad">A living knowledge base.</span>', de: 'Kein Dokumentenfriedhof.<br /><span class="fx-serif fx-grad">Eine lebendige Wissensbasis.</span>' },
+    'feat.sub':          { en: 'Every feature exists in the product today – no vapourware, no "coming soon" asterisks.', de: 'Jede Funktion existiert heute im Produkt – kein Vaporware, keine „Coming soon"-Sternchen.' },
+    'feat.1.h3':         { en: 'Semantic search that understands meaning', de: 'Semantische Suche, die Bedeutung versteht' },
+    'feat.1.p':          { en: 'Search for "all tax-relevant documents from 2025" and find exactly that – even if no file ever contained those words. Vector search compares meaning, not keywords. Optional reranking sharpens the top results.', de: 'Suchen Sie nach „alle steuerrelevanten Dokumente aus 2025" und finden Sie genau das – auch wenn kein Dokument diese Worte je enthielt. Die Vektorsuche vergleicht Bedeutung statt Schlagwörter. Optionales Reranking schärft die Top-Treffer.' },
+    'feat.1.tag':        { en: 'Vector search directly in SQL', de: 'Vektorsuche direkt in SQL' },
+    'feat.2.h3':         { en: 'AI chat with your documents – incl. attachments', de: 'KI-Chat mit Ihren Dokumenten – inkl. Anhängen' },
+    'feat.2.p':          { en: 'Discuss your document inventory in natural language. Drag a PDF or photo straight into the chat and ask questions about it. Every answer cites its sources – one click opens the original.', de: 'Diskutieren Sie Ihren Dokumentenbestand in natürlicher Sprache. Ziehen Sie ein PDF oder Foto direkt in den Chat und stellen Sie Fragen dazu. Jede Antwort nennt ihre Quellen – ein Klick öffnet das Original.' },
+    'feat.2.tag':        { en: 'Drag & drop · Source references', de: 'Drag & Drop · Quellenangaben' },
+    'feat.3.h3':         { en: 'Automatic calendar', de: 'Automatischer Kalender' },
+    'feat.3.p':          { en: 'Zenith detects appointments and deadlines inside documents and proposes them as calendar entries. You confirm – nothing gets lost.', de: 'Zenith erkennt Termine und Fristen in Dokumenten und schlägt sie als Kalendereinträge vor. Sie bestätigen – nichts geht mehr verloren.' },
+    'feat.3.tag':        { en: 'Deadline detection', de: 'Fristenerkennung' },
+    'feat.4.h3':         { en: 'Entities & relations', de: 'Entitäten & Beziehungen' },
+    'feat.4.p':          { en: 'People, companies, projects – automatically recognised and linked across your archive. Merge duplicates manually with full control.', de: 'Personen, Firmen, Projekte – automatisch erkannt und über Ihr gesamtes Archiv verknüpft. Duplikate führen Sie manuell und mit voller Kontrolle zusammen.' },
+    'feat.4.tag':        { en: 'Manual merge', de: 'Manuelles Zusammenführen' },
+    'feat.5.h3':         { en: 'Live processing monitor', de: 'Live-Verarbeitungsmonitor' },
+    'feat.5.p':          { en: 'Watch in real time which file is being processed, what\'s queued and how fast the pipeline runs. Full transparency instead of a black box.', de: 'Verfolgen Sie in Echtzeit, welche Datei gerade verarbeitet wird, was in der Warteschlange liegt und wie schnell die Pipeline läuft. Volle Transparenz statt Blackbox.' },
+    'feat.5.tag':        { en: 'Real-time status', de: 'Echtzeit-Status' },
+    'feat.6.h3':         { en: 'Structured extraction – ready for your tax return', de: 'Strukturierte Extraktion – bereit für die Steuererklärung' },
+    'feat.6.p':          { en: 'Every document is broken down into structured data: title, sender, date, amounts with currency, tax relevance, category. Questions like "all documents for my 2025 tax return" become a single click.', de: 'Jedes Dokument wird in strukturierte Daten zerlegt: Titel, Absender, Datum, Beträge mit Währung, Steuerrelevanz, Kategorie. Fragen wie „alle Unterlagen für die Steuererklärung 2025" werden zu einem einzigen Klick.' },
+    'feat.6.tag':        { en: 'Amounts · Dates · Tax flags', de: 'Beträge · Termine · Steuer-Kennzeichnung' },
+    'feat.7.h3':         { en: 'Web interface – on every device', de: 'Web-Oberfläche – auf jedem Gerät' },
+    'feat.7.p':          { en: 'Zenith runs as a modern web app in your local network. Desktop, tablet or phone: your knowledge base is one browser tab away. No client installation, unlimited users.', de: 'Zenith läuft als moderne Web-App in Ihrem lokalen Netzwerk. Desktop, Tablet oder Smartphone: Ihre Wissensbasis ist einen Browser-Tab entfernt. Keine Client-Installation, unbegrenzte Nutzer.' },
+    'feat.7.tag':        { en: 'Blazor · Responsive', de: 'Blazor · Responsive' },
 
     /* ════════════════════════════════
        INDEX – Screenshots
     ════════════════════════════════ */
-    'screens.label':     { en: 'The Interface', de: 'Die Oberfläche' },
-    'screens.title':     { en: 'Designed for<br /><span class="accent">Everyday Operations.</span>', de: 'Designed für den<br /><span class="accent">Alltag im Betrieb.</span>' },
-    'screens.sub':       { en: 'Zenith is fully available as a web interface – no installation needed, directly in the browser. Whether at your desk, working from home or on your smartphone: your knowledge base is always just one click away.', de: 'Zenith steht vollständig als Web-Oberfläche bereit – ohne Installation, direkt im Browser. Ob am stationären Arbeitsplatz, im Homeoffice oder unterwegs auf dem Smartphone: Ihre Wissensbasis ist immer nur einen Klick entfernt.' },
-    'screens.desktop.divider': { en: '📱 Mobile View', de: '📱 Mobile-Ansicht' },
-    'screens.note':      { en: '🖥 Desktop & Laptop &nbsp;·&nbsp; 📱 Smartphone & Tablet &nbsp;·&nbsp; No app download required', de: '🖥 Desktop & Laptop &nbsp;·&nbsp; 📱 Smartphone & Tablet &nbsp;·&nbsp; Kein App-Download erforderlich' },
-    'screens.cap1':      { en: 'Main View & Document Search', de: 'Hauptansicht & Dokumentensuche' },
-    'screens.cap2':      { en: 'Analysis Function & AI Summary', de: 'Analysefunktion & KI-Zusammenfassung' },
-    'screens.cap3':      { en: 'Document Archive & Navigation', de: 'Dokumentenarchiv & Navigation' },
-    'screens.cap.mob1':  { en: 'Home Screen & Quick Search', de: 'Startseite & Schnellsuche' },
-    'screens.cap.mob2':  { en: 'AI Chat & Document Answers', de: 'KI-Chat & Dokumentenantworten' },
-    'screens.cap.mob3':  { en: 'Document Overview & Filters', de: 'Dokumentenübersicht & Filter' },
+    'screens.label':     { en: 'The interface', de: 'Die Oberfläche' },
+    'screens.title':     { en: 'Powerful engine.<br /><span class="fx-serif fx-grad">Effortless surface.</span>', de: 'Kraftvoller Motor.<br /><span class="fx-serif fx-grad">Mühelose Oberfläche.</span>' },
+    'screens.sub':       { en: 'Enterprise-grade AI shouldn\'t feel like enterprise software. Zenith\'s interface stays out of your way – on the desktop and on your phone.', de: 'Enterprise-KI darf sich nicht wie Enterprise-Software anfühlen. Die Zenith-Oberfläche bleibt Ihnen aus dem Weg – am Desktop wie am Smartphone.' },
+    'screens.tab1':      { en: 'Search & Archive', de: 'Suche & Archiv' },
+    'screens.tab2':      { en: 'AI Analysis', de: 'KI-Analyse' },
+    'screens.tab3':      { en: 'Document Detail', de: 'Dokumentdetail' },
+    'screens.mob1':      { en: 'Home & quick search', de: 'Start & Schnellsuche' },
+    'screens.mob2':      { en: 'AI chat with sources', de: 'KI-Chat mit Quellen' },
+    'screens.mob3':      { en: 'Documents on the go', de: 'Dokumente unterwegs' },
 
     /* ════════════════════════════════
-       INDEX – Features
+       INDEX – Use cases
     ════════════════════════════════ */
-    'features.label':    { en: 'The Magic of Zenith', de: 'Die Magie von Zenith' },
-    'features.title':    { en: 'Advanced AI.<br /><span class="accent">Fully Under Your Control.</span>', de: 'Hochentwickelte KI.<br /><span class="accent">Vollständig unter Ihrer Kontrolle.</span>' },
-    'features.sub':      { en: 'Zenith combines state-of-the-art RAG technology with intuitive operation – no IT degree, no cloud, no compromises.', de: 'Zenith kombiniert modernste RAG-Technologie mit intuitiver Bedienung – ohne IT-Studium, ohne Cloud, ohne Kompromisse.' },
-
-    'feat.1.num':   { en: '01 — Search',          de: '01 — Suche' },
-    'feat.1.h3':    { en: 'Intelligent Full-Text Search', de: 'Intelligente Volltextsuche' },
-    'feat.1.p':     { en: 'Ask questions in natural language. Zenith searches your entire document base with semantic understanding – not just keywords.', de: 'Stellen Sie Fragen in natürlicher Sprache. Zenith durchsucht Ihre gesamte Dokumentenbasis mit semantischem Verständnis – nicht nur nach Keywords.' },
-    'feat.1.ex1':   { en: '"Which delivery dates and deadlines are expiring in the next 7 days?"', de: '„Welche Liefertermine und Deadlines laufen in den nächsten 7 Tagen ab?"' },
-    'feat.1.ex2':   { en: '"Show me all maintenance reports for System B from 2024–2025."', de: '„Zeig mir alle Wartungsberichte für Anlage B aus 2024–2025."' },
-
-    'feat.2.num':   { en: '02 — Classification',  de: '02 — Klassifizierung' },
-    'feat.2.h3':    { en: 'Automated Classification', de: 'Automatisierte Klassifizierung' },
-    'feat.2.p':     { en: 'Documents are automatically recognised, categorised and tagged on import. From invoices to contracts – your archive organises itself.', de: 'Dokumente werden beim Import automatisch erkannt, kategorisiert und getaggt. Von der Rechnung bis zum Vertrag – Ihr Archiv organisiert sich selbst.' },
-    'feat.2.ex':    { en: 'Detects: Invoices · Contracts · Reports · Minutes · Certificates · Manuals', de: 'Erkennt: Rechnungen · Verträge · Berichte · Protokolle · Zertifikate · Handbücher' },
-
-    'feat.3.num':   { en: '03 — Setup',           de: '03 — Setup' },
-    'feat.3.h3':    { en: 'One-Click Security',   de: 'One-Click-Sicherheit' },
-    'feat.3.p':     { en: 'Installation and operation without IT expertise. Zenith runs on your local hardware and is ready in just a few steps – immediately and permanently.', de: 'Installation und Betrieb ohne IT-Expertise. Zenith läuft auf Ihrer lokalen Hardware und ist in wenigen Schritten einsatzbereit – sofort und dauerhaft.' },
-    'feat.3.tag':   { en: 'Setup < 30 min',       de: 'Setup < 30 min' },
-
-    'feat.4.num':   { en: '04 — Archive',         de: '04 — Archiv' },
-    'feat.4.h3':    { en: 'Structured Document Archive', de: 'Strukturiertes Dokumentenarchiv' },
-    'feat.4.p':     { en: 'Projects, cases and documents in a clear hierarchy. Fully indexed, versioned and lightning-fast – even with tens of thousands of files.', de: 'Projekte, Vorgänge und Dokumente in einer klaren Hierarchie. Volltext-indiziert, versioniert und blitzschnell abrufbar – auch bei zehntausenden Dateien.' },
-    'feat.4.ex':    { en: 'Search across all formats: PDF · Word · Email · TIFF · more', de: 'Suche über alle Formate: PDF · Word · E-Mail · TIFF · mehr' },
-
-    'feat.5.num':   { en: '05 — Deadlines',       de: '05 — Fristen' },
-    'feat.5.h3':    { en: 'Deadline & Task Management', de: 'Frist- & Aufgabenmanagement' },
-    'feat.5.p':     { en: 'Zenith automatically extracts deadlines and dates from documents and reminds you proactively – before anything expires.', de: 'Zenith extrahiert Fristen und Termine automatisch aus Dokumenten und erinnert Sie proaktiv – bevor etwas ausläuft.' },
-    'feat.5.ex':    { en: 'AI automatically detects dates in contracts, maintenance plans and regulatory notices', de: 'KI erkennt Termine in Verträgen, Wartungsplänen und Behördenbescheiden automatisch' },
-
-    'feat.6.num':   { en: '06 — Analysis',        de: '06 — Analyse' },
-    'feat.6.h3':    { en: 'Document Analysis & Summarisation', de: 'Dokumentanalyse & Zusammenfassung' },
-    'feat.6.p':     { en: 'Long reports, expert opinions or technical documentation grasped in seconds. Zenith delivers precise summaries and highlights relevant passages.', de: 'Lange Berichte, Gutachten oder technische Dokumentationen in Sekunden erfasst. Zenith liefert präzise Zusammenfassungen und hebt relevante Passagen hervor.' },
-    'feat.6.tag':   { en: 'Saves up to 70% reading time', de: 'Spart bis zu 70 % Lesezeit' },
-
-    /* ════════════════════════════════
-       INDEX – Industry / Use Cases
-    ════════════════════════════════ */
-    'industry.label': { en: 'Limitless Applications', de: 'Grenzenlose Einsatzmöglichkeiten' },
-    'industry.title': { en: 'For Every Industry.<br /><span class="accent">For Every Use Case.</span>', de: 'Für jede Branche.<br /><span class="accent">Für jeden Anwendungsfall.</span>' },
-    'industry.sub':   { en: 'From the factory floor to the government office – Zenith secures your knowledge wherever critical documents and specialist data are created.', de: 'Von der Fabrikhalle bis zum Verwaltungsamt – Zenith sichert Ihr Wissen, wo immer kritische Dokumente und Fachdaten entstehen.' },
-
-    'uc.1.sector': { en: 'Industry',       de: 'Industrie' },
-    'uc.1.h4':     { en: 'Machine Park Knowledge', de: 'Maschinenpark-Wissen' },
-    'uc.1.p':      { en: 'Ask questions about all your machine documentation – instantly, offline, precisely.', de: 'Wartungsfragen an Ihre gesamten Maschinendokumentationen stellen – sofort, offline, präzise.' },
-
-    'uc.2.sector': { en: 'Architecture',   de: 'Architektur' },
-    'uc.2.h4':     { en: 'Building Code Check', de: 'Bauvorschriften-Check' },
-    'uc.2.p':      { en: 'Project management and automated comparison with applicable building regulations and standards.', de: 'Projektsteuerung und automatisierter Abgleich mit geltenden Bauvorschriften und Normen.' },
-
-    'uc.3.sector': { en: 'Real Estate',    de: 'Immobilien' },
-    'uc.3.h4':     { en: 'Contract Analysis', de: 'Vertragsanalyse' },
-    'uc.3.p':      { en: 'Lease analysis, deadline checks and special termination rights identified in seconds.', de: 'Mietvertragsanalyse, Fristenprüfung und Sonderkündigungsrechte in Sekunden aufgespürt.' },
-
-    'uc.4.sector': { en: 'HR',             de: 'HR' },
-    'uc.4.h4':     { en: 'Onboarding Knowledge', de: 'Onboarding-Wissen' },
-    'uc.4.p':      { en: 'Internal policies, works agreements and onboarding documents instantly accessible.', de: 'Interne Richtlinien, Betriebsvereinbarungen und Onboarding-Dokumente blitzschnell abrufbar.' },
-
-    'uc.5.sector': { en: 'R&D',            de: 'R&D' },
-    'uc.5.h4':     { en: 'Lab Report Analysis', de: 'Laborbericht-Analyse' },
-    'uc.5.p':      { en: 'Make decades of research reports and lab protocols semantically searchable.', de: 'Jahrzehnte an Forschungsberichten und Laborprotokollen semantisch durchsuchbar machen.' },
-
-    'uc.6.sector': { en: 'Finance',        de: 'Finanzen' },
-    'uc.6.h4':     { en: 'Audit Preparation', de: 'Audit-Vorbereitung' },
-    'uc.6.p':      { en: 'Audit-proof documentation and lightning-fast audit preparation – completely offline.', de: 'Revisionssichere Dokumentation und blitzschnelle Audit-Vorbereitung – komplett offline.' },
-
-    'uc.7.sector': { en: 'Government',     de: 'Verwaltung' },
-    'uc.7.h4':     { en: 'GDPR-Compliant Citizen Service', de: 'DSGVO-Bürgerservice' },
-    'uc.7.p':      { en: 'Local AI knowledge for authorities – compliant citizen service without cloud dependency.', de: 'Lokales KI-Wissen für Behörden – DSGVO-konformer Bürgerservice ohne Cloud-Abhängigkeit.' },
-
-    'uc.8.sector': { en: 'Hospitality',    de: 'Hotellerie' },
-    'uc.8.h4':     { en: 'SOP Access',     de: 'SOP-Zugriff' },
-    'uc.8.p':      { en: 'Central access to quality standards and Standard Operating Procedures for all teams.', de: 'Zentraler Zugriff auf Qualitätsstandards und Standard Operating Procedures für alle Teams.' },
-
-    'uc.9.sector': { en: 'Software',       de: 'Software' },
-    'uc.9.h4':     { en: 'Legacy Documentation', de: 'Legacy-Dokumentation' },
-    'uc.9.p':      { en: 'Query years-old code documentation, API specs and architecture decisions.', de: 'Abfrage von jahralten Code-Dokumentationen, API-Specs und Architekturentscheidungen.' },
-
-    'uc.10.sector': { en: 'Logistics',     de: 'Logistik' },
-    'uc.10.h4':    { en: 'Offline at Sea', de: 'Offline auf hoher See' },
-    'uc.10.p':     { en: 'Maintenance logs and technical manuals – available even without internet connection.', de: 'Wartungsprotokolle und technische Handbücher – auch ohne Internetverbindung verfügbar.' },
+    'industry.label':    { en: 'Built for professionals', de: 'Gebaut für Profis' },
+    'industry.title':    { en: 'For every industry.<br /><span class="fx-serif fx-grad">For every archive.</span>', de: 'Für jede Branche.<br /><span class="fx-serif fx-grad">Für jedes Archiv.</span>' },
+    'industry.sub':      { en: 'Wherever critical documents pile up and knowledge lives in filing cabinets – Zenith turns it into instant answers.', de: 'Überall, wo sich kritische Dokumente stapeln und Wissen in Aktenschränken schlummert – Zenith macht daraus sofortige Antworten.' },
+    'uc.1.sector':       { en: 'Industry & Manufacturing', de: 'Industrie & Fertigung' },
+    'uc.1.h4':           { en: 'Machine park knowledge', de: 'Maschinenpark-Wissen' },
+    'uc.1.p':            { en: 'Manuals, maintenance logs, certificates – ask questions about your entire machine documentation and get instant, precise answers. Offline, right on the shop floor.', de: 'Handbücher, Wartungsprotokolle, Zertifikate – stellen Sie Fragen an Ihre gesamte Maschinendokumentation und erhalten Sie sofort präzise Antworten. Offline, direkt in der Halle.' },
+    'uc.2.sector':       { en: 'Architecture & Engineering', de: 'Architektur & Ingenieurwesen' },
+    'uc.2.h4':           { en: 'Project & standards archive', de: 'Projekt- & Normenarchiv' },
+    'uc.2.p':            { en: 'Plans, building regulations, correspondence across years of projects – semantically searchable. Deadlines from permits land in the calendar automatically.', de: 'Pläne, Bauvorschriften, Schriftverkehr über Jahre von Projekten – semantisch durchsuchbar. Fristen aus Genehmigungen landen automatisch im Kalender.' },
+    'uc.3.sector':       { en: 'Real Estate & Property', de: 'Immobilien & Verwaltung' },
+    'uc.3.h4':           { en: 'Contract intelligence', de: 'Vertragsintelligenz' },
+    'uc.3.p':            { en: 'Leases, utility statements, insurance policies per property – linked as entities. Special termination rights and notice periods surface on time.', de: 'Mietverträge, Nebenkostenabrechnungen, Versicherungspolicen je Objekt – als Entitäten verknüpft. Sonderkündigungsrechte und Fristen tauchen rechtzeitig auf.' },
+    'uc.4.sector':       { en: 'Legal & Consulting', de: 'Recht & Beratung' },
+    'uc.4.h4':           { en: 'Case file research', de: 'Aktenrecherche' },
+    'uc.4.p':            { en: 'Client files, opinions, correspondence – professional secrecy demands local processing. Zenith searches thousands of pages without a single byte leaving the office.', de: 'Mandantenakten, Gutachten, Korrespondenz – das Berufsgeheimnis verlangt lokale Verarbeitung. Zenith durchsucht tausende Seiten, ohne dass ein Byte die Kanzlei verlässt.' },
+    'uc.5.sector':       { en: 'Healthcare & Practices', de: 'Gesundheitswesen & Praxen' },
+    'uc.5.h4':           { en: 'Sensitive records, safe', de: 'Sensible Akten, sicher' },
+    'uc.5.p':            { en: 'Reports, referrals, lab results: maximum-sensitivity data stays inside the practice. Find any prior finding in seconds – GDPR-compliant by architecture.', de: 'Befunde, Überweisungen, Laborwerte: Hochsensible Daten bleiben in der Praxis. Jeden Vorbefund in Sekunden finden – DSGVO-konform durch Architektur.' },
+    'uc.6.sector':       { en: 'Private & Family Office', de: 'Privat & Family Office' },
+    'uc.6.h4':           { en: 'Life admin, solved', de: 'Papierkram, gelöst' },
+    'uc.6.p':            { en: 'Insurance, contracts, invoices, warranties – the whole household archive becomes searchable. "All documents for the 2025 tax return" is one question away.', de: 'Versicherungen, Verträge, Rechnungen, Garantien – das gesamte Haushaltsarchiv wird durchsuchbar. „Alle Unterlagen für die Steuererklärung 2025" ist nur eine Frage entfernt.' },
 
     /* ════════════════════════════════
        INDEX – Technology
     ════════════════════════════════ */
-    'tech.label':  { en: 'Technical Excellence',  de: 'Technische Exzellenz' },
-    'tech.title':  { en: 'Enterprise Performance.<br /><span class="accent">Local Sovereignty.</span>', de: 'Enterprise-Performance.<br /><span class="accent">Lokale Souveränität.</span>' },
-    'tech.sub':    { en: 'Zenith runs on cutting-edge hardware and uses state-of-the-art architecture – for speed and reliability you can feel.', de: 'Zenith läuft auf modernster Hardware und nutzt State-of-the-Art-Architektur – für Geschwindigkeit und Zuverlässigkeit, die Sie spüren.' },
-
-    'tech.1.h4':   { en: 'Optimised for Minisforum MS S1 Max', de: 'Optimiert für Minisforum MS S1 Max' },
-    'tech.1.p':    { en: 'Zenith runs on the compact Intel-based mini PC with up to 128 GB DDR5 RAM, fast NVMe storage and a quiet fan system – ideal for continuous office operation.', de: 'Zenith läuft auf dem kompakten Intel-basierten Mini-PC mit bis zu 128 GB DDR5-RAM, schnellem NVMe-Speicher und einem leisen Lüftersystem – ideal für den Dauerbetrieb im Büro.' },
-
-    'tech.2.h4':   { en: 'RAG Architecture (Retrieval-Augmented Generation)', de: 'RAG-Architektur (Retrieval-Augmented Generation)' },
-    'tech.2.p':    { en: 'The AI answers not from memory, but from your documents – precise, up-to-date and without hallucinations.', de: 'Die KI antwortet nicht aus dem Gedächtnis, sondern aus Ihren Dokumenten – präzise, aktuell und ohne Halluzinationen.' },
-
-    'tech.3.h4':   { en: 'SQL Vector Search', de: 'SQL Vector Search' },
-    'tech.3.p':    { en: 'High-performance semantic search directly in the database. Thousands of documents are searched semantically in milliseconds.', de: 'Hochperformante semantische Suche direkt in der Datenbank. Tausende Dokumente werden in Millisekunden semantisch durchsucht.' },
-
-    'tech.4.h4':   { en: 'Air-Gap Capable', de: 'Air-Gap-fähig' },
-    'tech.4.p':    { en: 'Zenith works completely without an internet connection. For maximum security it can be operated in a fully isolated network.', de: 'Zenith funktioniert vollständig ohne Internetverbindung. Für maximale Sicherheit kann es in einem vollständig isolierten Netzwerk betrieben werden.' },
-
-    'tech.5.h4':   { en: 'Scalable for Any Company Size', de: 'Skalierbar für jede Unternehmensgröße' },
-    'tech.5.p':    { en: 'Whether 500 or 500,000 documents – the architecture stays fast and stable. Grow without additional costs.', de: 'Ob 500 oder 500.000 Dokumente – die Architektur bleibt schnell und stabil. Wachsen Sie ohne Mehrkosten.' },
-
-    'tech.6.h4':   { en: 'Automatic Backups & Versioning', de: 'Automatische Backups & Versionierung' },
-    'tech.6.p':    { en: 'Every change is versioned locally. Complete document history on your own hardware – no third parties involved.', de: 'Jede Änderung wird lokal versioniert. Vollständige Dokumentenhistorie auf Ihrer eigenen Hardware – kein Drittanbieter involviert.' },
+    'tech.label':        { en: 'Under the hood', de: 'Unter der Haube' },
+    'tech.title':        { en: 'Enterprise AI stack.<br /><span class="fx-serif fx-grad">Office-sized footprint.</span>', de: 'Enterprise-KI-Stack.<br /><span class="fx-serif fx-grad">Im Büro-Format.</span>' },
+    'tech.sub':          { en: 'Three specialised AI models orchestrated on one silent mini PC – engineered for 24/7 operation next to your desk.', de: 'Drei spezialisierte KI-Modelle, orchestriert auf einem leisen Mini-PC – konstruiert für den 24/7-Betrieb neben Ihrem Schreibtisch.' },
+    'tech.1.h4':         { en: 'AMD Ryzen AI Max+ 395 · 128 GB unified RAM', de: 'AMD Ryzen AI Max+ 395 · 128 GB Unified RAM' },
+    'tech.1.p':          { en: 'The Minisforum MS-S1 Max delivers workstation-class AI performance: up to 96 GB RAM dedicated to the GPU – enough to run a 30-billion-parameter vision model entirely in memory.', de: 'Der Minisforum MS-S1 Max liefert KI-Leistung auf Workstation-Niveau: bis zu 96 GB RAM exklusiv für die GPU – genug, um ein Vision-Modell mit 30 Milliarden Parametern komplett im Speicher zu betreiben.' },
+    'tech.2.h4':         { en: 'Three specialised models, one team', de: 'Drei spezialisierte Modelle, ein Team' },
+    'tech.2.p':          { en: 'Qwen3-VL 30B reads and understands documents visually. Qwen3-Embedding 4B builds the semantic index. A dedicated reranker sharpens search results. Each does one job – brilliantly.', de: 'Qwen3-VL 30B liest und versteht Dokumente visuell. Qwen3-Embedding 4B baut den semantischen Index. Ein dedizierter Reranker schärft die Suchergebnisse. Jedes Modell macht einen Job – brillant.' },
+    'tech.3.h4':         { en: 'Vector search inside SQL Server', de: 'Vektorsuche direkt im SQL Server' },
+    'tech.3.p':          { en: 'Embeddings live directly in the database – no separate vector-store infrastructure. Semantic search across thousands of documents in milliseconds, transactionally safe.', de: 'Embeddings liegen direkt in der Datenbank – keine separate Vektor-Store-Infrastruktur. Semantische Suche über tausende Dokumente in Millisekunden, transaktionssicher.' },
+    'tech.4.h4':         { en: 'Air-gap capable', de: 'Air-Gap-fähig' },
+    'tech.4.p':          { en: 'Zenith needs zero internet – not for setup, not for operation, not for the AI. Run it in a fully isolated network. Your data, physically unreachable.', de: 'Zenith braucht null Internet – nicht für die Einrichtung, nicht für den Betrieb, nicht für die KI. Betreiben Sie es im vollständig isolierten Netzwerk. Ihre Daten, physisch unerreichbar.' },
+    'tech.5.h4':         { en: 'RAG: answers with receipts', de: 'RAG: Antworten mit Beleg' },
+    'tech.5.p':          { en: 'Retrieval-Augmented Generation means the AI answers from your documents, not from vague memory. Every statement links to its source – verifiable in one click.', de: 'Retrieval-Augmented Generation bedeutet: Die KI antwortet aus Ihren Dokumenten, nicht aus vagem Gedächtnis. Jede Aussage verlinkt ihre Quelle – überprüfbar mit einem Klick.' },
+    'tech.6.h4':         { en: 'Modern .NET architecture', de: 'Moderne .NET-Architektur' },
+    'tech.6.p':          { en: 'Built on .NET 10 and Blazor with a robust worker-service pipeline. Automatic retries, live status, clean data model – engineered for years of unattended operation.', de: 'Gebaut auf .NET 10 und Blazor mit robuster Worker-Service-Pipeline. Automatische Wiederholungen, Live-Status, sauberes Datenmodell – konstruiert für Jahre wartungsfreien Betrieb.' },
 
     /* ════════════════════════════════
        INDEX – Pricing
     ════════════════════════════════ */
-    'pricing.label': { en: 'Pricing & Packages', de: 'Preise & Pakete' },
-    'pricing.title': { en: 'Choose Your<br /><span class="accent">Zenith Solution</span>', de: 'Wählen Sie Ihre<br /><span class="accent">Zenith-Lösung</span>' },
-    'pricing.sub':   { en: 'One-time payment – no subscriptions, no cloud lock-in, no hidden costs. Buy once and own Zenith forever.', de: 'Einmalige Zahlung – keine Abonnements, kein Cloud-Zwang, keine versteckten Kosten. Sie kaufen einmal und besitzen Zenith für immer.' },
+    'pricing.label':     { en: 'Kickstarter early-bird pricing', de: 'Kickstarter-Frühbucherpreise' },
+    'pricing.title':     { en: 'Buy once.<br /><span class="fx-serif fx-grad">Own it forever.</span>', de: 'Einmal kaufen.<br /><span class="fx-serif fx-grad">Für immer besitzen.</span>' },
+    'pricing.sub':       { en: 'Hardware + software as a complete package. No subscription, no per-user fees, no hidden costs. Delivered ready to run.', de: 'Hardware + Software als Komplettpaket. Kein Abo, keine Nutzergebühren, keine versteckten Kosten. Geliefert wird betriebsbereit.' },
+    'pricing.base.tier': { en: 'Ready to work', de: 'Sofort einsatzbereit' },
+    'pricing.base.note': { en: 'One-time payment · Hardware & software', de: 'Einmalzahlung · Hardware & Software' },
+    'pricing.base.f1':   { en: 'Minisforum MS-S1 Max (128 GB RAM)', de: 'Minisforum MS-S1 Max (128 GB RAM)' },
+    'pricing.base.f2':   { en: 'Zenith pre-installed & configured', de: 'Zenith vorinstalliert & konfiguriert' },
+    'pricing.base.f3':   { en: 'All AI features · unlimited users', de: 'Alle KI-Funktionen · unbegrenzte Nutzer' },
+    'pricing.base.f4':   { en: '100% local – 0 bytes external transfer', de: '100 % lokal – 0 Byte externe Übertragung' },
+    'pricing.base.f5':   { en: 'Setup guide & email support', de: 'Einrichtungsleitfaden & E-Mail-Support' },
+    'pricing.base.btn':  { en: 'Support on Kickstarter', de: 'Auf Kickstarter unterstützen' },
+    'pricing.pro.flag':  { en: 'Most popular', de: 'Am beliebtesten' },
+    'pricing.pro.tier':  { en: 'For companies & teams', de: 'Für Unternehmen & Teams' },
+    'pricing.pro.note':  { en: 'One-time payment · Incl. RAID backup', de: 'Einmalzahlung · Inkl. RAID-Sicherung' },
+    'pricing.pro.f1':    { en: 'Everything from BASE', de: 'Alles aus BASE' },
+    'pricing.pro.f2':    { en: 'External RAID system against data loss', de: 'Externes RAID-System gegen Datenverlust' },
+    'pricing.pro.f3':    { en: 'Redundancy for business-critical data', de: 'Redundanz für geschäftskritische Daten' },
+    'pricing.pro.f4':    { en: 'Automatic local backup', de: 'Automatisches lokales Backup' },
+    'pricing.pro.f5':    { en: 'Priority email support', de: 'Priorisierter E-Mail-Support' },
+    'pricing.pro.btn':   { en: 'Support on Kickstarter', de: 'Auf Kickstarter unterstützen' },
+    'pricing.prem.tier': { en: 'For enterprise & government', de: 'Für Enterprise & Behörden' },
+    'pricing.prem.note': { en: 'One-time payment · All-inclusive package', de: 'Einmalzahlung · Das Rundum-sorglos-Paket' },
+    'pricing.prem.f1':   { en: 'Everything from PROFESSIONAL', de: 'Alles aus PROFESSIONAL' },
+    'pricing.prem.f2':   { en: '24 months priority support', de: '24 Monate Priority-Support' },
+    'pricing.prem.f3':   { en: 'Remote setup by Zenith experts', de: 'Remote-Einrichtung durch Zenith-Experten' },
+    'pricing.prem.f4':   { en: '24h response time for incidents', de: '24h-Reaktionszeit bei Störungen' },
+    'pricing.prem.f5':   { en: 'Personal account manager', de: 'Persönlicher Ansprechpartner' },
+    'pricing.prem.btn':  { en: 'Support on Kickstarter', de: 'Auf Kickstarter unterstützen' },
+    'pricing.footnote':  { en: 'All prices excl. VAT &nbsp;·&nbsp; One-time payment – no ongoing costs &nbsp;·&nbsp; Kickstarter early-bird prices, limited units', de: 'Alle Preise zzgl. MwSt. &nbsp;·&nbsp; Einmalzahlung – keine laufenden Kosten &nbsp;·&nbsp; Kickstarter-Frühbucherpreise, limitierte Stückzahl' },
 
-    'pricing.base.tier':   { en: 'Ready-to-Work',                          de: 'Ready-to-Work' },
-    'pricing.base.note':   { en: 'One-time payment · Hardware & Software',  de: 'Einmalzahlung · Hardware & Software' },
-    'pricing.base.f1':     { en: 'Minisforum MS-S1 Max (128 GB RAM)',       de: 'Minisforum MS-S1 Max (128 GB RAM)' },
-    'pricing.base.f2':     { en: 'Zenith software pre-installed & configured', de: 'Zenith Software vorinstalliert & konfiguriert' },
-    'pricing.base.f3':     { en: '100% local AI – 0 bytes external transfer', de: '100 % lokale KI – 0 Byte externe Übertragung' },
-    'pricing.base.f4':     { en: 'Privacy-by-design',                      de: 'DSGVO-konform by Design' },
-    'pricing.base.f5':     { en: 'Setup guide & email support',             de: 'Setup-Anleitung & E-Mail-Support' },
-    'pricing.base.btn':    { en: 'Support on Kickstarter →',                de: 'Auf Kickstarter unterstützen →' },
+    /* ════════════════════════════════
+       INDEX – TCO
+    ════════════════════════════════ */
+    'tco.header':        { en: 'What does AI really cost you?', de: 'Was kostet KI Sie wirklich?' },
+    'tco.subheader':     { en: 'Total cost of ownership – 3-year comparison', de: 'Total Cost of Ownership – 3-Jahres-Vergleich' },
+    'tco.cloud.label':   { en: 'Typical cloud AI solution', de: 'Typische Cloud-KI-Lösung' },
+    'tco.cloud.title':   { en: 'SaaS subscription', de: 'SaaS-Abonnement' },
+    'tco.cloud.calc':    { en: '<code>30 €</code> / month per user<br />× <code>10 users</code><br />× <code>36 months</code> (3 years)<br />= ongoing costs, forever', de: '<code>30 €</code> / Monat pro Nutzer<br />× <code>10 Nutzer</code><br />× <code>36 Monate</code> (3 Jahre)<br />= laufende Kosten, für immer' },
+    'tco.cloud.verdict': { en: '— and your data sits with the provider.', de: '— und Ihre Daten liegen beim Anbieter.' },
+    'tco.zen.label':     { en: 'Zenith Professional', de: 'Zenith Professional' },
+    'tco.zen.title':     { en: 'Once. Forever.', de: 'Einmal. Für immer.' },
+    'tco.zen.calc':      { en: 'Single payment, hardware & software<br />No monthly fees<br />No per-user licences<br />Unlimited usage', de: 'Einmalzahlung, Hardware & Software<br />Keine monatlichen Gebühren<br />Keine Nutzerlizenzen<br />Unbegrenzte Nutzung' },
+    'tco.zen.verdict':   { en: '— and your data stays with you.', de: '— und Ihre Daten bleiben bei Ihnen.' },
 
-    'pricing.pro.tier':    { en: 'For Companies & Teams — Best Seller',     de: 'Für Unternehmen & Teams — Bestseller' },
-    'pricing.pro.note':    { en: 'One-time payment · Incl. RAID redundancy', de: 'Einmalzahlung · Inkl. RAID-Redundanz' },
-    'pricing.pro.f1':      { en: 'Everything from BASE',                    de: 'Alles aus BASE' },
-    'pricing.pro.f2':      { en: 'External RAID system for file-loss protection', de: 'Externes RAID-System für Dateiausfallschutz' },
-    'pricing.pro.f3':      { en: 'Integrated redundancy for critical business and operational data', de: 'Integrierte Redundanz für kritische Geschäfts- und Betriebsdaten' },
-    'pricing.pro.f4':      { en: 'Automatic local backup',                  de: 'Automatisches lokales Backup' },
-    'pricing.pro.f5':      { en: 'Priority email support',                  de: 'Prioritäts-E-Mail-Support' },
-    'pricing.pro.btn':     { en: 'Support on Kickstarter →',                de: 'Auf Kickstarter unterstützen →' },
-
-    'pricing.prem.tier':   { en: 'For Enterprise & Government',             de: 'Für Enterprise & Behörden' },
-    'pricing.prem.note':   { en: 'One-time payment · The all-inclusive package', de: 'Einmalzahlung · Das Sorglos-Paket' },
-    'pricing.prem.f1':     { en: 'Everything from PROFESSIONAL',            de: 'Alles aus PROFESSIONAL' },
-    'pricing.prem.f2':     { en: '24 months priority support',              de: '24 Monate Priority-Support' },
-    'pricing.prem.f3':     { en: 'Remote setup by Zenith experts',          de: 'Remote-Setup durch Zenith-Experten' },
-    'pricing.prem.f4':     { en: '24h response time for incidents',         de: '24h-Reaktionszeit bei Störungen' },
-    'pricing.prem.f5':     { en: 'Personal account manager',                de: 'Persönlicher Account Manager' },
-    'pricing.prem.btn':    { en: 'Support on Kickstarter →',                de: 'Auf Kickstarter unterstützen →' },
-
-    'tco.header':          { en: 'What Does AI Really Cost You? &nbsp;<span>Total Cost of Ownership – 3-Year Comparison</span>', de: 'Was kostet Sie KI wirklich? &nbsp;<span>Total Cost of Ownership – 3-Jahres-Vergleich</span>' },
-    'tco.cloud.label':     { en: 'Typical Cloud AI Solution',               de: 'Typische Cloud-KI-Lösung' },
-    'tco.cloud.title':     { en: 'SaaS Subscription',                       de: 'SaaS per Abo' },
-    'tco.cloud.calc':      { en: '<code>30 €</code> / month per user<br />× <code>10 users</code><br />× <code>36 months</code> (3 years)<br />= ongoing costs', de: '<code>30 €</code> / Monat pro User<br />× <code>10 User</code><br />× <code>36 Monate</code> (3 Jahre)<br />= laufende Kosten' },
-    'tco.cloud.verdict':   { en: '— and your data sits with the provider.', de: '— und Ihre Daten liegen beim Anbieter.' },
-    'tco.zen.label':       { en: 'Zenith Professional',                     de: 'Zenith Professional' },
-    'tco.zen.title':       { en: 'Once. Forever.',                          de: 'Einmalig. Für immer.' },
-    'tco.zen.calc':        { en: 'Single hardware & software payment<br />No monthly fees<br />No per-user licences<br />Unlimited usage', de: 'Einmalige Hardware- & Softwarezahlung<br />Keine Monatsgebühren<br />Keine User-Lizenzen<br />Unbegrenzte Nutzungsdauer' },
-    'tco.zen.verdict':     { en: '— and your data stays with you.',         de: '— und Ihre Daten bleiben bei Ihnen.' },
-    'pricing.footnote':    { en: 'All prices excl. VAT &nbsp;·&nbsp; One-time payment – no ongoing costs &nbsp;·&nbsp; Kickstarter early-bird prices – limited units available', de: 'Alle Preise zzgl. MwSt. &nbsp;·&nbsp; Einmalige Zahlung – keine Folgekosten &nbsp;·&nbsp; Kickstarter Early-Bird-Preise – begrenzte Stückzahl verfügbar' },
+    /* ════════════════════════════════
+       INDEX – FAQ
+    ════════════════════════════════ */
+    'faq.label':         { en: 'Frequently asked', de: 'Häufig gefragt' },
+    'faq.title':         { en: 'Good questions.<br /><span class="fx-serif fx-grad">Straight answers.</span>', de: 'Gute Fragen.<br /><span class="fx-serif fx-grad">Klare Antworten.</span>' },
+    'faq.1.q':           { en: 'Does Zenith really work without any internet connection?', de: 'Funktioniert Zenith wirklich ganz ohne Internetverbindung?' },
+    'faq.1.a':           { en: 'Yes – completely. All three AI models, the database and the web interface run on the device itself. Zenith never phones home: no telemetry, no license checks, no cloud fallback. You can operate it in a fully air-gapped network.', de: 'Ja – vollständig. Alle drei KI-Modelle, die Datenbank und die Web-Oberfläche laufen auf dem Gerät selbst. Zenith telefoniert nie nach Hause: keine Telemetrie, keine Lizenzprüfungen, kein Cloud-Fallback. Der Betrieb ist sogar im komplett isolierten Netzwerk (Air-Gap) möglich.' },
+    'faq.2.q':           { en: 'Which file formats does Zenith understand?', de: 'Welche Dateiformate versteht Zenith?' },
+    'faq.2.a':           { en: 'PDFs, Word, Excel, PowerPoint, e-mails and images (JPEG, PNG, TIFF – including scans and photographed documents). The vision model reads documents like a human: tables, stamps and even handwriting are captured.', de: 'PDFs, Word, Excel, PowerPoint, E-Mails und Bilder (JPEG, PNG, TIFF – inklusive Scans und abfotografierter Dokumente). Das Vision-Modell liest Dokumente wie ein Mensch: Tabellen, Stempel und sogar Handschrift werden erfasst.' },
+    'faq.3.q':           { en: 'How many users can work with Zenith?', de: 'Wie viele Nutzer können mit Zenith arbeiten?' },
+    'faq.3.a':           { en: 'As many as you like. Zenith runs as a web application in your local network – every device with a browser can access it. There are no per-user licences and no artificial limits.', de: 'So viele Sie möchten. Zenith läuft als Web-Anwendung in Ihrem lokalen Netzwerk – jedes Gerät mit Browser hat Zugriff. Es gibt keine Nutzerlizenzen und keine künstlichen Limits.' },
+    'faq.4.q':           { en: 'What happens to my data if the hardware fails?', de: 'Was passiert mit meinen Daten, wenn die Hardware ausfällt?' },
+    'faq.4.a':           { en: 'Your original files always stay in your file system – Zenith works with copies and indexes. The Professional and Premium packages additionally include an external RAID system and automatic local backups for business-critical redundancy.', de: 'Ihre Originaldateien bleiben immer in Ihrem Dateisystem – Zenith arbeitet mit Kopien und Indizes. Die Pakete Professional und Premium enthalten zusätzlich ein externes RAID-System und automatische lokale Backups für geschäftskritische Redundanz.' },
+    'faq.5.q':           { en: 'Do I need IT expertise to run Zenith?', de: 'Brauche ich IT-Kenntnisse, um Zenith zu betreiben?' },
+    'faq.5.a':           { en: 'No. The device arrives pre-installed and configured – connect power and network, open the browser, done. Setup takes less than 30 minutes. The Premium package even includes remote setup by our experts.', de: 'Nein. Das Gerät kommt vorinstalliert und konfiguriert – Strom und Netzwerk anschließen, Browser öffnen, fertig. Die Einrichtung dauert weniger als 30 Minuten. Das Premium-Paket enthält sogar die Remote-Einrichtung durch unsere Experten.' },
+    'faq.6.q':           { en: 'Why Kickstarter – and when will Zenith ship?', de: 'Warum Kickstarter – und wann wird Zenith ausgeliefert?' },
+    'faq.6.a':           { en: 'Zenith is in active development with a planned market launch in September 2026. The Kickstarter campaign funds the final development sprint and the first production batch. Early supporters secure the discounted early-bird prices shown above.', de: 'Zenith befindet sich in aktiver Entwicklung, der Marktstart ist für September 2026 geplant. Die Kickstarter-Kampagne finanziert den finalen Entwicklungssprint und die erste Produktionscharge. Frühe Unterstützer sichern sich die oben gezeigten vergünstigten Frühbucherpreise.' },
 
     /* ════════════════════════════════
        INDEX – CTA
     ════════════════════════════════ */
-    'cta.label':    { en: 'Support Us Now',                                 de: 'Jetzt unterstützen' },
-    'cta.h2':       { en: 'Be Part of It –<br /><span class="accent">From the Very Start.</span>', de: 'Seien Sie dabei –<br /><span class="accent">von Anfang an.</span>' },
-    'cta.p':        { en: 'Zenith is currently in development and is expected to be market-ready in <strong style="color: var(--text);">September 2026</strong>. Support the project on Kickstarter and secure your early-bird preferential price.', de: 'Zenith befindet sich aktuell in der Entwicklung und wird voraussichtlich im <strong style="color: var(--text);">September 2026</strong> marktreif sein. Unterstützen Sie das Projekt auf Kickstarter und sichern Sie sich Ihren Frühbucher-Vorzugspreis.' },
-    'cta.btn1':     { en: 'Support on Kickstarter →',                       de: 'Auf Kickstarter unterstützen →' },
-    'cta.btn2':     { en: 'Get in Touch',                                   de: 'Kontakt aufnehmen' },
-    'cta.sub':      { en: 'One-time licence · No subscription costs · 100% local · Market launch September 2026', de: 'Einmalige Lizenz · Keine Abo-Kosten · 100 % lokal · Marktstart September 2026' },
+    'cta.label':         { en: 'Limited early-bird units', de: 'Limitierte Frühbucher-Einheiten' },
+    'cta.h2':            { en: 'Be part of it –<br /><span class="fx-serif fx-grad">from the very start.</span>', de: 'Seien Sie dabei –<br /><span class="fx-serif fx-grad">von Anfang an.</span>' },
+    'cta.p':             { en: 'Zenith launches in <strong>September 2026</strong>. Back the project on Kickstarter now and secure your unit at the early-bird price – before the campaign closes.', de: 'Zenith startet im <strong>September 2026</strong>. Unterstützen Sie das Projekt jetzt auf Kickstarter und sichern Sie sich Ihr Gerät zum Frühbucherpreis – bevor die Kampagne endet.' },
+    'cta.btn1':          { en: 'Support on Kickstarter', de: 'Auf Kickstarter unterstützen' },
+    'cta.btn2':          { en: 'Get in touch', de: 'Kontakt aufnehmen' },
+    'cta.sub':           { en: 'One-time licence · No subscription costs · 100% local · Market launch September 2026', de: 'Einmalige Lizenz · Keine Abo-Kosten · 100 % lokal · Marktstart September 2026' },
 
     /* ════════════════════════════════
        KONTAKT PAGE

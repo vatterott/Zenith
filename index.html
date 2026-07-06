@@ -1,2011 +1,657 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Zenith – The sovereign knowledge hub for industry &amp; business. Local AI for your documents – 100% secure, 100% offline, 100% sovereign." />
-  <title>Zenith – Local AI Knowledge Hub | For Industry &amp; Business</title>
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cline x1='50' y1='10' x2='85' y2='30' stroke='%23CC2299' stroke-width='6' stroke-linecap='round'/%3E%3Cline x1='85' y1='30' x2='85' y2='70' stroke='%23CC2299' stroke-width='6' stroke-linecap='round'/%3E%3Cline x1='85' y1='70' x2='50' y2='90' stroke='%23CC2299' stroke-width='6' stroke-linecap='round'/%3E%3Cline x1='50' y1='90' x2='15' y2='70' stroke='%23CC2299' stroke-width='6' stroke-linecap='round'/%3E%3Cline x1='15' y1='70' x2='15' y2='30' stroke='%23CC2299' stroke-width='6' stroke-linecap='round'/%3E%3Cline x1='15' y1='30' x2='50' y2='10' stroke='%23CC2299' stroke-width='6' stroke-linecap='round'/%3E%3Cline x1='50' y1='10' x2='50' y2='90' stroke='%23CC2299' stroke-width='6' stroke-linecap='round'/%3E%3Cline x1='85' y1='30' x2='15' y2='70' stroke='%23CC2299' stroke-width='6' stroke-linecap='round'/%3E%3Cline x1='85' y1='70' x2='15' y2='30' stroke='%23CC2299' stroke-width='6' stroke-linecap='round'/%3E%3Ccircle cx='50' cy='10' r='7' fill='%23CC2299'/%3E%3Ccircle cx='85' cy='30' r='7' fill='%23CC2299'/%3E%3Ccircle cx='85' cy='70' r='7' fill='%23CC2299'/%3E%3Ccircle cx='50' cy='90' r='7' fill='%23CC2299'/%3E%3Ccircle cx='15' cy='70' r='7' fill='%23CC2299'/%3E%3Ccircle cx='15' cy='30' r='7' fill='%23CC2299'/%3E%3C/svg%3E" />
+  <meta name="description" content="Zenith – The AI document management system that runs 100% on your own hardware. Multimodal understanding for PDFs, images & Office files. Semantic search, AI chat, automatic calendar. 0 bytes to the cloud." />
+  <title>Zenith – Your Documents. Your AI. Your Hardware. | 100% Local DMS</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cline x1='50' y1='10' x2='85' y2='30' stroke='%23E23DB4' stroke-width='6' stroke-linecap='round'/%3E%3Cline x1='85' y1='30' x2='85' y2='70' stroke='%23E23DB4' stroke-width='6' stroke-linecap='round'/%3E%3Cline x1='85' y1='70' x2='50' y2='90' stroke='%23E23DB4' stroke-width='6' stroke-linecap='round'/%3E%3Cline x1='50' y1='90' x2='15' y2='70' stroke='%23E23DB4' stroke-width='6' stroke-linecap='round'/%3E%3Cline x1='15' y1='70' x2='15' y2='30' stroke='%23E23DB4' stroke-width='6' stroke-linecap='round'/%3E%3Cline x1='15' y1='30' x2='50' y2='10' stroke='%23E23DB4' stroke-width='6' stroke-linecap='round'/%3E%3Cline x1='50' y1='10' x2='50' y2='90' stroke='%23E23DB4' stroke-width='6' stroke-linecap='round'/%3E%3Cline x1='85' y1='30' x2='15' y2='70' stroke='%23E23DB4' stroke-width='6' stroke-linecap='round'/%3E%3Cline x1='85' y1='70' x2='15' y2='30' stroke='%23E23DB4' stroke-width='6' stroke-linecap='round'/%3E%3Ccircle cx='50' cy='10' r='7' fill='%23E23DB4'/%3E%3Ccircle cx='85' cy='30' r='7' fill='%23E23DB4'/%3E%3Ccircle cx='85' cy='70' r='7' fill='%23E23DB4'/%3E%3Ccircle cx='50' cy='90' r='7' fill='%23E23DB4'/%3E%3Ccircle cx='15' cy='70' r='7' fill='%23E23DB4'/%3E%3Ccircle cx='15' cy='30' r='7' fill='%23E23DB4'/%3E%3C/svg%3E" />
 
-  <meta property="og:title" content="Zenith – Local DMS with AI" />
-  <meta property="og:description" content="The sovereign knowledge hub for industry &amp; business – 100% local AI for your documents" />
+  <meta property="og:title" content="Zenith – Your Documents. Your AI. Your Hardware." />
+  <meta property="og:description" content="The AI document management system that runs 100% locally. Multimodal AI, semantic search, automatic calendar – 0 bytes to the cloud." />
   <meta property="og:image" content="/assets/images/zenith-og.jpg" />
   <meta property="og:url" content="https://myzenith.org/" />
   <meta name="twitter:card" content="summary_large_image" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
-  <style>
-    /* ─── Tokens ───────────────────────────────────────── */
-    :root {
-      --bg:            #08080F;
-      --bg-alt:        #0D0D1A;
-      --bg-card:       #111120;
-      --purple:        #CC2299;
-      --purple-dim:    #A81A7A;
-      --purple-glow:   rgba(204,34,153,.28);
-      --cyan:          #FFFFFF;
-      --text:          #F0F0FF;
-      --text-muted:    #6A6A85;
-      --border:        rgba(255,255,255,.07);
-      --border-purple: rgba(204,34,153,.35);
-      --font-display:  'Barlow Condensed', 'Impact', sans-serif;
-      --font-body:     'Barlow', system-ui, sans-serif;
-      --transition:    .3s ease;
-      --radius:        3px;
-    }
-
-    /* ─── Reset ────────────────────────────────────────── */
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body {
-      font-family: var(--font-body);
-      background-color: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-      overflow-x: hidden;
-    }
-    img { max-width: 100%; display: block; }
-    a { color: inherit; text-decoration: none; }
-
-    /* ─── Utility ──────────────────────────────────────── */
-    .container { max-width: 1200px; margin: 0 auto; padding: 0 32px; }
-    .section { padding: 100px 0; }
-    .section--alt { background-color: var(--bg-alt); }
-    .divider { height: 1px; background: var(--border); }
-
-    .label {
-      display: inline-block;
-      font-family: var(--font-body);
-      font-size: .68rem;
-      font-weight: 700;
-      letter-spacing: .22em;
-      text-transform: uppercase;
-      color: var(--cyan);
-      margin-bottom: 18px;
-    }
-    h2.section-title {
-      font-family: var(--font-display);
-      font-size: clamp(2.4rem, 5vw, 4rem);
-      font-weight: 900;
-      line-height: 1.02;
-      text-transform: uppercase;
-      color: var(--text);
-      letter-spacing: .02em;
-      margin-bottom: 20px;
-    }
-    h2.section-title .accent { color: var(--purple); }
-    .section-sub {
-      font-size: .97rem;
-      color: var(--text-muted);
-      max-width: 560px;
-      line-height: 1.8;
-    }
-
-    /* ─── Navigation ───────────────────────────────────── */
-    header {
-      position: fixed;
-      top: 44px; left: 0; right: 0;
-      z-index: 100;
-      padding: 20px 0;
-      transition: background var(--transition), border-color var(--transition);
-    }
-    header.scrolled {
-      background: rgba(8,8,15,.96);
-      border-bottom: 1px solid var(--border);
-      backdrop-filter: blur(16px);
-    }
-    nav { display: flex; align-items: center; justify-content: space-between; }
-    .logo {
-      font-family: var(--font-display);
-      font-size: 1.45rem;
-      font-weight: 900;
-      letter-spacing: .1em;
-      text-transform: uppercase;
-      display: inline-flex;
-      align-items: center;
-      gap: 9px;
-    }
-    .logo span { color: var(--purple); }
-    .nav-links { display: flex; gap: 36px; list-style: none; }
-    .nav-links a {
-      font-size: .75rem;
-      font-weight: 700;
-      letter-spacing: .12em;
-      text-transform: uppercase;
-      color: var(--text-muted);
-      transition: color var(--transition);
-    }
-    .nav-links a:hover { color: var(--text); }
-    .nav-cta {
-      padding: 10px 28px;
-      background: var(--purple);
-      color: #fff;
-      font-family: var(--font-body);
-      font-weight: 700;
-      font-size: .72rem;
-      letter-spacing: .12em;
-      text-transform: uppercase;
-      border-radius: var(--radius);
-      transition: background var(--transition), transform var(--transition);
-    }
-    .nav-cta:hover { background: var(--purple-dim); transform: translateY(-1px); }
-
-    /* ─── Hero ─────────────────────────────────────────── */
-    #hero {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      position: relative;
-      overflow: hidden;
-      padding-top: 124px;
-      padding-bottom: 100px;
-    }
-    .hero-bg {
-      position: absolute;
-      inset: 0;
-      background:
-        radial-gradient(ellipse 55% 90% at 78% 50%, rgba(12,10,22,.88) 0%, transparent 65%),
-        radial-gradient(ellipse 50% 60% at 10% 60%, rgba(204,34,153,.05) 0%, transparent 55%),
-        linear-gradient(160deg, #08080F 0%, #0B0B16 60%, #090910 100%);
-    }
-    .hero-grid {
-      position: absolute;
-      inset: 0;
-      background-image:
-        linear-gradient(rgba(204,34,153,.035) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(204,34,153,.035) 1px, transparent 1px);
-      background-size: 80px 80px;
-    }
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      max-width: 580px;
-    }
-    h1 {
-      font-family: var(--font-display);
-      font-size: clamp(2.4rem, 5.5vw, 4.2rem);
-      font-weight: 900;
-      line-height: 1.05;
-      letter-spacing: .01em;
-      text-transform: uppercase;
-      margin-bottom: 28px;
-    }
-    h1 .line-purple { color: var(--purple); }
-
-    /* ─── Hero h1 inline icon ──────────────────────────── */
-    .hero-h1-first-line {
-      display: inline-flex;
-      align-items: center;
-      gap: 18px;
-    }
-    .hero-h1-icon {
-      width: .85em;
-      height: .85em;
-      flex-shrink: 0;
-      filter: drop-shadow(0 0 14px rgba(204,34,153,.35));
-    }
-
-    /* ─── Hero DSGVO badge ─────────────────────────────── */
-    .hero-dsgvo-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      margin-bottom: 36px;
-      padding: 7px 16px;
-      border: 1px solid rgba(204,34,153,.4);
-      border-radius: 2px;
-      background: rgba(204,34,153,.07);
-      font-size: .68rem;
-      font-weight: 700;
-      letter-spacing: .18em;
-      text-transform: uppercase;
-      color: var(--purple);
-    }
-    .hero-sub {
-      font-size: .97rem;
-      color: var(--text-muted);
-      max-width: 430px;
-      margin-bottom: 52px;
-      line-height: 1.82;
-    }
-    .hero-actions {
-      display: flex;
-      gap: 24px;
-      flex-wrap: wrap;
-      align-items: center;
-    }
-    .btn-primary {
-      padding: 14px 36px;
-      background: var(--purple);
-      color: #fff;
-      font-family: var(--font-body);
-      font-weight: 700;
-      font-size: .72rem;
-      letter-spacing: .14em;
-      text-transform: uppercase;
-      border-radius: var(--radius);
-      border: none;
-      cursor: pointer;
-      transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
-      box-shadow: 0 4px 28px var(--purple-glow);
-      display: inline-block;
-    }
-    .btn-primary:hover {
-      background: var(--purple-dim);
-      transform: translateY(-2px);
-      box-shadow: 0 8px 40px var(--purple-glow);
-    }
-    .btn-ghost {
-      padding: 14px 0;
-      background: transparent;
-      color: var(--text);
-      font-family: var(--font-body);
-      font-weight: 700;
-      font-size: .72rem;
-      letter-spacing: .14em;
-      text-transform: uppercase;
-      border: none;
-      cursor: pointer;
-      transition: color var(--transition);
-      display: inline-block;
-    }
-    .btn-ghost:hover { color: var(--cyan); }
-
-    /* server-farm background image */
-    .hero-server-img {
-      position: absolute;
-      right: 0;
-      top: 0;
-      bottom: 0;
-      width: 55%;
-      z-index: 1;
-      background:
-        linear-gradient(to right, var(--bg) 0%, transparent 30%),
-        linear-gradient(to top, var(--bg) 0%, transparent 25%),
-        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='900' height='700' viewBox='0 0 900 700'%3E%3Crect width='900' height='700' fill='%23060610'/%3E%3C!-- racks --%3E%3Cg opacity='0.55'%3E%3C!-- rack 1 --%3E%3Crect x='60' y='80' width='120' height='540' rx='4' fill='none' stroke='%233a2060' stroke-width='1.5'/%3E%3Crect x='70' y='95' width='100' height='18' rx='2' fill='%231a0e30' stroke='%234a2880' stroke-width='1'/%3E%3Ccircle cx='155' cy='104' r='3' fill='%23CC2299' opacity='0.9'/%3E%3Crect x='70' y='120' width='100' height='18' rx='2' fill='%231a0e30' stroke='%234a2880' stroke-width='1'/%3E%3Ccircle cx='155' cy='129' r='3' fill='%23FFFFFF' opacity='0.8'/%3E%3Crect x='70' y='145' width='100' height='18' rx='2' fill='%231a0e30' stroke='%234a2880' stroke-width='1'/%3E%3Ccircle cx='155' cy='154' r='3' fill='%23CC2299' opacity='0.7'/%3E%3Crect x='70' y='170' width='100' height='18' rx='2' fill='%231a0e30' stroke='%234a2880' stroke-width='1'/%3E%3Ccircle cx='155' cy='179' r='3' fill='%23FFFFFF' opacity='0.9'/%3E%3Crect x='70' y='195' width='100' height='18' rx='2' fill='%231a0e30' stroke='%234a2880' stroke-width='1'/%3E%3Ccircle cx='155' cy='204' r='3' fill='%23CC2299' opacity='0.6'/%3E%3Crect x='70' y='220' width='100' height='18' rx='2' fill='%231a0e30' stroke='%234a2880' stroke-width='1'/%3E%3Ccircle cx='155' cy='229' r='3' fill='%23FFFFFF' opacity='0.8'/%3E%3Crect x='70' y='245' width='100' height='18' rx='2' fill='%231a0e30' stroke='%234a2880' stroke-width='1'/%3E%3Ccircle cx='155' cy='254' r='3' fill='%23CC2299' opacity='0.9'/%3E%3Crect x='70' y='270' width='100' height='18' rx='2' fill='%231a0e30' stroke='%234a2880' stroke-width='1'/%3E%3Ccircle cx='155' cy='279' r='3' fill='%23FFFFFF' opacity='0.7'/%3E%3Crect x='70' y='295' width='100' height='18' rx='2' fill='%231a0e30' stroke='%234a2880' stroke-width='1'/%3E%3Ccircle cx='155' cy='304' r='3' fill='%23CC2299' opacity='0.8'/%3E%3Crect x='70' y='320' width='100' height='18' rx='2' fill='%231a0e30' stroke='%234a2880' stroke-width='1'/%3E%3Ccircle cx='155' cy='329' r='3' fill='%23FFFFFF' opacity='0.9'/%3E%3Crect x='70' y='345' width='100' height='18' rx='2' fill='%231a0e30' stroke='%234a2880' stroke-width='1'/%3E%3Ccircle cx='155' cy='354' r='3' fill='%23CC2299' opacity='0.6'/%3E%3Crect x='70' y='370' width='100' height='18' rx='2' fill='%231a0e30' stroke='%234a2880' stroke-width='1'/%3E%3Ccircle cx='155' cy='379' r='3' fill='%23FFFFFF' opacity='0.8'/%3E%3Crect x='70' y='395' width='100' height='18' rx='2' fill='%231a0e30' stroke='%234a2880' stroke-width='1'/%3E%3Ccircle cx='155' cy='404' r='3' fill='%23CC2299' opacity='0.7'/%3E%3Crect x='70' y='420' width='100' height='18' rx='2' fill='%231a0e30' stroke='%234a2880' stroke-width='1'/%3E%3Ccircle cx='155' cy='429' r='3' fill='%23FFFFFF' opacity='0.9'/%3E%3Crect x='70' y='445' width='100' height='18' rx='2' fill='%231a0e30' stroke='%234a2880' stroke-width='1'/%3E%3Ccircle cx='155' cy='454' r='3' fill='%23CC2299' opacity='0.8'/%3E%3C!-- rack 2 --%3E%3Crect x='220' y='80' width='120' height='540' rx='4' fill='none' stroke='%233a2060' stroke-width='1.5'/%3E%3Crect x='230' y='95' width='100' height='18' rx='2' fill='%231a0e30' stroke='%234a2880' stroke-width='1'/%3E%3Ccircle cx='315' cy='104' r='3' fill='%23FFFFFF' opacity='0.7'/%3E%3Crect x='230' y='120' width='100' height='18' rx='2' fill='%231a0e30' stroke='%234a2880' stroke-width='1'/%3E%3Ccircle cx='315' cy='129' r='3' fill='%23CC2299' opacity='0.9'/%3E%3Crect x='230' y='145' width='100' height='18' rx='2' fill='%231a0e30' stroke='%234a2880' stroke-width='1'/%3E%3Ccircle cx='315' cy='154' r='3' fill='%23FFFFFF' opacity='0.8'/%3E%3Crect x='230' y='170' width='100' height='18' rx='2' fill='%231a0e30' stroke='%234a2880' stroke-width='1'/%3E%3Ccircle cx='315' cy='179' r='3' fill='%23CC2299' opacity='0.6'/%3E%3Crect x='230' y='195' width='100' height='18' rx='2' fill='%231a0e30' stroke='%234a2880' stroke-width='1'/%3E%3Ccircle cx='315' cy='204' r='3' fill='%23FFFFFF' opacity='0.9'/%3E%3Crect x='230' y='220' width='100' height='18' rx='2' fill='%231a0e30' stroke='%234a2880' stroke-width='1'/%3E%3Ccircle cx='315' cy='229' r='3' fill='%23CC2299' opacity='0.7'/%3E%3Crect x='230' y='245' width='100' height='18' rx='2' fill='%231a0e30' stroke='%234a2880' stroke-width='1'/%3E%3Ccircle cx='315' cy='254' r='3' fill='%23FFFFFF' opacity='0.8'/%3E%3Crect x='230' y='270' width='100' height='18' rx='2' fill='%231a0e30' stroke='%234a2880' stroke-width='1'/%3E%3Ccircle cx='315' cy='279' r='3' fill='%23CC2299' opacity='0.9'/%3E%3Crect x='230' y='295' width='100' height='18' rx='2' fill='%231a0e30' stroke='%234a2880' stroke-width='1'/%3E%3Ccircle cx='315' cy='304' r='3' fill='%23FFFFFF' opacity='0.6'/%3E%3Crect x='230' y='320' width='100' height='18' rx='2' fill='%231a0e30' stroke='%234a2880' stroke-width='1'/%3E%3Ccircle cx='315' cy='329' r='3' fill='%23CC2299' opacity='0.8'/%3E%3Crect x='230' y='345' width='100' height='18' rx='2' fill='%231a0e30' stroke='%234a2880' stroke-width='1'/%3E%3Ccircle cx='315' cy='354' r='3' fill='%23FFFFFF' opacity='0.7'/%3E%3Crect x='230' y='370' width='100' height='18' rx='2' fill='%231a0e30' stroke='%234a2880' stroke-width='1'/%3E%3Ccircle cx='315' cy='379' r='3' fill='%23CC2299' opacity='0.9'/%3E%3Crect x='230' y='395' width='100' height='18' rx='2' fill='%231a0e30' stroke='%234a2880' stroke-width='1'/%3E%3Ccircle cx='315' cy='404' r='3' fill='%23FFFFFF' opacity='0.8'/%3E%3Crect x='230' y='420' width='100' height='18' rx='2' fill='%231a0e30' stroke='%234a2880' stroke-width='1'/%3E%3Ccircle cx='315' cy='429' r='3' fill='%23CC2299' opacity='0.6'/%3E%3Crect x='230' y='445' width='100' height='18' rx='2' fill='%231a0e30' stroke='%234a2880' stroke-width='1'/%3E%3Ccircle cx='315' cy='454' r='3' fill='%23FFFFFF' opacity='0.9'/%3E%3C!-- rack 3 --%3E%3Crect x='380' y='80' width='120' height='540' rx='4' fill='none' stroke='%233a2060' stroke-width='1.5'/%3E%3Crect x='390' y='95' width='100' height='18' rx='2' fill='%231a0e30' stroke='%234a2880' stroke-width='1'/%3E%3Ccircle cx='475' cy='104' r='3' fill='%23CC2299' opacity='0.8'/%3E%3Crect x='390' y='120' width='100' height='18' rx='2' fill='%231a0e30' stroke='%234a2880' stroke-width='1'/%3E%3Ccircle cx='475' cy='129' r='3' fill='%23FFFFFF' opacity='0.7'/%3E%3Crect x='390' y='145' width='100' height='18' rx='2' fill='%231a0e30' stroke='%234a2880' stroke-width='1'/%3E%3Ccircle cx='475' cy='154' r='3' fill='%23CC2299' opacity='0.9'/%3E%3Crect x='390' y='170' width='100' height='18' rx='2' fill='%231a0e30' stroke='%234a2880' stroke-width='1'/%3E%3Ccircle cx='475' cy='179' r='3' fill='%23FFFFFF' opacity='0.8'/%3E%3Crect x='390' y='195' width='100' height='18' rx='2' fill='%231a0e30' stroke='%234a2880' stroke-width='1'/%3E%3Ccircle cx='475' cy='204' r='3' fill='%23CC2299' opacity='0.6'/%3E%3Crect x='390' y='220' width='100' height='18' rx='2' fill='%231a0e30' stroke='%234a2880' stroke-width='1'/%3E%3Ccircle cx='475' cy='229' r='3' fill='%23FFFFFF' opacity='0.9'/%3E%3Crect x='390' y='245' width='100' height='18' rx='2' fill='%231a0e30' stroke='%234a2880' stroke-width='1'/%3E%3Ccircle cx='475' cy='254' r='3' fill='%23CC2299' opacity='0.7'/%3E%3Crect x='390' y='270' width='100' height='18' rx='2' fill='%231a0e30' stroke='%234a2880' stroke-width='1'/%3E%3Ccircle cx='475' cy='279' r='3' fill='%23FFFFFF' opacity='0.8'/%3E%3Crect x='390' y='295' width='100' height='18' rx='2' fill='%231a0e30' stroke='%234a2880' stroke-width='1'/%3E%3Ccircle cx='475' cy='304' r='3' fill='%23CC2299' opacity='0.9'/%3E%3Crect x='390' y='320' width='100' height='18' rx='2' fill='%231a0e30' stroke='%234a2880' stroke-width='1'/%3E%3Ccircle cx='475' cy='329' r='3' fill='%23FFFFFF' opacity='0.6'/%3E%3Crect x='390' y='345' width='100' height='18' rx='2' fill='%231a0e30' stroke='%234a2880' stroke-width='1'/%3E%3Ccircle cx='475' cy='354' r='3' fill='%23CC2299' opacity='0.8'/%3E%3Crect x='390' y='370' width='100' height='18' rx='2' fill='%231a0e30' stroke='%234a2880' stroke-width='1'/%3E%3Ccircle cx='475' cy='379' r='3' fill='%23FFFFFF' opacity='0.7'/%3E%3Crect x='390' y='395' width='100' height='18' rx='2' fill='%231a0e30' stroke='%234a2880' stroke-width='1'/%3E%3Ccircle cx='475' cy='404' r='3' fill='%23CC2299' opacity='0.9'/%3E%3Crect x='390' y='420' width='100' height='18' rx='2' fill='%231a0e30' stroke='%234a2880' stroke-width='1'/%3E%3Ccircle cx='475' cy='429' r='3' fill='%23FFFFFF' opacity='0.8'/%3E%3Crect x='390' y='445' width='100' height='18' rx='2' fill='%231a0e30' stroke='%234a2880' stroke-width='1'/%3E%3Ccircle cx='475' cy='454' r='3' fill='%23CC2299' opacity='0.6'/%3E%3C!-- rack 4 --%3E%3Crect x='540' y='80' width='120' height='540' rx='4' fill='none' stroke='%233a2060' stroke-width='1.5'/%3E%3Crect x='550' y='95' width='100' height='18' rx='2' fill='%231a0e30' stroke='%234a2880' stroke-width='1'/%3E%3Ccircle cx='635' cy='104' r='3' fill='%23FFFFFF' opacity='0.9'/%3E%3Crect x='550' y='120' width='100' height='18' rx='2' fill='%231a0e30' stroke='%234a2880' stroke-width='1'/%3E%3Ccircle cx='635' cy='129' r='3' fill='%23CC2299' opacity='0.7'/%3E%3Crect x='550' y='145' width='100' height='18' rx='2' fill='%231a0e30' stroke='%234a2880' stroke-width='1'/%3E%3Ccircle cx='635' cy='154' r='3' fill='%23FFFFFF' opacity='0.8'/%3E%3Crect x='550' y='170' width='100' height='18' rx='2' fill='%231a0e30' stroke='%234a2880' stroke-width='1'/%3E%3Ccircle cx='635' cy='179' r='3' fill='%23CC2299' opacity='0.9'/%3E%3Crect x='550' y='195' width='100' height='18' rx='2' fill='%231a0e30' stroke='%234a2880' stroke-width='1'/%3E%3Ccircle cx='635' cy='204' r='3' fill='%23FFFFFF' opacity='0.6'/%3E%3Crect x='550' y='220' width='100' height='18' rx='2' fill='%231a0e30' stroke='%234a2880' stroke-width='1'/%3E%3Ccircle cx='635' cy='229' r='3' fill='%23CC2299' opacity='0.8'/%3E%3Crect x='550' y='245' width='100' height='18' rx='2' fill='%231a0e30' stroke='%234a2880' stroke-width='1'/%3E%3Ccircle cx='635' cy='254' r='3' fill='%23FFFFFF' opacity='0.7'/%3E%3Crect x='550' y='270' width='100' height='18' rx='2' fill='%231a0e30' stroke='%234a2880' stroke-width='1'/%3E%3Ccircle cx='635' cy='279' r='3' fill='%23CC2299' opacity='0.9'/%3E%3Crect x='550' y='295' width='100' height='18' rx='2' fill='%231a0e30' stroke='%234a2880' stroke-width='1'/%3E%3Ccircle cx='635' cy='304' r='3' fill='%23FFFFFF' opacity='0.8'/%3E%3Crect x='550' y='320' width='100' height='18' rx='2' fill='%231a0e30' stroke='%234a2880' stroke-width='1'/%3E%3Ccircle cx='635' cy='329' r='3' fill='%23CC2299' opacity='0.6'/%3E%3Crect x='550' y='345' width='100' height='18' rx='2' fill='%231a0e30' stroke='%234a2880' stroke-width='1'/%3E%3Ccircle cx='635' cy='354' r='3' fill='%23FFFFFF' opacity='0.9'/%3E%3Crect x='550' y='370' width='100' height='18' rx='2' fill='%231a0e30' stroke='%234a2880' stroke-width='1'/%3E%3Ccircle cx='635' cy='379' r='3' fill='%23CC2299' opacity='0.7'/%3E%3Crect x='550' y='395' width='100' height='18' rx='2' fill='%231a0e30' stroke='%234a2880' stroke-width='1'/%3E%3Ccircle cx='635' cy='404' r='3' fill='%23FFFFFF' opacity='0.8'/%3E%3Crect x='550' y='420' width='100' height='18' rx='2' fill='%231a0e30' stroke='%234a2880' stroke-width='1'/%3E%3Ccircle cx='635' cy='429' r='3' fill='%23CC2299' opacity='0.9'/%3E%3Crect x='550' y='445' width='100' height='18' rx='2' fill='%231a0e30' stroke='%234a2880' stroke-width='1'/%3E%3Ccircle cx='635' cy='454' r='3' fill='%23FFFFFF' opacity='0.6'/%3E%3C!-- rack 5 --%3E%3Crect x='700' y='80' width='120' height='540' rx='4' fill='none' stroke='%233a2060' stroke-width='1.5'/%3E%3Crect x='710' y='95' width='100' height='18' rx='2' fill='%231a0e30' stroke='%234a2880' stroke-width='1'/%3E%3Ccircle cx='795' cy='104' r='3' fill='%23CC2299' opacity='0.7'/%3E%3Crect x='710' y='120' width='100' height='18' rx='2' fill='%231a0e30' stroke='%234a2880' stroke-width='1'/%3E%3Ccircle cx='795' cy='129' r='3' fill='%23FFFFFF' opacity='0.9'/%3E%3Crect x='710' y='145' width='100' height='18' rx='2' fill='%231a0e30' stroke='%234a2880' stroke-width='1'/%3E%3Ccircle cx='795' cy='154' r='3' fill='%23CC2299' opacity='0.8'/%3E%3Crect x='710' y='170' width='100' height='18' rx='2' fill='%231a0e30' stroke='%234a2880' stroke-width='1'/%3E%3Ccircle cx='795' cy='179' r='3' fill='%23FFFFFF' opacity='0.6'/%3E%3Crect x='710' y='195' width='100' height='18' rx='2' fill='%231a0e30' stroke='%234a2880' stroke-width='1'/%3E%3Ccircle cx='795' cy='204' r='3' fill='%23CC2299' opacity='0.9'/%3E%3Crect x='710' y='220' width='100' height='18' rx='2' fill='%231a0e30' stroke='%234a2880' stroke-width='1'/%3E%3Ccircle cx='795' cy='229' r='3' fill='%23FFFFFF' opacity='0.8'/%3E%3Crect x='710' y='245' width='100' height='18' rx='2' fill='%231a0e30' stroke='%234a2880' stroke-width='1'/%3E%3Ccircle cx='795' cy='254' r='3' fill='%23CC2299' opacity='0.7'/%3E%3Crect x='710' y='270' width='100' height='18' rx='2' fill='%231a0e30' stroke='%234a2880' stroke-width='1'/%3E%3Ccircle cx='795' cy='279' r='3' fill='%23FFFFFF' opacity='0.9'/%3E%3Crect x='710' y='295' width='100' height='18' rx='2' fill='%231a0e30' stroke='%234a2880' stroke-width='1'/%3E%3Ccircle cx='795' cy='304' r='3' fill='%23CC2299' opacity='0.6'/%3E%3Crect x='710' y='320' width='100' height='18' rx='2' fill='%231a0e30' stroke='%234a2880' stroke-width='1'/%3E%3Ccircle cx='795' cy='329' r='3' fill='%23FFFFFF' opacity='0.8'/%3E%3Crect x='710' y='345' width='100' height='18' rx='2' fill='%231a0e30' stroke='%234a2880' stroke-width='1'/%3E%3Ccircle cx='795' cy='354' r='3' fill='%23CC2299' opacity='0.9'/%3E%3Crect x='710' y='370' width='100' height='18' rx='2' fill='%231a0e30' stroke='%234a2880' stroke-width='1'/%3E%3Ccircle cx='795' cy='379' r='3' fill='%23FFFFFF' opacity='0.7'/%3E%3Crect x='710' y='395' width='100' height='18' rx='2' fill='%231a0e30' stroke='%234a2880' stroke-width='1'/%3E%3Ccircle cx='795' cy='404' r='3' fill='%23CC2299' opacity='0.8'/%3E%3Crect x='710' y='420' width='100' height='18' rx='2' fill='%231a0e30' stroke='%234a2880' stroke-width='1'/%3E%3Ccircle cx='795' cy='429' r='3' fill='%23FFFFFF' opacity='0.6'/%3E%3Crect x='710' y='445' width='100' height='18' rx='2' fill='%231a0e30' stroke='%234a2880' stroke-width='1'/%3E%3Ccircle cx='795' cy='454' r='3' fill='%23CC2299' opacity='0.9'/%3E%3C!-- cable trays --%3E%3Crect x='60' y='470' width='760' height='12' rx='2' fill='%230e0820' stroke='%233a2060' stroke-width='1'/%3E%3Crect x='60' y='490' width='760' height='12' rx='2' fill='%230e0820' stroke='%233a2060' stroke-width='1'/%3E%3C!-- floor lines --%3E%3Crect x='40' y='630' width='820' height='4' rx='2' fill='%231a0e30' opacity='0.6'/%3E%3Crect x='40' y='640' width='820' height='2' rx='1' fill='%23CC2299' opacity='0.15'/%3E%3C!-- ceiling cables --%3E%3Cline x1='120' y1='80' x2='120' y2='40' stroke='%233a2060' stroke-width='1' stroke-dasharray='3,3'/%3E%3Cline x1='280' y1='80' x2='280' y2='40' stroke='%233a2060' stroke-width='1' stroke-dasharray='3,3'/%3E%3Cline x1='440' y1='80' x2='440' y2='40' stroke='%233a2060' stroke-width='1' stroke-dasharray='3,3'/%3E%3Cline x1='600' y1='80' x2='600' y2='40' stroke='%233a2060' stroke-width='1' stroke-dasharray='3,3'/%3E%3Cline x1='760' y1='80' x2='760' y2='40' stroke='%233a2060' stroke-width='1' stroke-dasharray='3,3'/%3E%3C!-- ambient glow --%3E%3Ccircle cx='450' cy='350' r='280' fill='%23CC2299' opacity='0.03'/%3E%3Ccircle cx='450' cy='350' r='150' fill='%23FFFFFF' opacity='0.02'/%3E%3C/g%3E%3C/svg%3E") center/cover no-repeat;
-      opacity: .45;
-    }
-
-    /* ─── Equipment grid ───────────────────────────────── */
-    .equip-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 2px;
-      margin-top: 60px;
-    }
-    .equip-item {
-      position: relative;
-      overflow: hidden;
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      padding: 40px 32px;
-      transition: border-color var(--transition), background var(--transition);
-    }
-    .equip-item:hover {
-      border-color: var(--border-purple);
-      background: rgba(204,34,153,.04);
-    }
-    .equip-item::after {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 2px;
-      background: var(--purple);
-      opacity: 0;
-      transition: opacity var(--transition);
-    }
-    .equip-item:hover::after { opacity: 1; }
-    .equip-num {
-      font-size: .62rem;
-      font-weight: 700;
-      letter-spacing: .22em;
-      text-transform: uppercase;
-      color: var(--purple);
-      margin-bottom: 18px;
-    }
-    .equip-item h3 {
-      font-family: var(--font-display);
-      font-size: 1.55rem;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: .03em;
-      margin-bottom: 14px;
-    }
-    .equip-item p {
-      font-size: .88rem;
-      color: var(--text-muted);
-      line-height: 1.78;
-    }
-    .equip-tag {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 4px 12px;
-      border: 1px solid var(--border-purple);
-      color: var(--purple);
-      font-size: .62rem;
-      font-weight: 700;
-      letter-spacing: .14em;
-      text-transform: uppercase;
-    }
-
-    /* ─── Stats bar ────────────────────────────────────── */
-    .stats-row {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-    }
-    .stat-item {
-      padding: 52px 32px;
-      text-align: center;
-      border-right: 1px solid var(--border);
-    }
-    .stat-item:last-child { border-right: none; }
-    .stat-num {
-      font-family: var(--font-display);
-      font-size: 3.4rem;
-      font-weight: 900;
-      line-height: 1;
-      letter-spacing: .01em;
-    }
-    .stat-num span { color: var(--purple); }
-    .stat-lbl {
-      font-size: .65rem;
-      letter-spacing: .16em;
-      text-transform: uppercase;
-      color: var(--text-muted);
-      margin-top: 10px;
-    }
-
-    /* ─── Studios ──────────────────────────────────────── */
-    .studios-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 2px;
-      margin-top: 60px;
-      background: var(--border);
-    }
-    .studio-card {
-      background: var(--bg-card);
-      border: 1px solid transparent;
-      padding: 52px 44px;
-      display: flex;
-      flex-direction: column;
-      transition: border-color var(--transition);
-    }
-    .studio-card:hover { border-color: var(--border-purple); }
-    .studio-num {
-      font-size: .62rem;
-      font-weight: 700;
-      letter-spacing: .22em;
-      text-transform: uppercase;
-      color: var(--cyan);
-      margin-bottom: 18px;
-    }
-    .studio-card h3 {
-      font-family: var(--font-display);
-      font-size: 2.2rem;
-      font-weight: 900;
-      text-transform: uppercase;
-      letter-spacing: .03em;
-      margin-bottom: 14px;
-    }
-    .studio-card p {
-      font-size: .9rem;
-      color: var(--text-muted);
-      line-height: 1.78;
-      margin-bottom: 28px;
-      flex: 1;
-    }
-    .studio-specs {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      margin-bottom: 36px;
-    }
-    .studio-specs li {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      font-size: .85rem;
-      color: var(--text-muted);
-    }
-    .spec-dot { width: 4px; height: 4px; border-radius: 50%; background: var(--purple); flex-shrink: 0; }
-    .studio-card .btn-primary { align-self: flex-start; }
-
-    /* ─── Pricing ──────────────────────────────────────── */
-    .pricing-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 2px;
-      margin-top: 60px;
-      background: var(--border);
-    }
-    .pricing-card {
-      position: relative;
-      padding: 48px 36px;
-      background: var(--bg-card);
-      display: flex;
-      flex-direction: column;
-      transition: background var(--transition);
-    }
-    .pricing-card:hover { background: rgba(204,34,153,.04); }
-    .pricing-card--featured {
-      background: rgba(204,34,153,.07);
-      border: 1px solid var(--border-purple);
-    }
-    .pricing-card--featured:hover { background: rgba(204,34,153,.11); }
-    .p-tier {
-      font-size: .6rem;
-      font-weight: 700;
-      letter-spacing: .2em;
-      text-transform: uppercase;
-      color: var(--text-muted);
-      margin-bottom: 10px;
-    }
-    .pricing-card--featured .p-tier { color: var(--purple); }
-    .p-name {
-      font-family: var(--font-display);
-      font-size: 2.1rem;
-      font-weight: 900;
-      text-transform: uppercase;
-      letter-spacing: .05em;
-      margin-bottom: 20px;
-    }
-    .p-price {
-      font-family: var(--font-display);
-      font-size: 3rem;
-      font-weight: 900;
-      line-height: 1;
-      margin-bottom: 6px;
-    }
-    .pricing-card--featured .p-price { color: var(--purple); }
-    .p-note {
-      font-size: .68rem;
-      color: var(--text-muted);
-      letter-spacing: .1em;
-      text-transform: uppercase;
-      margin-bottom: 28px;
-    }
-    .p-divider { height: 1px; background: var(--border); margin-bottom: 28px; }
-    .p-features {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      margin-bottom: 36px;
-      flex: 1;
-    }
-    .p-features li {
-      display: flex;
-      align-items: flex-start;
-      gap: 12px;
-      font-size: .87rem;
-      color: var(--text-muted);
-    }
-    .pricing-card--featured .p-features li { color: var(--text); }
-    .pchk { color: var(--purple); font-weight: 700; flex-shrink: 0; line-height: 1.4; }
-    .pricing-card--featured .pchk { color: var(--cyan); }
-    .btn-book {
-      display: block;
-      width: 100%;
-      padding: 14px 12px;
-      background: transparent;
-      color: var(--text);
-      border: 1px solid var(--border);
-      font-family: var(--font-body);
-      font-weight: 700;
-      font-size: .72rem;
-      letter-spacing: .14em;
-      text-transform: uppercase;
-      text-align: center;
-      border-radius: var(--radius);
-      cursor: pointer;
-      transition: border-color var(--transition), color var(--transition), background var(--transition);
-      margin-top: auto;
-    }
-    .btn-book:hover { border-color: var(--purple); color: var(--purple); }
-    .pricing-card--featured .btn-book {
-      background: var(--purple);
-      border-color: var(--purple);
-      color: #fff;
-    }
-    .pricing-card--featured .btn-book:hover { background: var(--purple-dim); border-color: var(--purple-dim); }
-
-    /* ─── TCO Comparison ───────────────────────────────── */
-    .tco-block {
-      margin-top: 64px;
-      border: 1px solid var(--border-purple);
-      border-radius: 16px;
-      overflow: hidden;
-    }
-    .tco-header {
-      padding: 20px 32px;
-      background: rgba(204,34,153,.07);
-      border-bottom: 1px solid var(--border-purple);
-      text-align: center;
-    }
-    .tco-header h3 {
-      margin: 0;
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: 1.15rem;
-      font-weight: 700;
-      letter-spacing: .08em;
-      text-transform: uppercase;
-      color: var(--text-muted);
-    }
-    .tco-header h3 span { color: var(--purple); }
-    .tco-grid {
-      display: grid;
-      grid-template-columns: 1fr auto 1fr;
-      align-items: center;
-    }
-    .tco-col {
-      padding: 32px 36px;
-    }
-    .tco-col--cloud {
-      background: rgba(255,255,255,.02);
-    }
-    .tco-col--zenith {
-      background: rgba(204,34,153,.05);
-    }
-    .tco-col .tco-label {
-      font-size: .72rem;
-      font-weight: 700;
-      letter-spacing: .12em;
-      text-transform: uppercase;
-      color: var(--text-muted);
-      margin-bottom: 10px;
-    }
-    .tco-col .tco-title {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: 1.35rem;
-      font-weight: 800;
-      color: var(--text);
-      margin-bottom: 18px;
-    }
-    .tco-col .tco-calc {
-      font-size: .85rem;
-      color: var(--text-muted);
-      line-height: 2;
-      margin-bottom: 18px;
-    }
-    .tco-col .tco-calc code {
-      font-family: 'Barlow', sans-serif;
-      color: var(--text);
-      font-style: normal;
-    }
-    .tco-col .tco-total {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: 2.2rem;
-      font-weight: 900;
-      line-height: 1;
-      margin-bottom: 6px;
-    }
-    .tco-col--cloud .tco-total { color: #FF6B6B; }
-    .tco-col--zenith .tco-total { color: var(--purple); }
-    .tco-col .tco-verdict {
-      font-size: .78rem;
-      font-weight: 600;
-      letter-spacing: .04em;
-    }
-    .tco-col--cloud .tco-verdict { color: #FF6B6B; }
-    .tco-col--zenith .tco-verdict { color: var(--purple); }
-    .tco-vs {
-      padding: 0 20px;
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: 1.6rem;
-      font-weight: 900;
-      color: var(--border-purple);
-      text-align: center;
-    }
-    @media (max-width: 640px) {
-      .tco-grid { grid-template-columns: 1fr; }
-      .tco-vs { padding: 0; text-align: center; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
-      .tco-col { padding: 28px 24px; }
-    }
-
-    /* ─── CTA ──────────────────────────────────────────── */
-    #cta {
-      padding: 120px 0;
-      position: relative;
-      overflow: hidden;
-      text-align: center;
-    }
-    .cta-glow {
-      position: absolute;
-      top: 50%; left: 50%;
-      transform: translate(-50%, -50%);
-      width: 700px; height: 400px;
-      background: radial-gradient(ellipse, rgba(204,34,153,.1) 0%, transparent 70%);
-      pointer-events: none;
-    }
-    .cta-inner {
-      position: relative;
-      z-index: 2;
-      max-width: 680px;
-      margin: 0 auto;
-    }
-    .cta-inner h2 {
-      font-family: var(--font-display);
-      font-size: clamp(2.5rem, 5.5vw, 4.5rem);
-      font-weight: 900;
-      text-transform: uppercase;
-      letter-spacing: .02em;
-      line-height: 1.02;
-      margin-bottom: 24px;
-    }
-    .cta-inner h2 .accent { color: var(--purple); }
-    .cta-inner p {
-      font-size: .97rem;
-      color: var(--text-muted);
-      margin-bottom: 52px;
-      line-height: 1.8;
-    }
-    .cta-actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
-    .btn-outline {
-      padding: 14px 36px;
-      border: 1px solid var(--border);
-      color: var(--text);
-      font-family: var(--font-body);
-      font-weight: 700;
-      font-size: .72rem;
-      letter-spacing: .14em;
-      text-transform: uppercase;
-      background: transparent;
-      border-radius: var(--radius);
-      cursor: pointer;
-      display: inline-block;
-      transition: border-color var(--transition), color var(--transition);
-    }
-    .btn-outline:hover { border-color: var(--purple); color: var(--purple); }
-
-    /* ─── Footer ───────────────────────────────────────── */
-    footer {
-      padding: 48px 0;
-      border-top: 1px solid var(--border);
-    }
-    .footer-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
-    .footer-logo {
-      font-family: var(--font-display);
-      font-size: 1.2rem;
-      font-weight: 900;
-      letter-spacing: .1em;
-      text-transform: uppercase;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-    }
-    .footer-logo span { color: var(--purple); }
-    .footer-links { display: flex; gap: 28px; list-style: none; }
-    .footer-links a {
-      font-size: .72rem;
-      font-weight: 600;
-      letter-spacing: .1em;
-      text-transform: uppercase;
-      color: var(--text-muted);
-      transition: color var(--transition);
-    }
-    .footer-links a:hover { color: var(--text); }
-    .footer-copy { font-size: .72rem; color: var(--text-muted); letter-spacing: .05em; }
-
-    /* ─── Responsive ───────────────────────────────────── */
-    @media (max-width: 960px) {
-      .nav-links { display: none; }
-      .waveform-wrap { display: none; }
-      .equip-grid { grid-template-columns: 1fr; gap: 16px; }
-      .studios-grid { grid-template-columns: 1fr; gap: 16px; background: none; }
-      .stats-row { grid-template-columns: repeat(2, 1fr); }
-      .pricing-grid { grid-template-columns: 1fr; gap: 16px; background: none; }
-      .pricing-card--featured { border: 1px solid var(--border-purple); }
-    }
-    @media (max-width: 600px) {
-      .container { padding: 0 20px; }
-      .section { padding: 72px 0; }
-      .stats-row { grid-template-columns: 1fr 1fr; }
-      .footer-inner { flex-direction: column; text-align: center; }
-    }
-
-    /* ─── Compare cards (Problem/Solution) ────────────── */
-    .compare-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 2px;
-      margin-top: 60px;
-      background: var(--border);
-    }
-    .compare-card {
-      padding: 52px 44px;
-      position: relative;
-      overflow: hidden;
-    }
-    .compare-card::after {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 3px;
-    }
-    .compare-card--danger {
-      background: linear-gradient(160deg, rgba(224,85,85,.06) 0%, var(--bg-card) 45%);
-      border: 1px solid rgba(224,85,85,.14);
-    }
-    .compare-card--danger::after {
-      background: linear-gradient(90deg, #E05555 0%, rgba(224,85,85,.3) 100%);
-      box-shadow: 0 0 18px rgba(224,85,85,.5);
-    }
-    .compare-card--safe {
-      background: linear-gradient(160deg, rgba(204,34,153,.07) 0%, var(--bg-card) 45%);
-      border: 1px solid var(--border-purple);
-    }
-    .compare-card--safe::after {
-      background: linear-gradient(90deg, var(--purple) 0%, rgba(204,34,153,.3) 100%);
-      box-shadow: 0 0 18px var(--purple-glow);
-    }
-    .compare-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 7px;
-      font-size: .58rem;
-      font-weight: 700;
-      letter-spacing: .2em;
-      text-transform: uppercase;
-      padding: 5px 12px;
-      border-radius: 2px;
-      margin-bottom: 22px;
-    }
-    .compare-card--danger .compare-badge {
-      background: rgba(224,85,85,.1);
-      color: #E07777;
-      border: 1px solid rgba(224,85,85,.22);
-    }
-    .compare-card--safe .compare-badge {
-      background: rgba(204,34,153,.1);
-      color: var(--purple);
-      border: 1px solid var(--border-purple);
-    }
-    .compare-card h3 {
-      font-family: var(--font-display);
-      font-size: 1.7rem;
-      font-weight: 900;
-      text-transform: uppercase;
-      letter-spacing: .02em;
-      line-height: 1.1;
-      margin-bottom: 32px;
-      color: var(--text);
-    }
-    .compare-list {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-    }
-    .compare-list li {
-      display: flex;
-      align-items: flex-start;
-      gap: 14px;
-      font-size: .88rem;
-      color: var(--text-muted);
-      line-height: 1.72;
-      padding: 14px 0;
-      border-bottom: 1px solid var(--border);
-    }
-    .compare-list li:first-child { padding-top: 0; }
-    .compare-list li:last-child  { border-bottom: none; padding-bottom: 0; }
-    .compare-icon {
-      width: 24px;
-      height: 24px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: .7rem;
-      font-style: normal;
-      flex-shrink: 0;
-      margin-top: 1px;
-    }
-    .compare-icon--danger {
-      background: rgba(224,85,85,.1);
-      color: #E07777;
-      border: 1px solid rgba(224,85,85,.22);
-    }
-    .compare-icon--safe {
-      background: rgba(204,34,153,.1);
-      color: var(--purple);
-      border: 1px solid var(--border-purple);
-    }
-
-    /* ─── Feature cards ────────────────────────────────── */
-    .features-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 2px;
-      margin-top: 60px;
-      background: var(--border);
-    }
-    .feature-card {
-      padding: 40px 32px;
-      background: var(--bg-card);
-      position: relative;
-      overflow: hidden;
-      transition: background var(--transition);
-    }
-    .feature-card:hover { background: rgba(204,34,153,.04); }
-    .feature-card::after {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 2px;
-      background: var(--purple);
-      opacity: 0;
-      transition: opacity var(--transition);
-    }
-    .feature-card:hover::after { opacity: 1; }
-    .feature-num {
-      font-size: .62rem;
-      font-weight: 700;
-      letter-spacing: .22em;
-      text-transform: uppercase;
-      color: var(--purple);
-      margin-bottom: 16px;
-    }
-    .feature-card h3 {
-      font-family: var(--font-display);
-      font-size: 1.45rem;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: .03em;
-      margin-bottom: 14px;
-    }
-    .feature-card p {
-      font-size: .88rem;
-      color: var(--text-muted);
-      line-height: 1.78;
-    }
-    .feature-example {
-      margin-top: 18px;
-      padding: 10px 14px;
-      border-left: 2px solid var(--purple);
-      background: rgba(204,34,153,.06);
-      font-size: .8rem;
-      font-style: italic;
-      color: var(--text-muted);
-    }
-    .feature-tag {
-      display: inline-block;
-      margin-top: 18px;
-      padding: 4px 12px;
-      border: 1px solid var(--border-purple);
-      color: var(--purple);
-      font-size: .62rem;
-      font-weight: 700;
-      letter-spacing: .14em;
-      text-transform: uppercase;
-    }
-
-    /* ─── Industry tabs ────────────────────────────────── */
-    .industry-tabs {
-      display: flex;
-      gap: 2px;
-      margin-bottom: 2px;
-      background: var(--border);
-      flex-wrap: wrap;
-    }
-    .tab-btn {
-      padding: 14px 32px;
-      background: var(--bg-card);
-      border: none;
-      color: var(--text-muted);
-      font-family: var(--font-body);
-      font-size: .72rem;
-      font-weight: 700;
-      letter-spacing: .14em;
-      text-transform: uppercase;
-      cursor: pointer;
-      transition: background var(--transition), color var(--transition);
-    }
-    .tab-btn.active, .tab-btn:hover {
-      background: rgba(204,34,153,.08);
-      color: var(--purple);
-    }
-    .industry-panel { display: none; }
-    .industry-panel.active { display: block; }
-    .industry-layout {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 2px;
-      background: var(--border);
-    }
-    .industry-visual {
-      background: var(--bg-card);
-      padding: 44px;
-      min-height: 360px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-    .industry-mockup-label {
-      font-size: .6rem;
-      font-weight: 700;
-      letter-spacing: .2em;
-      text-transform: uppercase;
-      color: var(--text-muted);
-      margin-bottom: 24px;
-    }
-    .mock-query {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      padding: 12px 16px;
-      background: rgba(0,212,184,.05);
-      border: 1px solid rgba(0,212,184,.18);
-      font-size: .88rem;
-      color: var(--cyan);
-      margin-bottom: 20px;
-    }
-    .mock-results { display: flex; flex-direction: column; gap: 8px; }
-    .mock-result-item {
-      padding: 11px 14px;
-      background: rgba(255,255,255,.025);
-      border: 1px solid var(--border);
-      font-size: .82rem;
-      color: var(--text-muted);
-    }
-    .mock-result-tag {
-      display: inline-block;
-      padding: 2px 8px;
-      font-size: .62rem;
-      font-weight: 700;
-      letter-spacing: .08em;
-      text-transform: uppercase;
-      margin-right: 8px;
-    }
-    .tag-urteil { background: rgba(204,34,153,.15); color: var(--purple); }
-    .tag-frist  { background: rgba(224,85,85,.15);  color: #E07777; }
-    .tag-befund { background: rgba(0,212,184,.12);  color: var(--cyan); }
-    .tag-labor  { background: rgba(100,200,150,.12); color: #70DBA0; }
-    .industry-content {
-      background: var(--bg-card);
-      padding: 44px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-    .industry-content h3 {
-      font-family: var(--font-display);
-      font-size: 2rem;
-      font-weight: 900;
-      text-transform: uppercase;
-      letter-spacing: .02em;
-      margin-bottom: 16px;
-    }
-    .industry-content h3 .accent { color: var(--cyan); }
-    .industry-content p {
-      color: var(--text-muted);
-      font-size: .9rem;
-      line-height: 1.78;
-      margin-bottom: 28px;
-    }
-    .benefit-list {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-    }
-    .benefit-list li {
-      display: flex;
-      align-items: flex-start;
-      gap: 12px;
-      font-size: .88rem;
-      color: var(--text-muted);
-      line-height: 1.7;
-    }
-    .benefit-check {
-      width: 20px; height: 20px;
-      border-radius: 50%;
-      background: rgba(204,34,153,.12);
-      border: 1px solid var(--border-purple);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: .65rem;
-      color: var(--purple);
-      flex-shrink: 0;
-      margin-top: 2px;
-    }
-
-    /* ─── Tech grid ─────────────────────────────────────── */
-    .tech-features {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 2px;
-      margin-top: 60px;
-      background: var(--border);
-    }
-    .tech-feature-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 20px;
-      padding: 36px 32px;
-      background: var(--bg-card);
-      transition: background var(--transition);
-    }
-    .tech-feature-item:hover { background: rgba(204,34,153,.04); }
-    .tech-feature-icon {
-      flex-shrink: 0;
-      width: 28px;
-      height: 28px;
-      color: rgba(255,255,255,.75);
-    }
-    .tech-feature-icon svg { width: 100%; height: 100%; display: block; }
-    .tech-feature-item h4 {
-      font-family: var(--font-display);
-      font-size: 1.1rem;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: .04em;
-      margin-bottom: 8px;
-    }
-    .tech-feature-item p {
-      font-size: .86rem;
-      color: var(--text-muted);
-      line-height: 1.78;
-    }
-
-    @media (max-width: 960px) {
-      .compare-grid { grid-template-columns: 1fr; gap: 16px; background: none; }
-      .features-grid { grid-template-columns: repeat(2, 1fr); }
-      .usecases-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 8px; background: none; }
-      .industry-layout { grid-template-columns: 1fr; }
-      .industry-tabs { background: none; gap: 8px; }
-      .tab-btn { border: 1px solid var(--border); }
-      .tech-features { grid-template-columns: 1fr; }
-    }
-    @media (max-width: 600px) {
-      .features-grid { grid-template-columns: 1fr; }
-      .usecases-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 8px; background: none; }
-    }
-
-    /* ─── Screenshots Gallery ──────────────────────────── */
-    .screens-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
-      margin-top: 52px;
-    }
-    .screen-card {
-      cursor: pointer;
-      display: flex;
-      flex-direction: column;
-      gap: 0;
-      border: 1px solid var(--border);
-      border-radius: 4px;
-      overflow: hidden;
-      background: var(--bg-card);
-      transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition);
-    }
-    .screen-card:hover {
-      border-color: var(--border-purple);
-      transform: translateY(-3px);
-      box-shadow: 0 12px 36px rgba(0,0,0,.45), 0 0 0 1px var(--border-purple);
-    }
-    .screen-thumb-wrap {
-      position: relative;
-      overflow: hidden;
-      aspect-ratio: 16/10;
-      background: #060610;
-    }
-    .screen-thumb {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-      transition: transform .5s ease, opacity var(--transition);
-      opacity: .88;
-    }
-    .screen-card:hover .screen-thumb {
-      transform: scale(1.03);
-      opacity: 1;
-    }
-    .screen-overlay {
-      position: absolute;
-      inset: 0;
-      background: rgba(204,34,153,.12);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      opacity: 0;
-      transition: opacity var(--transition);
-    }
-    .screen-card:hover .screen-overlay { opacity: 1; }
-    .screen-zoom {
-      width: 44px;
-      height: 44px;
-      border-radius: 50%;
-      background: var(--purple);
-      color: #fff;
-      font-size: 1.1rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 4px 20px var(--purple-glow);
-    }
-    .screen-caption {
-      padding: 12px 16px;
-      font-size: .78rem;
-      color: var(--text-muted);
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      border-top: 1px solid var(--border);
-    }
-    .screen-tag {
-      display: inline-block;
-      padding: 2px 9px;
-      background: rgba(204,34,153,.1);
-      border: 1px solid var(--border-purple);
-      color: var(--purple);
-      font-size: .58rem;
-      font-weight: 700;
-      letter-spacing: .14em;
-      text-transform: uppercase;
-      border-radius: 2px;
-      flex-shrink: 0;
-    }
-    .screen-tag--mobile {
-      background: rgba(255,255,255,.06);
-      border-color: rgba(255,255,255,.14);
-      color: var(--text-muted);
-    }
-    .screens-divider {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      margin: 40px 0 28px;
-    }
-    .screens-divider::before,
-    .screens-divider::after {
-      content: '';
-      flex: 1;
-      height: 1px;
-      background: var(--border);
-    }
-    .screens-divider-label {
-      font-size: .65rem;
-      font-weight: 700;
-      letter-spacing: .18em;
-      text-transform: uppercase;
-      color: var(--text-muted);
-      white-space: nowrap;
-    }
-    .screens-grid--mobile {
-      grid-template-columns: repeat(5, 1fr);
-    }
-    .screen-thumb-wrap--portrait {
-      aspect-ratio: 9/19;
-    }
-    .lightbox-inner--mobile {
-      max-width: min(360px, 38vw);
-    }
-    .screens-note {
-      margin-top: 28px;
-      text-align: center;
-      font-size: .75rem;
-      color: var(--text-muted);
-      letter-spacing: .05em;
-    }
-
-    /* ─── Lightbox ──────────────────────────────────────── */
-    .lightbox {
-      display: none;
-      position: fixed;
-      inset: 0;
-      z-index: 500;
-      background: rgba(4,4,10,.92);
-      backdrop-filter: blur(10px);
-      align-items: center;
-      justify-content: center;
-      padding: 40px 24px;
-    }
-    .lightbox.open { display: flex; }
-    .lightbox-close {
-      position: absolute;
-      top: 20px; right: 24px;
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      color: var(--text-muted);
-      width: 40px; height: 40px;
-      border-radius: 50%;
-      font-size: .9rem;
-      cursor: pointer;
-      transition: border-color var(--transition), color var(--transition);
-      display: flex; align-items: center; justify-content: center;
-    }
-    .lightbox-close:hover { border-color: var(--purple); color: var(--purple); }
-    .lightbox-inner {
-      max-width: min(1100px, 94vw);
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 16px;
-    }
-    .lightbox-img {
-      width: 100%;
-      height: auto;
-      border-radius: 4px;
-      border: 1px solid var(--border-purple);
-      box-shadow: 0 24px 80px rgba(0,0,0,.7);
-    }
-    .lightbox-caption {
-      font-size: .75rem;
-      color: var(--text-muted);
-      letter-spacing: .06em;
-      text-align: center;
-    }
-
-    @media (max-width: 960px) {
-      .screens-grid { grid-template-columns: 1fr; gap: 12px; }
-      .screens-grid--mobile { grid-template-columns: repeat(3, 1fr); }
-      .lightbox-inner--mobile { max-width: min(360px, 70vw); }
-    }
-    @media (max-width: 600px) {
-      .screens-grid--mobile { grid-template-columns: repeat(2, 1fr); }
-      .lightbox-inner--mobile { max-width: 90vw; }
-    }
-
-    /* ─── Use Cases Grid ───────────────────────────────── */
-    .usecases-grid {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 2px;
-      margin-top: 60px;
-      background: var(--border);
-    }
-    .usecase-card {
-      background: var(--bg-card);
-      padding: 30px 22px;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      position: relative;
-      overflow: hidden;
-      transition: background var(--transition);
-      border: 1px solid transparent;
-    }
-    .usecase-card:hover {
-      background: rgba(204,34,153,.06);
-      border-color: var(--border-purple);
-    }
-    .usecase-card::after {
-      content: '';
-      position: absolute;
-      bottom: 0; left: 0; right: 0;
-      height: 2px;
-      background: var(--purple);
-      opacity: 0;
-      transition: opacity var(--transition);
-    }
-    .usecase-card:hover::after { opacity: 1; }
-    .usecase-icon {
-      width: 28px;
-      height: 28px;
-      color: rgba(255,255,255,.75);
-      flex-shrink: 0;
-    }
-    .usecase-icon svg { width: 100%; height: 100%; display: block; }
-    .usecase-sector {
-      font-size: .58rem;
-      font-weight: 700;
-      letter-spacing: .2em;
-      text-transform: uppercase;
-      color: var(--purple);
-    }
-    .usecase-card h4 {
-      font-family: var(--font-display);
-      font-size: 1rem;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: .03em;
-      color: var(--text);
-      line-height: 1.25;
-      margin: 0;
-    }
-    .usecase-card p {
-      font-size: .81rem;
-      color: var(--text-muted);
-      line-height: 1.72;
-      margin: 0;
-    }
-
-    /* ─── Announcement bar ─────────────────────────── */
-    .announce-bar {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      z-index: 101;
-      height: 44px;
-      background: linear-gradient(90deg, #0D0820 0%, #160D30 50%, #0D0820 100%);
-      border-bottom: 1px solid var(--border-purple);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 16px;
-      padding: 0 24px;
-    }
-    .announce-badge {
-      font-size: .58rem;
-      font-weight: 700;
-      letter-spacing: .18em;
-      text-transform: uppercase;
-      color: #fff;
-      background: var(--purple);
-      padding: 3px 10px;
-      border-radius: 2px;
-      flex-shrink: 0;
-    }
-    .announce-text {
-      font-size: .7rem;
-      color: var(--text-muted);
-      letter-spacing: .03em;
-    }
-    .announce-link {
-      font-size: .6rem;
-      font-weight: 700;
-      letter-spacing: .12em;
-      text-transform: uppercase;
-      color: var(--cyan);
-      border: 1px solid rgba(0,212,184,.35);
-      padding: 4px 14px;
-      border-radius: 2px;
-      flex-shrink: 0;
-      transition: background var(--transition), color var(--transition);
-    }
-    .announce-link:hover { background: var(--cyan); color: var(--bg); }
-    @media (max-width: 600px) {
-      .announce-text { display: none; }
-    }
-  </style>
-  <script src="assets/lang.js" defer></script>
+  <link rel="stylesheet" href="assets/style.css" />
 </head>
-
 <body>
 
-  <!-- ══════════════════════════════════════════════
-       NAVIGATION
-  ══════════════════════════════════════════════ -->
-  <!-- Announcement bar -->
-  <div class="announce-bar">
-    <span class="announce-badge" data-i18n="announce.badge">In Development</span>
+  <div class="noise" aria-hidden="true"></div>
+
+  <!-- ═══ Announce bar ═══════════════════════════════════════ -->
+  <div class="announce">
+    <span class="announce-badge"><span class="dot"></span><span data-i18n="announce.badge">In Development</span></span>
     <span class="announce-text" data-i18n="announce.text">Market launch expected September 2026 &nbsp;·&nbsp; Support the project on Kickstarter</span>
     <a href="https://www.kickstarter.com/projects/125084900/491999603/edit/preview?ref=project_build" target="_blank" rel="noopener" class="announce-link" data-i18n="announce.link">To Kickstarter →</a>
   </div>
 
-  <header id="header">
+  <!-- ═══ Header ═════════════════════════════════════════════ -->
+  <header class="site-header">
     <div class="container">
-      <nav>
-        <a href="#hero" class="logo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" style="height:.85em;width:.85em;flex-shrink:0;" aria-hidden="true"><line x1="50" y1="10" x2="85" y2="30" stroke="currentColor" stroke-width="6" stroke-linecap="round"/><line x1="85" y1="30" x2="85" y2="70" stroke="currentColor" stroke-width="6" stroke-linecap="round"/><line x1="85" y1="70" x2="50" y2="90" stroke="currentColor" stroke-width="6" stroke-linecap="round"/><line x1="50" y1="90" x2="15" y2="70" stroke="currentColor" stroke-width="6" stroke-linecap="round"/><line x1="15" y1="70" x2="15" y2="30" stroke="currentColor" stroke-width="6" stroke-linecap="round"/><line x1="15" y1="30" x2="50" y2="10" stroke="currentColor" stroke-width="6" stroke-linecap="round"/><line x1="50" y1="10" x2="50" y2="90" stroke="currentColor" stroke-width="6" stroke-linecap="round"/><line x1="85" y1="30" x2="15" y2="70" stroke="currentColor" stroke-width="6" stroke-linecap="round"/><line x1="85" y1="70" x2="15" y2="30" stroke="currentColor" stroke-width="6" stroke-linecap="round"/><circle cx="50" cy="10" r="7" fill="currentColor"/><circle cx="85" cy="30" r="7" fill="currentColor"/><circle cx="85" cy="70" r="7" fill="currentColor"/><circle cx="50" cy="90" r="7" fill="currentColor"/><circle cx="15" cy="70" r="7" fill="currentColor"/><circle cx="15" cy="30" r="7" fill="currentColor"/></svg>Zenith<span>.</span></a>
+      <nav class="nav">
+        <a href="#hero" class="logo" aria-label="Zenith">
+          <svg viewBox="0 0 100 100" aria-hidden="true"><line x1="50" y1="10" x2="85" y2="30" stroke="#E23DB4" stroke-width="6" stroke-linecap="round"/><line x1="85" y1="30" x2="85" y2="70" stroke="#E23DB4" stroke-width="6" stroke-linecap="round"/><line x1="85" y1="70" x2="50" y2="90" stroke="#E23DB4" stroke-width="6" stroke-linecap="round"/><line x1="50" y1="90" x2="15" y2="70" stroke="#E23DB4" stroke-width="6" stroke-linecap="round"/><line x1="15" y1="70" x2="15" y2="30" stroke="#E23DB4" stroke-width="6" stroke-linecap="round"/><line x1="15" y1="30" x2="50" y2="10" stroke="#E23DB4" stroke-width="6" stroke-linecap="round"/><line x1="50" y1="10" x2="50" y2="90" stroke="#E23DB4" stroke-width="6" stroke-linecap="round"/><line x1="85" y1="30" x2="15" y2="70" stroke="#E23DB4" stroke-width="6" stroke-linecap="round"/><line x1="85" y1="70" x2="15" y2="30" stroke="#E23DB4" stroke-width="6" stroke-linecap="round"/><circle cx="50" cy="10" r="7" fill="#E23DB4"/><circle cx="85" cy="30" r="7" fill="#E23DB4"/><circle cx="85" cy="70" r="7" fill="#E23DB4"/><circle cx="50" cy="90" r="7" fill="#E23DB4"/><circle cx="15" cy="70" r="7" fill="#E23DB4"/><circle cx="15" cy="30" r="7" fill="#E23DB4"/></svg>
+          ZEN<span class="z-accent">ITH</span>
+        </a>
         <ul class="nav-links">
           <li><a href="#features" data-i18n="nav.features">Features</a></li>
           <li><a href="#screenshots" data-i18n="nav.screenshots">Screenshots</a></li>
           <li><a href="#industry" data-i18n="nav.industry">Use Cases</a></li>
           <li><a href="#technology" data-i18n="nav.technology">Technology</a></li>
           <li><a href="#pricing" data-i18n="nav.pricing">Pricing</a></li>
-          <li><a href="#cta" data-i18n="nav.contact">Contact</a></li>
+          <li><a href="kontakt.html" data-i18n="nav.contact">Contact</a></li>
         </ul>
         <a href="https://www.kickstarter.com/projects/125084900/491999603/edit/preview?ref=project_build" target="_blank" rel="noopener" class="nav-cta" data-i18n="nav.kickstarter">On Kickstarter</a>
+        <button class="nav-burger" aria-label="Menu"><span></span><span></span><span></span></button>
       </nav>
     </div>
   </header>
 
-  <!-- ══════════════════════════════════════════════
-       HERO
-  ══════════════════════════════════════════════ -->
-  <section id="hero">
-    <div class="hero-bg"></div>
-    <div class="hero-grid"></div>
-
-    <div class="container">
-      <div class="hero-content">
-        <div class="label" data-i18n="hero.label">In Development · Market launch September 2026</div>
-        <h1>
-          <span class="hero-h1-first-line"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="hero-h1-icon" aria-hidden="true"><line x1="50" y1="10" x2="85" y2="30" stroke="currentColor" stroke-width="6" stroke-linecap="round"/><line x1="85" y1="30" x2="85" y2="70" stroke="currentColor" stroke-width="6" stroke-linecap="round"/><line x1="85" y1="70" x2="50" y2="90" stroke="currentColor" stroke-width="6" stroke-linecap="round"/><line x1="50" y1="90" x2="15" y2="70" stroke="currentColor" stroke-width="6" stroke-linecap="round"/><line x1="15" y1="70" x2="15" y2="30" stroke="currentColor" stroke-width="6" stroke-linecap="round"/><line x1="15" y1="30" x2="50" y2="10" stroke="currentColor" stroke-width="6" stroke-linecap="round"/><line x1="50" y1="10" x2="50" y2="90" stroke="currentColor" stroke-width="6" stroke-linecap="round"/><line x1="85" y1="30" x2="15" y2="70" stroke="currentColor" stroke-width="6" stroke-linecap="round"/><line x1="85" y1="70" x2="15" y2="30" stroke="currentColor" stroke-width="6" stroke-linecap="round"/><circle cx="50" cy="10" r="7" fill="currentColor"/><circle cx="85" cy="30" r="7" fill="currentColor"/><circle cx="85" cy="70" r="7" fill="currentColor"/><circle cx="50" cy="90" r="7" fill="currentColor"/><circle cx="15" cy="70" r="7" fill="currentColor"/><circle cx="15" cy="30" r="7" fill="currentColor"/></svg>ZENITH<span class="line-purple">.</span></span><br />
-          <span class="line-purple" data-i18n="hero.h1.line2">The AI Document<br />Management System</span>
-        </h1>
-        <p class="hero-sub" data-i18n="hero.sub">
-          Harness the full power of local AI for your documents –<br />
-          100% secure, 100% offline, 100% GDPR-compliant, 100% sovereign
-        </p>
-        <div class="hero-actions">
-          <a href="#cta" class="btn-primary" data-i18n="hero.cta.primary">Discover Zenith Now →</a>
-          <a href="#features" class="btn-ghost" data-i18n="hero.cta.ghost">Learn More</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Server farm background -->
-    <div class="hero-server-img"></div>
-
-  </section>
-
-  <!-- ══════════════════════════════════════════════
-       PROBLEM / SOLUTION
-  ══════════════════════════════════════════════ -->
-  <section id="problem" class="section">
-    <div class="container">
-      <div class="label" data-i18n="problem.label">The Problem with Cloud AI</div>
-      <h2 class="section-title" data-i18n="problem.title">Why Cloud Solutions<br /><span class="accent">Are Not an Option</span></h2>
-      <p class="section-sub" data-i18n="problem.sub">
-        Trade secrets, sensitive data and data protection regulations tolerate no compromise.
-        Zenith was built exactly for that.
-      </p>
-
-      <div class="compare-grid">
-        <div class="compare-card compare-card--danger">
-          <div class="compare-badge" data-i18n="problem.danger.badge">⚠ Risk</div>
-          <h3 data-i18n="problem.danger.h3">Cloud AI –<br />The Hidden Risk</h3>
-          <ul class="compare-list">
-            <li><i class="compare-icon compare-icon--danger">✕</i><span data-i18n="problem.danger.1">Sensitive business data, trade secrets and documentation leave your premises and end up on third-party servers</span></li>
-            <li><i class="compare-icon compare-icon--danger">✕</i><span data-i18n="problem.danger.2">Possible violations of data protection law, trade secret law and industry-specific compliance requirements</span></li>
-            <li><i class="compare-icon compare-icon--danger">✕</i><span data-i18n="problem.danger.3">Data protection authorities are increasingly issuing fines for uncontrolled AI usage</span></li>
-            <li><i class="compare-icon compare-icon--danger">✕</i><span data-i18n="problem.danger.4">Opaque data storage by AI providers – training data, logs, backups uncontrollable</span></li>
-            <li><i class="compare-icon compare-icon--danger">✕</i><span data-i18n="problem.danger.5">Dependency on internet connection and external services jeopardises your availability</span></li>
-          </ul>
-        </div>
-
-        <div class="compare-card compare-card--safe">
-          <div class="compare-badge" data-i18n="problem.safe.badge">✦ Solution</div>
-          <h3 data-i18n="problem.safe.h3">Zenith –<br />Local Sovereignty</h3>
-          <ul class="compare-list">
-            <li><i class="compare-icon compare-icon--safe">✓</i><span data-i18n="problem.safe.1">All AI processes run exclusively on your hardware – not a single byte leaves your network</span></li>
-            <li><i class="compare-icon compare-icon--safe">✓</i><span data-i18n="problem.safe.2">Legally compliant: full control over all data, auditable at any time</span></li>
-            <li><i class="compare-icon compare-icon--safe">✓</i><span data-i18n="problem.safe.3">Privacy-by-design: data protection impact assessments are straightforward</span></li>
-            <li><i class="compare-icon compare-icon--safe">✓</i><span data-i18n="problem.safe.4">Runs on your local server (optimised for Minisforum MS S1 Max) – no dependencies</span></li>
-            <li><i class="compare-icon compare-icon--safe">✓</i><span data-i18n="problem.safe.5">Works fully offline – maximum availability and independence</span></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ══════════════════════════════════════════════
-       STATS
-  ══════════════════════════════════════════════ -->
-  <div class="stats-row">
-    <div class="stat-item">
-      <div class="stat-num">128<span>GB</span></div>
-      <div class="stat-lbl" data-i18n="stats.ram">DDR5 RAM</div>
-    </div>
-    <div class="stat-item">
-      <div class="stat-num">0<span>Byte</span></div>
-      <div class="stat-lbl" data-i18n="stats.bytes">External Data Transfer</div>
-    </div>
-    <div class="stat-item">
-      <div class="stat-num">RAG</div>
-      <div class="stat-lbl" data-i18n="stats.rag">AI Architecture</div>
-    </div>
-    <div class="stat-item">
-      <div class="stat-num">&lt;<span>30</span></div>
-      <div class="stat-lbl" data-i18n="stats.setup">min Setup Time</div>
-    </div>
+  <div class="nav-drawer">
+    <a href="#features" data-i18n="nav.features">Features</a>
+    <a href="#screenshots" data-i18n="nav.screenshots">Screenshots</a>
+    <a href="#industry" data-i18n="nav.industry">Use Cases</a>
+    <a href="#technology" data-i18n="nav.technology">Technology</a>
+    <a href="#pricing" data-i18n="nav.pricing">Pricing</a>
+    <a href="kontakt.html" data-i18n="nav.contact">Contact</a>
   </div>
 
-  <!-- ══════════════════════════════════════════════
-       SCREENSHOTS
-  ══════════════════════════════════════════════ -->
-  <section id="screenshots" class="section section--alt">
-    <div class="container">
-      <div class="label" data-i18n="screens.label">The Interface</div>
-      <h2 class="section-title" data-i18n="screens.title">Designed for<br /><span class="accent">Everyday Operations.</span></h2>
-      <p class="section-sub" style="max-width:640px;" data-i18n="screens.sub">
-        Zenith is fully available as a web interface – no installation needed, directly in the browser. Whether at your desk, working from home or on your smartphone: your knowledge base is always just one click away.
-      </p>
+  <main>
 
-      <div class="screens-grid">
-
-        <div class="screen-card" onclick="openLightbox('images/screen_1.png', 'Zenith Desktop-Ansicht – Dokumentensuche')">
-          <div class="screen-thumb-wrap">
-            <img src="images/screen_1.png" alt="Zenith Desktop-Ansicht" class="screen-thumb" loading="lazy" />
-            <div class="screen-overlay">
-              <span class="screen-zoom">⤢</span>
-            </div>
-          </div>
-          <div class="screen-caption">
-            <span class="screen-tag">Desktop</span>
-            <span data-i18n="screens.cap1">Main View &amp; Document Search</span>
-          </div>
-        </div>
-
-        <div class="screen-card" onclick="openLightbox('images/screen_2.png', 'Zenith – Analysefunktion &amp; Zusammenfassung')">
-          <div class="screen-thumb-wrap">
-            <img src="images/screen_2.png" alt="Zenith Analysefunktion" class="screen-thumb" loading="lazy" />
-            <div class="screen-overlay">
-              <span class="screen-zoom">⤢</span>
-            </div>
-          </div>
-          <div class="screen-caption">
-            <span class="screen-tag">Desktop</span>
-            <span data-i18n="screens.cap2">Analysis Function &amp; AI Summary</span>
-          </div>
-        </div>
-
-        <div class="screen-card" onclick="openLightbox('images/screen_3.png', 'Zenith Desktop – Dokumentenarchiv &amp; Navigation')">
-          <div class="screen-thumb-wrap">
-            <img src="images/screen_3.png" alt="Zenith Dokumentenarchiv" class="screen-thumb" loading="lazy" />
-            <div class="screen-overlay">
-              <span class="screen-zoom">⤢</span>
-            </div>
-          </div>
-          <div class="screen-caption">
-            <span class="screen-tag">Desktop</span>
-            <span data-i18n="screens.cap3">Document Archive &amp; Navigation</span>
-          </div>
-        </div>
-
+    <!-- ═══ Hero ═════════════════════════════════════════════ -->
+    <section id="hero">
+      <div class="hero-bg" aria-hidden="true">
+        <div class="grid-overlay"></div>
+        <div class="blob b1"></div>
+        <div class="blob b2"></div>
+        <div class="blob b3"></div>
       </div>
-
-      <div class="screens-divider">
-        <span class="screens-divider-label" data-i18n="screens.desktop.divider">📱 Mobile View</span>
-      </div>
-
-      <div class="screens-grid screens-grid--mobile">
-
-        <div class="screen-card" onclick="openLightbox('images/screen_mobile_1.png', 'Zenith Mobile – Startseite &amp; Schnellsuche', true)">
-          <div class="screen-thumb-wrap screen-thumb-wrap--portrait">
-            <img src="images/screen_mobile_1.png" alt="Zenith Mobile Startseite" class="screen-thumb" loading="lazy" />
-            <div class="screen-overlay">
-              <span class="screen-zoom">⤢</span>
+      <div class="container">
+        <div class="hero-inner">
+          <div class="hero-copy">
+            <div class="hero-eyebrow" data-reveal>
+              <span class="dot"></span>
+              <span data-i18n="hero.eyebrow">100% local · 0 bytes to the cloud · GDPR-compliant by design</span>
+            </div>
+            <h1 class="hero-title" data-reveal style="--d:.08s">
+              <span data-i18n="hero.h1">Your documents.<br />Your AI.<br /><span class="fx-serif fx-grad">Your hardware.</span></span>
+            </h1>
+            <p class="hero-sub" data-reveal style="--d:.16s">
+              <span data-i18n="hero.sub">Zenith reads, understands and organises your entire document inventory – PDFs, images, Office files. Ask questions in natural language and get answers <strong>with sources</strong>. All of it on one machine in your office.</span>
+            </p>
+            <div class="hero-ctas" data-reveal style="--d:.24s">
+              <a href="#pricing" class="btn-primary"><span data-i18n="hero.cta1">Secure early-bird price</span> <span class="arr">→</span></a>
+              <a href="#features" class="btn-ghost" data-i18n="hero.cta2">Explore features</a>
+            </div>
+            <div class="hero-proof" data-reveal style="--d:.32s">
+              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="hero.proof1">Works fully offline</span></span>
+              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="hero.proof2">No subscription</span></span>
+              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="hero.proof3">Unlimited users</span></span>
             </div>
           </div>
-          <div class="screen-caption">
-            <span class="screen-tag screen-tag--mobile">Mobile</span>
-            <span data-i18n="screens.cap.mob1">Home Screen &amp; Quick Search</span>
-          </div>
-        </div>
 
-        <div class="screen-card" onclick="openLightbox('images/screen_mobile_2.png', 'Zenith Mobile – KI-Chat &amp; Antworten', true)">
-          <div class="screen-thumb-wrap screen-thumb-wrap--portrait">
-            <img src="images/screen_mobile_2.png" alt="Zenith Mobile KI-Chat" class="screen-thumb" loading="lazy" />
-            <div class="screen-overlay">
-              <span class="screen-zoom">⤢</span>
+          <div class="hero-demo" data-reveal style="--d:.2s">
+            <div class="float-card fc-cal" aria-hidden="true">
+              <div class="fc-head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg><span data-i18n="hero.fc1.head">Deadline detected</span></div>
+              <div class="fc-body"><strong data-i18n="hero.fc1.title">Insurance notice period</strong><br /><span data-i18n="hero.fc1.date">March 31, 2026</span><br /><span class="fc-tag" data-i18n="hero.fc1.tag">→ added to calendar</span></div>
+            </div>
+            <div class="demo-window">
+              <div class="demo-titlebar">
+                <span class="td"></span><span class="td"></span><span class="td"></span>
+                <span class="demo-title">zenith://chat — local session</span>
+              </div>
+              <div class="demo-chat" id="demo-chat"></div>
+            </div>
+            <div class="float-card fc-ent" aria-hidden="true">
+              <div class="fc-head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><circle cx="4" cy="6" r="2"/><circle cx="20" cy="6" r="2"/><circle cx="4" cy="18" r="2"/><circle cx="20" cy="18" r="2"/><line x1="6" y1="7" x2="10" y2="10.5"/><line x1="18" y1="7" x2="14" y2="10.5"/><line x1="6" y1="17" x2="10" y2="13.5"/><line x1="18" y1="17" x2="14" y2="13.5"/></svg><span data-i18n="hero.fc2.head">Knowledge graph</span></div>
+              <div class="fc-body"><span data-i18n="hero.fc2.body"><strong>Müller GmbH</strong> linked with 23 documents, 4 contracts, 2 deadlines</span></div>
             </div>
           </div>
-          <div class="screen-caption">
-            <span class="screen-tag screen-tag--mobile">Mobile</span>
-            <span data-i18n="screens.cap.mob2">AI Chat &amp; Document Answers</span>
-          </div>
         </div>
-
-        <div class="screen-card" onclick="openLightbox('images/screen_mobile_3.png', 'Zenith Mobile – Dokumentenübersicht', true)">
-          <div class="screen-thumb-wrap screen-thumb-wrap--portrait">
-            <img src="images/screen_mobile_3.png" alt="Zenith Mobile Dokumentenübersicht" class="screen-thumb" loading="lazy" />
-            <div class="screen-overlay">
-              <span class="screen-zoom">⤢</span>
-            </div>
-          </div>
-          <div class="screen-caption">
-            <span class="screen-tag screen-tag--mobile">Mobile</span>
-            <span data-i18n="screens.cap.mob3">Document Overview &amp; Filters</span>
-          </div>
-        </div>
-
       </div>
+    </section>
 
-      <p class="screens-note">
-        <span data-i18n="screens.note">🖥 Desktop &amp; Laptop &nbsp;·&nbsp; 📱 Smartphone &amp; Tablet &nbsp;·&nbsp; No app download required</span>
-      </p>
-    </div>
-  </section>
-
-  <!-- Lightbox -->
-  <div id="lightbox" class="lightbox" onclick="closeLightbox()">
-    <button class="lightbox-close" onclick="closeLightbox()">✕</button>
-    <div class="lightbox-inner" onclick="event.stopPropagation()">
-      <img id="lightbox-img" src="" alt="" class="lightbox-img" />
-      <p id="lightbox-caption" class="lightbox-caption"></p>
-    </div>
-  </div>
-
-  <!-- ══════════════════════════════════════════════
-       FEATURES
-  ══════════════════════════════════════════════ -->
-  <section id="features" class="section section--alt">
-    <div class="container">
-      <div class="label" data-i18n="features.label">The Magic of Zenith</div>
-      <h2 class="section-title" data-i18n="features.title">Advanced AI.<br /><span class="accent">Fully Under Your Control.</span></h2>
-      <p class="section-sub" data-i18n="features.sub">
-        Zenith combines state-of-the-art RAG technology with intuitive operation – no IT degree, no cloud, no compromises.
-      </p>
-
-      <div class="features-grid">
-
-        <div class="feature-card">
-          <div class="feature-num" data-i18n="feat.1.num">01 — Search</div>
-          <h3 data-i18n="feat.1.h3">Intelligent Full-Text Search</h3>
-          <p data-i18n="feat.1.p">Ask questions in natural language. Zenith searches your entire document base with semantic understanding – not just keywords.</p>
-          <div class="feature-example" data-i18n="feat.1.ex1">"Which delivery dates and deadlines are expiring in the next 7 days?"</div>
-          <div class="feature-example" style="margin-top:8px;" data-i18n="feat.1.ex2">"Show me all maintenance reports for System B from 2024–2025."</div>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-num" data-i18n="feat.2.num">02 — Classification</div>
-          <h3 data-i18n="feat.2.h3">Automated Classification</h3>
-          <p data-i18n="feat.2.p">Documents are automatically recognised, categorised and tagged on import. From invoices to contracts – your archive organises itself.</p>
-          <div class="feature-example" data-i18n="feat.2.ex">Detects: Invoices · Contracts · Reports · Minutes · Certificates · Manuals</div>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-num" data-i18n="feat.3.num">03 — Setup</div>
-          <h3 data-i18n="feat.3.h3">One-Click Security</h3>
-          <p data-i18n="feat.3.p">Installation and operation without IT expertise. Zenith runs on your local hardware and is ready in just a few steps – immediately and permanently.</p>
-          <span class="feature-tag" data-i18n="feat.3.tag">Setup &lt; 30 min</span>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-num" data-i18n="feat.4.num">04 — Archive</div>
-          <h3 data-i18n="feat.4.h3">Structured Document Archive</h3>
-          <p data-i18n="feat.4.p">Projects, cases and documents in a clear hierarchy. Fully indexed, versioned and lightning-fast – even with tens of thousands of files.</p>
-          <div class="feature-example" data-i18n="feat.4.ex">Search across all formats: PDF · Word · Email · TIFF · more</div>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-num" data-i18n="feat.5.num">05 — Deadlines</div>
-          <h3 data-i18n="feat.5.h3">Deadline &amp; Task Management</h3>
-          <p data-i18n="feat.5.p">Zenith automatically extracts deadlines and dates from documents and reminds you proactively – before anything expires.</p>
-          <div class="feature-example" data-i18n="feat.5.ex">AI automatically detects dates in contracts, maintenance plans and regulatory notices</div>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-num" data-i18n="feat.6.num">06 — Analysis</div>
-          <h3 data-i18n="feat.6.h3">Document Analysis &amp; Summarisation</h3>
-          <p data-i18n="feat.6.p">Long reports, expert opinions or technical documentation grasped in seconds. Zenith delivers precise summaries and highlights relevant passages.</p>
-          <span class="feature-tag" data-i18n="feat.6.tag">Saves up to 70% reading time</span>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <div class="divider"></div>
-
-  <!-- ══════════════════════════════════════════════
-       ANWENDUNGSBEREICHE
-  ══════════════════════════════════════════════ -->
-  <section id="industry" class="section">
-    <div class="container">
-      <div class="label" data-i18n="industry.label">Limitless Applications</div>
-      <h2 class="section-title" data-i18n="industry.title">For Every Industry.<br /><span class="accent">For Every Use Case.</span></h2>
-      <p class="section-sub" data-i18n="industry.sub">
-        From the factory floor to the government office – Zenith secures your knowledge wherever critical documents and specialist data are created.
-      </p>
-
-      <div class="usecases-grid">
-
-        <div class="usecase-card">
-          <div class="usecase-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="6" height="14"/><rect x="9" y="3" width="6" height="18"/><rect x="16" y="10" width="6" height="11"/><line x1="2" y1="21" x2="22" y2="21"/></svg></div>
-          <div class="usecase-sector" data-i18n="uc.1.sector">Industry</div>
-          <h4 data-i18n="uc.1.h4">Machine Park Knowledge</h4>
-          <p data-i18n="uc.1.p">Ask questions about all your machine documentation – instantly, offline, precisely.</p>
-        </div>
-
-        <div class="usecase-card">
-          <div class="usecase-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M9 21V9l3-6 3 6v12M9 12h6"/></svg></div>
-          <div class="usecase-sector" data-i18n="uc.2.sector">Architecture</div>
-          <h4 data-i18n="uc.2.h4">Building Code Check</h4>
-          <p data-i18n="uc.2.p">Project management and automated comparison with applicable building regulations and standards.</p>
-        </div>
-
-        <div class="usecase-card">
-          <div class="usecase-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5L12 3l9 7.5V21H3z"/><path d="M9 21v-9h6v9"/></svg></div>
-          <div class="usecase-sector" data-i18n="uc.3.sector">Real Estate</div>
-          <h4 data-i18n="uc.3.h4">Contract Analysis</h4>
-          <p data-i18n="uc.3.p">Lease analysis, deadline checks and special termination rights identified in seconds.</p>
-        </div>
-
-        <div class="usecase-card">
-          <div class="usecase-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="7" r="3"/><path d="M2 21v-1a7 7 0 0 1 14 0v1"/><path d="M18 9a3 3 0 0 1 0 6M22 21v-1a7 7 0 0 0-5-6.7"/></svg></div>
-          <div class="usecase-sector" data-i18n="uc.4.sector">HR</div>
-          <h4 data-i18n="uc.4.h4">Onboarding Knowledge</h4>
-          <p data-i18n="uc.4.p">Internal policies, works agreements and onboarding documents instantly accessible.</p>
-        </div>
-
-        <div class="usecase-card">
-          <div class="usecase-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6M8 3 4 13c0 3 3.6 5 8 5s8-2 8-5L16 3"/><line x1="6" y1="10" x2="18" y2="10"/></svg></div>
-          <div class="usecase-sector" data-i18n="uc.5.sector">R&amp;D</div>
-          <h4 data-i18n="uc.5.h4">Lab Report Analysis</h4>
-          <p data-i18n="uc.5.p">Make decades of research reports and lab protocols semantically searchable.</p>
-        </div>
-
-        <div class="usecase-card">
-          <div class="usecase-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg></div>
-          <div class="usecase-sector" data-i18n="uc.6.sector">Finance</div>
-          <h4 data-i18n="uc.6.h4">Audit Preparation</h4>
-          <p data-i18n="uc.6.p">Audit-proof documentation and lightning-fast audit preparation – completely offline.</p>
-        </div>
-
-        <div class="usecase-card">
-          <div class="usecase-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="1"/><line x1="2" y1="22" x2="22" y2="22"/><rect x="8" y="6" width="2" height="2"/><rect x="14" y="6" width="2" height="2"/><rect x="8" y="11" width="2" height="2"/><rect x="14" y="11" width="2" height="2"/><rect x="10" y="16" width="4" height="6"/></svg></div>
-          <div class="usecase-sector" data-i18n="uc.7.sector">Government</div>
-          <h4 data-i18n="uc.7.h4">GDPR-Compliant Citizen Service</h4>
-          <p data-i18n="uc.7.p">Local AI knowledge for authorities – compliant citizen service without cloud dependency.</p>
-        </div>
-
-        <div class="usecase-card">
-          <div class="usecase-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 16h20M2 20h20M6 20V8h12v12"/><path d="M9 8V5a3 3 0 0 1 6 0v3"/></svg></div>
-          <div class="usecase-sector" data-i18n="uc.8.sector">Hospitality</div>
-          <h4 data-i18n="uc.8.h4">SOP Access</h4>
-          <p data-i18n="uc.8.p">Central access to quality standards and Standard Operating Procedures for all teams.</p>
-        </div>
-
-        <div class="usecase-card">
-          <div class="usecase-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M7 9l3 3-3 3"/><line x1="13" y1="15" x2="17" y2="15"/></svg></div>
-          <div class="usecase-sector" data-i18n="uc.9.sector">Software</div>
-          <h4 data-i18n="uc.9.h4">Legacy Documentation</h4>
-          <p data-i18n="uc.9.p">Query years-old code documentation, API specs and architecture decisions.</p>
-        </div>
-
-        <div class="usecase-card">
-          <div class="usecase-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20c1.6-.8 3.4-.8 5 0s3.4.8 5 0 3.4-.8 5 0"/><path d="M5 18l1.5-7h11L19 18"/><path d="M10 11V6h4v5"/><path d="M8 6h8"/></svg></div>
-          <div class="usecase-sector" data-i18n="uc.10.sector">Logistics</div>
-          <h4 data-i18n="uc.10.h4">Offline at Sea</h4>
-          <p data-i18n="uc.10.p">Maintenance logs and technical manuals – available even without internet connection.</p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <div class="divider"></div>
-
-  <!-- ══════════════════════════════════════════════
-       TECHNOLOGY
-  ══════════════════════════════════════════════ -->
-  <section id="technology" class="section section--alt">
-    <div class="container">
-      <div class="label" data-i18n="tech.label">Technical Excellence</div>
-      <h2 class="section-title" data-i18n="tech.title">Enterprise Performance.<br /><span class="accent">Local Sovereignty.</span></h2>
-      <p class="section-sub" data-i18n="tech.sub">
-        Zenith runs on cutting-edge hardware and uses state-of-the-art architecture – for speed and reliability you can feel.
-      </p>
-
-      <div class="tech-features">
-        <div class="tech-feature-item">
-          <div class="tech-feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
-          <div>
-            <h4 data-i18n="tech.1.h4">Optimised for Minisforum MS S1 Max</h4>
-            <p data-i18n="tech.1.p">Zenith runs on the compact Intel-based mini PC with up to 128 GB DDR5 RAM, fast NVMe storage and a quiet fan system – ideal for continuous office operation.</p>
+    <!-- ═══ Stats band ═══════════════════════════════════════ -->
+    <div class="stats-band">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat" data-reveal>
+            <div class="stat-num"><span data-count="128">0</span><span class="unit">GB</span></div>
+            <div class="stat-lbl" data-i18n="stats.ram">Unified RAM for AI</div>
           </div>
-        </div>
-        <div class="tech-feature-item">
-          <div class="tech-feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a8 8 0 0 1 8 8c0 5-8 12-8 12S4 15 4 10a8 8 0 0 1 8-8z"/><circle cx="12" cy="10" r="3"/></svg></div>
-          <div>
-            <h4 data-i18n="tech.2.h4">RAG Architecture (Retrieval-Augmented Generation)</h4>
-            <p data-i18n="tech.2.p">The AI answers not from memory, but from your documents – precise, up-to-date and without hallucinations.</p>
+          <div class="stat" data-reveal style="--d:.08s">
+            <div class="stat-num"><span data-count="0">0</span><span class="unit">Bytes</span></div>
+            <div class="stat-lbl" data-i18n="stats.bytes">External data transfer</div>
           </div>
-        </div>
-        <div class="tech-feature-item">
-          <div class="tech-feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.66 4.03 3 9 3s9-1.34 9-3V5"/><path d="M3 12c0 1.66 4.03 3 9 3s9-1.34 9-3"/></svg></div>
-          <div>
-            <h4 data-i18n="tech.3.h4">SQL Vector Search</h4>
-            <p data-i18n="tech.3.p">High-performance semantic search directly in the database. Thousands of documents are searched semantically in milliseconds.</p>
+          <div class="stat" data-reveal style="--d:.16s">
+            <div class="stat-num"><span data-count="3">0</span><span class="unit">×</span></div>
+            <div class="stat-lbl" data-i18n="stats.models">Specialised AI models</div>
           </div>
-        </div>
-        <div class="tech-feature-item">
-          <div class="tech-feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
-          <div>
-            <h4 data-i18n="tech.4.h4">Air-Gap Capable</h4>
-            <p data-i18n="tech.4.p">Zenith works completely without an internet connection. For maximum security it can be operated in a fully isolated network.</p>
-          </div>
-        </div>
-        <div class="tech-feature-item">
-          <div class="tech-feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg></div>
-          <div>
-            <h4 data-i18n="tech.5.h4">Scalable for Any Company Size</h4>
-            <p data-i18n="tech.5.p">Whether 500 or 500,000 documents – the architecture stays fast and stable. Grow without additional costs.</p>
-          </div>
-        </div>
-        <div class="tech-feature-item">
-          <div class="tech-feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/><path d="M3 9a9 9 0 0 0 18 0"/></svg></div>
-          <div>
-            <h4 data-i18n="tech.6.h4">Automatic Backups &amp; Versioning</h4>
-            <p data-i18n="tech.6.p">Every change is versioned locally. Complete document history on your own hardware – no third parties involved.</p>
+          <div class="stat" data-reveal style="--d:.24s">
+            <div class="stat-num">&lt;<span data-count="30">0</span><span class="unit">min</span></div>
+            <div class="stat-lbl" data-i18n="stats.setup">Setup time</div>
           </div>
         </div>
       </div>
     </div>
-  </section>
 
-  <div class="divider"></div>
+    <!-- ═══ Marquee ══════════════════════════════════════════ -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span class="marquee-item">PDF</span>
+        <span class="marquee-item">Word</span>
+        <span class="marquee-item">Excel</span>
+        <span class="marquee-item">PowerPoint</span>
+        <span class="marquee-item">JPEG · PNG · TIFF</span>
+        <span class="marquee-item">E-Mail</span>
+        <span class="marquee-item" data-i18n="marquee.scans">Scans &amp; Photos</span>
+        <span class="marquee-item" data-i18n="marquee.hand">Handwritten notes</span>
+        <span class="marquee-item">PDF</span>
+        <span class="marquee-item">Word</span>
+        <span class="marquee-item">Excel</span>
+        <span class="marquee-item">PowerPoint</span>
+        <span class="marquee-item">JPEG · PNG · TIFF</span>
+        <span class="marquee-item">E-Mail</span>
+        <span class="marquee-item" data-i18n="marquee.scans2">Scans &amp; Photos</span>
+        <span class="marquee-item" data-i18n="marquee.hand2">Handwritten notes</span>
+      </div>
+    </div>
 
-  <!-- ══════════════════════════════════════════════
-       PRICING
-  ══════════════════════════════════════════════ -->
-  <section id="pricing" class="section section--alt">
+    <!-- ═══ Problem / Solution ═══════════════════════════════ -->
+    <section id="problem" class="section">
+      <div class="container">
+        <div class="kicker" data-reveal data-i18n="problem.label">The problem with cloud AI</div>
+        <h2 class="section-title" data-reveal style="--d:.08s" data-i18n="problem.title">Your data is your capital.<br /><span class="fx-serif fx-grad">Why hand it over?</span></h2>
+        <p class="section-lead" data-reveal style="--d:.16s" data-i18n="problem.sub">Trade secrets, personal data and compliance requirements tolerate no compromise. Zenith was built for exactly one principle: nothing leaves your building. Ever.</p>
+
+        <div class="compare-grid">
+          <div class="compare-card compare-card--risk" data-reveal>
+            <div class="compare-badge" data-i18n="problem.danger.badge">⚠ Cloud AI</div>
+            <h3 data-i18n="problem.danger.h3">The invisible risk</h3>
+            <ul class="compare-list">
+              <li><i class="ic ic--x">✕</i><span data-i18n="problem.danger.1">Sensitive business data and trade secrets end up on third-party servers – often outside the EU</span></li>
+              <li><i class="ic ic--x">✕</i><span data-i18n="problem.danger.2">Potential violations of GDPR, trade-secret law and industry-specific compliance</span></li>
+              <li><i class="ic ic--x">✕</i><span data-i18n="problem.danger.3">Opaque storage: training data, logs and backups beyond your control</span></li>
+              <li><i class="ic ic--x">✕</i><span data-i18n="problem.danger.4">Monthly per-user fees that never stop – costs grow with your team</span></li>
+              <li><i class="ic ic--x">✕</i><span data-i18n="problem.danger.5">No internet, no AI: your workflows depend on someone else's uptime</span></li>
+            </ul>
+          </div>
+          <div class="compare-card compare-card--safe" data-reveal style="--d:.12s">
+            <div class="compare-badge" data-i18n="problem.safe.badge">✓ Zenith</div>
+            <h3 data-i18n="problem.safe.h3">Local sovereignty</h3>
+            <ul class="compare-list">
+              <li><i class="ic ic--ok">✓</i><span data-i18n="problem.safe.1">All AI models run exclusively on your hardware – not a single byte leaves your network</span></li>
+              <li><i class="ic ic--ok">✓</i><span data-i18n="problem.safe.2">Privacy-by-design: GDPR compliance and audits become straightforward</span></li>
+              <li><i class="ic ic--ok">✓</i><span data-i18n="problem.safe.3">Full data control: you decide what is stored, processed and deleted</span></li>
+              <li><i class="ic ic--ok">✓</i><span data-i18n="problem.safe.4">One-time purchase – no subscription, no per-user licences, unlimited usage</span></li>
+              <li><i class="ic ic--ok">✓</i><span data-i18n="problem.safe.5">Works fully offline – even air-gapped in isolated networks</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ Pipeline / How it works ══════════════════════════ -->
+    <section id="pipeline" class="section" style="padding-top:0;">
+      <div class="container">
+        <div class="section-head--center">
+          <div class="kicker" data-reveal data-i18n="pipe.label">How Zenith works</div>
+          <h2 class="section-title" data-reveal style="--d:.08s" data-i18n="pipe.title">Drop a file in.<br /><span class="fx-serif fx-grad">Knowledge comes out.</span></h2>
+          <p class="section-lead" data-reveal style="--d:.16s" data-i18n="pipe.sub">A fully automatic pipeline turns unstructured files into a searchable, connected knowledge base – without any manual tagging.</p>
+        </div>
+
+        <div class="pipe-grid">
+          <div class="pipe-step" data-reveal>
+            <span class="pipe-num">01 / CAPTURE</span>
+            <div class="pipe-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 12h-6l-2 3h-4l-2-3H2"/><path d="M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"/></svg></div>
+            <h3 data-i18n="pipe.1.h3">Automatic intake</h3>
+            <p data-i18n="pipe.1.p">A watched inbox folder ingests every file: PDFs, Word, Excel, photos, scans. Drop it in – Zenith does the rest, around the clock.</p>
+            <span class="pipe-tech">Worker Service · Hot Folder</span>
+          </div>
+          <div class="pipe-step" data-reveal style="--d:.08s">
+            <span class="pipe-num">02 / UNDERSTAND</span>
+            <div class="pipe-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/></svg></div>
+            <h3 data-i18n="pipe.2.h3">Multimodal AI vision</h3>
+            <p data-i18n="pipe.2.p">A vision-language model reads every page like a human: text, tables, stamps, handwriting. It extracts title, sender, amounts, dates and tax relevance as structured data.</p>
+            <span class="pipe-tech">Qwen3-VL 30B · Structured JSON</span>
+          </div>
+          <div class="pipe-step" data-reveal style="--d:.16s">
+            <span class="pipe-num">03 / CONNECT</span>
+            <div class="pipe-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="2.5"/><circle cx="5" cy="5" r="2"/><circle cx="19" cy="5" r="2"/><circle cx="5" cy="19" r="2"/><circle cx="19" cy="19" r="2"/><line x1="6.5" y1="6.5" x2="10.2" y2="10.2"/><line x1="17.5" y1="6.5" x2="13.8" y2="10.2"/><line x1="6.5" y1="17.5" x2="10.2" y2="13.8"/><line x1="17.5" y1="17.5" x2="13.8" y2="13.8"/></svg></div>
+            <h3 data-i18n="pipe.3.h3">Knowledge graph</h3>
+            <p data-i18n="pipe.3.p">People, companies, projects and places are recognised as entities and linked across documents. Duplicates? Merge them with one click.</p>
+            <span class="pipe-tech">Entities · Relations · Merge</span>
+          </div>
+          <div class="pipe-step" data-reveal style="--d:.24s">
+            <span class="pipe-num">04 / ANSWER</span>
+            <div class="pipe-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M8 9h8M8 13h5"/></svg></div>
+            <h3 data-i18n="pipe.4.h3">Ask anything</h3>
+            <p data-i18n="pipe.4.p">Semantic search plus AI chat with source references. Complex questions across document boundaries – answered in seconds, verifiable with one click.</p>
+            <span class="pipe-tech">RAG · Vector Search · Reranking</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ Features (Bento) ═════════════════════════════════ -->
+    <section id="features" class="section">
+      <div class="container">
+        <div class="kicker" data-reveal data-i18n="feat.label">Everything included</div>
+        <h2 class="section-title" data-reveal style="--d:.08s" data-i18n="feat.title">Not a document graveyard.<br /><span class="fx-serif fx-grad">A living knowledge base.</span></h2>
+        <p class="section-lead" data-reveal style="--d:.16s" data-i18n="feat.sub">Every feature exists in the product today – no vapourware, no "coming soon" asterisks.</p>
+
+        <div class="bento">
+          <div class="bento-card span-3" data-reveal>
+            <div class="bento-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/><path d="M8 11h6M11 8v6"/></svg></div>
+            <h3 data-i18n="feat.1.h3">Semantic search that understands meaning</h3>
+            <p data-i18n="feat.1.p">Search for "all tax-relevant documents from 2025" and find exactly that – even if no file ever contained those words. Vector search compares meaning, not keywords. Optional reranking sharpens the top results.</p>
+            <span class="bento-tag" data-i18n="feat.1.tag">Vector search directly in SQL</span>
+          </div>
+          <div class="bento-card span-3" data-reveal style="--d:.08s">
+            <div class="bento-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M13 8H8M16 12H8"/></svg></div>
+            <h3 data-i18n="feat.2.h3">AI chat with your documents – incl. attachments</h3>
+            <p data-i18n="feat.2.p">Discuss your document inventory in natural language. Drag a PDF or photo straight into the chat and ask questions about it. Every answer cites its sources – one click opens the original.</p>
+            <span class="bento-tag" data-i18n="feat.2.tag">Drag &amp; drop · Source references</span>
+          </div>
+          <div class="bento-card" data-reveal>
+            <div class="bento-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><path d="M9 16l2 2 4-4"/></svg></div>
+            <h3 data-i18n="feat.3.h3">Automatic calendar</h3>
+            <p data-i18n="feat.3.p">Zenith detects appointments and deadlines inside documents and proposes them as calendar entries. You confirm – nothing gets lost.</p>
+            <span class="bento-tag" data-i18n="feat.3.tag">Deadline detection</span>
+          </div>
+          <div class="bento-card" data-reveal style="--d:.08s">
+            <div class="bento-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="2.5"/><circle cx="5" cy="5" r="2"/><circle cx="19" cy="5" r="2"/><circle cx="5" cy="19" r="2"/><circle cx="19" cy="19" r="2"/><line x1="6.5" y1="6.5" x2="10.2" y2="10.2"/><line x1="17.5" y1="6.5" x2="13.8" y2="10.2"/><line x1="6.5" y1="17.5" x2="10.2" y2="13.8"/><line x1="17.5" y1="17.5" x2="13.8" y2="13.8"/></svg></div>
+            <h3 data-i18n="feat.4.h3">Entities &amp; relations</h3>
+            <p data-i18n="feat.4.p">People, companies, projects – automatically recognised and linked across your archive. Merge duplicates manually with full control.</p>
+            <span class="bento-tag" data-i18n="feat.4.tag">Manual merge</span>
+          </div>
+          <div class="bento-card" data-reveal style="--d:.16s">
+            <div class="bento-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg></div>
+            <h3 data-i18n="feat.5.h3">Live processing monitor</h3>
+            <p data-i18n="feat.5.p">Watch in real time which file is being processed, what's queued and how fast the pipeline runs. Full transparency instead of a black box.</p>
+            <span class="bento-tag" data-i18n="feat.5.tag">Real-time status</span>
+          </div>
+          <div class="bento-card span-3" data-reveal>
+            <div class="bento-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M9 15l2 2 4-4"/></svg></div>
+            <h3 data-i18n="feat.6.h3">Structured extraction – ready for your tax return</h3>
+            <p data-i18n="feat.6.p">Every document is broken down into structured data: title, sender, date, amounts with currency, tax relevance, category. Questions like "all documents for my 2025 tax return" become a single click.</p>
+            <span class="bento-tag" data-i18n="feat.6.tag">Amounts · Dates · Tax flags</span>
+          </div>
+          <div class="bento-card span-3" data-reveal style="--d:.08s">
+            <div class="bento-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/><path d="M7 10l3-3 3 3 4-4"/></svg></div>
+            <h3 data-i18n="feat.7.h3">Web interface – on every device</h3>
+            <p data-i18n="feat.7.p">Zenith runs as a modern web app in your local network. Desktop, tablet or phone: your knowledge base is one browser tab away. No client installation, unlimited users.</p>
+            <span class="bento-tag" data-i18n="feat.7.tag">Blazor · Responsive</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ Screenshots ══════════════════════════════════════ -->
+    <section id="screenshots" class="section">
+      <div class="container">
+        <div class="section-head--center">
+          <div class="kicker" data-reveal data-i18n="screens.label">The interface</div>
+          <h2 class="section-title" data-reveal style="--d:.08s" data-i18n="screens.title">Powerful engine.<br /><span class="fx-serif fx-grad">Effortless surface.</span></h2>
+          <p class="section-lead" data-reveal style="--d:.16s" data-i18n="screens.sub">Enterprise-grade AI shouldn't feel like enterprise software. Zenith's interface stays out of your way – on the desktop and on your phone.</p>
+        </div>
+
+        <div class="shots-tabs" data-reveal>
+          <button class="shot-tab active" data-shot="1" data-i18n="screens.tab1">Search &amp; Archive</button>
+          <button class="shot-tab" data-shot="2" data-i18n="screens.tab2">AI Analysis</button>
+          <button class="shot-tab" data-shot="3" data-i18n="screens.tab3">Document Detail</button>
+        </div>
+
+        <div class="browser" data-reveal style="--d:.1s">
+          <div class="browser-bar">
+            <span class="td"></span><span class="td"></span><span class="td"></span>
+            <span class="browser-url"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>zenith.local — your network only</span>
+          </div>
+          <div class="shot-stage">
+            <img src="images/screen_1.png" data-shot="1" class="active" alt="Zenith – Document search and archive" loading="lazy" onclick="openLightbox('images/screen_1.png', 'Zenith – Document search & archive')" />
+            <img src="images/screen_2.png" data-shot="2" alt="Zenith – AI analysis and summary" loading="lazy" onclick="openLightbox('images/screen_2.png', 'Zenith – AI analysis & summary')" />
+            <img src="images/screen_3.png" data-shot="3" alt="Zenith – Document detail view" loading="lazy" onclick="openLightbox('images/screen_3.png', 'Zenith – Document detail view')" />
+          </div>
+        </div>
+
+        <div class="phones">
+          <div class="phone" data-reveal>
+            <div class="phone-screen">
+              <div class="phone-notch"></div>
+              <img src="images/screen_mobile_1.png" alt="Zenith Mobile – Home & quick search" loading="lazy" onclick="openLightbox('images/screen_mobile_1.png', 'Zenith Mobile – Home & quick search')" />
+            </div>
+            <div class="phone-caption" data-i18n="screens.mob1">Home &amp; quick search</div>
+          </div>
+          <div class="phone" data-reveal style="--d:.1s">
+            <div class="phone-screen">
+              <div class="phone-notch"></div>
+              <img src="images/screen_mobile_2.png" alt="Zenith Mobile – AI chat" loading="lazy" onclick="openLightbox('images/screen_mobile_2.png', 'Zenith Mobile – AI chat')" />
+            </div>
+            <div class="phone-caption" data-i18n="screens.mob2">AI chat with sources</div>
+          </div>
+          <div class="phone" data-reveal style="--d:.2s">
+            <div class="phone-screen">
+              <div class="phone-notch"></div>
+              <img src="images/screen_mobile_3.png" alt="Zenith Mobile – Document view" loading="lazy" onclick="openLightbox('images/screen_mobile_3.png', 'Zenith Mobile – Document view')" />
+            </div>
+            <div class="phone-caption" data-i18n="screens.mob3">Documents on the go</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ Use cases ════════════════════════════════════════ -->
+    <section id="industry" class="section">
+      <div class="container">
+        <div class="kicker" data-reveal data-i18n="industry.label">Built for professionals</div>
+        <h2 class="section-title" data-reveal style="--d:.08s" data-i18n="industry.title">For every industry.<br /><span class="fx-serif fx-grad">For every archive.</span></h2>
+        <p class="section-lead" data-reveal style="--d:.16s" data-i18n="industry.sub">Wherever critical documents pile up and knowledge lives in filing cabinets – Zenith turns it into instant answers.</p>
+
+        <div class="uc-grid">
+          <div class="uc-card" data-reveal>
+            <div class="uc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="7" width="6" height="14"/><rect x="9" y="3" width="6" height="18"/><rect x="16" y="10" width="6" height="11"/><line x1="2" y1="21" x2="22" y2="21"/></svg></div>
+            <div class="uc-sector" data-i18n="uc.1.sector">Industry &amp; Manufacturing</div>
+            <h4 data-i18n="uc.1.h4">Machine park knowledge</h4>
+            <p data-i18n="uc.1.p">Manuals, maintenance logs, certificates – ask questions about your entire machine documentation and get instant, precise answers. Offline, right on the shop floor.</p>
+          </div>
+          <div class="uc-card" data-reveal style="--d:.08s">
+            <div class="uc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 21h18M9 21V9l3-6 3 6v12M9 12h6"/></svg></div>
+            <div class="uc-sector" data-i18n="uc.2.sector">Architecture &amp; Engineering</div>
+            <h4 data-i18n="uc.2.h4">Project &amp; standards archive</h4>
+            <p data-i18n="uc.2.p">Plans, building regulations, correspondence across years of projects – semantically searchable. Deadlines from permits land in the calendar automatically.</p>
+          </div>
+          <div class="uc-card" data-reveal style="--d:.16s">
+            <div class="uc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 10.5L12 3l9 7.5V21H3z"/><path d="M9 21v-9h6v9"/></svg></div>
+            <div class="uc-sector" data-i18n="uc.3.sector">Real Estate &amp; Property</div>
+            <h4 data-i18n="uc.3.h4">Contract intelligence</h4>
+            <p data-i18n="uc.3.p">Leases, utility statements, insurance policies per property – linked as entities. Special termination rights and notice periods surface on time.</p>
+          </div>
+          <div class="uc-card" data-reveal>
+            <div class="uc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6z"/><path d="M9 12l2 2 4-4"/></svg></div>
+            <div class="uc-sector" data-i18n="uc.4.sector">Legal &amp; Consulting</div>
+            <h4 data-i18n="uc.4.h4">Case file research</h4>
+            <p data-i18n="uc.4.p">Client files, opinions, correspondence – professional secrecy demands local processing. Zenith searches thousands of pages without a single byte leaving the office.</p>
+          </div>
+          <div class="uc-card" data-reveal style="--d:.08s">
+            <div class="uc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+            <div class="uc-sector" data-i18n="uc.5.sector">Healthcare &amp; Practices</div>
+            <h4 data-i18n="uc.5.h4">Sensitive records, safe</h4>
+            <p data-i18n="uc.5.p">Reports, referrals, lab results: maximum-sensitivity data stays inside the practice. Find any prior finding in seconds – GDPR-compliant by architecture.</p>
+          </div>
+          <div class="uc-card" data-reveal style="--d:.16s">
+            <div class="uc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+            <div class="uc-sector" data-i18n="uc.6.sector">Private &amp; Family Office</div>
+            <h4 data-i18n="uc.6.h4">Life admin, solved</h4>
+            <p data-i18n="uc.6.p">Insurance, contracts, invoices, warranties – the whole household archive becomes searchable. "All documents for the 2025 tax return" is one question away.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ Technology ═══════════════════════════════════════ -->
+    <section id="technology" class="section">
+      <div class="container">
+        <div class="kicker" data-reveal data-i18n="tech.label">Under the hood</div>
+        <h2 class="section-title" data-reveal style="--d:.08s" data-i18n="tech.title">Enterprise AI stack.<br /><span class="fx-serif fx-grad">Office-sized footprint.</span></h2>
+        <p class="section-lead" data-reveal style="--d:.16s" data-i18n="tech.sub">Three specialised AI models orchestrated on one silent mini PC – engineered for 24/7 operation next to your desk.</p>
+
+        <div class="tech-grid">
+          <div class="tech-card" data-reveal>
+            <div class="tech-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></svg></div>
+            <div>
+              <h4 data-i18n="tech.1.h4">AMD Ryzen AI Max+ 395 · 128 GB unified RAM</h4>
+              <p data-i18n="tech.1.p">The Minisforum MS-S1 Max delivers workstation-class AI performance: up to 96 GB RAM dedicated to the GPU – enough to run a 30-billion-parameter vision model entirely in memory.</p>
+            </div>
+          </div>
+          <div class="tech-card" data-reveal style="--d:.08s">
+            <div class="tech-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2a4 4 0 0 1 4 4c0 1.1-.45 2.1-1.17 2.83L12 12l-2.83-3.17A4 4 0 0 1 12 2z"/><circle cx="12" cy="12" r="2"/><path d="M12 14v8M8 18h8"/></svg></div>
+            <div>
+              <h4 data-i18n="tech.2.h4">Three specialised models, one team</h4>
+              <p data-i18n="tech.2.p">Qwen3-VL 30B reads and understands documents visually. Qwen3-Embedding 4B builds the semantic index. A dedicated reranker sharpens search results. Each does one job – brilliantly.</p>
+            </div>
+          </div>
+          <div class="tech-card" data-reveal>
+            <div class="tech-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.66 4.03 3 9 3s9-1.34 9-3V5"/><path d="M3 12c0 1.66 4.03 3 9 3s9-1.34 9-3"/></svg></div>
+            <div>
+              <h4 data-i18n="tech.3.h4">Vector search inside SQL Server</h4>
+              <p data-i18n="tech.3.p">Embeddings live directly in the database – no separate vector-store infrastructure. Semantic search across thousands of documents in milliseconds, transactionally safe.</p>
+            </div>
+          </div>
+          <div class="tech-card" data-reveal style="--d:.08s">
+            <div class="tech-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+            <div>
+              <h4 data-i18n="tech.4.h4">Air-gap capable</h4>
+              <p data-i18n="tech.4.p">Zenith needs zero internet – not for setup, not for operation, not for the AI. Run it in a fully isolated network. Your data, physically unreachable.</p>
+            </div>
+          </div>
+          <div class="tech-card" data-reveal>
+            <div class="tech-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M8 9h8M8 13h5"/></svg></div>
+            <div>
+              <h4 data-i18n="tech.5.h4">RAG: answers with receipts</h4>
+              <p data-i18n="tech.5.p">Retrieval-Augmented Generation means the AI answers from your documents, not from vague memory. Every statement links to its source – verifiable in one click.</p>
+            </div>
+          </div>
+          <div class="tech-card" data-reveal style="--d:.08s">
+            <div class="tech-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
+            <div>
+              <h4 data-i18n="tech.6.h4">Modern .NET architecture</h4>
+              <p data-i18n="tech.6.p">Built on .NET 10 and Blazor with a robust worker-service pipeline. Automatic retries, live status, clean data model – engineered for years of unattended operation.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="spec-strip" data-reveal>
+          <span class="spec-chip">AMD Ryzen AI Max+ 395</span>
+          <span class="spec-chip">128 GB Unified RAM</span>
+          <span class="spec-chip">96 GB GPU Memory</span>
+          <span class="spec-chip">Qwen3-VL 30B</span>
+          <span class="spec-chip">Qwen3-Embedding 4B</span>
+          <span class="spec-chip">Reranker</span>
+          <span class="spec-chip">SQL Vector Search</span>
+          <span class="spec-chip">.NET 10 · Blazor</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ Pricing ══════════════════════════════════════════ -->
+    <section id="pricing" class="section">
+      <div class="container">
+        <div class="section-head--center">
+          <div class="kicker" data-reveal data-i18n="pricing.label">Kickstarter early-bird pricing</div>
+          <h2 class="section-title" data-reveal style="--d:.08s" data-i18n="pricing.title">Buy once.<br /><span class="fx-serif fx-grad">Own it forever.</span></h2>
+          <p class="section-lead" data-reveal style="--d:.16s" data-i18n="pricing.sub">Hardware + software as a complete package. No subscription, no per-user fees, no hidden costs. Delivered ready to run.</p>
+        </div>
+
+        <div class="plans">
+          <div class="plan" data-reveal>
+            <div class="plan-tier" data-i18n="pricing.base.tier">Ready to work</div>
+            <div class="plan-name">Base</div>
+            <div class="plan-price">4.500 €</div>
+            <div class="plan-note" data-i18n="pricing.base.note">One-time payment · Hardware &amp; software</div>
+            <div class="plan-divider"></div>
+            <ul class="plan-feats">
+              <li><i class="ic ic--ok">✓</i><span data-i18n="pricing.base.f1">Minisforum MS-S1 Max (128 GB RAM)</span></li>
+              <li><i class="ic ic--ok">✓</i><span data-i18n="pricing.base.f2">Zenith pre-installed &amp; configured</span></li>
+              <li><i class="ic ic--ok">✓</i><span data-i18n="pricing.base.f3">All AI features · unlimited users</span></li>
+              <li><i class="ic ic--ok">✓</i><span data-i18n="pricing.base.f4">100% local – 0 bytes external transfer</span></li>
+              <li><i class="ic ic--ok">✓</i><span data-i18n="pricing.base.f5">Setup guide &amp; email support</span></li>
+            </ul>
+            <a href="#cta" class="plan-cta" data-i18n="pricing.base.btn">Support on Kickstarter</a>
+          </div>
+
+          <div class="plan plan--featured" data-reveal style="--d:.1s">
+            <div class="plan-flag" data-i18n="pricing.pro.flag">Most popular</div>
+            <div class="plan-tier" data-i18n="pricing.pro.tier">For companies &amp; teams</div>
+            <div class="plan-name">Professional</div>
+            <div class="plan-price">5.200 €</div>
+            <div class="plan-note" data-i18n="pricing.pro.note">One-time payment · Incl. RAID backup</div>
+            <div class="plan-divider"></div>
+            <ul class="plan-feats">
+              <li><i class="ic ic--ok">✓</i><span data-i18n="pricing.pro.f1">Everything from BASE</span></li>
+              <li><i class="ic ic--ok">✓</i><span data-i18n="pricing.pro.f2">External RAID system against data loss</span></li>
+              <li><i class="ic ic--ok">✓</i><span data-i18n="pricing.pro.f3">Redundancy for business-critical data</span></li>
+              <li><i class="ic ic--ok">✓</i><span data-i18n="pricing.pro.f4">Automatic local backup</span></li>
+              <li><i class="ic ic--ok">✓</i><span data-i18n="pricing.pro.f5">Priority email support</span></li>
+            </ul>
+            <a href="#cta" class="plan-cta" data-i18n="pricing.pro.btn">Support on Kickstarter</a>
+          </div>
+
+          <div class="plan" data-reveal style="--d:.2s">
+            <div class="plan-tier" data-i18n="pricing.prem.tier">For enterprise &amp; government</div>
+            <div class="plan-name">Premium</div>
+            <div class="plan-price">5.800 €</div>
+            <div class="plan-note" data-i18n="pricing.prem.note">One-time payment · All-inclusive package</div>
+            <div class="plan-divider"></div>
+            <ul class="plan-feats">
+              <li><i class="ic ic--ok">✓</i><span data-i18n="pricing.prem.f1">Everything from PROFESSIONAL</span></li>
+              <li><i class="ic ic--ok">✓</i><span data-i18n="pricing.prem.f2">24 months priority support</span></li>
+              <li><i class="ic ic--ok">✓</i><span data-i18n="pricing.prem.f3">Remote setup by Zenith experts</span></li>
+              <li><i class="ic ic--ok">✓</i><span data-i18n="pricing.prem.f4">24h response time for incidents</span></li>
+              <li><i class="ic ic--ok">✓</i><span data-i18n="pricing.prem.f5">Personal account manager</span></li>
+            </ul>
+            <a href="#cta" class="plan-cta" data-i18n="pricing.prem.btn">Support on Kickstarter</a>
+          </div>
+        </div>
+
+        <div class="tco" data-reveal>
+          <div class="tco-head">
+            <h3><span data-i18n="tco.header">What does AI really cost you?</span><span data-i18n="tco.subheader">Total cost of ownership – 3-year comparison</span></h3>
+          </div>
+          <div class="tco-grid">
+            <div class="tco-col tco-col--cloud">
+              <div class="tco-label" data-i18n="tco.cloud.label">Typical cloud AI solution</div>
+              <div class="tco-title" data-i18n="tco.cloud.title">SaaS subscription</div>
+              <div class="tco-calc" data-i18n="tco.cloud.calc"><code>30 €</code> / month per user<br />× <code>10 users</code><br />× <code>36 months</code> (3 years)<br />= ongoing costs, forever</div>
+              <div class="tco-total">10.800 €</div>
+              <div class="tco-verdict" data-i18n="tco.cloud.verdict">— and your data sits with the provider.</div>
+            </div>
+            <div class="tco-vs">VS</div>
+            <div class="tco-col tco-col--zenith">
+              <div class="tco-label" data-i18n="tco.zen.label">Zenith Professional</div>
+              <div class="tco-title" data-i18n="tco.zen.title">Once. Forever.</div>
+              <div class="tco-calc" data-i18n="tco.zen.calc">Single payment, hardware &amp; software<br />No monthly fees<br />No per-user licences<br />Unlimited usage</div>
+              <div class="tco-total">5.200 €</div>
+              <div class="tco-verdict" data-i18n="tco.zen.verdict">— and your data stays with you.</div>
+            </div>
+          </div>
+        </div>
+
+        <p class="pricing-footnote"><span data-i18n="pricing.footnote">All prices excl. VAT &nbsp;·&nbsp; One-time payment – no ongoing costs &nbsp;·&nbsp; Kickstarter early-bird prices, limited units</span></p>
+      </div>
+    </section>
+
+    <!-- ═══ FAQ ══════════════════════════════════════════════ -->
+    <section id="faq" class="section" style="padding-top:0;">
+      <div class="container">
+        <div class="section-head--center">
+          <div class="kicker" data-reveal data-i18n="faq.label">Frequently asked</div>
+          <h2 class="section-title" data-reveal style="--d:.08s" data-i18n="faq.title">Good questions.<br /><span class="fx-serif fx-grad">Straight answers.</span></h2>
+        </div>
+
+        <div class="faq-list" data-reveal>
+          <details class="faq-item">
+            <summary><span data-i18n="faq.1.q">Does Zenith really work without any internet connection?</span><span class="faq-plus">+</span></summary>
+            <p class="faq-a" data-i18n="faq.1.a">Yes – completely. All three AI models, the database and the web interface run on the device itself. Zenith never phones home: no telemetry, no license checks, no cloud fallback. You can operate it in a fully air-gapped network.</p>
+          </details>
+          <details class="faq-item">
+            <summary><span data-i18n="faq.2.q">Which file formats does Zenith understand?</span><span class="faq-plus">+</span></summary>
+            <p class="faq-a" data-i18n="faq.2.a">PDFs, Word, Excel, PowerPoint, e-mails and images (JPEG, PNG, TIFF – including scans and photographed documents). The vision model reads documents like a human: tables, stamps and even handwriting are captured.</p>
+          </details>
+          <details class="faq-item">
+            <summary><span data-i18n="faq.3.q">How many users can work with Zenith?</span><span class="faq-plus">+</span></summary>
+            <p class="faq-a" data-i18n="faq.3.a">As many as you like. Zenith runs as a web application in your local network – every device with a browser can access it. There are no per-user licences and no artificial limits.</p>
+          </details>
+          <details class="faq-item">
+            <summary><span data-i18n="faq.4.q">What happens to my data if the hardware fails?</span><span class="faq-plus">+</span></summary>
+            <p class="faq-a" data-i18n="faq.4.a">Your original files always stay in your file system – Zenith works with copies and indexes. The Professional and Premium packages additionally include an external RAID system and automatic local backups for business-critical redundancy.</p>
+          </details>
+          <details class="faq-item">
+            <summary><span data-i18n="faq.5.q">Do I need IT expertise to run Zenith?</span><span class="faq-plus">+</span></summary>
+            <p class="faq-a" data-i18n="faq.5.a">No. The device arrives pre-installed and configured – connect power and network, open the browser, done. Setup takes less than 30 minutes. The Premium package even includes remote setup by our experts.</p>
+          </details>
+          <details class="faq-item">
+            <summary><span data-i18n="faq.6.q">Why Kickstarter – and when will Zenith ship?</span><span class="faq-plus">+</span></summary>
+            <p class="faq-a" data-i18n="faq.6.a">Zenith is in active development with a planned market launch in September 2026. The Kickstarter campaign funds the final development sprint and the first production batch. Early supporters secure the discounted early-bird prices shown above.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ CTA ══════════════════════════════════════════════ -->
+    <section id="cta">
+      <div class="container">
+        <div class="cta-panel" data-reveal>
+          <div class="grid-overlay" aria-hidden="true"></div>
+          <div class="kicker" style="justify-content:center;" data-i18n="cta.label">Limited early-bird units</div>
+          <h2 class="cta-title" data-i18n="cta.h2">Be part of it –<br /><span class="fx-serif fx-grad">from the very start.</span></h2>
+          <p class="cta-sub" data-i18n="cta.p">Zenith launches in <strong>September 2026</strong>. Back the project on Kickstarter now and secure your unit at the early-bird price – before the campaign closes.</p>
+          <div class="cta-actions">
+            <a href="https://www.kickstarter.com/projects/125084900/491999603/edit/preview?ref=project_build" target="_blank" rel="noopener" class="btn-primary"><span data-i18n="cta.btn1">Support on Kickstarter</span> <span class="arr">→</span></a>
+            <a href="mailto:info@myzenith.org?subject=Zenith DMS Enquiry" class="btn-ghost" data-i18n="cta.btn2">Get in touch</a>
+          </div>
+          <p class="cta-note" data-i18n="cta.sub">One-time licence · No subscription costs · 100% local · Market launch September 2026</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══ Footer ═════════════════════════════════════════════ -->
+  <footer class="site-footer">
     <div class="container">
-      <div class="label" data-i18n="pricing.label">Pricing &amp; Packages</div>
-      <h2 class="section-title" data-i18n="pricing.title">Choose Your<br /><span class="accent">Zenith Solution</span></h2>
-      <p class="section-sub" data-i18n="pricing.sub">
-        One-time payment – no subscriptions, no cloud lock-in, no hidden costs. Buy once and own Zenith forever.
-      </p>
-
-      <div class="pricing-grid">
-
-        <!-- BASE -->
-        <div class="pricing-card">
-          <div class="p-tier" data-i18n="pricing.base.tier">Ready-to-Work</div>
-          <div class="p-name">BASE</div>
-          <div class="p-price">4.500 €</div>
-          <div class="p-note" data-i18n="pricing.base.note">One-time payment · Hardware &amp; Software</div>
-          <div class="p-divider"></div>
-          <ul class="p-features">
-            <li><span class="pchk">✓</span><span data-i18n="pricing.base.f1">Minisforum MS-S1 Max (128 GB RAM)</span></li>
-            <li><span class="pchk">✓</span><span data-i18n="pricing.base.f2">Zenith software pre-installed &amp; configured</span></li>
-            <li><span class="pchk">✓</span><span data-i18n="pricing.base.f3">100% local AI – 0 bytes external transfer</span></li>
-            <li><span class="pchk">✓</span><span data-i18n="pricing.base.f4">Privacy-by-design</span></li>
-            <li><span class="pchk">✓</span><span data-i18n="pricing.base.f5">Setup guide &amp; email support</span></li>
+      <div class="foot-grid">
+        <div class="foot-brand">
+          <a href="#hero" class="logo" aria-label="Zenith">
+            <svg viewBox="0 0 100 100" aria-hidden="true"><line x1="50" y1="10" x2="85" y2="30" stroke="#E23DB4" stroke-width="6" stroke-linecap="round"/><line x1="85" y1="30" x2="85" y2="70" stroke="#E23DB4" stroke-width="6" stroke-linecap="round"/><line x1="85" y1="70" x2="50" y2="90" stroke="#E23DB4" stroke-width="6" stroke-linecap="round"/><line x1="50" y1="90" x2="15" y2="70" stroke="#E23DB4" stroke-width="6" stroke-linecap="round"/><line x1="15" y1="70" x2="15" y2="30" stroke="#E23DB4" stroke-width="6" stroke-linecap="round"/><line x1="15" y1="30" x2="50" y2="10" stroke="#E23DB4" stroke-width="6" stroke-linecap="round"/><line x1="50" y1="10" x2="50" y2="90" stroke="#E23DB4" stroke-width="6" stroke-linecap="round"/><line x1="85" y1="30" x2="15" y2="70" stroke="#E23DB4" stroke-width="6" stroke-linecap="round"/><line x1="85" y1="70" x2="15" y2="30" stroke="#E23DB4" stroke-width="6" stroke-linecap="round"/><circle cx="50" cy="10" r="7" fill="#E23DB4"/><circle cx="85" cy="30" r="7" fill="#E23DB4"/><circle cx="85" cy="70" r="7" fill="#E23DB4"/><circle cx="50" cy="90" r="7" fill="#E23DB4"/><circle cx="15" cy="70" r="7" fill="#E23DB4"/><circle cx="15" cy="30" r="7" fill="#E23DB4"/></svg>
+            ZEN<span class="z-accent">ITH</span>
+          </a>
+          <p data-i18n="footer.tagline">The AI document management system that runs 100% on your hardware. Your documents. Your AI. Your sovereignty.</p>
+        </div>
+        <div class="foot-col">
+          <h5 data-i18n="footer.col.product">Product</h5>
+          <ul class="foot-links">
+            <li><a href="#features" data-i18n="nav.features">Features</a></li>
+            <li><a href="#technology" data-i18n="nav.technology">Technology</a></li>
+            <li><a href="#pricing" data-i18n="nav.pricing">Pricing</a></li>
+            <li><a href="#screenshots" data-i18n="nav.screenshots">Screenshots</a></li>
           </ul>
-          <a href="#cta" class="btn-book" data-i18n="pricing.base.btn">Support on Kickstarter →</a>
         </div>
-
-        <!-- PROFESSIONAL (featured) -->
-        <div class="pricing-card pricing-card--featured">
-          <div class="p-tier" data-i18n="pricing.pro.tier">For Companies &amp; Teams — Best Seller</div>
-          <div class="p-name">Professional</div>
-          <div class="p-price">5.200 €</div>
-          <div class="p-note" data-i18n="pricing.pro.note">One-time payment · Incl. RAID redundancy</div>
-          <div class="p-divider"></div>
-          <ul class="p-features">
-            <li><span class="pchk">✓</span><span data-i18n="pricing.pro.f1">Everything from BASE</span></li>
-            <li><span class="pchk">✓</span><span data-i18n="pricing.pro.f2">External RAID system for file-loss protection</span></li>
-            <li><span class="pchk">✓</span><span data-i18n="pricing.pro.f3">Integrated redundancy for critical business and operational data</span></li>
-            <li><span class="pchk">✓</span><span data-i18n="pricing.pro.f4">Automatic local backup</span></li>
-            <li><span class="pchk">✓</span><span data-i18n="pricing.pro.f5">Priority email support</span></li>
+        <div class="foot-col">
+          <h5 data-i18n="footer.col.company">Company</h5>
+          <ul class="foot-links">
+            <li><a href="kontakt.html" data-i18n="footer.contact">Contact</a></li>
+            <li><a href="https://www.kickstarter.com/projects/125084900/491999603/edit/preview?ref=project_build" target="_blank" rel="noopener">Kickstarter</a></li>
           </ul>
-          <a href="#cta" class="btn-book" data-i18n="pricing.pro.btn">Support on Kickstarter →</a>
         </div>
-
-        <!-- PREMIUM -->
-        <div class="pricing-card">
-          <div class="p-tier" data-i18n="pricing.prem.tier">For Enterprise &amp; Government</div>
-          <div class="p-name">Premium</div>
-          <div class="p-price">5.800 €</div>
-          <div class="p-note" data-i18n="pricing.prem.note">One-time payment · The all-inclusive package</div>
-          <div class="p-divider"></div>
-          <ul class="p-features">
-            <li><span class="pchk">✓</span><span data-i18n="pricing.prem.f1">Everything from PROFESSIONAL</span></li>
-            <li><span class="pchk">✓</span><span data-i18n="pricing.prem.f2">24 months priority support</span></li>
-            <li><span class="pchk">✓</span><span data-i18n="pricing.prem.f3">Remote setup by Zenith experts</span></li>
-            <li><span class="pchk">✓</span><span data-i18n="pricing.prem.f4">24h response time for incidents</span></li>
-            <li><span class="pchk">✓</span><span data-i18n="pricing.prem.f5">Personal account manager</span></li>
+        <div class="foot-col">
+          <h5 data-i18n="footer.col.legal">Legal</h5>
+          <ul class="foot-links">
+            <li><a href="impressum.html" data-i18n="footer.imprint">Imprint</a></li>
+            <li><a href="datenschutz.html" data-i18n="footer.privacy">Privacy Policy</a></li>
+            <li><a href="agb.html" data-i18n="footer.terms">Terms &amp; Conditions</a></li>
           </ul>
-          <a href="#cta" class="btn-book" data-i18n="pricing.prem.btn">Support on Kickstarter →</a>
-        </div>
-
-      </div>
-
-      <!-- TCO Comparison -->
-      <div class="tco-block">
-        <div class="tco-header">
-          <h3 data-i18n="tco.header">What Does AI Really Cost You? &nbsp;<span>Total Cost of Ownership – 3-Year Comparison</span></h3>
-        </div>
-        <div class="tco-grid">
-          <div class="tco-col tco-col--cloud">
-            <div class="tco-label" data-i18n="tco.cloud.label">Typical Cloud AI Solution</div>
-            <div class="tco-title" data-i18n="tco.cloud.title">SaaS Subscription</div>
-            <div class="tco-calc" data-i18n="tco.cloud.calc">
-              <code>30 €</code> / month per user<br />
-              × <code>10 users</code><br />
-              × <code>36 months</code> (3 years)<br />
-              = ongoing costs
-            </div>
-            <div class="tco-total">10.800 €</div>
-            <div class="tco-verdict" data-i18n="tco.cloud.verdict">— and your data sits with the provider.</div>
-          </div>
-          <div class="tco-vs">VS</div>
-          <div class="tco-col tco-col--zenith">
-            <div class="tco-label" data-i18n="tco.zen.label">Zenith Professional</div>
-            <div class="tco-title" data-i18n="tco.zen.title">Once. Forever.</div>
-            <div class="tco-calc" data-i18n="tco.zen.calc">
-              Single hardware &amp; software payment<br />
-              No monthly fees<br />
-              No per-user licences<br />
-              Unlimited usage
-            </div>
-            <div class="tco-total">5.200 €</div>
-            <div class="tco-verdict" data-i18n="tco.zen.verdict">— and your data stays with you.</div>
-          </div>
         </div>
       </div>
-
-      <p style="margin-top:36px; text-align:center; font-size:.78rem; color: var(--text-muted); line-height:1.7;">
-        <span data-i18n="pricing.footnote">All prices excl. VAT &nbsp;·&nbsp; One-time payment – no ongoing costs &nbsp;·&nbsp; Kickstarter early-bird prices – limited units available</span>
-      </p>
-    </div>
-  </section>
-
-  <div class="divider"></div>
-
-  <!-- ══════════════════════════════════════════════
-       CTA
-  ══════════════════════════════════════════════ -->
-  <section id="cta">
-    <div class="cta-glow"></div>
-    <div class="container">
-      <div class="cta-inner">
-        <div class="label" data-i18n="cta.label">Support Us Now</div>
-        <h2 data-i18n="cta.h2">Be Part of It –<br /><span class="accent">From the Very Start.</span></h2>
-        <p data-i18n="cta.p">
-          Zenith is currently in development and is expected to be market-ready in
-          <strong style="color: var(--text);">September 2026</strong>.
-          Support the project on Kickstarter and secure your early-bird preferential price.
-        </p>
-        <div class="cta-actions">
-          <a href="https://www.kickstarter.com/projects/125084900/491999603/edit/preview?ref=project_build" target="_blank" rel="noopener" class="btn-primary" data-i18n="cta.btn1">Support on Kickstarter →</a>
-          <a href="mailto:info@myzenith.org?subject=Zenith DMS Enquiry" class="btn-outline" data-i18n="cta.btn2">Get in Touch</a>
-        </div>
-        <p style="margin-top:28px; font-size:.78rem; color: var(--text-muted);" data-i18n="cta.sub">
-          One-time licence · No subscription costs · 100% local · Market launch September 2026
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ══════════════════════════════════════════════
-       FOOTER
-  ══════════════════════════════════════════════ -->
-  <footer>
-    <div class="container">
-      <div class="footer-inner">
-        <div class="footer-logo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" style="height:.85em;width:.85em;flex-shrink:0;" aria-hidden="true"><line x1="50" y1="10" x2="85" y2="30" stroke="currentColor" stroke-width="6" stroke-linecap="round"/><line x1="85" y1="30" x2="85" y2="70" stroke="currentColor" stroke-width="6" stroke-linecap="round"/><line x1="85" y1="70" x2="50" y2="90" stroke="currentColor" stroke-width="6" stroke-linecap="round"/><line x1="50" y1="90" x2="15" y2="70" stroke="currentColor" stroke-width="6" stroke-linecap="round"/><line x1="15" y1="70" x2="15" y2="30" stroke="currentColor" stroke-width="6" stroke-linecap="round"/><line x1="15" y1="30" x2="50" y2="10" stroke="currentColor" stroke-width="6" stroke-linecap="round"/><line x1="50" y1="10" x2="50" y2="90" stroke="currentColor" stroke-width="6" stroke-linecap="round"/><line x1="85" y1="30" x2="15" y2="70" stroke="currentColor" stroke-width="6" stroke-linecap="round"/><line x1="85" y1="70" x2="15" y2="30" stroke="currentColor" stroke-width="6" stroke-linecap="round"/><circle cx="50" cy="10" r="7" fill="currentColor"/><circle cx="85" cy="30" r="7" fill="currentColor"/><circle cx="85" cy="70" r="7" fill="currentColor"/><circle cx="50" cy="90" r="7" fill="currentColor"/><circle cx="15" cy="70" r="7" fill="currentColor"/><circle cx="15" cy="30" r="7" fill="currentColor"/></svg>Zenith<span>.</span></div>
-        <ul class="footer-links">
-          <li><a href="impressum.html" data-i18n="footer.imprint">Legal Notice</a></li>
-          <li><a href="datenschutz.html" data-i18n="footer.privacy">Privacy Policy</a></li>
-          <li><a href="agb.html" data-i18n="footer.terms">Terms &amp; Conditions</a></li>
-          <li><a href="kontakt.html" data-i18n="footer.contact">Contact</a></li>
-        </ul>
-        <p class="footer-copy" data-i18n="footer.copy">© 2026 Zenith DMS. All rights reserved.</p>
+      <div class="foot-bottom">
+        <span data-i18n="footer.copy">© 2026 Zenith DMS · All rights reserved</span>
+        <span data-i18n="footer.made">Engineered in Germany · 100% local AI</span>
       </div>
     </div>
   </footer>
 
-  <script>
-    // Sticky header
-    const header = document.getElementById('header');
-    window.addEventListener('scroll', () => {
-      header.classList.toggle('scrolled', window.scrollY > 40);
-    }, { passive: true });
+  <!-- ═══ Lightbox ═══════════════════════════════════════════ -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true">
+    <button class="lightbox-close" aria-label="Close">✕</button>
+    <img src="" alt="" />
+    <div class="lightbox-caption"></div>
+  </div>
 
-    // Lightbox
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImg = document.getElementById('lightbox-img');
-    const lightboxCaption = document.getElementById('lightbox-caption');
-
-    const lightboxInner = document.querySelector('.lightbox-inner');
-
-    function openLightbox(src, caption, isMobile) {
-      lightboxImg.src = src;
-      lightboxImg.alt = caption;
-      lightboxCaption.textContent = caption;
-      lightboxInner.classList.toggle('lightbox-inner--mobile', !!isMobile);
-      lightbox.classList.add('open');
-      document.body.style.overflow = 'hidden';
-    }
-    function closeLightbox() {
-      lightbox.classList.remove('open');
-      document.body.style.overflow = '';
-      lightboxImg.src = '';
-    }
-    document.addEventListener('keydown', e => {
-      if (e.key === 'Escape') closeLightbox();
-    });
-  </script>
-
+  <script src="assets/main.js" defer></script>
+  <script src="assets/lang.js" defer></script>
 </body>
 </html>
