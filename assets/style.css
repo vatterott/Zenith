@@ -1472,6 +1472,9 @@ main { position: relative; z-index: 2; }
 }
 @media (max-width: 640px) {
   .container { padding: 0 20px; }
+  .announce { padding: 0 88px 0 10px; gap: 0; }
+  .announce-link { display: none; }
+  .announce-badge { max-width: 100%; padding: 3px 8px; font-size: .56rem; overflow: hidden; text-overflow: ellipsis; }
   #hero { padding-top: 160px; }
   .hero-ctas .btn-primary, .hero-ctas .btn-ghost { width: 100%; justify-content: center; }
   .pipe-grid { grid-template-columns: 1fr; }
