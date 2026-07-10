@@ -18,28 +18,28 @@
   --ink-3: #4B4C68;
 
   /* Brand */
-  --brand:      #E23DB4;
-  --brand-deep: #CC2299;
-  --violet:     #8B5CF6;
+  --brand:      #4F8FF7;
+  --brand-deep: #2F6FD8;
+  --violet:     #6BA6FF;
   --blue:       #38BDF8;
   --amber:      #FFC24B;
   --green:      #34D399;
   --red:        #F87171;
 
-  --grad-brand: linear-gradient(92deg, #8B5CF6 0%, #E23DB4 55%, #FF7AC6 100%);
-  --grad-text:  linear-gradient(94deg, #C4B5FD 0%, #F0ABFC 45%, #FF7AC6 100%);
+  --grad-brand: linear-gradient(92deg, #2F6FD8 0%, #4F8FF7 55%, #7FB2FF 100%);
+  --grad-text:  linear-gradient(94deg, #9EC3FF 0%, #6BA6FF 45%, #4F8FF7 100%);
 
   /* Lines & glows */
   --line:        rgba(255,255,255,.08);
   --line-strong: rgba(255,255,255,.16);
-  --brand-line:  rgba(226,61,180,.42);
-  --glow:        rgba(226,61,180,.32);
+  --brand-line:  rgba(79,143,247,.42);
+  --glow:        rgba(79,143,247,.32);
 
   /* Type */
-  --font-display: 'Space Grotesk', system-ui, sans-serif;
-  --font-body:    'Inter', system-ui, sans-serif;
-  --font-serif:   'Instrument Serif', Georgia, serif;
-  --font-mono:    'JetBrains Mono', 'Cascadia Code', monospace;
+  --font-display: Arial, 'Helvetica Neue', Helvetica, system-ui, sans-serif;
+  --font-body:    Arial, 'Helvetica Neue', Helvetica, system-ui, sans-serif;
+  --font-serif:   Arial, 'Helvetica Neue', Helvetica, system-ui, sans-serif;
+  --font-mono:    'Cascadia Code', Consolas, monospace;
 
   /* Motion */
   --ease:   cubic-bezier(.22,.61,.36,1);
@@ -117,8 +117,8 @@ button { font: inherit; color: inherit; background: none; border: none; cursor: 
 
 .fx-serif {
   font-family: var(--font-serif);
-  font-style: italic;
-  font-weight: 400;
+  font-style: normal;
+  font-weight: 700;
   letter-spacing: 0;
 }
 .fx-grad {
@@ -1482,4 +1482,40 @@ main { position: relative; z-index: 2; }
   .cta-panel { padding: 64px 28px; }
   .foot-grid { grid-template-columns: 1fr; gap: 36px; }
   .tco-col { padding: 32px 26px; }
+}
+
+/* ─── Feature list (top) ───────────────────────────────────────── */
+.flist-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px 28px;
+  max-width: 980px;
+  margin: 0 auto;
+}
+.flist-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 16px 18px;
+  background: var(--bg-2);
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  font-size: .95rem;
+  color: var(--ink-1);
+  transition: border-color var(--t-fast), transform var(--t-fast);
+}
+.flist-item:hover { border-color: var(--brand-line); transform: translateY(-2px); }
+.flist-item svg { width: 22px; height: 22px; flex-shrink: 0; color: var(--brand); margin-top: 2px; }
+.flist-item strong { color: var(--ink-0); }
+@media (max-width: 760px) { .flist-grid { grid-template-columns: 1fr; } }
+
+/* ─── Early-bird price display ─────────────────────────────────── */
+.plan-price-old {
+  display: inline-block;
+  margin-right: 8px;
+  font-size: .55em;
+  font-weight: 400;
+  color: var(--ink-2);
+  text-decoration: line-through;
+  vertical-align: middle;
 }

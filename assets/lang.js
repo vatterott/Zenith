@@ -18,7 +18,7 @@
     'nav.technology':    { en: 'Technology', de: 'Technologie' },
     'nav.pricing':       { en: 'Pricing', de: 'Preise' },
     'nav.contact':       { en: 'Contact', de: 'Kontakt' },
-    'nav.kickstarter':   { en: 'On Kickstarter', de: 'Auf Kickstarter' },
+    'nav.kickstarter':   { en: 'Pre-order now', de: 'Jetzt vorbestellen' },
     'nav.back':          { en: 'Back to Homepage', de: 'Zurück zur Startseite' },
 
     'footer.tagline':    { en: 'The AI document management system that runs 100% on your hardware. Your documents. Your AI. Your sovereignty.', de: 'Das KI-Dokumentenmanagement-System, das zu 100 % auf Ihrer Hardware läuft. Ihre Dokumente. Ihre KI. Ihre Souveränität.' },
@@ -35,9 +35,23 @@
     /* ════════════════════════════════
        INDEX – Announce bar
     ════════════════════════════════ */
-    'announce.badge':    { en: 'In Development', de: 'In Entwicklung' },
-    'announce.text':     { en: 'Market launch expected September 2026 &nbsp;·&nbsp; Support the project on Kickstarter', de: 'Marktstart voraussichtlich September 2026 &nbsp;·&nbsp; Unterstützen Sie das Projekt auf Kickstarter' },
-    'announce.link':     { en: 'To Kickstarter →', de: 'Zum Kickstarter →' },
+    'announce.badge':    { en: 'Market launch October', de: 'Marktstart Oktober' },
+    'announce.text':     { en: 'Zenith launches in October &nbsp;·&nbsp; Early-bird prices for pre-orders – limited units', de: 'Zenith startet im Oktober &nbsp;·&nbsp; Early-Bird-Preise für Vorbesteller – limitierte Stückzahl' },
+    'announce.link':     { en: 'Secure early-bird price →', de: 'Early-Bird-Preis sichern →' },
+
+    /* ════════════════════════════════
+       INDEX – FEATURE LIST
+    ════════════════════════════════ */
+    'flist.label':       { en: 'Everything at a glance', de: 'Alles auf einen Blick' },
+    'flist.title':       { en: 'What Zenith does for you', de: 'Was Zenith für Sie leistet' },
+    'flist.1':           { en: '<strong>Multimodal AI capture</strong> – reads PDFs, Office files, scans and photos, including tables and handwriting', de: '<strong>Multimodale KI-Erfassung</strong> – liest PDFs, Office-Dateien, Scans und Fotos, inklusive Tabellen und Handschrift' },
+    'flist.2':           { en: '<strong>Semantic search</strong> – finds documents by meaning, not just keywords', de: '<strong>Semantische Suche</strong> – findet Dokumente nach Bedeutung, nicht nur nach Stichworten' },
+    'flist.3':           { en: '<strong>AI chat with sources</strong> – ask questions in natural language, get answers with document references', de: '<strong>KI-Chat mit Quellen</strong> – Fragen in natürlicher Sprache stellen, Antworten mit Dokumentbelegen erhalten' },
+    'flist.4':           { en: '<strong>Knowledge graph</strong> – interactive view of people, companies, topics and their documents', de: '<strong>Wissensgraph</strong> – interaktive Ansicht von Personen, Firmen, Themen und ihren Dokumenten' },
+    'flist.5':           { en: '<strong>Automatic calendar</strong> – detects appointments and deadlines in documents and reminds you in time', de: '<strong>Automatischer Kalender</strong> – erkennt Termine und Fristen in Dokumenten und erinnert rechtzeitig' },
+    'flist.6':           { en: '<strong>Folders &amp; export</strong> – organise documents in virtual folders and export them with one click, e.g. for your tax advisor', de: '<strong>Ordner &amp; Export</strong> – Dokumente in virtuellen Ordnern organisieren und mit einem Klick exportieren, z. B. für den Steuerberater' },
+    'flist.7':           { en: '<strong>100% local</strong> – all AI models run on the device; not a single byte leaves your office', de: '<strong>100 % lokal</strong> – alle KI-Modelle laufen auf dem Gerät; kein einziges Byte verlässt Ihr Büro' },
+    'flist.8':           { en: '<strong>Unlimited users</strong> – web app in the local network, no per-user licences', de: '<strong>Unbegrenzte Nutzer</strong> – Web-App im lokalen Netzwerk, keine Nutzerlizenzen' },
 
     /* ════════════════════════════════
        INDEX – Hero
@@ -143,12 +157,15 @@
     'screens.label':     { en: 'The interface', de: 'Die Oberfläche' },
     'screens.title':     { en: 'Powerful engine.<br /><span class="fx-serif fx-grad">Effortless surface.</span>', de: 'Kraftvoller Motor.<br /><span class="fx-serif fx-grad">Mühelose Oberfläche.</span>' },
     'screens.sub':       { en: 'Enterprise-grade AI shouldn\'t feel like enterprise software. Zenith\'s interface stays out of your way – on the desktop and on your phone.', de: 'Enterprise-KI darf sich nicht wie Enterprise-Software anfühlen. Die Zenith-Oberfläche bleibt Ihnen aus dem Weg – am Desktop wie am Smartphone.' },
-    'screens.tab1':      { en: 'Search & Archive', de: 'Suche & Archiv' },
-    'screens.tab2':      { en: 'AI Analysis', de: 'KI-Analyse' },
-    'screens.tab3':      { en: 'Document Detail', de: 'Dokumentdetail' },
-    'screens.mob1':      { en: 'Home & quick search', de: 'Start & Schnellsuche' },
-    'screens.mob2':      { en: 'AI chat with sources', de: 'KI-Chat mit Quellen' },
-    'screens.mob3':      { en: 'Documents on the go', de: 'Dokumente unterwegs' },
+    'screens.tab1':      { en: 'Dashboard', de: 'Dashboard' },
+    'screens.tab2':      { en: 'Archive', de: 'Archiv' },
+    'screens.tab3':      { en: 'Document search', de: 'Dokumentsuche' },
+    'screens.tab4':      { en: 'Knowledge graph', de: 'Wissensgraph' },
+    'screens.tab5':      { en: 'Entities', de: 'Entitäten' },
+    'screens.tab6':      { en: 'Calendar', de: 'Kalender' },
+    'screens.tab7':      { en: 'Folders', de: 'Ordner' },
+    'screens.tab8':      { en: 'Processing', de: 'Verarbeitung' },
+    'screens.tab9':      { en: 'Settings', de: 'Einstellungen' },
 
     /* ════════════════════════════════
        INDEX – Use cases
@@ -197,35 +214,38 @@
     /* ════════════════════════════════
        INDEX – Pricing
     ════════════════════════════════ */
-    'pricing.label':     { en: 'Kickstarter early-bird pricing', de: 'Kickstarter-Frühbucherpreise' },
+    'pricing.label':     { en: 'Early-bird prices until market launch in October', de: 'Early-Bird-Preise bis zum Marktstart im Oktober' },
     'pricing.title':     { en: 'Buy once.<br /><span class="fx-serif fx-grad">Own it forever.</span>', de: 'Einmal kaufen.<br /><span class="fx-serif fx-grad">Für immer besitzen.</span>' },
     'pricing.sub':       { en: 'Hardware + software as a complete package. No subscription, no per-user fees, no hidden costs. Delivered ready to run.', de: 'Hardware + Software als Komplettpaket. Kein Abo, keine Nutzergebühren, keine versteckten Kosten. Geliefert wird betriebsbereit.' },
     'pricing.base.tier': { en: 'Ready to work', de: 'Sofort einsatzbereit' },
-    'pricing.base.note': { en: 'One-time payment · Hardware & software', de: 'Einmalzahlung · Hardware & Software' },
-    'pricing.base.f1':   { en: 'Minisforum MS-S1 Max (128 GB RAM)', de: 'Minisforum MS-S1 Max (128 GB RAM)' },
+    'pricing.base.note': { en: 'Early-bird pre-order price · regular 3.990 € from October', de: 'Early-Bird-Vorbestellerpreis · regulär 3.990 € ab Oktober' },
+    'pricing.base.f1':   { en: 'High-end AI mini server (AMD Ryzen AI Max+, 128 GB unified RAM)', de: 'High-End-KI-Mini-Server (AMD Ryzen AI Max+, 128 GB Unified RAM)' },
     'pricing.base.f2':   { en: 'Zenith pre-installed & configured', de: 'Zenith vorinstalliert & konfiguriert' },
     'pricing.base.f3':   { en: 'All AI features · unlimited users', de: 'Alle KI-Funktionen · unbegrenzte Nutzer' },
     'pricing.base.f4':   { en: '100% local – 0 bytes external transfer', de: '100 % lokal – 0 Byte externe Übertragung' },
-    'pricing.base.f5':   { en: 'Setup guide & email support', de: 'Einrichtungsleitfaden & E-Mail-Support' },
-    'pricing.base.btn':  { en: 'Support on Kickstarter', de: 'Auf Kickstarter unterstützen' },
+    'pricing.base.f5':   { en: '12 months software updates', de: '12 Monate Software-Updates' },
+    'pricing.base.f6':   { en: 'Setup guide & email support', de: 'Einrichtungsleitfaden & E-Mail-Support' },
+    'pricing.base.btn':  { en: 'Pre-order Base', de: 'Base vorbestellen' },
     'pricing.pro.flag':  { en: 'Most popular', de: 'Am beliebtesten' },
     'pricing.pro.tier':  { en: 'For companies & teams', de: 'Für Unternehmen & Teams' },
-    'pricing.pro.note':  { en: 'One-time payment · Incl. RAID backup', de: 'Einmalzahlung · Inkl. RAID-Sicherung' },
+    'pricing.pro.note':  { en: 'Early-bird pre-order price · regular 5.990 € from October', de: 'Early-Bird-Vorbestellerpreis · regulär 5.990 € ab Oktober' },
     'pricing.pro.f1':    { en: 'Everything from BASE', de: 'Alles aus BASE' },
-    'pricing.pro.f2':    { en: 'External RAID system against data loss', de: 'Externes RAID-System gegen Datenverlust' },
-    'pricing.pro.f3':    { en: 'Redundancy for business-critical data', de: 'Redundanz für geschäftskritische Daten' },
-    'pricing.pro.f4':    { en: 'Automatic local backup', de: 'Automatisches lokales Backup' },
-    'pricing.pro.f5':    { en: 'Priority email support', de: 'Priorisierter E-Mail-Support' },
-    'pricing.pro.btn':   { en: 'Support on Kickstarter', de: 'Auf Kickstarter unterstützen' },
-    'pricing.prem.tier': { en: 'For enterprise & government', de: 'Für Enterprise & Behörden' },
-    'pricing.prem.note': { en: 'One-time payment · All-inclusive package', de: 'Einmalzahlung · Das Rundum-sorglos-Paket' },
+    'pricing.pro.f2':    { en: 'External RAID backup system against data loss', de: 'Externes RAID-Backup-System gegen Datenverlust' },
+    'pricing.pro.f3':    { en: 'Automatic local backups', de: 'Automatische lokale Backups' },
+    'pricing.pro.f4':    { en: 'Personal onboarding session (remote)', de: 'Persönliches Onboarding (remote)' },
+    'pricing.pro.f5':    { en: '24 months software updates', de: '24 Monate Software-Updates' },
+    'pricing.pro.f6':    { en: 'Priority email support', de: 'Priorisierter E-Mail-Support' },
+    'pricing.pro.btn':   { en: 'Pre-order Professional', de: 'Professional vorbestellen' },
+    'pricing.prem.tier': { en: 'For enterprise & regulated sectors', de: 'Für Enterprise & regulierte Branchen' },
+    'pricing.prem.note': { en: 'Early-bird pre-order price · regular 8.490 € from October', de: 'Early-Bird-Vorbestellerpreis · regulär 8.490 € ab Oktober' },
     'pricing.prem.f1':   { en: 'Everything from PROFESSIONAL', de: 'Alles aus PROFESSIONAL' },
-    'pricing.prem.f2':   { en: '24 months priority support', de: '24 Monate Priority-Support' },
-    'pricing.prem.f3':   { en: 'Remote setup by Zenith experts', de: 'Remote-Einrichtung durch Zenith-Experten' },
-    'pricing.prem.f4':   { en: '24h response time for incidents', de: '24h-Reaktionszeit bei Störungen' },
-    'pricing.prem.f5':   { en: 'Personal account manager', de: 'Persönlicher Ansprechpartner' },
-    'pricing.prem.btn':  { en: 'Support on Kickstarter', de: 'Auf Kickstarter unterstützen' },
-    'pricing.footnote':  { en: 'All prices excl. VAT &nbsp;·&nbsp; One-time payment – no ongoing costs &nbsp;·&nbsp; Kickstarter early-bird prices, limited units', de: 'Alle Preise zzgl. MwSt. &nbsp;·&nbsp; Einmalzahlung – keine laufenden Kosten &nbsp;·&nbsp; Kickstarter-Frühbucherpreise, limitierte Stückzahl' },
+    'pricing.prem.f2':   { en: 'Complete setup & integration by Zenith experts', de: 'Komplette Einrichtung & Integration durch Zenith-Experten' },
+    'pricing.prem.f3':   { en: 'Migration of your existing document archive', de: 'Migration Ihres bestehenden Dokumentenarchivs' },
+    'pricing.prem.f4':   { en: '36 months software updates & priority support', de: '36 Monate Software-Updates & Priority-Support' },
+    'pricing.prem.f5':   { en: 'Guaranteed 24h response time for incidents', de: 'Garantierte 24h-Reaktionszeit bei Störungen' },
+    'pricing.prem.f6':   { en: 'Personal account manager', de: 'Persönlicher Ansprechpartner' },
+    'pricing.prem.btn':  { en: 'Pre-order Premium', de: 'Premium vorbestellen' },
+    'pricing.footnote':  { en: 'All prices excl. VAT &nbsp;·&nbsp; One-time payment – no ongoing costs &nbsp;·&nbsp; Early-bird prices valid for pre-orders until market launch in October', de: 'Alle Preise zzgl. MwSt. &nbsp;·&nbsp; Einmalzahlung – keine laufenden Kosten &nbsp;·&nbsp; Early-Bird-Preise gelten für Vorbestellungen bis zum Marktstart im Oktober' },
 
     /* ════════════════════════════════
        INDEX – TCO
@@ -256,18 +276,18 @@
     'faq.4.a':           { en: 'Your original files always stay in your file system – Zenith works with copies and indexes. The Professional and Premium packages additionally include an external RAID system and automatic local backups for business-critical redundancy.', de: 'Ihre Originaldateien bleiben immer in Ihrem Dateisystem – Zenith arbeitet mit Kopien und Indizes. Die Pakete Professional und Premium enthalten zusätzlich ein externes RAID-System und automatische lokale Backups für geschäftskritische Redundanz.' },
     'faq.5.q':           { en: 'Do I need IT expertise to run Zenith?', de: 'Brauche ich IT-Kenntnisse, um Zenith zu betreiben?' },
     'faq.5.a':           { en: 'No. The device arrives pre-installed and configured – connect power and network, open the browser, done. Setup takes less than 30 minutes. The Premium package even includes remote setup by our experts.', de: 'Nein. Das Gerät kommt vorinstalliert und konfiguriert – Strom und Netzwerk anschließen, Browser öffnen, fertig. Die Einrichtung dauert weniger als 30 Minuten. Das Premium-Paket enthält sogar die Remote-Einrichtung durch unsere Experten.' },
-    'faq.6.q':           { en: 'Why Kickstarter – and when will Zenith ship?', de: 'Warum Kickstarter – und wann wird Zenith ausgeliefert?' },
-    'faq.6.a':           { en: 'Zenith is in active development with a planned market launch in September 2026. The Kickstarter campaign funds the final development sprint and the first production batch. Early supporters secure the discounted early-bird prices shown above.', de: 'Zenith befindet sich in aktiver Entwicklung, der Marktstart ist für September 2026 geplant. Die Kickstarter-Kampagne finanziert den finalen Entwicklungssprint und die erste Produktionscharge. Frühe Unterstützer sichern sich die oben gezeigten vergünstigten Frühbucherpreise.' },
+    'faq.6.q':           { en: 'When will Zenith ship – and how does the early-bird price work?', de: 'Wann wird Zenith ausgeliefert – und wie funktioniert der Early-Bird-Preis?' },
+    'faq.6.a':           { en: 'Zenith launches in October. Anyone who pre-orders before market launch secures the discounted early-bird price shown above – with full warranty and 14-day right of return. Pre-orders are delivered first, in the order they were received.', de: 'Zenith startet im Oktober. Wer vor dem Marktstart vorbestellt, sichert sich den oben gezeigten vergünstigten Early-Bird-Preis – mit voller Gewährleistung und 14-tägigem Rückgaberecht. Vorbestellungen werden zuerst ausgeliefert, in der Reihenfolge des Eingangs.' },
 
     /* ════════════════════════════════
        INDEX – CTA
     ════════════════════════════════ */
     'cta.label':         { en: 'Limited early-bird units', de: 'Limitierte Frühbucher-Einheiten' },
     'cta.h2':            { en: 'Be part of it –<br /><span class="fx-serif fx-grad">from the very start.</span>', de: 'Seien Sie dabei –<br /><span class="fx-serif fx-grad">von Anfang an.</span>' },
-    'cta.p':             { en: 'Zenith launches in <strong>September 2026</strong>. Back the project on Kickstarter now and secure your unit at the early-bird price – before the campaign closes.', de: 'Zenith startet im <strong>September 2026</strong>. Unterstützen Sie das Projekt jetzt auf Kickstarter und sichern Sie sich Ihr Gerät zum Frühbucherpreis – bevor die Kampagne endet.' },
-    'cta.btn1':          { en: 'Support on Kickstarter', de: 'Auf Kickstarter unterstützen' },
+    'cta.p':             { en: 'Zenith launches in <strong>October</strong>. Pre-order now and secure your unit at the early-bird price – available only until market launch.', de: 'Zenith startet im <strong>Oktober</strong>. Bestellen Sie jetzt vor und sichern Sie sich Ihr Gerät zum Early-Bird-Preis – nur bis zum Marktstart verfügbar.' },
+    'cta.btn1':          { en: 'Pre-order at early-bird price', de: 'Zum Early-Bird-Preis vorbestellen' },
     'cta.btn2':          { en: 'Get in touch', de: 'Kontakt aufnehmen' },
-    'cta.sub':           { en: 'One-time licence · No subscription costs · 100% local · Market launch September 2026', de: 'Einmalige Lizenz · Keine Abo-Kosten · 100 % lokal · Marktstart September 2026' },
+    'cta.sub':           { en: 'One-time licence · No subscription costs · 100% local · Market launch October', de: 'Einmalige Lizenz · Keine Abo-Kosten · 100 % lokal · Marktstart Oktober' },
 
     /* ════════════════════════════════
        KONTAKT PAGE
