@@ -35,7 +35,7 @@
     /* ════════════════════════════════
        INDEX – Announce bar
     ════════════════════════════════ */
-    'announce.badge':    { en: 'Launch planned for September 2026', de: 'Launch geplant für September 2026' },
+    'announce.badge':    { en: 'Market launch October 2026', de: 'Marktstart Oktober 2026' },
     'announce.text':     { en: 'The working product is entering its founding-customer phase', de: 'Das funktionierende Produkt startet in die Founding-Customer-Phase' },
     'announce.link':     { en: 'Become a founding partner →', de: 'Founding Partner werden →' },
 
@@ -52,6 +52,10 @@
     'flist.6':           { en: '<strong>Folders &amp; export</strong> – organise documents in virtual folders and export them with one click, e.g. for your tax advisor', de: '<strong>Ordner &amp; Export</strong> – Dokumente in virtuellen Ordnern organisieren und mit einem Klick exportieren, z. B. für den Steuerberater' },
     'flist.7':           { en: '<strong>100% local</strong> – all AI models run on the device; not a single byte leaves your office', de: '<strong>100 % lokal</strong> – alle KI-Modelle laufen auf dem Gerät; kein einziges Byte verlässt Ihr Büro' },
     'flist.8':           { en: '<strong>Unlimited users</strong> – web app in the local network, no per-user licences', de: '<strong>Unbegrenzte Nutzer</strong> – Web-App im lokalen Netzwerk, keine Nutzerlizenzen' },
+    'flist.9':           { en: '<strong>Users & permissions</strong> – role-based access is enforced consistently across documents, search, AI chat and knowledge graph', de: '<strong>Benutzer & Rechte</strong> – rollenbasierte Zugriffe gelten konsequent für Dokumente, Suche, KI-Chat und Wissensgraph' },
+    'flist.10':          { en: '<strong>Audit trail</strong> – important access, exports, changes and administrative actions remain traceable', de: '<strong>Audit-Protokoll</strong> – wichtige Zugriffe, Exporte, Änderungen und administrative Aktionen bleiben nachvollziehbar' },
+    'flist.11':          { en: '<strong>Backup & recovery</strong> – automatic local backups, visible backup status and a controlled restore process protect your archive', de: '<strong>Backup & Wiederherstellung</strong> – automatische lokale Sicherungen, sichtbarer Backup-Status und ein kontrollierter Restore-Prozess schützen Ihr Archiv' },
+    'flist.12':          { en: '<strong>Administration & updates</strong> – system health, storage, queues, models, backups and offline updates are managed centrally', de: '<strong>Administration & Updates</strong> – Systemzustand, Speicher, Warteschlangen, Modelle, Backups und Offline-Updates werden zentral verwaltet' },
 
     /* ════════════════════════════════
        INDEX – Hero
@@ -214,7 +218,7 @@
     /* ════════════════════════════════
        INDEX – Pricing
     ════════════════════════════════ */
-    'pricing.label':     { en: 'Founding Customer Programme · Launch planned for late September 2026', de: 'Founding-Customer-Programm · Launch für Ende September 2026 geplant' },
+    'pricing.label':     { en: 'Founding Customer Programme · Market launch October 2026', de: 'Founding-Customer-Programm · Marktstart Oktober 2026' },
     'pricing.title':     { en: 'Shape the launch.<br /><span class="fx-serif fx-grad">Keep the advantage.</span>', de: 'Den Launch mitgestalten.<br /><span class="fx-serif fx-grad">Den Vorsprung behalten.</span>' },
     'pricing.sub':       { en: 'Before we publish final packages, we want to understand your archive, workflow and security requirements. Founding customers receive a personal demo, an individual offer and preferred launch access.', de: 'Bevor wir finale Pakete veröffentlichen, möchten wir Ihr Archiv, Ihre Abläufe und Sicherheitsanforderungen verstehen. Founding Customers erhalten eine persönliche Demo, ein individuelles Angebot und bevorzugten Zugang zum Launch.' },
     'pricing.base.tier': { en: 'Step 1', de: 'Schritt 1' },
@@ -271,17 +275,17 @@
     'faq.5.q':           { en: 'Do I need IT expertise to run Zenith?', de: 'Brauche ich IT-Kenntnisse, um Zenith zu betreiben?' },
     'faq.5.a':           { en: 'No. Zenith is delivered pre-installed and configured for the agreed environment. The exact installation and onboarding scope is documented in your individual offer.', de: 'Nein. Zenith wird für die vereinbarte Umgebung vorinstalliert und konfiguriert geliefert. Der genaue Umfang von Installation und Onboarding wird im individuellen Angebot dokumentiert.' },
     'faq.6.q':           { en: 'When will Zenith launch – and what does “founding customer” mean?', de: 'Wann startet Zenith – und was bedeutet „Founding Customer“?' },
-    'faq.6.a':           { en: 'The market launch is planned for late September 2026. Before then, we invite interested organisations to a personal demo and needs assessment. If both sides see a good fit, you receive an individual written offer with a defined scope, total price and delivery window. Contacting us or attending a demo creates no purchase obligation.', de: 'Der Marktstart ist für Ende September 2026 geplant. Bis dahin laden wir interessierte Organisationen zu einer persönlichen Demo und Bedarfsanalyse ein. Wenn es für beide Seiten passt, erhalten Sie ein individuelles schriftliches Angebot mit festgelegtem Umfang, Gesamtpreis und Lieferzeitraum. Aus einer Kontaktaufnahme oder Demo entsteht keine Kaufverpflichtung.' },
+    'faq.6.a':           { en: 'The market launch is planned for October 2026. Before then, we invite interested organisations to a personal demo and needs assessment. If both sides see a good fit, you receive an individual written offer with a defined scope, total price and delivery window. Contacting us or attending a demo creates no purchase obligation.', de: 'Der Marktstart ist für Oktober 2026 geplant. Bis dahin laden wir interessierte Organisationen zu einer persönlichen Demo und Bedarfsanalyse ein. Wenn es für beide Seiten passt, erhalten Sie ein individuelles schriftliches Angebot mit festgelegtem Umfang, Gesamtpreis und Lieferzeitraum. Aus einer Kontaktaufnahme oder Demo entsteht keine Kaufverpflichtung.' },
 
     /* ════════════════════════════════
        INDEX – CTA
     ════════════════════════════════ */
     'cta.label':         { en: 'Founding Customer Programme', de: 'Founding-Customer-Programm' },
     'cta.h2':            { en: 'Be part of it –<br /><span class="fx-serif fx-grad">from the very start.</span>', de: 'Seien Sie dabei –<br /><span class="fx-serif fx-grad">von Anfang an.</span>' },
-    'cta.p':             { en: 'The launch is planned for <strong>late September 2026</strong>. See the working product, discuss your requirements and receive a transparent individual offer.', de: 'Der Launch ist für <strong>Ende September 2026</strong> geplant. Lernen Sie das funktionierende Produkt kennen, besprechen Sie Ihre Anforderungen und erhalten Sie ein transparentes individuelles Angebot.' },
+    'cta.p':             { en: 'The market launch is planned for <strong>October 2026</strong>. See the working product, discuss your requirements and receive a transparent individual offer.', de: 'Der Marktstart ist für <strong>Oktober 2026</strong> geplant. Lernen Sie das funktionierende Produkt kennen, besprechen Sie Ihre Anforderungen und erhalten Sie ein transparentes individuelles Angebot.' },
     'cta.btn1':          { en: 'Request a personal demo', de: 'Persönliche Demo anfragen' },
     'cta.btn2':          { en: 'Email the founder', de: 'Gründer direkt kontaktieren' },
-    'cta.sub':           { en: 'No purchase commitment · Personal contact · 100% local · Launch planned for September 2026', de: 'Keine Kaufverpflichtung · Persönlicher Kontakt · 100 % lokal · Launch für September 2026 geplant' },
+    'cta.sub':           { en: 'No purchase commitment · Personal contact · 100% local · Market launch October 2026', de: 'Keine Kaufverpflichtung · Persönlicher Kontakt · 100 % lokal · Marktstart Oktober 2026' },
 
     'footer.founding':   { en: 'Founding programme', de: 'Founding-Programm' },
 
