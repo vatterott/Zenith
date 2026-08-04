@@ -166,6 +166,10 @@
     'screens.tab7':      { en: 'Folders', de: 'Ordner' },
     'screens.tab8':      { en: 'Processing', de: 'Verarbeitung' },
     'screens.tab9':      { en: 'Settings', de: 'Einstellungen' },
+    'screens.tab10':     { en: 'Chat', de: 'Chat' },
+    'screens.tab11':     { en: 'Roles', de: 'Rollen' },
+    'screens.tab12':     { en: 'Document permissions', de: 'Dokumentrechte' },
+    'screens.tab13':     { en: 'Users', de: 'Benutzer' },
 
     /* ════════════════════════════════
        INDEX – Use cases
@@ -415,6 +419,14 @@
     // Show/hide language-specific blocks
     document.querySelectorAll('[data-lang]').forEach(el => {
       el.style.display = el.getAttribute('data-lang') === lang ? '' : 'none';
+    });
+
+    // Keep product screenshots in sync with the selected website language.
+    document.querySelectorAll('img[data-screenshot]').forEach(img => {
+      const src = img.getAttribute(`data-src-${lang}`);
+      const alt = img.getAttribute(`data-alt-${lang}`);
+      if (src) img.src = src;
+      if (alt) img.alt = alt;
     });
 
     // Legal notice banner for EN on legal pages

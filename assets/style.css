@@ -904,10 +904,11 @@ main { position: relative; z-index: 2; }
   object-fit: cover;
   object-position: top;
   opacity: 0;
+  pointer-events: none;
   transition: opacity .5s var(--ease);
   cursor: zoom-in;
 }
-.shot-stage img.active { opacity: 1; }
+.shot-stage img.active { opacity: 1; pointer-events: auto; }
 
 .phones {
   display: flex;
