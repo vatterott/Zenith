@@ -13,15 +13,16 @@
        SHARED / GLOBAL
     ════════════════════════════════ */
     'nav.features':      { en: 'Features', de: 'Funktionen' },
+    'nav.agent':         { en: 'AI Partner', de: 'KI-Partner' },
     'nav.screenshots':   { en: 'Screenshots', de: 'Screenshots' },
     'nav.industry':      { en: 'Use Cases', de: 'Einsatzbereiche' },
     'nav.technology':    { en: 'Technology', de: 'Technologie' },
-    'nav.pricing':       { en: 'Launch', de: 'Launch' },
+    'nav.pricing':       { en: 'Crowdfunding', de: 'Crowdfunding' },
     'nav.contact':       { en: 'Contact', de: 'Kontakt' },
-    'nav.kickstarter':   { en: 'Request a demo', de: 'Demo anfragen' },
+    'nav.kickstarter':   { en: 'View campaign', de: 'Kampagne ansehen' },
     'nav.back':          { en: 'Back to Homepage', de: 'Zurück zur Startseite' },
 
-    'footer.tagline':    { en: 'The AI document management system that runs 100% on your hardware. Your documents. Your AI. Your sovereignty.', de: 'Das KI-Dokumentenmanagement-System, das zu 100 % auf Ihrer Hardware läuft. Ihre Dokumente. Ihre KI. Ihre Souveränität.' },
+    'footer.tagline':    { en: 'The private local AI work partner for your documents and meetings. Your knowledge. Your AI. Your control.', de: 'Der private lokale KI-Arbeitspartner für Ihre Dokumente und Meetings. Ihr Wissen. Ihre KI. Ihre Kontrolle.' },
     'footer.col.product':{ en: 'Product', de: 'Produkt' },
     'footer.col.company':{ en: 'Company', de: 'Unternehmen' },
     'footer.col.legal':  { en: 'Legal', de: 'Rechtliches' },
@@ -35,9 +36,9 @@
     /* ════════════════════════════════
        INDEX – Announce bar
     ════════════════════════════════ */
-    'announce.badge':    { en: 'Market launch October 2026', de: 'Marktstart Oktober 2026' },
-    'announce.text':     { en: 'The working product is entering its founding-customer phase', de: 'Das funktionierende Produkt startet in die Founding-Customer-Phase' },
-    'announce.link':     { en: 'Become a founding partner →', de: 'Founding Partner werden →' },
+    'announce.badge':    { en: 'Crowdfunding starts October 1, 2026', de: 'Crowdfunding startet am 1. Oktober 2026' },
+    'announce.text':     { en: 'Help turn the working prototype into your private AI work partner', de: 'Helfen Sie, aus dem funktionierenden Prototyp Ihren privaten KI-Arbeitspartner zu machen' },
+    'announce.link':     { en: 'Follow on Indiegogo →', de: 'Auf Indiegogo folgen →' },
 
     /* ════════════════════════════════
        INDEX – FEATURE LIST
@@ -50,24 +51,26 @@
     'flist.4':           { en: '<strong>Knowledge graph</strong> – interactive view of people, companies, topics and their documents', de: '<strong>Wissensgraph</strong> – interaktive Ansicht von Personen, Firmen, Themen und ihren Dokumenten' },
     'flist.5':           { en: '<strong>Automatic calendar</strong> – detects appointments and deadlines in documents and reminds you in time', de: '<strong>Automatischer Kalender</strong> – erkennt Termine und Fristen in Dokumenten und erinnert rechtzeitig' },
     'flist.6':           { en: '<strong>Folders &amp; export</strong> – organise documents in virtual folders and export them with one click, e.g. for your tax advisor', de: '<strong>Ordner &amp; Export</strong> – Dokumente in virtuellen Ordnern organisieren und mit einem Klick exportieren, z. B. für den Steuerberater' },
-    'flist.7':           { en: '<strong>100% local</strong> – all AI models run on the device; not a single byte leaves your office', de: '<strong>100 % lokal</strong> – alle KI-Modelle laufen auf dem Gerät; kein einziges Byte verlässt Ihr Büro' },
+    'flist.7':           { en: '<strong>Local by default</strong> – core AI processing stays on your device; external tools run only when you explicitly enable them', de: '<strong>Standardmäßig lokal</strong> – die zentrale KI-Verarbeitung bleibt auf Ihrem Gerät; externe Werkzeuge laufen nur, wenn Sie sie ausdrücklich aktivieren' },
     'flist.8':           { en: '<strong>Unlimited users</strong> – web app in the local network, no per-user licences', de: '<strong>Unbegrenzte Nutzer</strong> – Web-App im lokalen Netzwerk, keine Nutzerlizenzen' },
     'flist.9':           { en: '<strong>Users & permissions</strong> – role-based access is enforced consistently across documents, search, AI chat and knowledge graph', de: '<strong>Benutzer & Rechte</strong> – rollenbasierte Zugriffe gelten konsequent für Dokumente, Suche, KI-Chat und Wissensgraph' },
     'flist.10':          { en: '<strong>Audit trail</strong> – important access, exports, changes and administrative actions remain traceable', de: '<strong>Audit-Protokoll</strong> – wichtige Zugriffe, Exporte, Änderungen und administrative Aktionen bleiben nachvollziehbar' },
     'flist.11':          { en: '<strong>Backup & recovery</strong> – automatic local backups, visible backup status and a controlled restore process protect your archive', de: '<strong>Backup & Wiederherstellung</strong> – automatische lokale Sicherungen, sichtbarer Backup-Status und ein kontrollierter Restore-Prozess schützen Ihr Archiv' },
     'flist.12':          { en: '<strong>Administration & updates</strong> – system health, storage, queues, models, backups and offline updates are managed centrally', de: '<strong>Administration & Updates</strong> – Systemzustand, Speicher, Warteschlangen, Modelle, Backups und Offline-Updates werden zentral verwaltet' },
+    'flist.13':          { en: '<strong>Zenith Agent · in development</strong> – plans document tasks, uses approved tools and asks before consequential actions', de: '<strong>Zenith Agent · in Entwicklung</strong> – plant Dokumentaufgaben, nutzt freigegebene Werkzeuge und fragt vor folgenreichen Aktionen nach' },
+    'flist.14':          { en: '<strong>Meeting transcripts · in development</strong> – creates local transcripts, summaries, decisions and action items', de: '<strong>Meeting-Transkripte · in Entwicklung</strong> – erstellt lokal Transkripte, Zusammenfassungen, Entscheidungen und Aufgaben' },
 
     /* ════════════════════════════════
        INDEX – Hero
     ════════════════════════════════ */
-    'hero.eyebrow':      { en: '100% local · 0 bytes to the cloud · Designed for data sovereignty', de: '100 % lokal · 0 Byte in die Cloud · Entwickelt für Datensouveränität' },
-    'hero.h1':           { en: 'Your documents.<br />Your AI.<br /><span class="fx-serif fx-grad">Your hardware.</span>', de: 'Ihre Dokumente.<br />Ihre KI.<br /><span class="fx-serif fx-grad">Ihre Hardware.</span>' },
-    'hero.sub':          { en: 'Zenith reads, understands and organises your entire document inventory – PDFs, images, Office files. Ask questions in natural language and get answers <strong>with sources</strong>. All of it on one machine in your office.', de: 'Zenith liest, versteht und organisiert Ihren gesamten Dokumentenbestand – PDFs, Bilder, Office-Dateien. Stellen Sie Fragen in natürlicher Sprache und erhalten Sie Antworten <strong>mit Quellenangabe</strong>. Alles auf einer Maschine in Ihrem Büro.' },
-    'hero.cta1':         { en: 'Request a personal demo', de: 'Persönliche Demo anfragen' },
-    'hero.cta2':         { en: 'Explore features', de: 'Funktionen entdecken' },
+    'hero.eyebrow':      { en: 'Private by design · Agentic by choice · Built on your documents', de: 'Privat by Design · Agentisch nach Ihrer Wahl · Auf Ihren Dokumenten aufgebaut' },
+    'hero.h1':           { en: 'Your archive.<br />Your private AI.<br /><span class="fx-serif fx-grad">Ready to act.</span>', de: 'Ihr Archiv.<br />Ihre private KI.<br /><span class="fx-serif fx-grad">Bereit zu handeln.</span>' },
+    'hero.sub':          { en: 'Stop searching through folders and rebuilding context by hand. Zenith turns documents and meetings into a <strong>private AI work partner</strong> that finds what matters, shows its sources and prepares the next step – on hardware you control.', de: 'Hören Sie auf, Ordner zu durchsuchen und Zusammenhänge von Hand wiederherzustellen. Zenith macht aus Dokumenten und Meetings einen <strong>privaten KI-Arbeitspartner</strong>, der Relevantes findet, Quellen zeigt und den nächsten Schritt vorbereitet – auf Hardware unter Ihrer Kontrolle.' },
+    'hero.cta1':         { en: 'Follow the campaign', de: 'Der Kampagne folgen' },
+    'hero.cta2':         { en: 'Watch the pitch', de: 'Pitch-Video ansehen' },
     'hero.proof1':       { en: 'Works fully offline', de: 'Funktioniert komplett offline' },
-    'hero.proof2':       { en: 'No subscription', de: 'Kein Abo' },
-    'hero.proof3':       { en: 'Unlimited users', de: 'Unbegrenzte Nutzer' },
+    'hero.proof2':       { en: 'Cited answers', de: 'Antworten mit Quellen' },
+    'hero.proof3':       { en: 'You approve every action', de: 'Sie geben jede Aktion frei' },
     'hero.fc1.head':     { en: 'Deadline detected', de: 'Frist erkannt' },
     'hero.fc1.title':    { en: 'Insurance notice period', de: 'Kündigungsfrist Versicherung' },
     'hero.fc1.date':     { en: 'March 31, 2026', de: '31. März 2026' },
@@ -76,10 +79,22 @@
     'hero.fc2.body':     { en: '<strong>Müller GmbH</strong> linked with 23 documents, 4 contracts, 2 deadlines', de: '<strong>Müller GmbH</strong> verknüpft mit 23 Dokumenten, 4 Verträgen, 2 Fristen' },
 
     /* ════════════════════════════════
+       INDEX – Pitch video
+    ════════════════════════════════ */
+    'video.label':       { en: 'Why Zenith exists', de: 'Warum es Zenith gibt' },
+    'video.title':       { en: 'Your archive should not just store information.<br /><span class="fx-serif fx-grad">It should work for you.</span>', de: 'Ihr Archiv soll Informationen nicht nur ablegen.<br /><span class="fx-serif fx-grad">Es soll für Sie arbeiten.</span>' },
+    'video.sub':         { en: 'A scanned letter should not create another evening of renaming files, searching folders and reconstructing context. Zenith is built to understand what arrived, connect it to what you already know and help you move forward.', de: 'Ein gescannter Brief sollte nicht wieder einen Abend mit Umbenennen, Ordnersuche und mühsamer Rekonstruktion von Zusammenhängen verursachen. Zenith versteht, was angekommen ist, verbindet es mit vorhandenem Wissen und hilft Ihnen weiter.' },
+    'video.point1':      { en: '<strong>Bring order to the past.</strong> Turn scans, files and correspondence into a connected archive.', de: '<strong>Ordnung in die Vergangenheit bringen.</strong> Aus Scans, Dateien und Schriftverkehr entsteht ein vernetztes Archiv.' },
+    'video.point2':      { en: '<strong>Understand the present.</strong> Find the right facts, people, deadlines and decisions with sources.', de: '<strong>Die Gegenwart verstehen.</strong> Relevante Fakten, Personen, Fristen und Entscheidungen mit Quellen finden.' },
+    'video.point3':      { en: '<strong>Prepare what comes next.</strong> Let your private AI partner propose the next useful action.', de: '<strong>Den nächsten Schritt vorbereiten.</strong> Ihr privater KI-Partner schlägt die nächste sinnvolle Aktion vor.' },
+    'video.fallback':    { en: 'Your browser does not support embedded video.', de: 'Ihr Browser unterstützt die eingebettete Videowiedergabe nicht.' },
+    'video.caption':     { en: '2:26 min · See the working Zenith prototype', de: '2:26 Min. · Den funktionierenden Zenith-Prototyp erleben' },
+
+    /* ════════════════════════════════
        INDEX – Stats
     ════════════════════════════════ */
     'stats.ram':         { en: 'Unified RAM for AI', de: 'Unified RAM für KI' },
-    'stats.bytes':       { en: 'External data transfer', de: 'Externe Datenübertragung' },
+    'stats.bytes':       { en: 'Cloud transfer in the core workflow', de: 'Cloud-Transfer im Kernablauf' },
     'stats.models':      { en: 'Specialised AI models', de: 'Spezialisierte KI-Modelle' },
     'stats.setup':       { en: 'Setup time', de: 'Minuten bis einsatzbereit' },
 
@@ -96,7 +111,7 @@
     ════════════════════════════════ */
     'problem.label':     { en: 'The problem with cloud AI', de: 'Das Problem mit Cloud-KI' },
     'problem.title':     { en: 'Your data is your capital.<br /><span class="fx-serif fx-grad">Why hand it over?</span>', de: 'Ihre Daten sind Ihr Kapital.<br /><span class="fx-serif fx-grad">Warum sie aus der Hand geben?</span>' },
-    'problem.sub':       { en: 'Trade secrets, personal data and compliance requirements tolerate no compromise. Zenith was built for exactly one principle: nothing leaves your building. Ever.', de: 'Betriebsgeheimnisse, personenbezogene Daten und Compliance-Anforderungen dulden keinen Kompromiss. Zenith wurde für genau ein Prinzip gebaut: Nichts verlässt Ihr Haus. Niemals.' },
+    'problem.sub':       { en: 'Your archive holds contracts, conversations and decisions that should not become somebody else\'s dataset. Zenith keeps its core document and AI workflow local; optional external tools are used only when you explicitly enable them.', de: 'Ihr Archiv enthält Verträge, Gespräche und Entscheidungen, die nicht zum Datensatz eines fremden Anbieters werden sollten. Zenith hält den Kernablauf für Dokumente und KI lokal; optionale externe Werkzeuge werden nur nach Ihrer ausdrücklichen Freigabe genutzt.' },
     'problem.danger.badge': { en: '⚠ Cloud AI', de: '⚠ Cloud-KI' },
     'problem.danger.h3':    { en: 'The invisible risk', de: 'Das unsichtbare Risiko' },
     'problem.danger.1':     { en: 'Sensitive business data and trade secrets end up on third-party servers – often outside the EU', de: 'Sensible Geschäftsdaten und Betriebsgeheimnisse landen auf fremden Servern – oft außerhalb der EU' },
@@ -106,10 +121,10 @@
     'problem.danger.5':     { en: 'No internet, no AI: your workflows depend on someone else\'s uptime', de: 'Kein Internet, keine KI: Ihre Arbeitsabläufe hängen von fremder Verfügbarkeit ab' },
     'problem.safe.badge':   { en: '✓ Zenith', de: '✓ Zenith' },
     'problem.safe.h3':      { en: 'Local sovereignty', de: 'Lokale Souveränität' },
-    'problem.safe.1':       { en: 'All AI models run exclusively on your hardware – not a single byte leaves your network', de: 'Alle KI-Modelle laufen ausschließlich auf Ihrer Hardware – kein einziges Byte verlässt Ihr Netzwerk' },
+    'problem.safe.1':       { en: 'Core AI processing runs on your hardware; external tools remain optional and explicit', de: 'Die zentrale KI-Verarbeitung läuft auf Ihrer Hardware; externe Werkzeuge bleiben optional und ausdrücklich freizugeben' },
     'problem.safe.2':       { en: 'Privacy-by-design: local processing supports GDPR-compliant operation and audits', de: 'Privacy-by-Design: Lokale Verarbeitung unterstützt einen DSGVO-konformen Betrieb und Audits' },
     'problem.safe.3':       { en: 'Full data control: you decide what is stored, processed and deleted', de: 'Volle Datenkontrolle: Sie entscheiden, was gespeichert, verarbeitet und gelöscht wird' },
-    'problem.safe.4':       { en: 'One-time purchase – no subscription, no per-user licences, unlimited usage', de: 'Einmaliger Kauf – kein Abo, keine Nutzerlizenzen, unbegrenzte Nutzung' },
+    'problem.safe.4':       { en: 'No mandatory metered cloud AI for everyday document workflows', de: 'Keine verpflichtende, nutzungsabhängig berechnete Cloud-KI für alltägliche Dokumentenabläufe' },
     'problem.safe.5':       { en: 'Works fully offline – even air-gapped in isolated networks', de: 'Funktioniert komplett offline – auf Wunsch sogar im isolierten Netzwerk (Air-Gap)' },
 
     /* ════════════════════════════════
@@ -128,11 +143,38 @@
     'pipe.4.p':          { en: 'Semantic search plus AI chat with source references. Complex questions across document boundaries – answered in seconds, verifiable with one click.', de: 'Semantische Suche plus KI-Chat mit Quellenangaben. Komplexe Fragen über Dokumentgrenzen hinweg – beantwortet in Sekunden, überprüfbar mit einem Klick.' },
 
     /* ════════════════════════════════
+       INDEX – Agentic AI partner
+    ════════════════════════════════ */
+    'agent.label':       { en: 'Now in prototype development', de: 'Jetzt in der Prototyp-Entwicklung' },
+    'agent.title':       { en: 'From answer engine to<br /><span class="fx-serif fx-grad">private AI work partner.</span>', de: 'Von der Antwortmaschine zum<br /><span class="fx-serif fx-grad">privaten KI-Arbeitspartner.</span>' },
+    'agent.sub':         { en: 'Zenith already makes an archive searchable and answers questions with sources. The next step is a controlled local agent that can prepare useful work – without becoming an uncontrolled black box.', de: 'Zenith macht ein Archiv bereits durchsuchbar und beantwortet Fragen mit Quellen. Der nächste Schritt ist ein kontrollierter lokaler Agent, der wertvolle Arbeit vorbereitet – ohne zur unkontrollierten Blackbox zu werden.' },
+    'agent.step1.h3':    { en: 'It notices what matters', de: 'Er erkennt, was zählt' },
+    'agent.step1.p':     { en: 'A letter, contract or meeting arrives. Zenith identifies the subject, people, dates and obligations.', de: 'Ein Brief, Vertrag oder Meeting kommt hinzu. Zenith erkennt Thema, Personen, Termine und Verpflichtungen.' },
+    'agent.step2.h3':    { en: 'It rebuilds the context', de: 'Er stellt den Zusammenhang her' },
+    'agent.step2.p':     { en: 'The agent gathers related documents, earlier correspondence, decisions and deadlines from your archive.', de: 'Der Agent führt zugehörige Dokumente, früheren Schriftverkehr, Entscheidungen und Fristen aus Ihrem Archiv zusammen.' },
+    'agent.step3.h3':    { en: 'It prepares the next step', de: 'Er bereitet den nächsten Schritt vor' },
+    'agent.step3.p':     { en: 'It drafts a reply, checklist, dossier or reminder – with sources and a clear plan for your approval.', de: 'Er erstellt einen Entwurf, eine Checkliste, ein Dossier oder eine Erinnerung – mit Quellen und einem klaren Plan für Ihre Freigabe.' },
+    'agent.status':      { en: 'IN DEVELOPMENT', de: 'IN ENTWICKLUNG' },
+    'agent.tools.h3':    { en: 'Controlled tools through MCP', de: 'Kontrollierte Werkzeuge über MCP' },
+    'agent.tools.p':     { en: 'The Zenith Agent is being designed around an MCP-compatible tool layer. Only approved tools are available, permissions stay narrow and consequential actions require confirmation.', de: 'Der Zenith Agent wird auf einer MCP-kompatiblen Werkzeugebene aufgebaut. Nur freigegebene Werkzeuge stehen zur Verfügung, Berechtigungen bleiben eng begrenzt und folgenreiche Aktionen benötigen eine Bestätigung.' },
+    'agent.meet.h3':     { en: 'Meetings become usable knowledge', de: 'Meetings werden nutzbares Wissen' },
+    'agent.meet.p':      { en: 'Record or import a meeting, create the transcript locally and let Zenith extract summaries, decisions and action items. The result becomes searchable and can be linked to the relevant project and documents.', de: 'Zeichnen Sie ein Meeting auf oder importieren Sie es, lassen Sie das Transkript lokal erstellen und gewinnen Sie daraus Zusammenfassungen, Entscheidungen und Aufgaben. Das Ergebnis wird durchsuchbar und mit Projekt sowie Dokumenten verknüpfbar.' },
+    'agent.control.status': { en: 'HUMAN IN CONTROL', de: 'MENSCH BEHÄLT KONTROLLE' },
+    'agent.control.h3':  { en: 'Nothing consequential happens silently', de: 'Nichts Folgenreiches geschieht unbemerkt' },
+    'agent.control.p':   { en: 'Source-linked results, explicit approvals and an activity log make the agent\'s work reviewable. Sending, deleting and other high-impact actions stay behind a confirmation step.', de: 'Quellenverknüpfte Ergebnisse, ausdrückliche Freigaben und ein Aktivitätsprotokoll machen die Arbeit des Agenten überprüfbar. Senden, Löschen und andere weitreichende Aktionen bleiben hinter einem Bestätigungsschritt.' },
+
+    /* ════════════════════════════════
        INDEX – Features (Bento)
     ════════════════════════════════ */
     'feat.label':        { en: 'Everything included', de: 'Alles inklusive' },
     'feat.title':        { en: 'Not a document graveyard.<br /><span class="fx-serif fx-grad">A living knowledge base.</span>', de: 'Kein Dokumentenfriedhof.<br /><span class="fx-serif fx-grad">Eine lebendige Wissensbasis.</span>' },
-    'feat.sub':          { en: 'Every feature exists in the product today – no vapourware, no "coming soon" asterisks.', de: 'Jede Funktion existiert heute im Produkt – kein Vaporware, keine „Coming soon"-Sternchen.' },
+    'feat.sub':          { en: 'The document core is working today. The Zenith Agent and local meeting transcription are clearly marked as the next capabilities now entering prototype development.', de: 'Der Dokumentenkern funktioniert heute. Zenith Agent und lokale Meeting-Transkription sind klar als nächste Funktionen gekennzeichnet, die jetzt in die Prototyp-Entwicklung gehen.' },
+    'feat.8.h3':         { en: 'An agent that works with your archive', de: 'Ein Agent, der mit Ihrem Archiv arbeitet' },
+    'feat.8.p':          { en: 'Instead of stopping at an answer, Zenith can prepare the next task: organise an incoming document, assemble a dossier, draft a reply or create a checklist. You see the plan and approve important actions.', de: 'Statt bei einer Antwort aufzuhören, kann Zenith die nächste Aufgabe vorbereiten: ein eingehendes Dokument organisieren, ein Dossier zusammenstellen, eine Antwort entwerfen oder eine Checkliste erstellen. Sie sehen den Plan und geben wichtige Aktionen frei.' },
+    'feat.8.tag':        { en: 'MCP-compatible · Approval gates · Activity log', de: 'MCP-kompatibel · Freigaben · Aktivitätsprotokoll' },
+    'feat.9.h3':         { en: 'Private meeting transcription', de: 'Private Meeting-Transkription' },
+    'feat.9.p':          { en: 'Turn meetings into searchable transcripts, concise summaries, decisions and action items. Keep the recording and processing local, then connect the result with the right project and documents.', de: 'Verwandeln Sie Meetings in durchsuchbare Transkripte, kompakte Zusammenfassungen, Entscheidungen und Aufgaben. Aufnahme und Verarbeitung bleiben lokal; anschließend wird das Ergebnis mit dem passenden Projekt und den Dokumenten verknüpft.' },
+    'feat.9.tag':        { en: 'Local speech-to-text · Decisions · Action items', de: 'Lokale Spracherkennung · Entscheidungen · Aufgaben' },
     'feat.1.h3':         { en: 'Semantic search that understands meaning', de: 'Semantische Suche, die Bedeutung versteht' },
     'feat.1.p':          { en: 'Search for "all tax-relevant documents from 2025" and find exactly that – even if no file ever contained those words. Vector search compares meaning, not keywords. Optional reranking sharpens the top results.', de: 'Suchen Sie nach „alle steuerrelevanten Dokumente aus 2025" und finden Sie genau das – auch wenn kein Dokument diese Worte je enthielt. Die Vektorsuche vergleicht Bedeutung statt Schlagwörter. Optionales Reranking schärft die Top-Treffer.' },
     'feat.1.tag':        { en: 'Vector search directly in SQL', de: 'Vektorsuche direkt in SQL' },
@@ -205,7 +247,7 @@
     ════════════════════════════════ */
     'tech.label':        { en: 'Under the hood', de: 'Unter der Haube' },
     'tech.title':        { en: 'Enterprise AI stack.<br /><span class="fx-serif fx-grad">Office-sized footprint.</span>', de: 'Enterprise-KI-Stack.<br /><span class="fx-serif fx-grad">Im Büro-Format.</span>' },
-    'tech.sub':          { en: 'Three specialised AI models orchestrated on one silent mini PC – engineered for 24/7 operation next to your desk.', de: 'Drei spezialisierte KI-Modelle, orchestriert auf einem leisen Mini-PC – konstruiert für den 24/7-Betrieb neben Ihrem Schreibtisch.' },
+    'tech.sub':          { en: 'Specialised local models, a connected knowledge layer and controlled tools – engineered to turn private information into useful work.', de: 'Spezialisierte lokale Modelle, eine vernetzte Wissensebene und kontrollierte Werkzeuge – entwickelt, um aus privaten Informationen nützliche Arbeit zu machen.' },
     'tech.1.h4':         { en: 'AMD Ryzen AI Max+ 395 · 128 GB unified RAM', de: 'AMD Ryzen AI Max+ 395 · 128 GB Unified RAM' },
     'tech.1.p':          { en: 'The Minisforum MS-S1 Max delivers workstation-class AI performance: up to 96 GB RAM dedicated to the GPU – enough to run a 30-billion-parameter vision model entirely in memory.', de: 'Der Minisforum MS-S1 Max liefert KI-Leistung auf Workstation-Niveau: bis zu 96 GB RAM exklusiv für die GPU – genug, um ein Vision-Modell mit 30 Milliarden Parametern komplett im Speicher zu betreiben.' },
     'tech.2.h4':         { en: 'Three specialised models, one team', de: 'Drei spezialisierte Modelle, ein Team' },
@@ -218,6 +260,22 @@
     'tech.5.p':          { en: 'Retrieval-Augmented Generation means the AI answers from your documents, not from vague memory. Every statement links to its source – verifiable in one click.', de: 'Retrieval-Augmented Generation bedeutet: Die KI antwortet aus Ihren Dokumenten, nicht aus vagem Gedächtnis. Jede Aussage verlinkt ihre Quelle – überprüfbar mit einem Klick.' },
     'tech.6.h4':         { en: 'Modern .NET architecture', de: 'Moderne .NET-Architektur' },
     'tech.6.p':          { en: 'Built on .NET 10 and Blazor with a robust worker-service pipeline. Automatic retries, live status, clean data model – engineered for years of unattended operation.', de: 'Gebaut auf .NET 10 und Blazor mit robuster Worker-Service-Pipeline. Automatische Wiederholungen, Live-Status, sauberes Datenmodell – konstruiert für Jahre wartungsfreien Betrieb.' },
+    'tech.7.h4':         { en: 'Permission-aware agent tools', de: 'Berechtigungsbewusste Agentenwerkzeuge' },
+    'tech.7.p':          { en: 'An MCP-compatible layer will expose only approved capabilities to the agent. Plans, confirmations and activity records keep autonomous assistance bounded and reviewable.', de: 'Eine MCP-kompatible Ebene stellt dem Agenten nur freigegebene Fähigkeiten bereit. Pläne, Bestätigungen und Aktivitätsprotokolle halten die autonome Unterstützung begrenzt und überprüfbar.' },
+    'tech.8.h4':         { en: 'Local speech-to-text pipeline', de: 'Lokale Speech-to-Text-Pipeline' },
+    'tech.8.p':          { en: 'Meeting audio is planned to be transcribed and structured on the local system, so conversations can become searchable knowledge without a mandatory cloud transcription service.', de: 'Meeting-Audio soll auf dem lokalen System transkribiert und strukturiert werden. So werden Gespräche zu durchsuchbarem Wissen, ohne verpflichtenden Cloud-Transkriptionsdienst.' },
+
+    /* ════════════════════════════════
+       INDEX – Crowdfunding
+    ════════════════════════════════ */
+    'crowd.label':       { en: 'Indiegogo · Starts October 1, 2026', de: 'Indiegogo · Start am 1. Oktober 2026' },
+    'crowd.title':       { en: 'Back the software.<br /><span class="fx-serif fx-grad">Keep the hardware choice.</span>', de: 'Unterstützen Sie die Software.<br /><span class="fx-serif fx-grad">Behalten Sie die Hardwarewahl.</span>' },
+    'crowd.sub':         { en: 'The campaign funds the software work that turns the prototype into a dependable product: the controlled Zenith Agent, local meeting transcription, installer, security, testing, documentation and onboarding.', de: 'Die Kampagne finanziert die Softwarearbeit, die aus dem Prototyp ein verlässliches Produkt macht: den kontrollierten Zenith Agent, lokale Meeting-Transkription, Installer, Sicherheit, Tests, Dokumentation und Onboarding.' },
+    'crowd.note':        { en: '<strong>Clear separation:</strong> Indiegogo rewards are software access and project participation. No computer, GPU, server or other hardware is included.', de: '<strong>Klare Trennung:</strong> Die Indiegogo-Rewards umfassen Softwarezugang und Projektbeteiligung. Computer, GPU, Server oder andere Hardware sind nicht enthalten.' },
+    'crowd.date.label':  { en: 'CROWDFUNDING START', de: 'CROWDFUNDING-START' },
+    'crowd.date':        { en: '01 OCT 2026', de: '01. OKT. 2026' },
+    'crowd.btn':         { en: 'Follow Zenith on Indiegogo', de: 'Zenith auf Indiegogo folgen' },
+    'crowd.small':       { en: 'The working document prototype exists. Agent and transcription capabilities are in active development and will be demonstrated as they become ready.', de: 'Der funktionierende Dokumentenprototyp existiert. Agenten- und Transkriptionsfunktionen sind in aktiver Entwicklung und werden gezeigt, sobald sie bereit sind.' },
 
     /* ════════════════════════════════
        INDEX – Pricing
@@ -269,27 +327,31 @@
     'faq.label':         { en: 'Frequently asked', de: 'Häufig gefragt' },
     'faq.title':         { en: 'Good questions.<br /><span class="fx-serif fx-grad">Straight answers.</span>', de: 'Gute Fragen.<br /><span class="fx-serif fx-grad">Klare Antworten.</span>' },
     'faq.1.q':           { en: 'Does Zenith really work without any internet connection?', de: 'Funktioniert Zenith wirklich ganz ohne Internetverbindung?' },
-    'faq.1.a':           { en: 'Yes – completely. All three AI models, the database and the web interface run on the device itself. Zenith never phones home: no telemetry, no license checks, no cloud fallback. You can operate it in a fully air-gapped network.', de: 'Ja – vollständig. Alle drei KI-Modelle, die Datenbank und die Web-Oberfläche laufen auf dem Gerät selbst. Zenith telefoniert nie nach Hause: keine Telemetrie, keine Lizenzprüfungen, kein Cloud-Fallback. Der Betrieb ist sogar im komplett isolierten Netzwerk (Air-Gap) möglich.' },
+    'faq.1.a':           { en: 'The core archive, search and AI workflow is designed to run locally and can be deployed in an isolated network. Initial installation and model download require internet access. Future external agent tools will be optional, clearly identified and used only when explicitly enabled.', de: 'Der zentrale Archiv-, Such- und KI-Ablauf ist für den lokalen Betrieb ausgelegt und kann in einem isolierten Netzwerk eingesetzt werden. Für Erstinstallation und Modelldownload ist Internetzugang erforderlich. Künftige externe Agentenwerkzeuge bleiben optional, klar gekennzeichnet und werden nur nach ausdrücklicher Freigabe genutzt.' },
     'faq.2.q':           { en: 'Which file formats does Zenith understand?', de: 'Welche Dateiformate versteht Zenith?' },
     'faq.2.a':           { en: 'PDFs, Word, Excel, PowerPoint, e-mails and images (JPEG, PNG, TIFF – including scans and photographed documents). The vision model reads documents like a human: tables, stamps and even handwriting are captured.', de: 'PDFs, Word, Excel, PowerPoint, E-Mails und Bilder (JPEG, PNG, TIFF – inklusive Scans und abfotografierter Dokumente). Das Vision-Modell liest Dokumente wie ein Mensch: Tabellen, Stempel und sogar Handschrift werden erfasst.' },
     'faq.3.q':           { en: 'How many users can work with Zenith?', de: 'Wie viele Nutzer können mit Zenith arbeiten?' },
-    'faq.3.a':           { en: 'As many as you like. Zenith runs as a web application in your local network – every device with a browser can access it. There are no per-user licences and no artificial limits.', de: 'So viele Sie möchten. Zenith läuft als Web-Anwendung in Ihrem lokalen Netzwerk – jedes Gerät mit Browser hat Zugriff. Es gibt keine Nutzerlizenzen und keine künstlichen Limits.' },
+    'faq.3.a':           { en: 'Zenith runs as a web application in your local network. User scope depends on the chosen edition: Indiegogo personal rewards cover one named user, the team pilot covers up to five, and individually offered deployments can be scoped for larger teams.', de: 'Zenith läuft als Web-Anwendung in Ihrem lokalen Netzwerk. Der Nutzerumfang hängt von der gewählten Edition ab: Persönliche Indiegogo-Rewards gelten für eine benannte Person, der Team-Pilot für bis zu fünf und individuell angebotene Installationen können für größere Teams ausgelegt werden.' },
     'faq.4.q':           { en: 'What happens to my data if the hardware fails?', de: 'Was passiert mit meinen Daten, wenn die Hardware ausfällt?' },
     'faq.4.a':           { en: 'Your original files stay in your file system – Zenith works with copies and indexes. Backup requirements are defined during the needs assessment; an external local backup can be included in the individual offer.', de: 'Ihre Originaldateien bleiben in Ihrem Dateisystem – Zenith arbeitet mit Kopien und Indizes. Die Backup-Anforderungen werden in der Bedarfsanalyse festgelegt; ein externes lokales Backup kann Bestandteil des individuellen Angebots sein.' },
     'faq.5.q':           { en: 'Do I need IT expertise to run Zenith?', de: 'Brauche ich IT-Kenntnisse, um Zenith zu betreiben?' },
-    'faq.5.a':           { en: 'No. Zenith is delivered pre-installed and configured for the agreed environment. The exact installation and onboarding scope is documented in your individual offer.', de: 'Nein. Zenith wird für die vereinbarte Umgebung vorinstalliert und konfiguriert geliefert. Der genaue Umfang von Installation und Onboarding wird im individuellen Angebot dokumentiert.' },
+    'faq.5.a':           { en: 'The Indiegogo campaign funds a guided Windows installer, hardware-aware model profiles, diagnostics and clear onboarding. Campaign rewards contain software, not hardware. Separately agreed founding-customer deployments may include installation and configured hardware.', de: 'Die Indiegogo-Kampagne finanziert einen geführten Windows-Installer, hardwaregerechte Modellprofile, Diagnose und verständliches Onboarding. Kampagnen-Rewards enthalten Software, keine Hardware. Separat vereinbarte Founding-Customer-Installationen können Einrichtung und konfigurierte Hardware umfassen.' },
     'faq.6.q':           { en: 'When will Zenith launch – and what does “founding customer” mean?', de: 'Wann startet Zenith – und was bedeutet „Founding Customer“?' },
-    'faq.6.a':           { en: 'The market launch is planned for October 2026. Before then, we invite interested organisations to a personal demo and needs assessment. If both sides see a good fit, you receive an individual written offer with a defined scope, total price and delivery window. Contacting us or attending a demo creates no purchase obligation.', de: 'Der Marktstart ist für Oktober 2026 geplant. Bis dahin laden wir interessierte Organisationen zu einer persönlichen Demo und Bedarfsanalyse ein. Wenn es für beide Seiten passt, erhalten Sie ein individuelles schriftliches Angebot mit festgelegtem Umfang, Gesamtpreis und Lieferzeitraum. Aus einer Kontaktaufnahme oder Demo entsteht keine Kaufverpflichtung.' },
+    'faq.6.a':           { en: 'The Indiegogo crowdfunding campaign is scheduled to start on October 1, 2026. It funds software productisation and offers software rewards. Organisations interested in a complete configured deployment can also request a personal demo and a separate written offer.', de: 'Die Indiegogo-Crowdfunding-Kampagne soll am 1. Oktober 2026 starten. Sie finanziert die Produktreife der Software und bietet Software-Rewards. Organisationen mit Interesse an einer vollständig konfigurierten Installation können zusätzlich eine persönliche Demo und ein separates schriftliches Angebot anfragen.' },
+    'faq.7.q':           { en: 'What will the Zenith Agent be allowed to do?', de: 'Was darf der Zenith Agent tun?' },
+    'faq.7.a':           { en: 'The first version will focus on bounded document workflows: classifying incoming files, gathering related material, preparing dossiers, drafting replies and creating checklists or reminders. Approved tools, narrow permissions, source references, confirmations and an activity log are part of the design. The agent will not silently send, delete or make high-impact decisions.', de: 'Die erste Version konzentriert sich auf begrenzte Dokumentenabläufe: eingehende Dateien klassifizieren, zusammengehöriges Material sammeln, Dossiers vorbereiten, Antworten entwerfen sowie Checklisten oder Erinnerungen erstellen. Freigegebene Werkzeuge, enge Berechtigungen, Quellen, Bestätigungen und ein Aktivitätsprotokoll gehören zum Konzept. Der Agent sendet oder löscht nicht unbemerkt und trifft keine folgenreichen Entscheidungen.' },
+    'faq.8.q':           { en: 'How will meeting transcription work?', de: 'Wie funktioniert die Meeting-Transkription?' },
+    'faq.8.a':           { en: 'The planned prototype will record or import meeting audio, transcribe it locally and derive a summary, decisions and action items. Transcripts then become searchable and can be connected with projects, people and documents. Recording participants remains the user\'s legal responsibility.', de: 'Der geplante Prototyp zeichnet Meeting-Audio auf oder importiert es, transkribiert lokal und leitet Zusammenfassung, Entscheidungen sowie Aufgaben ab. Transkripte werden durchsuchbar und lassen sich mit Projekten, Personen und Dokumenten verbinden. Die rechtmäßige Aufzeichnung der Teilnehmenden bleibt in der Verantwortung des Nutzers.' },
 
     /* ════════════════════════════════
        INDEX – CTA
     ════════════════════════════════ */
-    'cta.label':         { en: 'Founding Customer Programme', de: 'Founding-Customer-Programm' },
-    'cta.h2':            { en: 'Be part of it –<br /><span class="fx-serif fx-grad">from the very start.</span>', de: 'Seien Sie dabei –<br /><span class="fx-serif fx-grad">von Anfang an.</span>' },
-    'cta.p':             { en: 'The market launch is planned for <strong>October 2026</strong>. See the working product, discuss your requirements and receive a transparent individual offer.', de: 'Der Marktstart ist für <strong>Oktober 2026</strong> geplant. Lernen Sie das funktionierende Produkt kennen, besprechen Sie Ihre Anforderungen und erhalten Sie ein transparentes individuelles Angebot.' },
-    'cta.btn1':          { en: 'Request a personal demo', de: 'Persönliche Demo anfragen' },
+    'cta.label':         { en: 'Your archive can do more', de: 'Ihr Archiv kann mehr' },
+    'cta.h2':            { en: 'Stop managing files.<br /><span class="fx-serif fx-grad">Start moving work forward.</span>', de: 'Verwalten Sie nicht länger Dateien.<br /><span class="fx-serif fx-grad">Bringen Sie Arbeit voran.</span>' },
+    'cta.p':             { en: 'Follow the Indiegogo campaign, see the working foundation and help shape the private AI partner you would trust with your documents and meetings.', de: 'Folgen Sie der Indiegogo-Kampagne, erleben Sie das funktionierende Fundament und gestalten Sie den privaten KI-Partner mit, dem Sie Ihre Dokumente und Meetings anvertrauen würden.' },
+    'cta.btn1':          { en: 'Follow on Indiegogo', de: 'Auf Indiegogo folgen' },
     'cta.btn2':          { en: 'Email the founder', de: 'Gründer direkt kontaktieren' },
-    'cta.sub':           { en: 'No purchase commitment · Personal contact · 100% local · Market launch October 2026', de: 'Keine Kaufverpflichtung · Persönlicher Kontakt · 100 % lokal · Marktstart Oktober 2026' },
+    'cta.sub':           { en: 'Software campaign · No hardware reward · Local-first · Human-controlled agent', de: 'Software-Kampagne · Keine Hardware-Rewards · Local-first · Menschlich kontrollierter Agent' },
 
     'footer.founding':   { en: 'Founding programme', de: 'Founding-Programm' },
 
